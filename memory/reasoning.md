@@ -3,6 +3,10 @@
 Append-only log of bot decisions, rationale, and reflections.
 Each entry is timestamped and written by the /journal skill or agents.
 
+## 2026-06-17 ICT
+All 8 cloud routines registered and confirmed. Bot is in paper trading mode. First routine fires at 19:33 ICT on the next weekday (pre-market research).
+---
+
 ---
 
 ## 2026-06-15 (bot initialized)
