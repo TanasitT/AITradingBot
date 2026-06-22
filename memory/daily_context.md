@@ -90,6 +90,34 @@ All clear. Bot is healthy, paper account fully funded at $100,000, no trades act
 
 ---
 
+## Intraday Monitor Log — 2026-06-22 10:35 ET
+
+**Run time:** 2026-06-22 10:35 ET (automated intraday monitor)
+**Routine:** position_monitor
+
+### Checks Performed
+| Check | Result |
+|---|---|
+| `daily_loss_halt` flag | false — no halt; proceeding |
+| Open positions | **1** — NVDA (23 shares, entry $213.3857) |
+| NVDA current price | **$210.25** (Alpaca positions endpoint) |
+| NVDA vs stop-loss $202.72 | $210.25 > $202.72 — NO STOP HIT ✅ |
+| NVDA vs TP1 $230.46 (+8%) | $210.25 < $230.46 — NO HIT |
+| NVDA vs TP2 $245.39 (+15%) | $210.25 < $245.39 — NO HIT |
+| NVDA vs TP3 $266.73 (+25%) | $210.25 < $266.73 — NO HIT |
+| NVDA unrealized P&L | -$72.12 (-1.47%) — within tolerated drawdown |
+| Account equity | $99,935.47 |
+| Daily P&L | -$64.53 (-0.06%) — below 2% halt threshold ✅ |
+| Daily loss halt triggered | NO |
+
+### Actions Taken
+- None. NVDA holding within range; no stop, take-profit, or halt triggers met.
+
+### Status
+All clear. NVDA position healthy; -1.47% unrealized, stop-loss $202.72 is $7.53 away (-3.57% more to go). Monitoring continues.
+
+---
+
 ## Sources
 
 - Barchart.com SPY options and VIX data (2026-06-22)
