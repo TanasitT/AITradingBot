@@ -170,3 +170,41 @@ daily_loss_halt confirmed false. Reset logged as part of EOD routine. Portfolio 
 
 EOD report could NOT be sent to jankla2010@gmail.com. Outbound SMTP (ports 465 and 587) is blocked by this remote execution environment's network policy. Full EOD summary is preserved in portfolio_state.md, trade_log.md, and benchmark_tracking.md. User should configure an HTTP-based email service (e.g. SendGrid, Resend, Mailgun) or enable SMTP in environment settings to restore email delivery.
 ---
+
+## 2026-06-23 — Pre-Market Research Run #3
+
+**Tickers Scanned:** 15 (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ)
+
+**Market Status — TRADE_OK: YES**
+- SPY: ABOVE 5-day MA ✅
+- VIX: ~15.00 — well below 28 threshold ✅ (low volatility, risk-on)
+- US-Iran peace deal still supporting bullish sentiment; geopolitical risk reduced
+- Fed speakers scheduled; markets pricing in no change near-term
+- Sector leaders: Technology, Consumer Discretionary
+- Sector laggards: Utilities, Energy
+- Overall market bias: BULLISH
+
+**Top 3 Candidates by Score:**
+1. META — 85/100 | $48B AI infrastructure agreements locked in; post-earnings momentum; 58/64 analysts Buy; avg PT $815–$829; Q2 earnings surged +11.8%; forward P/E ~20x (below 3yr avg); no near-term earnings risk
+2. AMD — 85/100 | Ryzen AI 400 expansion + EPYC "Venice" on 2nm announced; Q2 rev guidance ~$11.2B (+46% YoY); data center +57% YoY; trading near 52-week highs with strong momentum
+3. SPY — 85/100 | Benchmark ETF in confirmed uptrend; VIX 15 (risk-on); US-Iran peace deal reduces inflation risk; broad market rally
+
+**Next-Tier Candidates (score 70–79):**
+- NVDA 78: AI demand intact; 11-day winning streak base forming; minor pullback risk pre-earnings per one analyst; KeyBanc flagged HBM4 delays as short-term headwind — bullish trend intact
+- PLTR 78: Geopolitical narrative (Venezuela raid) sparked 5% surge; 3 consecutive up days; recovering from 52-week low; Q3 +63% revenue; catalyst-driven but fragile
+
+**Below Threshold / Watch:**
+- QQQ 55: Fed decision + Oracle/Adobe/Broadcom earnings this week add volatility; double-top pattern risk; neutral-to-bearish near-term
+- GOOGL 45: No specific 48h catalyst; neutral
+- AAPL 25: Below 50-day MA; bearish flag; analyst downgrades; skip
+- MSFT 25: Below key MAs; -23% YTD; earnings reaction negative; skip
+- TSLA 25: Below $400 support; federal probe; high P/E; skip
+- AMZN 25: -11% post-earnings capex shock; FTC lawsuit; weak volume; skip
+- COIN 25: Baird bearish pick; -19% week; crypto legislation stalled; skip
+- SMCI 15: $7B equity dilution; scandal overhang; skip
+- SOFI 15: -32% YTD; revenue forecast unchanged; insider selling; skip
+- RIVN 15: 600 layoffs; -8.6% drop; EV headwinds; skip
+
+**Weekly Trade Counter:** 1/3 trades used (NVDA 2026-06-22) — 2 trades remaining
+**Mode:** Paper trading (live_trading: false)
+---
