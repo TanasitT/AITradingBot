@@ -207,4 +207,6 @@ EOD report could NOT be sent to jankla2010@gmail.com. Outbound SMTP (ports 465 a
 
 **Weekly Trade Counter:** 1/3 trades used (NVDA 2026-06-22) — 2 trades remaining
 **Mode:** Paper trading (live_trading: false)
+
+**Email Notification:** SMTP blocked (ports 465/587 unavailable in remote execution environment — same issue as prior runs). Results preserved in research_cache.md, daily_context.md, and this journal. Configure SendGrid/Resend HTTP email API to restore delivery.
 ---
