@@ -258,3 +258,11 @@ No open positions. Confirmed via Alpaca API (0 positions, long_market_value $0).
 ## 2026-06-27 01:15 ET
 EOD report sent to jankla2010@gmail.com. Subject: Trading Bot -- EOD Summary 2026-06-27 | Saturday Reset | Week P&L: -0.13%
 ---
+
+## 2026-06-27 (weekly close) -- Weekly Report Sent
+
+Weekly summary email sent to jankla2010@gmail.com.
+Subject: Trading Bot -- Weekly Summary | 2026-06-27 | Week P&L: -0.13%
+Week stats: 1 trade executed (NVDA -$126.63), 1 skipped, 0 wins, 0% win rate.
+Alpha vs SPY: +1.46% (SPY -1.59%, portfolio -0.13%). Performance metrics and learned patterns updated.
+---
