@@ -266,3 +266,7 @@ Subject: Trading Bot -- Weekly Summary | 2026-06-27 | Week P&L: -0.13%
 Week stats: 1 trade executed (NVDA -$126.63), 1 skipped, 0 wins, 0% win rate.
 Alpha vs SPY: +1.46% (SPY -1.59%, portfolio -0.13%). Performance metrics and learned patterns updated.
 ---
+
+## 2026-06-29 08:30 ET
+Research complete. 13 tickers scanned. Top candidates: AMD(94), RIVN(82), AMZN(77). Market TRADE_OK=no, VIX=unconfirmed (Perplexity could not confirm VIX below 28; SPY near/below 5-day MA). Five tickers exceed entry threshold (>=70): AMD, RIVN, AMZN, NVDA(75), GOOGL(75). SMCI flagged bearish (36/100) on $7B dilution shock. No trades placed. Verify VIX and SPY 5-day MA at market open before any entries.
+---

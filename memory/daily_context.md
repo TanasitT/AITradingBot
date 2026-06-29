@@ -1,46 +1,47 @@
 # Daily Market Context
 
-Last updated: 2026-06-26
+Last updated: 2026-06-29 (pre-market)
 
 ---
 
 ## SPY
-- **Price:** ~$733–734
-- **Trend:** Bullish overall; short-term selling pressure near 5-day MA
-- **vs 5-day MA (~$739):** Slightly below — minor sell signal
-- **vs 20-day MA (~$674–688):** Above — buy signal
-- **vs 50-day MA:** Mixed (above EMA ~$663; below SMA ~$742)
-- **MACD:** Positive (4.26) — buy signal
-- **RSI:** 48.43 — Neutral
+- **Price:** ~$728.72 (pre-market); prior close $728.99
+- **Trend:** Near-flat; recovering from Friday's tech-led pullback (-0.72%); markets attempting to regain momentum
+- **vs 5-day MA:** Near or slightly below — minor sell signal; insufficient for confirmed above-5-day-MA entry criterion
+- **vs 50-day MA:** Likely above given 52-week avg of $678.40 and strong 2026 upward trend
+- **vs 200-day MA:** Above — long-term uptrend intact
+- **Overall:** Cautiously bullish; near-term indeterminate
 
 ## QQQ
-- **Trend:** Bullish, consistent with SPY
-- **Sector:** Tech-heavy; benefiting from AI/risk-on environment
+- **Trend:** Consistent with SPY; tech-heavy
+- **Note:** Nasdaq fell ~0.5% amid global tech sell-off; short-term pressure
 
 ## VIX
-- **Level:** Implied SPY volatility ~16.05% (IV rank 32.18%) — direct VIX not quoted
-- **Interpretation:** Low-to-moderate volatility; no immediate fear signal
-- **Status:** Below 28 threshold — VIX halt rule NOT triggered
+- **Level:** Not explicitly confirmed for June 29, 2026 (data gap in Perplexity sources)
+- **Status:** UNCONFIRMED — VIX < 28 threshold cannot be verified
+- **Note:** BofA expects Fed to hike rates 3x in 2026 (Sep/Oct/Dec under Chair Warsh) — rate risk on horizon
 
 ## Top Sector
-- **Technology** — leading rally on AI-driven growth, positive earnings expectations, risk-on sentiment
+- **Technology / Semiconductors** (tentative) — AI sentiment positive; Micron after-bell earnings as next AI test
+- **Peace deal tailwind:** US-Iran deal lowered oil prices; broad risk-on sentiment early Monday
 
 ## Macro Events (Next 48 Hours)
-- Possible PCE inflation data release
-- Jobless claims
-- No major scheduled Fed speakers noted
+- **Micron (MU) earnings** — after-bell; major AI sentiment test for semiconductors
+- **No Fed meeting or CPI release** confirmed in immediate 48-hour window
+- **Fed rate path:** 3 hikes projected for remainder of 2026 (Sep/Oct/Dec) — longer-term headwind
 
-## Fed Policy
-- Stance: Neutral to slightly dovish
-- Markets pricing stable monetary environment (no imminent hikes)
+## Catalyst Notes
+- US-Iran peace deal boosting risk-on sentiment Monday pre-market
+- AI chip demand remains strong (China H200 orders for NVDA; AMZN AWS 28% growth)
+- SMCI dilution shock (-8.49%) is sector-specific, not broad market
 
 ## Overall Sentiment
-- **Risk-On / Cautiously Bullish**
-- SPY above key medium/long-term MAs; MACD positive; low implied volatility
-- Short-term divergence in technicals adds caution
+- **Neutral to Cautiously Bullish**
+- SPY near flat; Nasdaq under mild pressure; AI names mixed
+- Peace deal provides a short-term positive macro catalyst
 
 ---
 
 ## TRADE_OK: no
 
-**Reason:** Conflicting technical signals (Strong Buy vs Strong Sell divergence across data sources) and short-term selling pressure near the 5-day MA introduce moderate risk. VIX is acceptable (<28) and sentiment is broadly risk-on, but directional clarity is insufficient for new swing entries today. Wait for clearer 5-day MA reclaim or bullish confirmation candle.
+**Reason:** VIX level unconfirmed — cannot verify below 28 threshold (strategy hard rule). SPY is near/slightly below 5-day MA — entry criterion "SPY above 5-day MA" not met. Both conditions must be verified at market open before any trades are placed. Re-run context check after 9:35 AM ET open.
