@@ -309,3 +309,7 @@ No trade placed on 2026-06-30 (market open session). Reason: SPY below 5-day mov
 ## 2026-06-30 09:35 ET — Market Open Routine (Scheduled Task)
 No trade placed. Market open routine ran all checks: daily_loss_halt=false ✅, trades_this_week=0/3 ✅. Research candidates: AMD 77/100, TSLA 71/100 — both above 70 threshold. No open positions held. Market context check (Step 8) failed: SPY ~$729 is ~$10 below 5-day MA ~$739-$740. TRADE_OK=no. VIX=17.56 (below 28 ✅) but SPY criterion not met — both must be true per strategy. No order submitted to Alpaca paper account. AMD and TSLA remain pre-staged for entry if SPY reclaims its 5-day MA.
 ---
+
+## 2026-06-30 09:30 ET — Intraday Monitor
+Intraday monitor check at ~9:30 ET on 2026-06-30. No open positions (confirmed via Alpaca API). Daily P&L: $0.00 (0.000%) — well within the -2% halt threshold. daily_loss_halt remains false. No stop-loss, take-profit, or exit actions were required. trades_this_week: 0 of 3. Account equity: $99,873.35. No action taken.
+---
