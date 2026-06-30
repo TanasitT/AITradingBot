@@ -18,4 +18,8 @@ Steps (execute in order):
 8. Call /journal with: "Research complete. [N] tickers scanned. Top candidates: [ticker(score), ...]. Market TRADE_OK=[yes/no], VIX=[X]."
 9. Commit and push memory/ to GitHub with message: `auto: research update | [N] tickers | [date] [time] ET`
 
-Only research stocks (equities). Do not score ETFs for trading — they can be used for market context only.
+For regular stocks: score each on news, analyst sentiment, volume, technicals, sector momentum. End with SCORE: [X]/100.
+
+For SH (inverse ETF): score it differently — higher score when SPY is falling, VIX is rising, and bearish momentum is confirmed. Ask Perplexity: "Is the S&P 500 in a confirmed short-term downtrend based on the last 5 days?" If yes, SH scores higher. End with SCORE: [X]/100. Minimum threshold for SH is 60 (not 70).
+
+Do not score leveraged inverse ETFs (SQQQ, SPXS, etc.) — SH only.

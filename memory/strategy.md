@@ -28,6 +28,15 @@ live_trading: false
 - Daily trade count < 3
 - Daily portfolio loss < 2%
 
+## Inverse ETF Entry Criteria (bearish market — replaces SPY rule above)
+When SPY is BELOW its 5-day moving average, regular stock entries are blocked.
+Instead, evaluate SH (inverse SPY ETF):
+- SH entry allowed when: SPY below 5-day MA AND VIX < 28 AND SH score >= 60/100
+- Max position size for SH: 3% of portfolio (lower than the 5% stock limit)
+- Stop-loss for SH: 5% below entry
+- Exit SH immediately when SPY reclaims its 5-day moving average
+- Do NOT hold SH overnight if SPY is recovering (showing consecutive green candles)
+
 ## Exit Criteria
 - Stop-loss: 5% below entry (7% for high-beta stocks with beta > 1.5)
 - Take-profit tier 1: sell 33% at +8%

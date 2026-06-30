@@ -30,7 +30,17 @@ Calculate max_position_dollars = equity × 0.05 (5% hard rule — never exceed t
 
 STEP 8 — Confirm market context
 Read memory/daily_context.md.
-Confirm: SPY above 5-day MA, VIX < 28. If not: log reason, call /journal, stop.
+
+If SPY is ABOVE 5-day MA and VIX < 28:
+  - Proceed with regular stock candidates (score >= 70). Skip SH.
+
+If SPY is BELOW 5-day MA and VIX < 28:
+  - Block all regular stock entries.
+  - Check if SH is in the research_cache.md with score >= 60.
+  - If yes: proceed with SH only. Max position = equity × 0.03 (3% rule for inverse ETFs).
+  - If no: log "SPY below MA, SH not scored or below threshold. No trades today.", call /journal, stop.
+
+If VIX >= 28: log reason, call /journal, stop regardless of SPY direction.
 
 STEP 9 — Evaluate each candidate
 For each candidate (highest score first):
@@ -56,3 +66,6 @@ Call /journal with full decision: ticker, score, thesis, entry price, stop price
 Commit and push memory/ to GitHub with message: `auto: BUY [TICKER] [N]sh @ $[PRICE] | score:[X] | [date] ET`
 
 After placing one trade: re-check weekly_trade_counter.md. If trades_this_week >= 3, stop evaluating further candidates for today.
+
+SPECIAL EXIT RULE FOR SH:
+During intraday monitor, if SH is held and SPY has reclaimed its 5-day moving average (current SPY price > 5-day MA), close SH immediately via market sell order regardless of current P&L. Log reason: "SPY reclaimed 5-day MA — inverse ETF thesis resolved."

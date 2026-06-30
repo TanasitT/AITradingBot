@@ -13,3 +13,11 @@
 - Take-profit tier 2: +15% (sell 33%)
 - Take-profit tier 3: +25% (sell 34%)
 - Trailing stop after tier 1: 3% from intraday high
+
+## Inverse ETF Rules
+- Allowed tickers: SH only (1x inverse SPY — no leveraged inverse ETFs)
+- Max position size: 3% of portfolio (vs 5% for stocks)
+- Entry condition: SPY below 5-day MA (this REPLACES the SPY-above-MA requirement)
+- Min score to enter: 60/100 (vs 70 for stocks — inverse ETFs score differently)
+- Exit trigger: SPY reclaims 5-day MA → close SH immediately regardless of P&L
+- Do not hold SH and a long stock position at the same time

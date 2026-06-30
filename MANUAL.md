@@ -1,0 +1,214 @@
+# AITradingBot — User Manual
+
+A plain-English guide to how the bot works, what it does, and all the rules it follows.
+
+---
+
+## What This Bot Does
+
+The bot monitors the US stock market every day and automatically:
+1. Researches stocks using AI (Perplexity)
+2. Decides whether to buy based on a strict set of rules
+3. Monitors open positions every hour and exits when targets are hit
+4. Sends you an end-of-day email report
+5. Keeps a journal of every decision it makes
+
+All trading happens on **Alpaca** (currently paper trading — fake money, no real risk).
+
+---
+
+## Key Terms Explained
+
+| Term | What It Means |
+|---|---|
+| **SPY** | An ETF that tracks the 500 biggest US companies. It goes up when the overall market goes up. Used as the market's health indicator. |
+| **VIX** | The "Fear Gauge." Measures how nervous investors are. Low VIX (< 20) = calm market. High VIX (> 28) = fearful, choppy market — bot avoids trading. |
+| **5-day MA** | Moving Average — the average price of SPY over the last 5 trading days. If today's SPY price is above this average, the market is in an uptrend. |
+| **Volume** | How many shares of a stock are traded today vs the normal daily amount. High volume = big investors are active in that stock. |
+| **Stop-loss** | A safety net price. If the stock falls this far below your buy price, the bot sells automatically to cut the loss. |
+| **Take-profit** | A target price. When the stock rises this much, the bot sells a portion to lock in gains. |
+| **Paper trading** | Trading with fake money to test the strategy. Works exactly like real trading but no real money at risk. |
+| **ETF** | Exchange Traded Fund — a basket of stocks you can buy as a single share. SPY holds all 500 S&P 500 stocks. |
+| **Inverse ETF** | An ETF that moves opposite to the market. When SPY goes down 1%, SH goes up 1%. Used to profit during market downturns. |
+| **Research score** | A score from 0–100 the bot assigns each stock after analyzing news, analyst opinions, volume, and technical charts. |
+| **Portfolio** | Your total account value — cash + value of stocks currently held. |
+| **Equity** | Another word for your total portfolio value (cash + investments). |
+| **Alpha** | How much better (or worse) you did vs SPY. +1% alpha means you beat the market by 1% that day. |
+
+---
+
+## Daily Schedule (Bangkok Time / ICT)
+
+| Time | What Happens |
+|---|---|
+| **7:33 PM** (Mon–Fri) | Pre-market research — bot scans all watchlist stocks, scores them 0–100 |
+| **8:37 PM** (Mon–Fri) | Market open — bot reviews scores and places trades if conditions are met |
+| **8:30 PM, 9:30 PM, 10:30 PM, 11:30 PM** (Mon–Fri) | Intraday monitor — checks if stop-loss or take-profit targets are hit |
+| **2:47 AM** (Tue–Sat) | End of day — reviews overnight thesis, closes weak positions, sends email report |
+| **4:23 AM** (Saturdays) | Weekly summary — full week performance review, email sent |
+
+---
+
+## The 5 Rules Before Any Trade
+
+All 5 must be true at the same time. If any one fails, no trade is placed.
+
+### Rule 1 — Research Score ≥ 70/100
+The bot asks Perplexity AI to analyze each stock across 6 dimensions:
+- Recent news and catalysts (last 48 hours)
+- Analyst upgrades/downgrades and price targets
+- Volume vs 30-day average
+- Price vs 50-day and 200-day moving averages
+- RSI (momentum indicator)
+- Sector momentum
+
+A score below 70 means the signal is too weak to risk money.
+
+### Rule 2 — Volume ≥ 2x Normal
+The stock must be trading at least twice its normal daily volume. This confirms that big institutional investors are active — not just retail noise.
+
+### Rule 3 — SPY Above Its 5-Day Average
+The overall market must be in an uptrend. If the whole market is falling, even good stocks tend to fall with it. The bot waits for market health before entering.
+
+**Exception:** When SPY is BELOW the 5-day average, the bot switches to evaluating SH (inverse ETF) instead of regular stocks.
+
+### Rule 4 — VIX Below 28
+Fear must be low enough to trade. When VIX is above 28, markets are volatile and unpredictable — stops get hit randomly, even correct trades lose money. The bot sits in cash.
+
+### Rule 5 — No Existing Halt
+- Daily portfolio loss must be below 2%
+- Daily trade count must be below 3
+
+---
+
+## Position Sizing
+
+The bot never risks more than **5% of total portfolio per trade**.
+
+| Portfolio Value | Max Per Trade |
+|---|---|
+| $100,000 | $5,000 |
+| $50,000 | $2,500 |
+| $10,000 | $500 |
+
+For SH (inverse ETF): max is **3% of portfolio** — smaller because inverse ETFs can reverse quickly.
+
+---
+
+## Exit Rules
+
+### Stop-Loss (cut losses)
+| Stock Type | Stop-Loss Level |
+|---|---|
+| Regular stocks | 5% below entry price |
+| High-beta stocks (volatile, beta > 1.5) | 7% below entry price |
+| SH (inverse ETF) | 5% below entry price |
+
+### Take-Profit (lock in gains — sold in 3 stages)
+| Level | Gain | Action |
+|---|---|---|
+| Tier 1 | +8% | Sell 33% of position |
+| Tier 2 | +15% | Sell another 33% |
+| Tier 3 | +25% | Sell final 34% |
+
+### Force-Close Triggers (sell immediately regardless of P&L)
+- Perplexity AI detects a major negative news reversal for the stock
+- VIX spikes above 30 during the day
+- End of day and no strong reason to hold overnight (confirmed by Perplexity)
+- SPY reclaims its 5-day MA while holding SH (inverse ETF thesis is resolved)
+
+---
+
+## Inverse ETF Mode (SH)
+
+When the market is in a short-term pullback (SPY below 5-day MA), the bot switches into inverse ETF mode:
+
+- **What it buys:** SH — a fund that goes up when SPY goes down
+- **Entry threshold:** Score ≥ 60 (lower than the 70 required for stocks)
+- **Position size:** 3% of portfolio max (vs 5% for stocks)
+- **Exit trigger:** As soon as SPY recovers above its 5-day MA, SH is sold — the thesis is gone
+- **Why only SH:** SH is 1x (not leveraged). Leveraged inverse ETFs (SQQQ, SPXS) are too risky
+
+---
+
+## Hard Rules (Cannot Be Changed Without Code)
+
+These are enforced in the code — they cannot be overridden by editing memory files:
+
+| Rule | Value |
+|---|---|
+| Max position size | 5% of portfolio (3% for SH) |
+| Daily loss halt | -2% triggers full stop for the day |
+| Max trades per day | 3 |
+| No options | Only stocks and approved ETFs |
+| Paper trading | Until `live_trading: true` is set in strategy.md |
+
+---
+
+## Memory Files (The Bot's Brain)
+
+All state is stored as text files in the `memory/` folder. You can read and edit these directly.
+
+| File | What It Contains |
+|---|---|
+| `strategy.md` | Master rules — the bot reads this first every single run |
+| `watchlist.md` | Stocks the bot monitors + inverse ETFs |
+| `research_cache.md` | Latest scores for each stock (refreshed daily) |
+| `daily_context.md` | Today's SPY trend, VIX level, sector leaders |
+| `open_positions.md` | All currently held positions with entry, stop, and targets |
+| `trade_log.md` | Complete history of every trade ever made |
+| `portfolio_state.md` | Current cash, equity, and daily P&L |
+| `weekly_trade_counter.md` | Trades placed today + halt flags |
+| `benchmark_tracking.md` | Daily portfolio vs SPY performance comparison |
+| `performance_metrics.md` | Overall win rate, profit factor, all-time stats |
+| `learned_patterns.md` | Weekly reflections on what worked and what didn't |
+| `reasoning.md` | Append-only journal of every bot decision |
+| `risk_rules.md` | Numerical thresholds (editable to tune the bot) |
+| `news_events.md` | Upcoming earnings, Fed meetings, economic calendar |
+| `pending_orders.md` | Orders placed but awaiting fill |
+
+---
+
+## Tuning the Bot (Without Code)
+
+Edit `memory/risk_rules.md` to adjust thresholds. Changes take effect on the next routine run.
+
+Common adjustments:
+- Raise `Min research score` from 70 to 80 → fewer but higher-conviction trades
+- Lower `Max VIX` from 28 to 22 → only trade in very calm markets
+- Change `SPY must be above N-day MA` from 5 to 10 → require a longer confirmed uptrend
+
+Do NOT edit `memory/strategy.md` hard rules unless you fully understand the consequences.
+
+---
+
+## How to Switch to Live Trading
+
+When you are ready to trade real money:
+
+1. Open `memory/strategy.md`
+2. Change `live_trading: false` to `live_trading: true`
+3. Make sure your `.env` file has your **live** Alpaca API keys (not paper keys)
+4. The bot will automatically use the live account on the next run
+
+**Recommended:** Only do this after at least 4 weeks of paper trading with consistent positive results.
+
+---
+
+## Email Reports
+
+The bot sends emails to `jankla2010@gmail.com` for:
+- End-of-day summary (daily P&L, trades, open positions, vs SPY)
+- Trade alerts (when a buy or sell is executed)
+- Halt alerts (when the -2% daily loss cap is triggered)
+- Weekly summary (every Saturday — full week performance)
+
+---
+
+## Current Status
+
+- **Mode:** Paper trading (fake money)
+- **Starting balance:** $100,000
+- **Trades made:** 1 (NVDA, closed at -$126.63)
+- **Current equity:** ~$99,873
+- **Inverse ETF:** SH added to watchlist — will activate when SPY is below 5-day MA
