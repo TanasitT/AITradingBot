@@ -61,3 +61,42 @@
 3. Formalize overnight confidence threshold: Perplexity confidence < 70 = mandatory EOD close
 4. Add valuation risk modifier: flag reduces research score by 7 points
 5. Confirm SPY MA calculation uses close prices, not intraday
+
+---
+
+## Weekly Reflection — Week of 2026-06-30 (Final, logged 2026-07-04)
+
+### Week Stats
+- Trades executed: 0 | Skipped: unknown (no entries logged) | Wins: 0 | Losses: 0
+- Win rate: N/A | Net P&L: $0.00 | Avg loss: N/A
+- Portfolio: $99,873.35 (unchanged from prior week close)
+- SPY performance this week: +0.41% (Jun 30 $741.03 → Jul 4 $744.07)
+- Alpha vs SPY: -0.41% (flat portfolio vs SPY gaining; underperformed by sitting out)
+- Cumulative alpha since inception: +1.05% (portfolio -0.13% vs SPY +0.92% net from baseline)
+
+### Signals That Worked
+- **Zero trades = zero losses**: No entries triggered this week, meaning no capital was put at risk during a mild SPY rally (+0.41%). Entry criteria held — no logs show a qualifying setup was missed.
+- **Holiday week reduced opportunity**: July 4th (Friday) was a market holiday. 4-day trading week with no high-volume breakout candidates appearing in prior daily logs.
+
+### Signals That Failed
+- **No trades means no alpha capture**: SPY gained +0.41% this week. A flat portfolio produced -0.41% weekly alpha — the cost of a slow/no-signal week in a rising market. This is expected behavior but worth tracking.
+- **Trade log gap for this week**: No trade log entries exist for 2026-06-30 through 2026-07-04. It is unknown how many skip decisions were made (if any) due to entry criteria failures. This is a logging gap — skip decisions should be recorded in the trade log, not just executed trades.
+
+### VIX Conditions
+- VIX data not available for this week in trade log (same ongoing gap from Week 1).
+- SPY was above its 5-day MA for most of this period (SPY range $741–$747), suggesting no inverse ETF (SH) conditions were triggered.
+- The mild +0.41% SPY gain suggests VIX was likely subdued (estimated 14–18 range), meaning entry criteria could have been met if a qualifying candidate appeared.
+
+### Emerging Patterns (Week 2 of 2 — still very low sample)
+- **Two consecutive no-trade or low-trade weeks**: Week 1 had 1 trade (loss), Week 2 had 0 trades. The bot is trading at very low frequency relative to its 3/day limit. Either the signal quality bar is appropriately high, or the watchlist lacks enough qualifying candidates on any given day.
+- **Flat portfolio in rising market = negative alpha drag**: When SPY trends up and bot holds cash, alpha goes negative. This is the hidden cost of conservative filters. Over a bull run, the opportunity cost compounds.
+- **Volume filter (2x 30-day avg) appears to be the primary gatekeeper**: From Week 1 data, even high-scoring tickers (NVDA 78, META 85, PLTR 78) failed to hit 2x volume on the skip day. If the volume threshold is rarely met, the bot will rarely trade. Consider whether 1.5x is more appropriate as a threshold.
+
+### Open Action Items (carry forward to Week 3)
+1. *(Unresolved from Week 1)* Add VIX at entry to trade log template
+2. *(Unresolved from Week 1)* Add intraday volume multiple at time of entry to trade log
+3. *(Unresolved from Week 1)* Formalize overnight confidence threshold: Perplexity confidence < 70 = mandatory EOD close
+4. *(Unresolved from Week 1)* Add valuation risk modifier: flag reduces research score by 7 points
+5. **New**: Log skip decisions in trade_log.md (not just executed trades) — record date, reason for skip, top candidate scores/volume at time of skip
+6. **New**: Evaluate whether 2x volume threshold is too restrictive — backtest 1.5x threshold against Week 1 candidates (PLTR 1.28x, NVDA 1.12x, META 1.09x would still not qualify at 1.5x, but worth reviewing over broader history)
+7. **New**: Track weekly alpha running total — currently -0.41% week 2; need 5+ weeks to determine if filters add net value vs. SPY buy-and-hold

@@ -1,6 +1,6 @@
 # Performance Metrics
 
-Last updated: 2026-06-27 (weekly close)
+Last updated: 2026-07-04 (weekly close)
 
 ## All-Time Stats
 - Total trades: 1
@@ -12,7 +12,7 @@ Last updated: 2026-06-27 (weekly close)
 - Largest single gain: N/A
 - Largest single loss: -$126.63 (NVDA, 2026-06-22)
 
-## This Week (2026-06-30 to 2026-07-04) — upcoming
+## This Week (2026-07-07 to 2026-07-11) — upcoming
 - Trades: 0
 - Wins: 0
 - Losses: 0
@@ -24,6 +24,7 @@ Last updated: 2026-06-27 (weekly close)
 | Week Start | Trades | Wins | Win Rate | P&L | Notes |
 |---|---|---|---|---|---|
 | 2026-06-22 | 1 | 0 | 0% | -$126.63 | Inaugural week; 1 skip (SPY below 5-day MA) |
+| 2026-06-30 | 0 | 0 | N/A | $0.00 | No trades; holiday-shortened week (Jul 4); SPY +0.41%; weekly alpha -0.41% |
 
 ## By Signal Type
 | Signal | Trades | Win Rate | Avg P&L |
