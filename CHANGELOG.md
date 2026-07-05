@@ -4,6 +4,26 @@ All notable changes to AITradingBot are documented here.
 
 ---
 
+## [0.5.0] — 2026-07-05
+
+### Changed
+- **Restructured project to follow Claude Code best practices**
+  - `.claude/commands/` renamed to `.claude/skills/` — all 5 skill files moved
+  - `agents/` (Python modules) renamed to `engine/` to eliminate naming conflict with Claude Code's
+    agent convention (`agents` now means `.claude/agents/*.md` sub-agent definitions)
+  - All imports updated: `main.py`, `engine/coordinator.py`
+
+### Added
+- **`.claude/agents/` sub-agent definitions** — four `.md` files with YAML frontmatter:
+  - `researcher.md` — Perplexity AI research agent
+  - `trader.md` — Alpaca order placement agent
+  - `monitor.md` — intraday position monitor agent
+  - `reporter.md` — EOD/weekly email report agent
+- **Trimmed `CLAUDE.md`** — removed redundant file tree, current status, tutorial sections;
+  kept only hard rules, config constants, schedule, and what-NOT-to-do safeguards
+
+---
+
 ## [Unreleased] — Active Development
 
 ---
