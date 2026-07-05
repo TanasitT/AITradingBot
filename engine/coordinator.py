@@ -2,12 +2,12 @@ import re
 import logging
 from utils import memory, github_sync
 from utils.alpaca_client import get_account, get_positions
-from agents import research as research_agent
-from agents import technical as technical_agent
-from agents.risk_manager import RiskManager
-from agents import execution as execution_agent
-from agents import monitor as monitor_agent
-from agents import reporter as reporter_agent
+from engine import research as research_agent
+from engine import technical as technical_agent
+from engine.risk_manager import RiskManager
+from engine import execution as execution_agent
+from engine import monitor as monitor_agent
+from engine import reporter as reporter_agent
 
 log = logging.getLogger(__name__)
 
@@ -149,6 +149,6 @@ def run_weekly_summary():
 
 
 def run_benchmark():
-    from agents import benchmark as benchmark_agent
+    from engine import benchmark as benchmark_agent
     github_sync.pull()
     benchmark_agent.run()
