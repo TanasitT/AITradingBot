@@ -19,8 +19,10 @@ def analyze(symbol):
         avg_volume_30d = statistics.mean(volumes[-30:]) if len(volumes) >= 30 else statistics.mean(volumes)
 
         snapshot = get_snapshot(symbol)
-        todays_volume = snapshot.get("dailyBar", {}).get("v", 0)
-        volume_ratio = todays_volume / avg_volume_30d if avg_volume_30d else 0
+        # Use prevDailyBar (yesterday's completed bar) — dailyBar is today's partial
+        # accumulation which reads near-zero at market open vs a full-day 30d average.
+        prev_volume = snapshot.get("prevDailyBar", {}).get("v", 0)
+        volume_ratio = prev_volume / avg_volume_30d if avg_volume_30d else 0
 
         ma50 = statistics.mean(closes[-50:]) if len(closes) >= 50 else None
         ma200 = statistics.mean(closes[-200:]) if len(closes) >= 200 else None
