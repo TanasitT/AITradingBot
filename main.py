@@ -1,4 +1,5 @@
 import logging
+import os
 import schedule
 import time
 from datetime import datetime
@@ -35,6 +36,18 @@ def run_if_weekday(fn):
     return wrapper
 
 
+def check_trade_trigger():
+    trigger_path = os.path.join("memory", "trade_trigger.md")
+    if os.path.exists(trigger_path):
+        try:
+            with open(trigger_path, encoding="utf-8") as f:
+                if "status: pending" in f.read():
+                    coordinator.run_from_trigger()
+        except Exception as e:
+            log.warning(f"[Trigger] Failed to read trade_trigger.md: {e}")
+
+
+schedule.every(30).seconds.do(check_trade_trigger)
 schedule.every().day.at("08:33").do(run_if_weekday(coordinator.run_pre_market))
 schedule.every().day.at("09:37").do(run_if_weekday(coordinator.run_market_open))
 schedule.every(15).minutes.do(run_if_weekday(coordinator.run_intraday))

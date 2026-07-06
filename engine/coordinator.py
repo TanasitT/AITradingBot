@@ -148,6 +148,33 @@ def run_weekly_summary():
     reporter_agent.run_weekly()
 
 
+def run_from_trigger():
+    """Called by main.py when memory/trade_trigger.md has status: pending."""
+    trigger = memory.read("trade_trigger.md")
+    if "status: pending" not in trigger:
+        return
+    log.info("[Coordinator] Trade trigger detected — executing")
+    memory.write(
+        "trade_trigger.md",
+        trigger.replace("status: pending", "status: executing", 1)
+    )
+    try:
+        run_market_open()
+        final = memory.read("trade_trigger.md")
+        memory.write(
+            "trade_trigger.md",
+            final.replace("status: executing", "status: done", 1)
+        )
+        log.info("[Coordinator] Trade trigger completed")
+    except Exception as e:
+        log.error(f"[Coordinator] Trade trigger error: {e}")
+        final = memory.read("trade_trigger.md")
+        memory.write(
+            "trade_trigger.md",
+            final.replace("status: executing", f"status: error\nerror: {e}", 1)
+        )
+
+
 def run_benchmark():
     from engine import benchmark as benchmark_agent
     github_sync.pull()
