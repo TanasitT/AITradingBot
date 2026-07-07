@@ -22,17 +22,40 @@ def _is_live():
     return m and m.group(1).lower() == "true"
 
 
+BENCHMARKS = {"SPY", "QQQ", "SH"}  # excluded from alpha trades; SH handled separately
+
 def _parse_research_cache():
     content = memory.read("research_cache.md")
     candidates = []
-    for block in re.split(r"\n## ", content):
-        m = re.match(r"([A-Z]+)\s*\|\s*Score:\s*(\d+)/100", block)
-        if m:
-            symbol = m.group(1)
-            score = int(m.group(2))
-            thesis_m = re.search(r"Catalyst:\s*(.+)", block)
-            thesis = thesis_m.group(1).strip() if thesis_m else "See research cache"
-            candidates.append((symbol, score, thesis))
+    seen = set()
+
+    # Format A: table rows  | TICKER | 82/100 | ...
+    for m in re.finditer(r"\|\s*([A-Z]{2,5})\s*\|\s*(\d+)/100\b", content):
+        symbol = m.group(1).strip()
+        score = int(m.group(2))
+        if symbol in seen or symbol in BENCHMARKS:
+            continue
+        seen.add(symbol)
+        row_m = re.search(
+            rf"\|\s*{re.escape(symbol)}\s*\|[^|]*\|[^|]*\|[^|]*\|\s*([^|]+?)\s*\|", content
+        )
+        thesis = row_m.group(1).strip() if row_m else "See research cache"
+        candidates.append((symbol, score, thesis))
+
+    # Format B: ## TICKER | Score: 82/100 section headers
+    if not candidates:
+        for block in re.split(r"\n## ", content):
+            m = re.match(r"([A-Z]{2,5})\s*\|\s*Score:\s*(\d+)/100", block)
+            if m:
+                symbol = m.group(1)
+                score = int(m.group(2))
+                if symbol in seen or symbol in BENCHMARKS:
+                    continue
+                seen.add(symbol)
+                thesis_m = re.search(r"Catalyst:\s*(.+)", block)
+                thesis = thesis_m.group(1).strip() if thesis_m else "See research cache"
+                candidates.append((symbol, score, thesis))
+
     return sorted(candidates, key=lambda x: x[1], reverse=True)
 
 
