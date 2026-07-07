@@ -500,3 +500,7 @@ Intraday monitor (9:30 PM ET / scheduled 930 routine). weekly_trade_counter.md: 
 ## [2026-07-07 22:30 ET] — Intraday Monitor
 Intraday monitor (10:30 PM ET / scheduled 1030 routine). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — clear. open_positions.md: none — portfolio remains flat/cash-only since NVDA closed EOD 2026-06-22, so no stop-loss, take-profit, or SH inverse ETF exit checks applied. No portfolio P&L halt check performed since there are no open positions to evaluate against the -2% cap. No exits, no trades, no alerts sent. All clear.
 ---
+
+## [2026-07-07 22:37 ET] — Market-Open (duplicate detection, 3rd occurrence)
+Scheduled market-open run invoked again. Checked trade_trigger.md: already status: done, requested_at 20:37 ET, same candidate set (NVDA 82, META 80, MSFT 78, PLTR 75, TSLA 73, AMZN 70). trade_log.md and open_positions.md confirm no trade was actually placed by the executor this morning (0 trades logged, no open positions) — likely failed volume/technical validation on the executor side. weekly_trade_counter.md still 0/3, no halt. No new trigger written this invocation to avoid clobbering executor state. Recommend checking the scheduled-task config for routine "2--trading-bot-market-open" — it appears to be firing multiple times per day.
+---
