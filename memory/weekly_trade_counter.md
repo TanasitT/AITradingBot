@@ -14,6 +14,9 @@ halt_date:
 daily_loss_halt reset to false by EOD Saturday routine.
 trades_this_week reset to 0 for new week (2026-07-07).
 
+## EOD Reset — 2026-07-07 (Tuesday EOD)
+daily_loss_halt confirmed/reset to false. trades_this_week confirmed/reset to 0 (was already 0 — no trades placed this week).
+
 ## Trade History This Week
 | Date | Ticker | Shares | Entry | Order ID |
 |---|---|---|---|---|
