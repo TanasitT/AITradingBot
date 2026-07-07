@@ -451,6 +451,26 @@ Intraday monitor (11:30 PM ICT scheduled run). weekly_trade_counter.md: daily_lo
 Intraday monitor (11:30 PM ICT scheduled run). strategy.md and weekly_trade_counter.md reviewed — daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07). open_positions.md: none, portfolio flat/cash-only since NVDA closed EOD 2026-06-22. No stop-loss, take-profit, or SH inverse ETF exit checks required since no positions are held. No P&L halt check performed — no open positions to evaluate against the -2% cap. No exits, no trades, no alerts. All clear.
 ---
 
+## [2026-07-07 EOD ET]
+EOD routine executed. No open positions (open_positions.md confirmed empty; last position NVDA closed EOD 2026-06-22) — no overnight thesis checks or SH exit logic required. Alpaca GET /v2/account confirmed: equity $99,873.35, cash $99,873.35, buying_power $399,493.40, 0 positions, status ACTIVE. portfolio_state.md updated.
+---
+
+## [2026-07-07 EOD ET] — Benchmark Logged
+Benchmark logged. Portfolio: $99,873.35 (0.00%) | SPY: $751.63 (+1.02%) | Alpha: -1.02%. SPY price used latest available Alpaca bar (2026-07-06 late trade print); no new trade this session so portfolio held flat while SPY continued to rally.
+---
+
+## [2026-07-07 EOD ET] — EOD Report Sent
+EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — EOD Summary 2026-07-07 | P&L: $0.00 (0.00%)
+---
+
+## [2026-07-07 EOD ET] — Weekly Counter Reset
+daily_loss_halt reset to false and trades_this_week reset to 0 in weekly_trade_counter.md as part of EOD routine (no halt was active; reset is routine housekeeping).
+---
+
 ## [2026-07-07 20:37 ET]
 Market-open run. No halt, trades_this_week=0/3 — proceeded to /trade. research_cache.md candidates >=70: PLTR (77), TSLA (75), AMD (71); SPY (80) excluded as market benchmark, not a tradeable alpha candidate. daily_context.md: SPY 744.78 above 5-day MA 742.96, VIX 15.81 — TRADE_OK, regular stock entries permitted (no SH needed). No trade was placed: the live Alpaca API verification/order-placement step could not be executed this run — the automation environment's security classifier blocked running the execution script after a (stale/inaccurate) credential-leakage flag from an earlier agent pass, even though the script only read credentials from .env via the existing utils/alpaca_client.py, no keys were hardcoded. The stray script was deleted; no memory files were altered beyond this log. Recommend the user review Bash execution permissions for this project so future market-open runs can complete steps 6-10 (live position/account check, volume confirmation, order placement).
+---
+
+## [2026-07-07 20:57 ET]
+Pre-market research complete. 16 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ, SH). Top 3 candidates: NVDA (82) — Kyber delay denied, Goldman calls 21.7x fwd P/E "compelling", 38-analyst Strong Buy; META (80) — +9% on cloud pivot, Wells Fargo $767 target, earnings July 29; MSFT (78) — Azure leads 55% of CIO surveys, +4% on enterprise AI deal. Also passing threshold: PLTR (75), TSLA (73), AMZN (70 borderline). SMCI (18) flagged AVOID — escalating Taiwan export-violation criminal probe. Market: TRADE_OK=yes, SPY ~750 above 5-day MA ~743, VIX ~15.81 (well below 28 cap) — SH inverse not triggered. Scores written to research_cache.md, context to daily_context.md.
 ---
