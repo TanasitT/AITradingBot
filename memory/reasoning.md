@@ -564,3 +564,19 @@ Research complete. 16 tickers scanned (watchlist + SH). Top candidates: META(80)
 ## [2026-07-09 11:30 ET] — Intraday Monitor
 Intraday monitor (11:30 ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — clear to proceed. open_positions.md: none — portfolio remains flat/cash-only since NVDA closed EOD 2026-06-22, so no stop-loss, take-profit, or SH inverse ETF exit checks were required. Alpaca GET /v2/account confirmed: equity $99,873.35 = last_equity $99,873.35 — daily P&L $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits, no trades, no alerts sent. All clear.
 ---
+
+## [2026-07-09 EOD ET]
+EOD routine executed (scheduled Friday EOD closing Thursday's session). open_positions.md confirmed empty — no SH held, no regular stock positions held, so no overnight thesis checks with Perplexity or force-close logic were required. Alpaca GET /v2/account confirmed: equity $99,873.35, cash $99,873.35, buying_power $399,493.40, 0 positions, status ACTIVE. Daily P&L $0.00 (equity == last_equity). portfolio_state.md updated.
+---
+
+## [2026-07-09 EOD ET] — Benchmark Logged
+Benchmark logged. Portfolio: $99,873.35 (0.00%) | SPY: $751.55 (+0.84%) | Alpha: -0.84%. Portfolio held flat (no positions) while SPY continued its rally on the H200 chip export catalyst noted in this morning's research — today's negative alpha reflects opportunity cost of sitting in cash during an up day, not a losing trade.
+---
+
+## [2026-07-09 EOD ET] — EOD Report Sent
+EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — EOD Summary 2026-07-09 | P&L: $0.00 (0.00%)
+---
+
+## [2026-07-09 EOD ET] — Weekly Counter Reset
+daily_loss_halt reset to false (was already false) and trades_this_week reset to 0 (was already 0) in weekly_trade_counter.md as part of EOD routine — routine housekeeping, no halt was active and no trades were placed this week.
+---
