@@ -283,7 +283,7 @@ EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — Weekly Summary
 ---
 
 ## 2026-06-27 01:12 ET
-Benchmark logged. Portfolio: $99,873.35 (0.00%) | SPY: $732.14 (+0.06%) | Alpha: -0.06% (Saturday � markets closed, SPY reflects Friday close)
+Benchmark logged. Portfolio: $99,873.35 (0.00%) | SPY: $732.14 (+0.06%) | Alpha: -0.06% (Saturday — markets closed, SPY reflects Friday close)
 ---
 
 ## 2026-06-27 11:30 ET — Intraday Monitor
@@ -434,7 +434,7 @@ Benchmark logged. Portfolio: $99,873.35 (0.00%) | SPY: $744.07 (+0.13%) | Alpha:
 ---
 
 ## [2026-07-03 23:27 ET]
-EOD report sent to jankla2010@gmail.com. Subject: Trading Bot � Weekly Summary | 2026-07-04 | Week P&L: 0.00%
+EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — Weekly Summary | 2026-07-04 | Week P&L: 0.00%
 ---
 
 ## 2026-07-04 10:04 ET
@@ -593,6 +593,26 @@ Intraday monitor (9:30 ET scheduled run). weekly_trade_counter.md: daily_loss_ha
 Market-open routine invoked. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, no trade-limit block. However, research_cache.md and daily_context.md are both still dated 2026-07-09 (last research run completed 2026-07-09 15:51 ET) — the pre-market-research routine has not yet produced fresh data for today's session. Candidates on file (META 80, NVDA 75, MSFT 74, AMD 73, TSLA 71, AMZN 70) and context (SPY $745.40 above 5-day MA $742.96, VIX 16.90, TRADE_OK=yes) are all one trading day old. Consistent with the precedent set on 2026-07-06 and 2026-07-09 runs, no trade_trigger.md was written this invocation to avoid trading on stale data. open_positions.md confirmed empty (no existing positions to reconcile). Recommend the pre-market-research routine run before the next market-open attempt.
 ---
 
+## [2026-07-11 10:30 ET] — Intraday Monitor
+Intraday monitor (10:30 ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — clear to proceed. open_positions.md: none — portfolio remains flat/cash-only since NVDA closed EOD 2026-06-22, so no stop-loss, take-profit, or SH inverse ETF exit checks were required. Alpaca GET /v2/account: equity $99,873.35 = last_equity $99,873.35 — daily P&L $0.00 (0.00%), well within the -2% halt threshold ($1,997.47). daily_loss_halt remains false. No exits, no trades, no alerts sent. All clear.
+---
+
 ## [2026-07-11 11:30 ET] — Intraday Monitor
 Intraday monitor (11:30 ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — clear to proceed. open_positions.md: none — portfolio remains flat/cash-only since NVDA closed EOD 2026-06-22, so no stop-loss, take-profit, or SH inverse ETF exit checks were required. Alpaca GET /v2/account confirmed: equity $99,873.35 = last_equity $99,873.35 — daily P&L $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits, no trades, no alerts sent. All clear. Note: uncommitted local changes present in engine/technical.py, memory/trade_trigger.md, and utils/alpaca_client.py from a prior session — left untouched, not part of this routine's scope.
+---
+
+## [2026-07-11 EOD ET]
+EOD routine executed (scheduled Saturday EOD). open_positions.md confirmed empty (no SH held, no regular stock positions held) — no overnight thesis checks with Perplexity or force-close logic were required. Alpaca GET /v2/account and GET /v2/positions both confirmed: equity $99,873.35, cash $99,873.35, buying_power $399,493.40, 0 positions, status ACTIVE. Daily P&L $0.00 (equity == last_equity). portfolio_state.md updated.
+---
+
+## [2026-07-11 EOD ET] — Benchmark Logged
+Benchmark logged. Portfolio: $99,873.35 (0.00%) | SPY: $755.10 (+0.47%) | Alpha: -0.47%. SPY price from latest Alpaca bar (2026-07-10 20:13 UTC print, Friday close since market closed Saturday). Portfolio held flat (no positions) while SPY continued its rally on the META/AI mega-cap narrative — negative alpha reflects opportunity cost of sitting in cash, not a losing trade.
+---
+
+## [2026-07-11 EOD ET] — EOD Report Sent
+EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — EOD Summary 2026-07-11 | P&L: $0.00 (0.00%)
+---
+
+## [2026-07-11 EOD ET] — Weekly Counter Reset
+daily_loss_halt reset to false (was already false) and trades_this_week reset to 0 (was already 0) in weekly_trade_counter.md as part of EOD Saturday routine — routine housekeeping, no halt was active and no trades were placed this week (week of 2026-07-07, currently 0/3).
 ---
