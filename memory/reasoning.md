@@ -3,6 +3,10 @@
 Append-only log of bot decisions, rationale, and reflections.
 Each entry is timestamped and written by the /journal skill or agents.
 
+## [2026-07-13 19:33 ET]
+Research complete. 16 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ, SH). Top candidates: META(88) — Iris AI chip entering production September, Muse Spark 1.1/Muse Image released, best week since early 2024 (+15%), earnings July 29 pre-window; AMD(77) — Citi upgraded to Buy ($575 PT), Bernstein raised to $600, Meta Helios server adoption confirmed, AI event July 22-23 in 9 days; NVDA(73) — UAE export easing, Q2 revenue guided $91B, above 50d/200d MA, though pre-market -1.35% on Iran-driven semiconductor sell-off. AMZN(71) also cleared threshold (AWS +28% fastest in 15 quarters). MSFT dropped to 68 (below 50d/200d MA despite Azure growth). SMCI(18) still flagged AVOID — Taiwan criminal probe ongoing. Market TRADE_OK=yes: SPY ~$752-757 above 5-day MA (~$748), VIX=15.03 (well below 28 cap, declining despite Iran-US military escalation). Key risk flags for the week: Iran/Strait of Hormuz tensions, oil near $80, CPI/PPI Tuesday July 14, big bank earnings (JPM/BAC/C/GS/WFC) — heaviest macro event week in recent memory; volume confirmation required at open before any entry. daily_loss_halt=false, 0/3 weekly trades used.
+---
+
 ## [2026-07-10 17:14 ET]
 Pre-market research complete. 16 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ, SH). Top candidates: META(86) — SemiAnalysis superintelligence report drove +6.85% surge, earnings July 29; NVDA(78) — +3.2% on earnings optimism and China H200 demand; AMD(76) — +5.67% July 9 on Q2 guidance +46% YoY, Goldman $640 PT. MSFT(72) and AMZN(71) also above threshold. TSLA dropped to 68 (below threshold) on cautious Citizens initiation. SMCI(20) flagged AVOID — active Taiwan criminal probe. Market TRADE_OK=yes: SPY above 5-day MA (~$750-752 vs MA ~$742-745), VIX=15.67 (well below 28 cap, near monthly low). Sector advance narrow — IT and Energy only positive sectors. daily_loss_halt=false, 0/3 weekly trades used.
 ---
@@ -619,4 +623,8 @@ daily_loss_halt reset to false (was already false) and trades_this_week reset to
 
 ## [2026-07-13 09:37 ET] — Market Open Trade Trigger Written
 Market-open routine executed. Pre-checks: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — clear to proceed. research_cache.md candidates >=70 (excluding SPY/QQQ benchmarks): META (86), NVDA (78), AMD (76), MSFT (72), AMZN (71). open_positions.md: none held (flat/cash-only since NVDA closed EOD 2026-06-22). daily_context.md: SPY ~$750-752 above 5-day MA ~$742-745 (solid cushion), VIX 15.67 (near monthly low, well below 28) — TRADE_OK=yes, regular stock entries permitted, SH not applicable. Wrote memory/trade_trigger.md (status: pending) with all five candidates for the Python executor to verify buying power/positions via Alpaca API, confirm volume, and place a limit order on the top qualifying candidate, enforcing the 5% position size cap. Did not update open_positions.md, trade_log.md, or weekly_trade_counter.md — those remain owned by the Python executor upon fill confirmation.
+---
+
+## [2026-07-13 22:30 ET] — Intraday Monitor
+Intraday monitor (9:30 PM ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — clear. open_positions.md: none — portfolio remains flat/cash-only since NVDA closed EOD 2026-06-22, so no stop-loss, take-profit, or SH inverse ETF exit checks applied. Alpaca GET /v2/account confirmed: equity $99,873.35 = last_equity $99,873.35 — daily P&L $0.00 (0.00%), well below the -2% halt threshold. daily_loss_halt remains false. No exits, no trades, no alerts sent. All clear.
 ---
