@@ -1,9 +1,9 @@
 # Weekly Trade Counter
 
 Week of: 2026-07-07
-trades_this_week: 1
+trades_this_week: 0
 max_trades_per_week: 3
-trades_remaining: 2
+trades_remaining: 3
 
 ## Halt Flags
 daily_loss_halt: false
@@ -41,3 +41,9 @@ daily_loss_halt set to false (was already false). trades_this_week reset to 0 (w
 daily_loss_halt set to false (was already false). trades_this_week reset to 0 (was already 0 — no trades placed on 2026-07-15).
 
 - 2026-07-16: BUY AMZN @ $254.25 (counted)
+
+## EOD Reset — 2026-07-16 (Friday-cycle EOD, closing Thursday 2026-07-16 session)
+daily_loss_halt set to false (was already false; daily loss -0.26%, well within -2% cap).
+trades_this_week reset to 0/3 (was 1/3 — AMZN entry counted for the week is now cleared
+per scheduled EOD reset instructions; note AMZN, META, and NVDA were all force-closed
+EOD today with no overnight thesis — see reasoning.md and trade_log.md).

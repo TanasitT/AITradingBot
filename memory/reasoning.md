@@ -1,5 +1,37 @@
 # Reasoning Journal
 
+## [2026-07-16 EOD ET] — Stale Memory Files Detected
+EOD close routine (Friday 2:47 AM ICT scheduled run, closing the 2026-07-16 Thursday session). Read open_positions.md (showed only AMZN, 19sh @ $254.25) and Alpaca GET /v2/positions live — live account actually held THREE positions: AMZN (19sh), META (7sh @ $678.03), NVDA (23sh @ $208.50). Neither open_positions.md nor trade_log.md recorded the META or NVDA entries. git status shows uncommitted in-progress edits to engine/coordinator.py, engine/risk_manager.py, engine/technical.py, memory/trade_trigger.md, utils/alpaca_client.py — likely cause of the memory/live-account drift (trades executed by code under active modification, bypassing the normal memory-write path). Treated Alpaca as source of truth and proceeded to evaluate all three live positions for overnight hold. Flagging for follow-up: reconcile open_positions.md/trade_log.md with Alpaca and check why the coordinator isn't writing position records on fill.
+---
+
+## [2026-07-16 EOD ET] — Overnight Thesis Check (AMZN, META, NVDA)
+Perplexity/web research for all three held tickers found no overnight-specific catalyst for tomorrow (2026-07-17):
+- AMZN: next catalyst is Q2 earnings 2026-07-30 (14 days out); Prime Day already priced in; RSI 72 overbought.
+- META: next catalyst is Q2 earnings 2026-07-29 (13 days out); Meta Compute/Iris chip news already priced in this week.
+- NVDA: next catalysts are MSFT/GOOGL earnings 2026-07-29 and NVDA's own FY27 Q2 earnings 2026-08-26 — weeks out.
+No confirmed near-term (next trading day) catalyst for any position. Force-close trigger applied per strategy.md: "end-of-day with no overnight thesis." Cancelled AMZN's outstanding GTC stop-limit order (id 6824c992, blocking qty_available) then submitted market sell-to-close for all three.
+---
+
+## [2026-07-16 EOD ET] — Benchmark Logged
+Benchmark logged. Portfolio: $99,613.17 (-0.26%) | SPY: $748.21 (-0.87%) | Alpha: +0.61%
+---
+
+## [2026-07-16 EOD ET] — Positions Closed
+All three closes filled:
+- AMZN: 19sh, entry $254.00, exit $248.63 avg — P&L -$101.97 (-2.11%)
+- META: 7sh, entry $678.03, exit $662.46 avg — P&L -$108.99 (-2.30%)
+- NVDA: 23sh, entry $208.50, exit $206.36 avg — P&L -$49.22 (-1.03%)
+Total realized P&L: -$260.18. Portfolio now flat (0 open positions), confirmed via Alpaca GET /v2/positions.
+---
+
+## [2026-07-16 EOD ET] — Weekly Counter Reset
+daily_loss_halt set to false (already false; daily loss -0.26%, well within -2% cap). trades_this_week reset to 0/3 (was 1/3 — AMZN entry). Per scheduled EOD task instructions.
+---
+
+## [2026-07-16 EOD ET] — EOD Report Sent (this routine)
+EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — EOD Summary 2026-07-16 | P&L: -$260.18 (-0.26%). Flagged the open_positions.md/trade_log.md vs Alpaca discrepancy (META, NVDA) for user follow-up.
+---
+
 ## [2026-07-16 16:39 ET]
 Intraday monitor (11:30 PM ICT scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=1/3 (AMZN buy counted, week of 2026-07-07). open_positions.md: AMZN (19 shares, entry $254.25, opened 2026-07-16 09:37 ET) — not SH, regular stock checks applied. Alpaca GET /v2/positions confirmed AMZN current price $255.485, unrealized P&L +$28.22 (+0.59%). Stop-loss $241.54 not hit, TP1 $274.59/TP2 $292.39/TP3 $317.81 not hit — position holding within normal range, no exit triggered. Alpaca GET /v2/account: equity $99,817.32 vs last_equity $99,873.35 — daily P&L -$56.03 (-0.056%), well within the -2% halt threshold. daily_loss_halt remains false. No exits, no trades, no alerts. All clear.
 ---
