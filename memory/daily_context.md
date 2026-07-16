@@ -1,84 +1,75 @@
 # Daily Market Context
-Last updated: 2026-07-14 pre-market/intraday ET (based on July 13 Monday close + July 14 real-time data)
+Last updated: 2026-07-16 pre-market ET (based on July 15 Wednesday close + July 16 real-time data)
 
 ## SPY Trend
-- SPY July 14: $751.71 (Barchart/TipRanks technical data)
-- SPY 5-day MA: $748.18 (confirmed via Barchart technical analysis)
-- SPY is ABOVE its 5-day moving average by approximately $3.53 — positive but narrower cushion than Monday
-- SPY 5-day MA calculation (est.): July 8 ~$743, July 9 ~$748, July 10 ~$754, July 13 ~$752, July 14 ~$751 → avg ~$748
-- Short-term trend: BULLISH — SPY holding above 5-day MA despite Iran escalation and Monday semiconductor sell-off
-- Broader structure: 12 Buy signals from MA5–MA200 per Barchart; 52-week range $618.05–$760.40; near ATH from June (~$760)
-- CPI 3.5% (below 3.8% expected) released July 14: supports SPY trend continuation; reduced rate hike odds from 35% to 15%
-- Regular stock entries are PERMITTED (SPY above 5d MA); monitor cushion — $3.53 is a narrow margin
+- SPY July 16: $754.47 (intraday range: $750.20–$755.58)
+- SPY 5-day MA: $742.96 (per Barchart technical analysis)
+- SPY is ABOVE its 5-day moving average by approximately $11.51 — improved bullish cushion vs $3.53 on July 14
+- Short-term trend: BULLISH — SPY holding well above 5-day MA with cushion widening from 2 days ago
+- Broader structure: Near 52-week high ($760.40 ATH); YTD performance +11.30%
+- Regular stock entries are PERMITTED (SPY above 5d MA); SH not triggered
+- Cushion interpretation: $11.51 is a healthy margin; geopolitical or soft retail sales data would need to be significant to break below 5d MA
 
 ## VIX
-- VIX level: 17.16 on July 14, 2026 (UP from 15.03 on July 13 — rose 14.2% from prior day)
-- VIX rose amid ongoing US-Iran military exchange; then partially reversed intraday as CPI beat and bank earnings absorbed geopolitical risk
+- VIX level: 15.67 on July 16, 2026 (DECLINED from 17.21 open and 17.16 on July 14 — positive trend)
 - VIX is WELL BELOW the 28 threshold — no trading halt required
-- Risk interpretation: MODERATE — VIX 17.16 is elevated vs prior week's 15.03 but within normal volatility range (12–20 "MID" band)
-- CPI 3.5% beat reduced rate anxiety; VIX may drift lower if bank earnings confirm economic resilience
-- Monitor: If VIX continues higher toward 20+ on additional geopolitical escalation, reassess TRADE_OK
+- Risk interpretation: LOW-MID — VIX 15.67 is within the normal 12–20 "MID" band and declining
+- Geopolitical background risk (US-Iran) appears to be fading from VIX; market absorbing noise
+- Monitor: If US retail sales (14:30 ET today) prints significantly below consensus (-0.1% core), VIX could spike intraday
 
 ## Sector Context
-- LEADING July 14: Technology (Nasdaq +0.5% on CPI beat); Financials (massive bank earnings beats — JPM, GS, WFC all significantly exceeded estimates)
-- MIXED/NEGATIVE July 14: IBM tumbled ~20% on weak preliminary Q2 results (company-specific, not market-wide); Dow -0.3%
-- Semiconductor sub-sector: Recovering partially from Monday's Iran-driven sell-off (SK Hynix -10%, Micron -4% on July 13); CPI beat supports Nasdaq/chip recovery
-- Energy: Oil elevated (Brent ~$80) on Iran Strait of Hormuz escalation; XLE likely outperforming
-- Financials: Q2 earnings beats from ALL major banks — sector momentum strongly positive July 14
+- LEADING: Technology (QQQ YTD +18.38% vs SPY +11.30%); AI/cloud hyperscaler names (META, AMZN, NVDA) all showing strong price action
+- Communication Services: GOOGL up 3.60% in past 24h; Alphabet ahead of July 22 earnings
+- Financials: Bank earnings week positive residual tailwind continuing
+- MIXED: Semiconductors recovering (NVDA recaptured 50d MA; AMD facing profit-taking)
+- LAGGING: Energy, Utilities, Real Estate, Small Caps
+- Consumer Discretionary: Sensitive to today's retail sales report at 14:30 ET
 
-## Key Movers (July 13–14, 2026)
-- META: $656.73 close July 14 (range $654–$676.62); Meta Compute cloud launch competing with AWS/Azure; Iris chip September; Muse Spark 1.1 API at 25% of OpenAI pricing; 26% upside to avg analyst PT $827
-- MSFT: $422.79; Azure +40% YoY; AI revenue run rate $37B (+123% YoY); now above 50d MA ($405.79); Jefferies bullish ahead of July 29 earnings
-- AMD: $534.39 (after 4.21% July 13 drop); KeyBanc raised PT to $725 on July 14; Goldman $640; Wells Fargo $615; AI event July 22–23
-- NVDA: $203.53 (down 3.52% July 13); now below 50d MA ($209.07); 77 analyst Buy; avg PT $303+; above 200d MA ($191.47)
-- AAPL: $313.05; Citi raised PT to $365 (July 14); KeyBanc initiated Underweight (July 14 — same day as Citi PT raise); iPhone $200 price hike expected September
-- PLTR: $127.97 (range $126.20–$130.72 July 14); DA Davidson upgraded to Buy, PT $175; Wedbush Buy $230; down 25% YTD
-- SOFI: $18.13 (down 3.41%); Goldman PT $17→$21 (Neutral); Hold consensus; bank earnings week positive for sector; earnings July 29
-- RIVN: $17.29 (down 3.53%); UBS $17 Neutral; JPMorgan $15 Underweight; offering absorption ongoing
-- COIN: ~$158–$165; Q1 EBITDA missed by 24%; new product diversification (tokenized stocks, options) announced; CLO departing July 31
-- SMCI: $27.66; export-control probe headline active on July 14; two Taiwan employees detained; criminal probe ongoing
-- Goldman Sachs (GS): Beat Q2 with record $7.42B stock-trading revenue; shares up 6%+ on July 14
-- IBM: -20% on weak preliminary Q2 results (company-specific headwind)
+## Key Movers (July 15–16, 2026)
+- META: $681.31 close July 15 (+3.07%); +17% in July; $50B Louisiana data center (5GW); 63 Strong Buy analysts; earnings July 29
+- AMZN: $254.96 (+3.02% past 24h, +4.38% past week); AWS AI workload momentum; FTC/CMA Anthropic probe flagged; earnings July 30
+- NVDA: July 15 close $212.50; recaptured 50d MA ($208.96); Jensen Huang confirmed Vera Rubin in production; 41.94% upside to avg PT $301.62
+- GOOGL: $370.21 (+3.60%); Warren Buffett endorsement; earnings July 22 (binary — 6 days)
+- AMD: Bullish PT raises (Rosenblatt $665, UBS $700, KeyBanc $725) but stock sinking on profit-taking; AI event July 22–23
+- MSFT: Evercore ISI PT raised to $525; 20M Copilot licenses +250% YoY; earnings July 29
+- PLTR: $133.76 (broke above $131 resistance from July 14); DA Davidson Buy $175; Wedbush $230
+- TSLA: Retail investors buying ahead of July 22 earnings; Morgan Stanley PT $417 (minor raise)
+- SMCI: $26.90; criminal probe ongoing; Citi Neutral PT $33; AVOID
 
 ## Key Macro Notes
-- CPI: June 2026 CPI = 3.5% (below 3.8% consensus estimate); monthly change -0.4% seasonally adjusted — COOLER THAN EXPECTED; rate hike probability at July 28–29 FOMC fell from 35% to ~15%
-- BANK EARNINGS (July 14): All five major banks beat Q2 estimates — JPMorgan EPS $6.14 vs $5.85 est., GS $7.42B stock-trading record (+6% shares), WFC $2.00 vs $1.72 est.; very positive for market sentiment
-- FED: Chair Kevin Warsh testifies before House Financial Services Committee today (July 14); enters FOMC blackout period ahead of July 28–29 meeting
-- PPI: Producer Price Index releases July 15 — second major inflation reading this week
-- GEOPOLITICAL: US-Iran military exchange ongoing; Iran attacked commercial container ship in Strait of Hormuz; US struck IRGC; Iran retaliated against Kuwait, Jordan, Qatar — escalation from prior week ceasefire collapse
-- OIL: Brent ~$80/barrel; WTI ~$75 — elevated on Strait of Hormuz threat; oil surge added to CPI complexity (headline CPI still came in under estimate)
-- IBM: -20% on weak preliminary Q2 EPS ($2.93 vs $3.01 est.) and revenue ($17.2B vs $17.86B est.) — company-specific, NOT market-wide signal
-- EARNINGS CALENDAR (upcoming): TSLA July 22 | GOOGL July 22 | MSFT July 29 | META July 29 | SOFI July 29 | AMZN July 30 | RIVN July 30 | AAPL July 30 | SMCI Aug 11 | AMD Aug 4 | NVDA Aug 26
+- RETAIL SALES (TODAY): June US retail sales report at 14:30 ET July 16 — the critical event of the day; consensus expects core reading near -0.1% m/m; too weak = hard landing fears; in-line = rate-cut confidence reinforced
+- JOBLESS CLAIMS (TODAY): 08:30 ET July 16 — additional labor market data point; key for FOMC context
+- PHILLY FED INDEX (TODAY): 08:30 ET — manufacturing sentiment gauge
+- FED: Funds rate at 3.50–3.75%; Kevin Warsh (Fed Chair) removed forward guidance; now pure data dependence; FOMC next meeting July 28–29; in blackout period
+- EARNINGS CALENDAR (upcoming): TSLA July 22 | GOOGL July 22 | MSFT July 29 | META July 29 | SOFI July 29 | AMZN July 30 | COIN July 30 | RIVN July 30 | SMCI Aug 11 | AMD Aug 4 | NVDA Aug 26
+- TODAY: 33 earnings reports scheduled (no mega-cap); 60 economic events; 9 IPO pricings
+- GEOPOLITICAL: US-Iran military exchange (background, lower prominence vs prior week); VIX declining suggests market has partially priced geopolitical risk
+- OIL: Elevated from prior week; Brent approximately $78–$80/barrel range
 
 ## Tickers Cleared for Entry (Score >= 70, subject to volume check at open)
-1. META — 85/100 (Meta Compute cloud launch + Iris chip + pre-earnings 15 days; HIGHEST CONVICTION — but volume 0.84x avg, must confirm 1.25x at open before executing)
-2. AMD — 76/100 (KeyBanc $725 PT raise July 14 + Goldman $640 + AI event July 22 + $520 support holding)
-3. AMZN — 72/100 (AWS +28%, $364B backlog, Trainium $225B+, earnings July 30 pre-window)
-4. MSFT — 70/100 (Azure +40%, AI run rate $37B +123% YoY; now above 50d MA $405.79; Jefferies bullish; earnings July 29; borderline)
+1. META — 86/100 (Meta Compute cloud + $50B Louisiana data center + 13 days to earnings; HIGHEST CONVICTION)
+2. AMZN — 75/100 (+3.02% past 24h momentum; AWS AI workload acceleration; 14 days to earnings; clean entry window)
+3. NVDA — 73/100 (50d MA recaptured — KEY CHANGE from July 14; Vera Rubin in production confirmed)
+4. MSFT — 72/100 (Evercore ISI PT raised to $525; Copilot +250% YoY; 13 days to earnings)
+5. AMD — 71/100 (Multiple PT raises but CAUTION: stock sinking on profit-taking July 16; confirm volume >= 1.25x before entry)
 
 ## Tickers Below Threshold (Watch but do not enter)
-- NVDA: 68/100 — strong fundamentals (77 Buy, avg PT $303+) but below 50d MA at $203.53 vs $209.07 MA; wait for 50d MA recapture
-- TSLA: 63/100 — earnings binary July 22 (8 days); EPS estimates declining; Jefferies Hold at $400; too close
-- PLTR: 62/100 — DA Davidson Buy upgrade + Wedbush $230; price stabilizing $126–$131; needs close above $135 to confirm trend
-- GOOGL: 62/100 — Strong Buy consensus (43/53 analysts), avg PT $433.67; but UBS PT cut + earnings binary July 22 (8 days) = no clean entry
+- PLTR: 65/100 — broke above $131 resistance ($133.76); approaching threshold; DA Davidson Buy $175; Wedbush $230; watch for $135 close
+- GOOGL: 63/100 — Strong Buy consensus (64 analysts); earnings binary July 22 (6 days) = no clean entry
+- TSLA: 62/100 — earnings binary July 22 (6 days); retail FOMO buying; no clean entry until after July 22
 
 ## Tickers Improving (Watch for threshold crossing)
-- AAPL: 58/100 — Citi PT raise $365 + iPhone $200 pricing + record high proximity; KeyBanc Underweight (July 14) offsets; re-evaluate after July 30 earnings
-- SOFI: 57/100 — Q1 record results; bank earnings week positive for fintech; Goldman PT raise; earnings July 29 is the catalyst event; may cross 70 on Q2 beat
+- AAPL: 59/100 — Apple Intelligence approved in China; Evercore ISI $365; iPhone 18 +$200 pricing; re-evaluate after July 30 earnings
+- SOFI: 56/100 — record Q1 results; analyst PT trimmed; hold until July 29 earnings
 
 ## Overall Environment
-- SPY above 5-day MA: YES ($751.71 vs $748.18 5-day MA — $3.53 cushion; narrow but positive)
-- VIX < 28: YES (VIX 17.16 — elevated from 15.03 but well below threshold)
-- No daily loss halt active (daily_loss_halt: false per weekly_trade_counter.md — confirmed at session start)
-- CPI beat (3.5% vs 3.8% expected): POSITIVE — reduced rate hike odds; positive for growth tech
-- Bank earnings week (all 5 major banks beating July 14): POSITIVE — reinforces economic resilience
-- Iran geopolitical risk: ELEVATED — active US-Iran military exchange; Strait of Hormuz threat; oil ~$80
-- IBM -20%: Company-specific; not a market-wide signal; IBM is not on watchlist
-- Four tickers cleared 70+ threshold: META (85), AMD (76), AMZN (72), MSFT (70)
-- META remains highest-conviction entry but volume must be confirmed at 1.25x before executing
-- MSFT: NEW addition to cleared list — MSFT recaptured 50d MA ($405.79); watch for 200d MA ($442.60) as next target
-- NVDA dropped from cleared list: 50d MA breach is the deciding factor; strong fundamentals maintained
+- SPY above 5-day MA: YES ($754.47 vs $742.96 5-day MA — $11.51 cushion; growing and healthy)
+- VIX < 28: YES (VIX 15.67 — declining from 17.21; well below threshold)
+- No daily loss halt active (daily_loss_halt: false per weekly_trade_counter.md)
+- Five tickers cleared 70+ threshold: META (86), AMZN (75), NVDA (73), MSFT (72), AMD (71)
+- KEY CHANGE: NVDA re-enters cleared list — 50d MA recaptured ($212.50 vs $208.96 50d MA); score upgraded from 68 to 73
+- AMD CAUTION: Entered cleared list but profit-taking active; volume confirmation required before entry
+- Retail Sales (14:30 ET today): Key intraday risk; if significantly weak, may affect SPY position vs 5d MA and sentiment
 - Volume confirmation required at market open for ALL entry candidates before executing
-- Risk note: SPY's $3.53 cushion above 5d MA is narrow; further geopolitical escalation (Strait of Hormuz closure) could tip SPY below 5d MA and halt regular entries; monitor closely
 
 TRADE_OK: yes
