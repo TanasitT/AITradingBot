@@ -1,11 +1,16 @@
 # Open Positions
 
-Last updated: 2026-07-17 10:34 ET (intraday monitor routine)
+Last updated: 2026-07-17 11:30 ET (intraday monitor routine)
 
 | Ticker | Shares | Entry Price | Entry Date | Cost Basis | Stop-Loss | TP1 (+8%) | TP2 (+15%) | TP3 (+25%) | Order ID |
 |---|---|---|---|---|---|---|---|---|---|
 | AAPL | 14 | $333.806428 | unknown (found on Alpaca, not previously recorded) | $4,673.29 | $317.12 | $360.51 | $383.88 | $417.26 | unknown |
 | META | 7 | $639.67 | unknown (found on Alpaca, not previously recorded) | $4,477.69 | $607.69 | $690.84 | $735.62 | $799.59 | unknown |
+
+NOTE (2026-07-17 11:30 ET): Intraday check. AAPL current price $331.85 (-0.59% vs entry) —
+no stop-loss or TP trigger. META current price $643.71 (+0.63% vs entry) — no stop-loss
+or TP trigger. Portfolio equity $99,613.73 vs last_equity $99,613.15 = +0.0006% daily,
+well within -2% halt threshold. No exits executed this check.
 
 NOTE (2026-07-17 10:34 ET): Intraday check. AAPL current price $334.01 (+0.06% vs entry) —
 no stop-loss or TP trigger. META current price $630.29 (-1.47% vs entry) — no stop-loss
