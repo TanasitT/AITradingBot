@@ -780,3 +780,30 @@ Research complete. 16 tickers scanned (15 active + SH). Top 3 candidates: META(8
 ## [2026-07-17 20:37 ET]
 Market-open routine executed. Pre-checks passed: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07, cleared per Thursday 2026-07-16 EOD reset). research_cache.md candidates >=70 (excluding SPY/QQQ benchmarks): META (84), AAPL (77, new entry on HSBC Hold->Buy upgrade + ATH $334.68), AMZN (75), MSFT (70, borderline — 3-firm PT cut wave flagged). open_positions.md: no open positions (AMZN/META/NVDA all force-closed EOD 2026-07-16 on no-overnight-thesis). daily_context.md: SPY $750.72 above 5-day MA $742.96 (+$7.76 cushion, narrowing from $11.51), VIX ~16.73 (below 28) — TRADE_OK=yes, regular stock entries permitted, SH inverse not triggered (score 20/100, trigger not met). Wrote memory/trade_trigger.md (status: pending) with all four candidates for the Python executor to verify buying power/positions via Alpaca API, confirm volume >=1.25x 30-day avg (AAPL and MSFT specifically flagged for volume confirmation), and place a limit order on the top qualifying candidate within the 5% position size cap. Did not update open_positions.md, trade_log.md, or weekly_trade_counter.md — those are owned by the Python executor upon fill confirmation. Trigger picked up by executor (status flipped to "executing") shortly after writing.
 ---
+
+## [2026-07-17 15:50 ET]
+EOD Saturday-cycle routine (closing 2026-07-17 Friday session). No SH position held, so
+the inverse-ETF check was skipped. Two regular positions found open on Alpaca (AAPL 14sh,
+META 7sh) that had not previously appeared in open_positions.md/trade_log.md this cycle.
+Checked Perplexity/web research for an overnight-specific catalyst on each:
+- AAPL: ongoing bullish narrative (China Apple Intelligence approval, analyst upgrades),
+  but next concrete catalyst is Q3 FY26 earnings on 7/30 and iPhone 18 launch in September
+  — both 2+ weeks out, nothing overnight-specific.
+- META: ongoing AI/Meta Compute cloud narrative and Iris chip news, but no near-term
+  overnight-specific event; earnings not until 7/29.
+No strong overnight thesis for either — force-close trigger applied per strategy.md exit
+criteria. Sold 14 AAPL @ $333.86 (entry $333.806428, +$0.75/+0.02%) and 7 META @
+$644.561428 (entry $639.67, +$34.23/+0.76%). Total realized P&L: +$34.98.
+---
+
+## [2026-07-17 15:50 ET]
+EOD report sent to jankla2010@gmail.com.
+---
+
+## [2026-07-18 weekly-summary ET] -- Benchmark Logged
+Benchmark logged. Portfolio: $99,648.12 (-0.00%) | SPY: $743.28 (0.00%, weekend/no new session) | Alpha: -0.00%. Weekend confirmation snapshot for the weekly-summary routine -- no new trading session since Friday 2026-07-17 close.
+---
+
+## [2026-07-18 weekly-summary ET] -- Weekly Report Sent
+Weekly summary email sent to jankla2010@gmail.com. Subject: Trading Bot -- Weekly Summary | 2026-07-18. Week stats: 5 trades executed (07-16, 07-17), 2 wins, 3 losses, 40.0% win rate, net P&L -$225.20. Alpha vs SPY: ~+0.50% (portfolio -0.23% vs SPY -0.73% over the week). Performance metrics and learned patterns updated -- see performance_metrics.md and learned_patterns.md for full detail.
+---

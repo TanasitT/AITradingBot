@@ -137,3 +137,41 @@
 4. *(Unresolved)* Add valuation risk modifier: flag reduces research score by 7 points
 5. **New**: Audit whether the market-open routine is actually re-checking volume against the current MIN_VOLUME_MULTIPLIER (1.25x per config.py) or a stale stricter value — 3 weeks of near-zero trading with scores clearing 70+ warrants a code-level check of engine/risk_manager.py's volume gate
 6. **New**: Reconcile trade_log.md (stale since 06-25) with weekly_trade_counter.md and portfolio_state.md (both current) — pick one source of truth and keep it updated daily
+
+---
+
+## Weekly Reflection -- Week of 2026-07-13 (Final, logged 2026-07-18)
+
+### Week Stats
+- Trades executed: 5 | Wins: 2 | Losses: 3 | Win rate: 40.0%
+- Net P&L: -$225.20 (5 fills across 07-16 and 07-17; no logged activity 07-13 to 07-15)
+- Portfolio: $99,873.35 -> $99,648.14 (-0.23%)
+- SPY performance this week: $749.13 (07-13) -> $743.68 (07-17), roughly -0.73%
+- Alpha vs SPY: ~+0.50% (losses were smaller than the market's own decline)
+- Cumulative alpha since inception: positive but thinning -- first week with net realized losses larger than any prior single week
+
+### Signals That Worked
+- **The under-trading streak finally broke**: after 3 consecutive weeks of 0-1 trades, the bot placed 5 trades in 2 days (AMZN, META, NVDA on 07-16; AAPL, META on 07-17), confirming the volume/score gates are not permanently closed -- they just needed the right week.
+- **AAPL and META (07-17) both closed positive**, driven by concrete near-term catalysts (China Apple Intelligence approval + HSBC/Citi upgrades for AAPL; Meta Compute cloud push + Iris chip news for META) rather than pure momentum scores.
+- **No hard rules broken across 5 trades**: every position sized within the 5% cap, daily loss cap never neared -2% on either day (worst daily print was still a gain +0.04% on 07-17), and the 3-trades/day limit was respected (3 on 07-16, 2 on 07-17).
+
+### Signals That Failed
+- **3 of 5 trades were force-closed at a loss purely on "no overnight catalyst," not on stop-loss or thesis invalidation**: AMZN -2.11%, META -2.30%, NVDA -1.03% on 07-16. The thesis in each case (AWS AI momentum, Meta Compute, Vera Rubin) was intact -- the exits were mechanical (earnings 2+ weeks out = no overnight hold), not driven by a negative catalyst. This is the same "EOD force-close cost me a real loss" pattern first seen with NVDA on 2026-06-22, now repeated 3x in one day.
+- **Position tracking drift recurred for a second straight week**: on 07-16 and again on 07-17, live Alpaca positions (META/NVDA on 07-16; AAPL/META on 07-17) were discovered at monitor/EOD time without ever being logged at entry in open_positions.md or trade_log.md. reasoning.md repeatedly flags uncommitted in-progress edits to engine/coordinator.py, engine/risk_manager.py, engine/technical.py, utils/alpaca_client.py as the likely cause -- this is now a 2-week-old unresolved gap and the most concrete, fixable bug surfaced this quarter.
+- **Entry order IDs and entry timestamps are unknown for 4 of the 5 positions this week** (AAPL, META 07-16, META 07-17, NVDA) because they were reconstructed from live Alpaca state rather than captured at fill time -- this blocks precise hold-duration and slippage analysis.
+
+### VIX Conditions
+- VIX stayed in a low, calm band all week (roughly 15-18 based on adjacent weeks' readings) -- no VIX-driven halts were triggered and VIX was not the binding constraint on any of the 5 trades.
+- Low VIX combined with an active trading week suggests the earlier under-trading weeks (07-07, 06-30) were volume/candidate-availability driven, not risk-driven -- consistent with the standing hypothesis from prior reflections.
+
+### Emerging Patterns (5 weeks tracked -- moderate confidence now building on force-close losses)
+- **The mandatory EOD-no-catalyst force-close is now a recurring, quantifiable drag**: 4 of the bot's 6 lifetime trades (NVDA 06-22, AMZN/META/NVDA 07-16) were closed at a loss specifically because of the "no overnight thesis" rule, not because the underlying thesis broke. Combined lifetime cost of this exit rule alone: -$126.63 -$101.97 -$108.99 -$49.22 = -$386.81 against only +$34.98 in wins. This is now the single largest identifiable driver of the bot's -$351.83 lifetime net P&L and merits a strategy review: either loosen the same-day earnings-distance requirement or add a smaller partial-hold allowance when the intraday move is favorable at close.
+- **Live-account/memory-file drift is a 2-week-recurring, code-level bug, not a one-off**: happening on both 07-16 and 07-17 EOD/intraday routines while engine/*.py files show uncommitted edits. This should be treated as a priority engineering fix rather than another "flag for follow-up" entry, since it is now actively corrupting the trade log's entry-time data for every trade this week.
+- **Win rate over the last 5 trades (40%) is closer to a coin flip than the bot's high average research scores (76-92) would suggest** -- reinforcing the week-1 finding that score predicts thesis quality, not same-day/next-day price direction.
+
+### Open Action Items (carry forward to next week)
+1. **New, highest priority**: Root-cause and fix the engine/coordinator.py position-logging bug causing live Alpaca fills to go unrecorded in open_positions.md/trade_log.md at entry time (2 weeks running: 07-16, 07-17).
+2. **New**: Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy -- 4 of 6 lifetime trades lost specifically to this rule for a combined -$386.81, vs. 2 wins for +$34.98. Consider requiring a genuinely negative catalyst (not just an absent one) before forcing an exit on a thesis that hasn't broken.
+3. *(Unresolved, 4 weeks running)* Add VIX at entry to trade log template.
+4. *(Unresolved, 4 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
+5. *(Unresolved)* Log skip decisions in trade_log.md daily, including on days with zero trades (07-13 through 07-15 this week have no entries at all, active or skipped).

@@ -1,17 +1,28 @@
 # Portfolio State
-Last updated: 2026-07-16 EOD (EOD Friday-cycle routine, closing 2026-07-16 Thursday session — Alpaca GET /v2/account live-confirmed)
+Last updated: 2026-07-17 15:50 ET (EOD Saturday-cycle routine, closing 2026-07-17 Friday session — Alpaca GET /v2/account live-confirmed)
 
-- Cash available: $99,613.17
+- Cash available: $99,648.14
 - Invested: $0.00
-- Total equity: $99,613.17
-- Daily P&L: -$260.18 (-0.26%) — all 3 open positions force-closed EOD, no overnight thesis
+- Total equity: $99,648.14
+- Daily P&L: +$34.99 (+0.04%) — AAPL and META force-closed EOD, no overnight thesis
 - Open positions: 0
-- Buying power: $398,452.68 (4× margin)
+- Buying power: $398,592.56 (4× margin)
 - Account status: ACTIVE
 - Mode: PAPER TRADING
 - Account number: PA3XB7R3677S
 
-## Today's Trade Summary (2026-07-16 EOD)
+## Today's Trade Summary (2026-07-17 EOD)
+- At EOD routine start, Alpaca live account held AAPL (14sh) and META (7sh) — an
+  entry earlier in the day (per market-open routine trigger in reasoning.md) that had
+  not yet been logged to open_positions.md/trade_log.md.
+- Perplexity/web research found no overnight-specific catalyst for either (AAPL earnings
+  7/30 and iPhone 18 launch Sept both 2+ weeks out; META earnings 7/29, 12 days out).
+- Force-close trigger applied to both. Realized P&L: AAPL +$0.75 (+0.02%),
+  META +$34.23 (+0.76%). Total: +$34.98.
+- Benchmark: portfolio +0.04% vs SPY -0.61% — alpha +0.65%.
+- daily_loss_halt: false — daily gain, well within -2% cap.
+
+## Previous Day (2026-07-16 EOD) Summary
 - At EOD routine start, Alpaca live account held AMZN (19sh), META (7sh), NVDA (23sh) —
   META and NVDA were undocumented in open_positions.md/trade_log.md (see reasoning.md;
   likely tied to in-progress edits on engine/coordinator.py and related files).

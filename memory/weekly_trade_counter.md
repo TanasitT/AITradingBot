@@ -7,8 +7,8 @@ trades_remaining: 3
 
 ## Halt Flags
 daily_loss_halt: false
-halt_reason: 
-halt_date: 
+halt_reason:
+halt_date:
 
 ## EOD Reset — 2026-07-04 (Saturday EOD)
 daily_loss_halt reset to false by EOD Saturday routine.
@@ -47,3 +47,9 @@ daily_loss_halt set to false (was already false; daily loss -0.26%, well within 
 trades_this_week reset to 0/3 (was 1/3 — AMZN entry counted for the week is now cleared
 per scheduled EOD reset instructions; note AMZN, META, and NVDA were all force-closed
 EOD today with no overnight thesis — see reasoning.md and trade_log.md).
+
+## EOD Reset — 2026-07-17 (Saturday-cycle EOD, closing Friday 2026-07-17 session)
+daily_loss_halt set to false (was already false; daily gain +0.04%, well within -2% cap).
+trades_this_week reset to 0/3 (AAPL and META were both force-closed EOD today with no
+overnight thesis — see reasoning.md and trade_log.md; these were exits of an entry
+made earlier in the day, per the market-open routine trigger).

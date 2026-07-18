@@ -1,11 +1,16 @@
 # Open Positions
 
-Last updated: 2026-07-17 11:30 ET (intraday monitor routine)
+Last updated: 2026-07-17 15:50 ET (EOD Saturday-cycle routine)
+
+No open positions. AAPL (14sh) and META (7sh) were both force-closed EOD today —
+no overnight-specific catalyst found for either. See trade_log.md and reasoning.md.
+
+## Position History
 
 | Ticker | Shares | Entry Price | Entry Date | Cost Basis | Stop-Loss | TP1 (+8%) | TP2 (+15%) | TP3 (+25%) | Order ID |
 |---|---|---|---|---|---|---|---|---|---|
-| AAPL | 14 | $333.806428 | unknown (found on Alpaca, not previously recorded) | $4,673.29 | $317.12 | $360.51 | $383.88 | $417.26 | unknown |
-| META | 7 | $639.67 | unknown (found on Alpaca, not previously recorded) | $4,477.69 | $607.69 | $690.84 | $735.62 | $799.59 | unknown |
+| AAPL | 14 | $333.806428 | unknown (found on Alpaca, not previously recorded) | $4,673.29 | $317.12 | $360.51 | $383.88 | $417.26 | unknown (close: 6c34b9ae-1b67-4c0d-b5f1-9437849ab6f4) |
+| META | 7 | $639.67 | unknown (found on Alpaca, not previously recorded) | $4,477.69 | $607.69 | $690.84 | $735.62 | $799.59 | unknown (close: f57b9be6-5e7c-4c96-aa26-d188a86c42e7) |
 
 NOTE (2026-07-17 11:30 ET): Intraday check. AAPL current price $331.85 (-0.59% vs entry) —
 no stop-loss or TP trigger. META current price $643.71 (+0.63% vs entry) — no stop-loss
