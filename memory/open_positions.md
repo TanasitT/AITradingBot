@@ -54,3 +54,15 @@ NVDA (23 shares) closed EOD via market order at ~$207.88.
 Close order ID: 9317f93a-81f0-4727-bdbf-2f04439647be
 Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy force-close trigger applied.
 
+
+
+## AAPL — Opened 2026-07-20 11:06 ET
+- Entry: $326.77 | Shares: 15 | Cost: $4901.55
+- Stop-loss: $310.43 (5% below entry)
+- Target 1: $352.91 (+8%) — sell 5 shares
+- Target 2: $375.79 (+15%) — sell 5 shares
+- Target 3: $408.46 (+25%) — sell 5 shares
+- Thesis: Up 22% YTD; briefly overtook NVDA as #1 by market cap ($4.88T); HSBC Hold→Buy PT $260→$366 intact; ATH momentum; earnings July 30 (10 days); RSI elevated post-ATH
+- Research score: 73/100
+- High-beta: False
+

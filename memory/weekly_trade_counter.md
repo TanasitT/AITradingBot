@@ -1,9 +1,9 @@
 # Weekly Trade Counter
 
 Week of: 2026-07-07
-trades_this_week: 0
+trades_this_week: 1
 max_trades_per_week: 3
-trades_remaining: 3
+trades_remaining: 2
 
 ## Halt Flags
 daily_loss_halt: false
@@ -53,3 +53,5 @@ daily_loss_halt set to false (was already false; daily gain +0.04%, well within 
 trades_this_week reset to 0/3 (AAPL and META were both force-closed EOD today with no
 overnight thesis — see reasoning.md and trade_log.md; these were exits of an entry
 made earlier in the day, per the market-open routine trigger).
+
+- 2026-07-20: BUY AAPL @ $326.77 (counted)

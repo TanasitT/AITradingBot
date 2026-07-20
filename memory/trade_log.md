@@ -10,3 +10,5 @@
 | 2026-07-16 | NVDA | $208.50 | $206.36 | 23 | -$49.22 (-1.03%) | ❌ | AI infra demand, 50-day MA recaptured, Vera Rubin production; closed EOD — no overnight catalyst (next earnings 8/26) — position not previously logged in this file, discovered live on Alpaca at EOD routine |
 | 2026-07-17 | AAPL | $333.806428 | $333.86 | 14 | +$0.75 (+0.02%) | ✅ | China Apple Intelligence approval, HSBC/Citi upgrades, ATH momentum; closed EOD — no overnight catalyst (earnings 7/30, iPhone 18 launch Sept, both 2+ weeks out) |
 | 2026-07-17 | META | $639.67 | $644.561428 | 7 | +$34.23 (+0.76%) | ✅ | Meta Compute cloud push, Iris in-house AI chip (Sept), $50B Louisiana data center; closed EOD — no overnight catalyst (earnings 7/29, 12 days out) |
+
+| 2026-07-20 | AAPL | $326.77 | open | 15 | — | — | Up 22% YTD; briefly overtook NVDA as #1 by market cap ($4.88 |
