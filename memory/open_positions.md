@@ -1,20 +1,29 @@
 # Open Positions
 
-Last updated: 2026-07-20 09:39 ET (intraday monitor routine)
+Last updated: 2026-07-20 11:34 ET (intraday monitor routine)
 
 | Ticker | Shares | Entry Price | Entry Date | Cost Basis | Stop-Loss | TP1 (+8%) | TP2 (+15%) | TP3 (+25%) | Order ID |
 |---|---|---|---|---|---|---|---|---|---|
+| AAPL | 15 | $326.77 | 2026-07-20 11:06 ET | $4,901.55 | $310.43 | $352.91 | $375.79 | $408.46 | unknown |
 | META | 7 | $640.637143 | 2026-07-20 (found on Alpaca, not previously recorded — opened by market-open trigger) | $4,484.46 | $608.61 | $691.89 | $736.73 | $800.80 | unknown |
+| AMZN | 19 | $250.632105 (from Alpaca avg_entry_price, not previously recorded) | unknown | $4,762.01 | $238.10 (computed) | $270.68 (computed) | n/a | n/a | unknown |
 
-NOTE (2026-07-20 09:39 ET): Intraday check. Same memory/live-account drift as
-2026-07-16/17 — open_positions.md said "no open positions" but Alpaca GET
-/v2/positions shows META (7sh, avg entry $640.637143) opened by today's 08:37 ET
-market-open trigger, never logged here or in trade_log.md. Current price $642.64
-(+0.31% vs entry) — no stop-loss or TP trigger. Portfolio equity $99,662.00 vs
-last_equity $99,648.12 = +0.014% daily, well within -2% halt threshold. No exits
-executed this check. Flagging again: coordinator.py/risk_manager.py/technical.py/
-reporter.py/alpaca_client.py all still show uncommitted edits per git status —
-likely still the root cause of positions not being written to memory on fill.
+NOTE (2026-07-20 11:34 ET): Intraday check. AAPL current price $325.8094
+(-0.22% vs memory entry $326.77) — no stop-loss or TP trigger. META current
+price $647.955 (+1.14% vs entry) — no stop-loss or TP trigger. AMZN current
+price $251.58 (+0.38% vs Alpaca avg entry) — no stop-loss or TP trigger.
+Portfolio equity $99,705.51 vs last_equity $99,648.12 = +0.058% daily, well
+within -2% halt threshold. No exits executed this check.
+
+DRIFT FLAG (recurring): Alpaca GET /v2/positions shows AMZN (19sh) still open,
+but trade_log.md/open_positions.md history says AMZN was force-closed EOD on
+2026-07-16. Either that EOD close never executed live, or a new AMZN position
+was opened afterward without being logged (same class of drift previously
+flagged 2026-07-16/17/20 — coordinator.py/risk_manager.py/technical.py/
+reporter.py/alpaca_client.py all still show uncommitted edits per git status,
+likely still the root cause of fills not being written to memory). Treating
+Alpaca as source of truth; AMZN now tracked above with computed stop/TP1 from
+avg_entry_price pending reconciliation.
 
 ## Position History
 
