@@ -1,12 +1,25 @@
 # Open Positions
 
-Last updated: 2026-07-20 11:50 ET (intraday monitor routine)
+Last updated: 2026-07-20 15:57 ET (EOD Tuesday routine)
+
+No open positions. AAPL, AMZN, and META were all force-closed EOD today with no
+overnight thesis confirmed by Perplexity — see reasoning.md and trade_log.md.
 
 | Ticker | Shares | Entry Price | Entry Date | Cost Basis | Stop-Loss | TP1 (+8%) | TP2 (+15%) | TP3 (+25%) | Order ID |
 |---|---|---|---|---|---|---|---|---|---|
-| AAPL | 15 | $326.77 | 2026-07-20 11:06 ET | $4,901.55 | $310.43 | $352.91 | $375.79 | $408.46 | unknown |
-| META | 7 | $640.637143 | 2026-07-20 (found on Alpaca, not previously recorded — opened by market-open trigger) | $4,484.46 | $608.61 | $691.89 | $736.73 | $800.80 | unknown |
-| AMZN | 19 | $250.632105 (from Alpaca avg_entry_price, not previously recorded) | unknown | $4,762.01 | $238.10 (computed) | $270.68 (computed) | n/a | n/a | unknown |
+| — | — | — | — | — | — | — | — | — | — |
+
+NOTE (2026-07-20 15:57 ET): EOD Tuesday routine. Perplexity checked for a strong
+confirmed overnight catalyst on all three open positions — none found for any
+(AAPL earnings 7/30, AMZN earnings 7/30, META earnings 7/29, all 9-10 days out;
+no new regulatory/M&A/guidance news in the last 24h). Force-close trigger applied
+to all three: AAPL sold 15sh @ $326.746 (P&L -$0.36), AMZN sold 19sh @ $249.97
+(P&L -$12.58), META sold 7sh @ $646.102857 (P&L +$38.26). AAPL's close initially
+failed with 403 Forbidden because its GTC stop-limit order ($310.43 stop) was
+still open and holding the shares — cancelled that order first, then the
+sell-to-close succeeded. Alpaca GET /v2/positions confirmed empty after fills.
+Account equity $99,675.84 vs last_equity $99,648.12 = +$27.72 (+0.028%), well
+within -2% halt threshold.
 
 NOTE (2026-07-20 11:34 ET): Intraday check. AAPL current price $325.8094
 (-0.22% vs memory entry $326.77) — no stop-loss or TP trigger. META current

@@ -835,3 +835,27 @@ Market-open scheduled task fired again. Pre-checks: weekly_trade_counter.md show
 ## 2026-07-20 11:06 ET
 Bought 15 shares of AAPL @ $326.77. Score: 73/100. Stop: $310.43. Targets: $352.91/$375.79/$408.46. Thesis: Up 22% YTD; briefly overtook NVDA as #1 by market cap ($4.88T); HSBC Hold→Buy PT $260→$366 intact; ATH momentum; earnings July 30 (10 days); RSI elevated post-ATH
 ---
+
+## [2026-07-20 15:57 ET]
+EOD close: Sold 15 shares of AAPL @ $326.746 (avg entry $326.77). P&L: -$0.36 (-0.01%). Reason: Perplexity found no strong confirmed overnight catalyst -- next earnings July 30 (10 days out); recent news limited to analyst reiterations (BofA Buy, $380 PT) and overbought/momentum concerns. Force-close trigger applied. Note: AAPL's GTC stop-limit order ($310.43 stop / $308.88 limit) was blocking the close (403 Forbidden) and had to be cancelled first before the market sell-to-close could be submitted.
+---
+
+## [2026-07-20 15:57 ET]
+EOD close: Sold 19 shares of AMZN @ $249.97 (avg entry $250.632105). P&L: -$12.58 (-0.26%). Reason: Perplexity found no strong confirmed overnight catalyst -- next earnings July 30 (10 days out), no new regulatory/M&A/guidance news in the last 24 hours. Force-close trigger applied.
+---
+
+## [2026-07-20 15:57 ET]
+EOD close: Sold 7 shares of META @ $646.102857 (avg entry $640.637143). P&L: +$38.26 (+0.85%). Reason: Perplexity found no strong confirmed overnight catalyst -- next earnings July 29 (9 days out), no specific event scheduled for tomorrow despite ongoing AI/advertising optimism. Force-close trigger applied.
+---
+
+## [2026-07-20 15:57 ET]
+EOD portfolio state: All positions closed (AAPL, AMZN, META). Equity $99,675.84 vs last_equity $99,648.12 = +$27.72 (+0.028%), well within -2% halt threshold. 0 open positions. Combined realized P&L on today's closes: +$25.32 (-0.36 - 12.58 + 38.26).
+---
+
+## [2026-07-20 15:58 ET]
+Benchmark logged. Portfolio: $99,675.84 (+0.03%) | SPY: $741.99 (-0.17%) | Alpha: +0.20%
+---
+
+## [2026-07-20 15:59 ET]
+EOD report sent to jankla2010@gmail.com.
+---

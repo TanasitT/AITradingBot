@@ -1,17 +1,32 @@
 # Portfolio State
-Last updated: 2026-07-17 15:50 ET (EOD Saturday-cycle routine, closing 2026-07-17 Friday session — Alpaca GET /v2/account live-confirmed)
+Last updated: 2026-07-20 15:57 ET (EOD Tuesday routine — Alpaca GET /v2/account live-confirmed)
 
-- Cash available: $99,648.14
+- Cash available: $99,675.84
 - Invested: $0.00
-- Total equity: $99,648.14
-- Daily P&L: +$34.99 (+0.04%) — AAPL and META force-closed EOD, no overnight thesis
+- Total equity: $99,675.84
+- Daily P&L: +$27.72 (+0.03%) — AAPL, AMZN, and META force-closed EOD, no overnight thesis
 - Open positions: 0
-- Buying power: $398,592.56 (4× margin)
+- Buying power: $398,703.36 (4× margin)
 - Account status: ACTIVE
 - Mode: PAPER TRADING
 - Account number: PA3XB7R3677S
 
-## Today's Trade Summary (2026-07-17 EOD)
+## Today's Trade Summary (2026-07-20 EOD)
+- At EOD routine start, Alpaca live account held AAPL (15sh), AMZN (19sh), and META (7sh).
+  AAPL was entered earlier today (market-open routine, 11:06 ET); AMZN and META were
+  discovered live on Alpaca without prior open_positions.md/trade_log.md entries (same
+  memory/live-account drift flagged repeatedly this week).
+- Perplexity research found no strong confirmed overnight catalyst for any of the three
+  (AAPL/AMZN earnings 7/30, META earnings 7/29 — all 9-10 days out; no new
+  regulatory/M&A/guidance news in the last 24h).
+- Force-close trigger applied to all three. AAPL's close was blocked (403 Forbidden) by
+  its own open GTC stop-limit order ($310.43 stop) — cancelled that order first, then
+  the sell-to-close succeeded.
+- Realized P&L: AAPL -$0.36 (-0.01%), AMZN -$12.58 (-0.26%), META +$38.26 (+0.85%).
+  Total: +$25.32.
+- daily_loss_halt: false — daily gain +0.03%, well within -2% cap.
+
+## Previous Day (2026-07-17 EOD) Summary
 - At EOD routine start, Alpaca live account held AAPL (14sh) and META (7sh) — an
   entry earlier in the day (per market-open routine trigger in reasoning.md) that had
   not yet been logged to open_positions.md/trade_log.md.

@@ -1,9 +1,9 @@
 # Weekly Trade Counter
 
 Week of: 2026-07-07
-trades_this_week: 1
+trades_this_week: 0
 max_trades_per_week: 3
-trades_remaining: 2
+trades_remaining: 3
 
 ## Halt Flags
 daily_loss_halt: false
@@ -55,3 +55,9 @@ overnight thesis — see reasoning.md and trade_log.md; these were exits of an e
 made earlier in the day, per the market-open routine trigger).
 
 - 2026-07-20: BUY AAPL @ $326.77 (counted)
+
+## EOD Reset — 2026-07-20 (Tuesday EOD)
+daily_loss_halt set to false (was already false; daily gain +0.03%, well within -2% cap).
+trades_this_week reset to 0/3 (was 1/3 — AAPL entry counted for the week is now cleared
+per scheduled EOD reset instructions; AAPL, AMZN, and META were all force-closed EOD
+today with no overnight thesis — see reasoning.md and trade_log.md).

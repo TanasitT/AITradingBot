@@ -11,4 +11,6 @@
 | 2026-07-17 | AAPL | $333.806428 | $333.86 | 14 | +$0.75 (+0.02%) | ✅ | China Apple Intelligence approval, HSBC/Citi upgrades, ATH momentum; closed EOD — no overnight catalyst (earnings 7/30, iPhone 18 launch Sept, both 2+ weeks out) |
 | 2026-07-17 | META | $639.67 | $644.561428 | 7 | +$34.23 (+0.76%) | ✅ | Meta Compute cloud push, Iris in-house AI chip (Sept), $50B Louisiana data center; closed EOD — no overnight catalyst (earnings 7/29, 12 days out) |
 
-| 2026-07-20 | AAPL | $326.77 | open | 15 | — | — | Up 22% YTD; briefly overtook NVDA as #1 by market cap ($4.88 |
+| 2026-07-20 | AAPL | $326.77 | $326.746 | 15 | -$0.36 (-0.01%) | ❌ | Up 22% YTD; briefly overtook NVDA as #1 by market cap ($4.88T); HSBC Hold→Buy PT $260→$366 intact; ATH momentum; closed EOD — no overnight catalyst (earnings 7/30, 10 days out) |
+| 2026-07-20 | AMZN | $250.632105 | $249.97 | 19 | -$12.58 (-0.26%) | ❌ | Position discovered live on Alpaca at EOD routine, not previously logged; AWS AI momentum; closed EOD — no overnight catalyst (earnings 7/30, 10 days out) |
+| 2026-07-20 | META | $640.637143 | $646.102857 | 7 | +$38.26 (+0.85%) | ✅ | Opened by market-open trigger, not previously logged; AI/advertising optimism; closed EOD — no overnight catalyst (earnings 7/29, 9 days out) |
