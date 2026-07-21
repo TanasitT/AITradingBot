@@ -1,5 +1,9 @@
 # Reasoning Journal
 
+## [2026-07-21 11:30 ET]
+Intraday monitor (11:30 AM ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded. open_positions.md/Alpaca GET /v2/positions: META (7sh, avg entry $644.744285) only open position — not SH, no inverse-ETF logic applies. META current price $648.025 (+0.509% vs entry) — stop-loss $612.51, TP1 $696.32, neither hit. Alpaca GET /v2/account: equity $99,698.79 vs last_equity $99,675.82 — daily P&L +0.023%, well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results. Recurring META memory/live-account drift (flagged 2026-07-16/17/20/21) remains unresolved — engine/coordinator.py, engine/risk_manager.py, engine/technical.py, engine/reporter.py, utils/alpaca_client.py still show uncommitted in-progress edits per git status.
+---
+
 ## [2026-07-21 10:30 ET]
 Intraday monitor (10:30 AM ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded. open_positions.md/Alpaca GET /v2/positions: META (7sh, avg entry $644.744285) only open position — not SH, no inverse-ETF logic applies. META current price $648.03 (+0.509% vs entry) — stop-loss $612.51, TP1 $696.32, neither hit. Alpaca GET /v2/account: equity $99,698.82 vs last_equity $99,675.82 — daily P&L +0.023%, well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results. Recurring META memory/live-account drift (flagged 2026-07-16/17/20/21) remains unresolved — engine/coordinator.py, engine/risk_manager.py, engine/technical.py, engine/reporter.py, utils/alpaca_client.py still show uncommitted in-progress edits per git status.
 ---

@@ -1,6 +1,6 @@
 # Open Positions
 
-Last updated: 2026-07-21 09:30 ET (intraday monitor check)
+Last updated: 2026-07-21 11:30 ET (intraday monitor check)
 
 DRIFT (recurring): Alpaca GET /v2/positions shows META (7sh) still open, despite
 open_positions.md/trade_log.md recording it as force-closed EOD on 2026-07-20
@@ -15,6 +15,14 @@ reconciliation.
 | Ticker | Shares | Entry Price | Entry Date | Cost Basis | Stop-Loss | TP1 (+8%) | TP2 (+15%) | TP3 (+25%) | Order ID |
 |---|---|---|---|---|---|---|---|---|---|
 | META | 7 | $644.744285 (Alpaca avg) | unknown | $4513.21 | $612.51 | $696.32 | $741.46 | $805.93 | unknown |
+
+NOTE (2026-07-21 11:30 ET): Intraday check. META current price $648.025 (Alpaca
+current_price; latest bar close $647.995) — (+0.509% vs Alpaca avg entry
+$644.744285) — no stop-loss ($612.51) or TP trigger. No SH position held (SPY
+inverse-ETF logic not applicable — no SH in Alpaca positions). Portfolio equity
+$99,698.79 vs last_equity $99,675.82 = +0.023% daily, well within -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md. No exits
+executed this check.
 
 NOTE (2026-07-21 10:30 ET): Intraday check. META current price $648.03 (+0.509%
 vs Alpaca avg entry $644.744285) — no stop-loss ($612.51) or TP trigger. No SH
