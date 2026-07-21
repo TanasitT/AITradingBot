@@ -1,5 +1,9 @@
 # Reasoning Journal
 
+## [2026-07-21 09:30 ET]
+Intraday monitor (9:30 AM ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded. open_positions.md said "no open positions" (AAPL/AMZN/META all force-closed EOD 2026-07-20), but Alpaca GET /v2/positions live shows META (7sh, avg entry $644.744285) still open — same recurring memory/live-account drift previously flagged 2026-07-16/17/20; git status still shows uncommitted in-progress edits to engine/coordinator.py, engine/risk_manager.py, engine/technical.py, engine/reporter.py, utils/alpaca_client.py, likely still the cause. Treated Alpaca as source of truth. Not SH, no inverse-ETF logic applies. META current price $647.215 (+0.383% vs entry) — stop-loss $612.51, TP1 $696.32, neither hit. Alpaca GET /v2/account: equity $99,693.92 vs last_equity $99,675.82 — daily P&L +0.018%, well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md to record the untracked META position with computed stop/TP levels. Flagging again: root-cause why coordinator isn't writing position closes/records to memory on fill.
+---
+
 ## [2026-07-21 07:33 ET]
 Research complete. 16 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ, SH). Top candidates: META(73), AMZN(70), MSFT(70). Market TRADE_OK=yes, VIX=18.65. SPY closed $741.93 on 7/20, $2.13 below its 5-day MA ($744.06) — blocks regular stock entries per strategy rules. SH evaluated as fallback: scored 52/100, below the 60 threshold (Nasdaq futures +1.3% pre-market, SPY RSI 35.32 signals oversold bounce not confirmed downtrend) — no SH entry either. Net: no entries expected at market open unless SPY reclaims $744.06 or breaks $739.53 (50-day MA, would push SH score toward 65-70). Results written to research_cache.md and daily_context.md.
 ---

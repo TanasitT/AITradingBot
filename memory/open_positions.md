@@ -1,13 +1,27 @@
 # Open Positions
 
-Last updated: 2026-07-20 15:57 ET (EOD Tuesday routine)
+Last updated: 2026-07-21 09:30 ET (intraday monitor check)
 
-No open positions. AAPL, AMZN, and META were all force-closed EOD today with no
-overnight thesis confirmed by Perplexity — see reasoning.md and trade_log.md.
+DRIFT (recurring): Alpaca GET /v2/positions shows META (7sh) still open, despite
+open_positions.md/trade_log.md recording it as force-closed EOD on 2026-07-20
+(exit price $646.102857, P&L +$38.26). Either that EOD close never executed live,
+or a new META position was opened afterward without being logged (same class of
+drift previously flagged 2026-07-16/17/20 — coordinator.py/risk_manager.py/
+technical.py/reporter.py/alpaca_client.py all still show uncommitted edits per
+git status, likely still the root cause). Treating Alpaca as source of truth;
+META tracked below with stop/TP computed from Alpaca avg_entry_price, pending
+reconciliation.
 
 | Ticker | Shares | Entry Price | Entry Date | Cost Basis | Stop-Loss | TP1 (+8%) | TP2 (+15%) | TP3 (+25%) | Order ID |
 |---|---|---|---|---|---|---|---|---|---|
-| — | — | — | — | — | — | — | — | — | — |
+| META | 7 | $644.744285 (Alpaca avg) | unknown | $4513.21 | $612.51 | $696.32 | $741.46 | $805.93 | unknown |
+
+NOTE (2026-07-21 09:30 ET): Intraday check. META current price $647.215 (+0.383%
+vs Alpaca avg entry $644.744285) — no stop-loss ($612.51) or TP trigger. No SH
+position held (SPY inverse-ETF logic not applicable — no SH in Alpaca positions).
+Portfolio equity $99,693.92 vs last_equity $99,675.82 = +0.018% daily, well within
+-2% halt threshold. daily_loss_halt confirmed false in weekly_trade_counter.md.
+No exits executed this check.
 
 NOTE (2026-07-20 15:57 ET): EOD Tuesday routine. Perplexity checked for a strong
 confirmed overnight catalyst on all three open positions — none found for any
