@@ -1,17 +1,27 @@
 # Portfolio State
-Last updated: 2026-07-23 EOD ET (EOD Thursday routine — Alpaca GET /v2/account live-confirmed)
+Last updated: 2026-07-24 EOD ET (EOD Friday routine — Alpaca GET /v2/account live-confirmed)
 
 - Cash available: $99,672.34
 - Invested: $0.00
 - Total equity: $99,672.34
-- Daily P&L: -$0.02 (-0.00%) — no positions held, no trades placed
+- Daily P&L: $0.00 (0.00%) — no positions held, no trades placed
 - Open positions: 0
-- Buying power: $99,672.34 (Alpaca now reports 1× — regt/effective/non-marginable buying_power fields all match cash; prior entries citing "4× margin" no longer match live account data, flagging for follow-up)
+- Buying power: $99,672.34
 - Account status: ACTIVE
 - Mode: PAPER TRADING
 - Account number: PA3XB7R3677S
 
-## Today's Trade Summary (2026-07-23 EOD)
+## Today's Trade Summary (2026-07-24 EOD)
+- Alpaca GET /v2/positions confirmed 0 open positions — no SH, no regular
+  stock positions. No overnight-thesis check or force-close needed.
+- No trades placed today (2026-07-24).
+- Benchmark: portfolio 0.00% vs SPY -0.66% — alpha +0.66%.
+- daily_loss_halt: false — daily change 0.00%, well within -2% cap.
+- account.last_equity again returned "0" (stale field anomaly, recurring) —
+  daily P&L computed against last known EOD equity ($99,672.34, 2026-07-23)
+  instead.
+
+## Previous Day (2026-07-23 EOD) Summary
 - Routine ran while Alpaca clock still showed market open (is_open=true,
   next_close 16:00 ET) — ahead of the usual post-close schedule; flagged as
   an anomaly, not a blocker.

@@ -1,5 +1,21 @@
 # Reasoning Journal
 
+## [2026-07-24 15:57 ET] — EOD Friday Routine
+EOD close routine (Friday). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07, last EOD reset 2026-07-23) — no halt. open_positions.md/Alpaca GET /v2/positions both confirm 0 open positions (no SH, no regular stock positions) — nothing to evaluate for overnight thesis on either branch. Alpaca GET /v2/account: equity $99,672.34, cash $99,672.34, matching 2026-07-23 EOD exactly (no intraday movement, no positions held); account.last_equity again returned "0" (same recurring stale-field anomaly) so daily P&L computed vs benchmark_tracking.md's 2026-07-23 EOD equity ($99,672.34): $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md and portfolio_state.md with this check's results.
+---
+
+## [2026-07-24 15:57 ET] — Benchmark Logged
+Benchmark logged. Portfolio: $99,672.34 (0.00%) | SPY: $735.98 (-0.66%) | Alpha: +0.66%
+---
+
+## [2026-07-24 15:57 ET] — Weekly Counter Reset
+daily_loss_halt set to false (already false; daily change 0.00%, well within -2% cap, no positions held). trades_this_week reset to 0/3 (was already 0/3 — no trades placed this week).
+---
+
+## [2026-07-24 15:57 ET] — EOD Report Sent
+EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — EOD Summary 2026-07-24 | P&L: $0.00 (0.00%).
+---
+
 ## [2026-07-23 10:30 ET]
 Intraday monitor (10:30 AM ET scheduled run, second instance today — an earlier 10:30 ET check already ran this morning; strategy.md, weekly_trade_counter.md, and open_positions.md were re-read per this run's own instructions). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07, last EOD reset 2026-07-23) — no halt, proceeded. open_positions.md/Alpaca GET /v2/positions both confirm 0 positions held (no SH, no regular stock positions) — no drift, portfolio flat. No stop-loss, take-profit, or SH inverse-ETF exit checks required. Alpaca GET /v2/account: equity $99,672.34, matching the 2026-07-23 EOD benchmark exactly; account.last_equity again returned "0" (stale/bad field, same recurring anomaly) so daily P&L computed vs benchmark_tracking.md's 2026-07-23 EOD equity ($99,672.34): $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results.
 ---

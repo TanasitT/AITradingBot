@@ -73,3 +73,8 @@ daily_loss_halt set to false (was already false; daily change -0.00%, well withi
 no positions held). trades_this_week reset to 0/3 (was already 0/3 — no trades placed
 2026-07-22 or 2026-07-23; the 08:37 ET market-open routine on 07-23 skipped trading
 because research was stale — see reasoning.md).
+
+## EOD Reset — 2026-07-24 (Friday EOD)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+no positions held). trades_this_week reset to 0/3 (was already 0/3 — no trades placed
+this week).
