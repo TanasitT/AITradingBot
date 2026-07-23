@@ -1,17 +1,34 @@
 # Portfolio State
-Last updated: 2026-07-21 15:57 ET (EOD Wednesday routine — Alpaca GET /v2/account live-confirmed)
+Last updated: 2026-07-23 EOD ET (EOD Thursday routine — Alpaca GET /v2/account live-confirmed)
 
-- Cash available: $99,672.36
+- Cash available: $99,672.34
 - Invested: $0.00
-- Total equity: $99,672.36
-- Daily P&L: -$3.46 (-0.00%) — META force-closed EOD, no overnight thesis
+- Total equity: $99,672.34
+- Daily P&L: -$0.02 (-0.00%) — no positions held, no trades placed
 - Open positions: 0
-- Buying power: $398,689.44 (4× margin)
+- Buying power: $99,672.34 (Alpaca now reports 1× — regt/effective/non-marginable buying_power fields all match cash; prior entries citing "4× margin" no longer match live account data, flagging for follow-up)
 - Account status: ACTIVE
 - Mode: PAPER TRADING
 - Account number: PA3XB7R3677S
 
-## Today's Trade Summary (2026-07-21 EOD)
+## Today's Trade Summary (2026-07-23 EOD)
+- Routine ran while Alpaca clock still showed market open (is_open=true,
+  next_close 16:00 ET) — ahead of the usual post-close schedule; flagged as
+  an anomaly, not a blocker.
+- Alpaca GET /v2/positions confirmed 0 open positions — no SH, no regular
+  stock positions. No overnight-thesis check or force-close needed.
+- No trades placed today (2026-07-23): the 08:37 ET market-open routine
+  stopped early because research_cache.md/daily_context.md were stale
+  (dated 2026-07-21, no pre-market research had run on 07-22 or 07-23) — see
+  reasoning.md for the 08:37 ET entry. trades_this_week remains 0/3.
+- Benchmark: portfolio -0.00% vs SPY -1.01% (intraday estimate, market still
+  open) — alpha +1.01%.
+- daily_loss_halt: false — daily change -0.00%, well within -2% cap.
+- account.last_equity returned "0" again (stale field anomaly, now recurring
+  across every check since 2026-07-22) — daily P&L computed against last
+  known EOD equity ($99,672.36, 2026-07-21) instead.
+
+## Previous Day (2026-07-21 EOD) Summary
 - At EOD routine start, Alpaca live account held META (7sh, avg entry $644.744285) —
   same recurring memory/live-account drift flagged repeatedly this week (position not
   logged as a new open in open_positions.md/trade_log.md; treated Alpaca as source

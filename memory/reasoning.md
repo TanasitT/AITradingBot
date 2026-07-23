@@ -915,3 +915,19 @@ daily_loss_halt confirmed false (daily change -0.00%, well within -2% cap). trad
 ## [2026-07-21 15:58 ET] — EOD Report Sent
 EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — EOD Summary 2026-07-21 | P&L: -$3.46. Flagged the recurring memory/live-account drift (META open at routine start despite no logged entry) in the email for user follow-up.
 ---
+## [2026-07-23 EOD ET] -- No Open Positions to Evaluate
+EOD Thursday routine. Alpaca GET /v2/positions confirmed 0 open positions (no SH, no regular stock positions) -- no overnight-thesis check or force-close needed for either branch of the EOD routine. No trades were placed today (2026-07-23 market-open routine stopped early due to stale research -- see 08:37 ET entry above). Note: routine executed while Alpaca clock still showed market open (is_open=true, next_close 16:00 ET) -- ahead of the usual post-close schedule; flagged as an anomaly per task instructions, not treated as a blocker.
+---
+
+## [2026-07-23 EOD ET] -- Benchmark Logged
+Benchmark logged. Portfolio: $99,672.34 (-0.00%) | SPY: $740.86 (-1.01%, intraday estimate -- market still open) | Alpha: +1.01%
+---
+
+## [2026-07-23 EOD ET] -- Weekly Counter Reset
+daily_loss_halt set to false (already false; daily change -0.00%, well within -2% cap; no positions held). trades_this_week reset to 0/3 (already 0/3 -- no trades placed 2026-07-22 or 2026-07-23).
+---
+
+## [2026-07-23 EOD ET] -- EOD Report Sent
+EOD report sent to jankla2010@gmail.com.
+---
+

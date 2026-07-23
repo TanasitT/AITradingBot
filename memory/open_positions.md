@@ -1,5 +1,20 @@
 # Open Positions
 
+Last updated: 2026-07-23 15:57 ET (EOD Thursday routine — confirmed flat)
+
+NOTE (2026-07-23 EOD): EOD routine executed while market was still open (Alpaca
+clock showed is_open=true, next_close 16:00 ET — routine ran ahead of its usual
+post-close schedule; noted as an anomaly, not treated as a blocker per task
+instructions). Alpaca GET /v2/positions confirmed empty — no open positions
+(no SH, no regular stock positions), so no overnight-thesis check or
+force-close was needed for either branch of the EOD routine. Account equity
+$99,672.34; account.last_equity again returned "0" (stale/bad field, now
+recurring across every check today) so daily P&L computed vs last known EOD
+equity ($99,672.36 from 2026-07-21 EOD per benchmark_tracking.md): -$0.02
+(-0.00%), well within -2% halt threshold. daily_loss_halt confirmed/reset
+false, trades_this_week confirmed/reset to 0/3 in weekly_trade_counter.md.
+No exits needed (nothing open). No action taken.
+
 Last updated: 2026-07-23 11:30 ET (Intraday monitor check — confirmed flat)
 
 NOTE (2026-07-23 11:30 ET): Intraday check. Alpaca GET /v2/positions confirms
