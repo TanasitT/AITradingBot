@@ -1,5 +1,9 @@
 # Reasoning Journal
 
+## [2026-07-24 07:33 ET] — Pre-Market Research
+Research complete. 16 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ, SH). Top candidates: AMD (68), NVDA (64), META (60) — none cleared the 70 entry threshold. Market TRADE_OK=no, VIX=17.73. Context: Thursday 7/23 saw a broad tech selloff (S&P 500 -1.2%, Nasdaq -2.2%, Mag-7 -$800B) triggered by GOOGL's FY2026 capex guidance raise ($180-190B→$195-205B), compounded by oil spiking above $100/bbl (Red Sea tanker attacks) and new open-ended Section 301 tariffs (10-12.5%) taking effect at 12:01am ET today. SPY fell below its 5-day MA ($738.79 vs ~$744.06), blocking regular stock entries and triggering SH evaluation — SH scored 55/100, below its 60 threshold (single sharp down day, not yet a confirmed 5-session downtrend; Friday pre-market showing a tentative recovery attempt, AMD +1.39%). No trades eligible today on either branch. Wrote scores to research_cache.md and market context to daily_context.md.
+---
+
 ## [2026-07-24 10:30 ET]
 Intraday monitor (10:30 AM ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07, last EOD reset 2026-07-24) — no halt, proceeded. open_positions.md said "no open positions" and Alpaca GET /v2/positions confirmed empty — no drift this check, portfolio flat. No SH held, no regular-stock positions to check against stop-loss/take-profit. Alpaca GET /v2/account: equity $99,672.34 = last_equity $99,672.34 — daily P&L $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results.
 ---
