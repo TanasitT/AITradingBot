@@ -1,5 +1,9 @@
 # Reasoning Journal
 
+## [2026-07-24 09:30 ET]
+Intraday monitor (9:30 AM ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07, last EOD reset 2026-07-24) — no halt, proceeded. open_positions.md said "no open positions" and Alpaca GET /v2/positions confirmed empty — no drift this check, portfolio flat. No SH held, no regular-stock positions to check against stop-loss/take-profit. Alpaca GET /v2/account: equity $99,672.34 = last_equity $99,672.34 — daily P&L $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. No memory file updates needed (open_positions.md already reflects flat state).
+---
+
 ## [2026-07-24 15:57 ET] — EOD Friday Routine
 EOD close routine (Friday). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07, last EOD reset 2026-07-23) — no halt. open_positions.md/Alpaca GET /v2/positions both confirm 0 open positions (no SH, no regular stock positions) — nothing to evaluate for overnight thesis on either branch. Alpaca GET /v2/account: equity $99,672.34, cash $99,672.34, matching 2026-07-23 EOD exactly (no intraday movement, no positions held); account.last_equity again returned "0" (same recurring stale-field anomaly) so daily P&L computed vs benchmark_tracking.md's 2026-07-23 EOD equity ($99,672.34): $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md and portfolio_state.md with this check's results.
 ---
@@ -957,5 +961,9 @@ daily_loss_halt set to false (already false; daily change -0.00%, well within -2
 
 ## [2026-07-23 EOD ET] -- EOD Report Sent
 EOD report sent to jankla2010@gmail.com.
+---
+
+## [2026-07-24 20:37 ET] -- Market-Open Skipped (stale research)
+Market-open routine invoked. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) -- no halt, no trade-limit block. However, research_cache.md and daily_context.md are both still dated 2026-07-23 (last research run completed pre-market 2026-07-23) -- the pre-market-research routine has not yet produced fresh data for today's 2026-07-24 session. Candidates on file (AMD 75, NVDA 72, META 70) and context (SPY ~$747.41 above 5-day MA ~$744.06, VIX ~16.93, TRADE_OK=yes) are one trading day old. Consistent with precedent set on 2026-07-06, 2026-07-09, 2026-07-10, and 2026-07-23 runs, no trade_trigger.md was written this invocation to avoid trading on stale data. open_positions.md confirmed empty (no existing positions to reconcile). Recommend the pre-market-research routine run before the next market-open attempt.
 ---
 
