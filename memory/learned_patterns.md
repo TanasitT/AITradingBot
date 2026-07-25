@@ -175,3 +175,43 @@
 3. *(Unresolved, 4 weeks running)* Add VIX at entry to trade log template.
 4. *(Unresolved, 4 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
 5. *(Unresolved)* Log skip decisions in trade_log.md daily, including on days with zero trades (07-13 through 07-15 this week have no entries at all, active or skipped).
+
+---
+
+## Weekly Reflection — Week of 2026-07-20 (Final, logged 2026-07-25)
+
+### Week Stats
+- Trades executed: 4 | Wins: 1 | Losses: 3 | Win rate: 25.0%
+- Net P&L: +$21.86 (4 fills across 07-20 and 07-21; zero trades 07-22 through 07-24)
+- Portfolio: $99,648.14 -> $99,672.34 (+0.02%)
+- SPY performance this week: $741.99 (07-20) -> $735.98 (07-24), roughly -0.81%
+- Alpha vs SPY: ~+0.83% (small positive P&L against a declining index)
+- Cumulative alpha since inception: still positive but thin — 4 of 6 tracked active weeks now show losing or barely-breakeven trade P&L offset mainly by SPY underperforming those same days
+
+### Signals That Worked
+- **First positive-P&L trading week since inception**: despite only a 25% win rate, the single win (META 07-20 +$38.26) outsized the three small losses (AAPL -$0.36, AMZN -$12.58, META 07-21 -$3.46) combined (-$16.40), turning the week net positive for the first time.
+- **No hard rules broken across 4 trades**: every position sized within the 5% cap, daily loss cap never approached -2% on any day, and the 3-trades/day limit held (3 on 07-20, 1 on 07-21).
+- **Bot correctly sat out 3 of 5 trading days (07-22 to 07-24)** rather than forcing a trade to stay active — 07-23 explicitly logged a skip because research_cache.md/daily_context.md were stale, showing the pre-flight staleness check is working as a safety gate.
+
+### Signals That Failed
+- **All 4 trades were again force-closed on "no overnight catalyst," not stop-loss/take-profit**: same mechanical EOD exit pattern as every prior active week (NVDA 06-22; AMZN/META/NVDA 07-16; AAPL/META 07-17). Lifetime, 8 of 10 trades have now closed via this rule for a combined -$372.75 against +$73.24 in wins — the rule remains the single largest identified drag on performance (carried-forward action item, still unresolved).
+- **Live-account/memory drift extended to a third straight active week**: AMZN and META on 07-20 were discovered live on Alpaca without a prior open_positions.md/trade_log.md entry, and META reappeared live again on 07-21 despite being recorded as closed on 07-20 — the bot treated Alpaca as source of truth each time rather than trusting its own memory files. Uncommitted edits to engine/coordinator.py, engine/risk_manager.py, engine/technical.py, and utils/alpaca_client.py are still present in git status as of this writing, consistent with the standing hypothesis that in-progress code changes are the root cause.
+- **Research staleness caused a missed trading day (07-23)**: the market-open routine could not evaluate entries because daily_context.md/research_cache.md hadn't been refreshed since 07-21. This is a scheduling/pipeline gap (pre-market research not running reliably every day), not a strategy filter — it directly reduced trading days from 5 to effectively 2 this week.
+
+### VIX Conditions
+- VIX conditions were not explicitly logged for 07-20/07-21 entries in trade_log.md — the VIX-at-entry gap flagged since Week 1 is still unresolved after 6 weeks of tracking.
+- SPY declined steadily through the week (-0.81% from 07-20 to 07-24) without triggering the VIX>28 gate or the daily -2% halt, suggesting a moderate, non-panic pullback rather than a volatility spike.
+
+### Emerging Patterns (6 weeks tracked — moderate confidence)
+- **A single strong intraday win can flip a low-win-rate week to net positive**: this week's 25% win rate still produced positive P&L because the one winner (+$38.26, +0.85%) was larger than all three losers combined. This reinforces that win rate alone is a poor predictor of weekly outcome; average win/loss magnitude matters more given the EOD-force-close pattern compresses most losses to under -0.3%.
+- **The mandatory EOD-no-catalyst force-close is now confirmed across 6 consecutive active weeks (8 of 10 lifetime trades)**: combined lifetime cost -$372.75 vs +$73.24 in wins. This is the same open action item from the 07-13 reflection, now with two more weeks of evidence — the case for revisiting the same-day-earnings-distance rule (or adding a partial-hold allowance) has strengthened, not weakened.
+- **Live-account/memory-file drift is now a chronic, multi-week bug (07-16, 07-17, 07-20, 07-21 — 4 of the last 5 active trading days)**: this has moved from "recurring" to "essentially every active day" and continues to corrupt entry-time data (unknown order IDs/timestamps for most positions this week), blocking slippage and hold-duration analysis.
+- **Pre-market research staleness cost a trading day this week (07-23)**: this is a new failure mode not seen in prior weekly reflections — the research pipeline itself, not the strategy's entry filters, was the bottleneck on that day.
+
+### Open Action Items (carry forward to next week)
+1. **Still highest priority, 3rd week unresolved**: Root-cause and fix the engine/coordinator.py position-logging bug causing live Alpaca fills to go unrecorded in open_positions.md/trade_log.md at entry time (now observed 07-16, 07-17, 07-20, 07-21).
+2. *(Unresolved, 2 weeks running)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — now 8 of 10 lifetime trades lost or reduced by this rule for a combined -$372.75, vs. 2 winners for +$73.24 that happened to close positive anyway.
+3. **New**: Investigate why pre-market research (research_cache.md/daily_context.md) went stale on 07-22/07-23, causing the market-open routine to skip 07-23 entirely — check whether the 7:33 PM ICT research routine is running reliably every weekday.
+4. *(Unresolved, 5 weeks running)* Add VIX at entry to trade log template.
+5. *(Unresolved, 5 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
+6. *(Unresolved)* Log skip decisions in trade_log.md daily — 07-22 through 07-24 (3 of 5 trading days) have no skip-reason entries logged, only reconstructed from portfolio_state.md/open_positions.md notes.
