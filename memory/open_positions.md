@@ -1,5 +1,15 @@
 # Open Positions
 
+Last updated: 2026-07-25 00:54 ET (EOD Saturday-cycle routine — confirmed flat)
+
+NOTE (2026-07-25 EOD Saturday routine): Alpaca GET /v2/positions confirms
+empty — no open positions (no SH, no regular stock positions), matching prior
+11:30 ET check and EOD Friday state. No overnight-thesis check or force-close
+needed (nothing open). This run found the 2026-07-24 EOD Friday routine had
+already completed in full (report sent, benchmark logged, counters reset), so
+no duplicate report/benchmark entry was made — see portfolio_state.md for
+detail. No action taken.
+
 Last updated: 2026-07-24 11:30 ET (Intraday monitor check — confirmed flat)
 
 NOTE (2026-07-24 11:30 ET): Intraday check. Alpaca GET /v2/positions confirms

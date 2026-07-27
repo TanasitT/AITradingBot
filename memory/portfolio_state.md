@@ -1,4 +1,18 @@
 # Portfolio State
+Last updated: 2026-07-25 00:54 ET (EOD Saturday-cycle routine — confirmed flat, no new session)
+
+NOTE (2026-07-25 EOD Saturday routine): This scheduled run closes the 2026-07-24
+Friday session, but the EOD Friday routine already fully completed for that
+session (commit ec61025 "auto: EOD report sent | 2026-07-24" — report emailed,
+benchmark row appended, weekly_trade_counter.md reset). Alpaca GET /v2/account
+and GET /v2/positions re-confirmed no change since then: equity $99,672.34,
+cash $99,672.34, 0 open positions (no SH, no regular stock). Market clock
+shows is_open=false, next_open 2026-07-27 09:30 ET — no new trading session to
+report on. To avoid sending a duplicate EOD email and duplicate benchmark row
+for the same date, this routine did NOT re-run /report or /benchmark; it only
+re-verified account state and re-confirmed the daily_loss_halt/trades_this_week
+reset (both already correct — see weekly_trade_counter.md).
+
 Last updated: 2026-07-24 EOD ET (EOD Friday routine — Alpaca GET /v2/account live-confirmed)
 
 - Cash available: $99,672.34

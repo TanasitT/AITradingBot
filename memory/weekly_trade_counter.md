@@ -78,3 +78,10 @@ because research was stale — see reasoning.md).
 daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
 no positions held). trades_this_week reset to 0/3 (was already 0/3 — no trades placed
 this week).
+
+## EOD Reset — 2026-07-25 (Saturday-cycle routine, re-confirming 2026-07-24 Friday session)
+daily_loss_halt re-confirmed false (was already false). trades_this_week re-confirmed 0/3
+(was already 0/3). This run found the Friday EOD routine had already reset these same
+fields for the same session (see entry above) — no change was needed, values re-verified
+against live Alpaca account (equity $99,672.34, 0 open positions, market closed until
+2026-07-27).
