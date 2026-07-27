@@ -1,6 +1,28 @@
 # Open Positions
 
-Last updated: 2026-07-25 00:54 ET (EOD Saturday-cycle routine — confirmed flat)
+Last updated: 2026-07-27 09:35 ET (Intraday monitor check)
+
+DRIFT FLAG: Alpaca GET /v2/positions shows AMD (9sh, avg entry $521.59) open,
+but this file's last entry (2026-07-25) recorded flat/no positions and no AMD
+entry was ever logged here or in trade_log.md — same recurring memory/live-account
+drift previously flagged for AMZN/META/NVDA (coordinator.py/risk_manager.py/
+technical.py/reporter.py/alpaca_client.py still show uncommitted edits per git
+status, likely still the root cause). Treating Alpaca as source of truth.
+
+AMD current price $485.26 vs avg entry $521.59 = -6.965% unrealized. AMD is a
+high-beta semiconductor name (beta > 1.5), so stop-loss threshold is 7%, not the
+standard 5% — position is close to but has NOT crossed the 7% stop-loss trigger
+this check. No exit executed. No SH position held (SPY inverse-ETF logic not
+applicable). Account equity $99,345.37 vs last_equity $99,672.34 = -0.328% daily,
+well within -2% halt threshold. daily_loss_halt confirmed false in
+weekly_trade_counter.md. Flagging AMD for close monitoring on the next check —
+if price drops below $485.08 (7% below entry), stop-loss should trigger.
+
+| Ticker | Shares | Entry Price | Entry Date | Cost Basis | Stop-Loss (7%, high-beta) | TP1 (+8%) | TP2 (+15%) | TP3 (+25%) | Order ID |
+|---|---|---|---|---|---|---|---|---|---|
+| AMD | 9 | $521.59 (Alpaca avg) | unknown | $4694.31 | $485.08 | $563.32 | $599.83 | $651.99 | unknown |
+
+
 
 NOTE (2026-07-25 EOD Saturday routine): Alpaca GET /v2/positions confirms
 empty — no open positions (no SH, no regular stock positions), matching prior
