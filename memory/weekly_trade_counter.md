@@ -10,6 +10,14 @@ daily_loss_halt: false
 halt_reason:
 halt_date:
 
+## EOD Reset — 2026-07-27 (Tuesday-cycle EOD, closing Monday 2026-07-27 session)
+daily_loss_halt set to false (was already false; daily change -0.38% — AMD's
+stop-loss realized loss — well within -2% cap). trades_this_week reset to 0/3
+(was already showing 0/3 in this file's header, though AMD was in fact entered
+this week via the 08:37 ET market-open trigger and never got counted here — see
+portfolio_state.md/reasoning.md for the flagged write-path drift; noting for
+follow-up rather than silently correcting the count).
+
 ## EOD Reset — 2026-07-04 (Saturday EOD)
 daily_loss_halt reset to false by EOD Saturday routine.
 trades_this_week reset to 0 for new week (2026-07-07).

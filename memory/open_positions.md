@@ -1,5 +1,26 @@
 # Open Positions
 
+Last updated: 2026-07-27 11:30 ET (Intraday monitor check — confirmed flat)
+
+NOTE (2026-07-27 11:30 ET): Intraday check. Alpaca GET /v2/positions confirms
+empty — no open positions (AMD was closed at the 10:30 ET check this session
+per stop-loss trigger; see entry below). No SH position held (SPY inverse-ETF
+logic not applicable). Account equity $99,293.08 vs last_equity $99,672.34 =
+-0.381% daily, well within -2% halt threshold. daily_loss_halt confirmed false
+in weekly_trade_counter.md. No exits needed (nothing open). No action taken.
+
+Last updated: 2026-07-27 10:30 ET (Intraday monitor check — AMD stop-loss triggered, closed)
+
+No open positions. AMD (9sh, avg entry $521.59) hit its 7% high-beta stop-loss
+this check: current price $479.569 vs stop trigger $485.08 (price had breached
+stop, down -8.06% from entry vs the 7% threshold flagged as "close monitoring"
+last check at 09:35 ET). Closed via Alpaca market sell-to-close order
+ce430e38-701b-4c65-b04c-79121ed5833a, filled 9sh @ $479.45 avg. Realized P&L
+-$379.26 (-8.09%). Alpaca GET /v2/positions confirmed empty after fill.
+Account equity $99,293.08 vs last_equity $99,672.34 = -0.381% daily, well
+within -2% halt threshold — no halt triggered. No SH position held (SPY
+inverse-ETF logic not applicable).
+
 Last updated: 2026-07-27 09:35 ET (Intraday monitor check)
 
 DRIFT FLAG: Alpaca GET /v2/positions shows AMD (9sh, avg entry $521.59) open,

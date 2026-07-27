@@ -1,5 +1,42 @@
 # Portfolio State
-Last updated: 2026-07-25 00:54 ET (EOD Saturday-cycle routine — confirmed flat, no new session)
+Last updated: 2026-07-27 EOD ET (EOD Tuesday-cycle routine, closing 2026-07-27 Monday session — Alpaca GET /v2/account live-confirmed)
+
+- Cash available: $99,293.08
+- Invested: $0.00
+- Total equity: $99,293.08
+- Daily P&L: -$379.26 (-0.38%) vs prior EOD equity $99,672.34 — driven by AMD's realized stop-loss loss earlier in the session; no positions held at close
+- Open positions: 0
+- Buying power: $397,172.32
+- Account status: ACTIVE
+- Mode: PAPER TRADING
+- Account number: PA3XB7R3677S
+
+## Today's Trade Summary (2026-07-27 EOD)
+- Alpaca GET /v2/positions confirmed 0 open positions at EOD — no SH, no regular
+  stock positions. No overnight-thesis check or force-close needed (nothing open).
+- AMD (9sh, entered via 08:37 ET market-open trigger, never logged to
+  open_positions.md/trade_log.md before being discovered live — see reasoning.md)
+  was closed intraday at 10:30 ET via its 7% high-beta stop-loss: exit $479.45 avg,
+  realized P&L -$379.26 (-8.09%). No new trades placed by this EOD routine itself.
+- ANOMALY: Alpaca clock (GET /v2/clock) still reported is_open=true / next_close
+  2026-07-27T16:00 ET at the time this routine ran — same recurring clock-lag
+  anomaly flagged on prior EOD runs (e.g. 2026-07-23). Treated as the EOD close
+  for the 2026-07-27 session per this scheduled task's own labeling (Tuesday-cycle,
+  closing Monday's session).
+- Benchmark: portfolio -0.38% vs SPY +0.39% — alpha -0.77%.
+- daily_loss_halt: false — daily change -0.38%, well within -2% cap.
+- weekly_trade_counter.md still shows 0/3 trades_this_week even though the AMD
+  entry executed this week — the market-open routine deferred writing the counter
+  to "the Python executor" (see reasoning.md 08:37 ET) and no follow-up entry ever
+  incremented it. Flagging this as the same class of recurring memory/live-account
+  write-path drift already noted repeatedly in open_positions.md/trade_log.md this
+  month (root cause likely still the uncommitted in-progress edits in
+  engine/coordinator.py, engine/risk_manager.py, engine/technical.py,
+  engine/reporter.py, utils/alpaca_client.py per git status).
+
+## Previous Day (2026-07-25 EOD Saturday-cycle) Summary
+- Re-confirmed flat, no new session (closes 2026-07-24 Friday session already
+  fully reported). See prior entry below for detail.
 
 NOTE (2026-07-25 EOD Saturday routine): This scheduled run closes the 2026-07-24
 Friday session, but the EOD Friday routine already fully completed for that

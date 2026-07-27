@@ -1,5 +1,33 @@
 # Reasoning Journal
 
+## [2026-07-27 EOD ET] — EOD Tuesday-cycle Routine
+EOD close routine (Tuesday-cycle, closing the 2026-07-27 Monday session). Read
+strategy.md and open_positions.md first. open_positions.md/Alpaca GET
+/v2/positions both confirm 0 open positions at EOD (no SH, no regular stock) —
+AMD (9sh, entered via this morning's 08:37 ET market-open trigger) was already
+closed intraday at 10:30 ET via its 7% high-beta stop-loss, realized P&L
+-$379.26 (-8.09%); nothing left to evaluate for an overnight-thesis check or
+force-close on either branch. Alpaca GET /v2/account: equity $99,293.08 vs
+prior EOD equity $99,672.34 = -0.38% daily, well within the -2% halt threshold
+— no halt triggered, daily_loss_halt confirmed false. ANOMALY: Alpaca clock
+still reported is_open=true / next_close 2026-07-27T16:00 ET at routine run
+time (same recurring clock-lag anomaly seen on prior EOD runs, e.g.
+2026-07-23) — proceeded per task instructions rather than treating it as a
+blocker. Wrote portfolio_state.md with updated account snapshot.
+---
+
+## [2026-07-27 EOD ET] — Benchmark Logged
+Benchmark logged. Portfolio: $99,293.08 (-0.38%) | SPY: $738.83 (+0.39%) | Alpha: -0.77%
+---
+
+## [2026-07-27 EOD ET] — EOD Report Sent
+EOD report sent to jankla2010@gmail.com.
+---
+
+## [2026-07-27 10:30 ET] — Intraday Monitor Check — AMD Stop-Loss Triggered
+Intraday monitor (10:30 AM ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded. open_positions.md/Alpaca GET /v2/positions: AMD (9sh, avg entry $521.59) only open position, not SH, no inverse-ETF logic applies. AMD current price $479.569 vs entry $521.59 = -8.06% unrealized — AMD is high-beta (semiconductor, beta > 1.5) so its stop-loss threshold is 7% ($485.08); price had breached that trigger (last check at 09:35 ET flagged it at -6.97%, close to but not yet past the line). Executed market sell-to-close via Alpaca: order ce430e38-701b-4c65-b04c-79121ed5833a, filled 9/9 shares @ $479.45 avg. Realized P&L -$379.26 (-8.09%). Alpaca GET /v2/positions confirmed empty after fill. Alpaca GET /v2/account: equity $99,293.08 vs last_equity $99,672.34 — daily P&L -0.381%, well within the -2% halt threshold, so no halt triggered. Updated open_positions.md and trade_log.md with the close.
+---
+
 ## [2026-07-27 09:35 ET] — Intraday Monitor Check
 Intraday monitor (9:35 AM ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded. open_positions.md's last entry (2026-07-25) recorded flat, but Alpaca GET /v2/positions live shows AMD (9sh, avg entry $521.59) open — never recorded in open_positions.md or trade_log.md, same recurring memory/live-account drift previously flagged for AMZN/META/NVDA (coordinator.py/risk_manager.py/technical.py/reporter.py/alpaca_client.py still show uncommitted edits per git status, likely still the cause; note this may tie to this morning's 08:37 ET market-open trigger, which wrote memory/trade_trigger.md with AMD as a candidate but deferred order placement/logging to the Python executor). Treated Alpaca as source of truth. AMD current price $485.26 vs avg entry $521.59 = -6.965% unrealized — AMD is high-beta (semiconductor, beta > 1.5) so its stop-loss threshold is 7% ($485.08), not the standard 5%; position is close to but has NOT crossed that trigger this check. No SH position held (SPY inverse-ETF logic not applicable). Alpaca GET /v2/account: equity $99,345.37 vs last_equity $99,672.34 — daily P&L -0.328%, well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md to record the untracked AMD position with computed stop/TP levels and flagged it for close monitoring next check given proximity to its stop-loss.
 ---
@@ -994,4 +1022,8 @@ Market-open routine invoked. weekly_trade_counter.md: daily_loss_halt=false, tra
 
 ## [2026-07-25 04:23 ET] — Weekly Summary
 Weekly summary compiled (week of 2026-07-20 to 2026-07-24). Benchmark logged: Portfolio $99,672.34 (0.00%, no new session) | SPY $735.98 (0.00%, weekend) | Alpha 0.00% — final snapshot carried from Friday close. Trade log stats: 4 trades (AAPL, AMZN, META on 07-20; META on 07-21), 1 win (META +$38.26), 3 losses (AAPL -$0.36, AMZN -$12.58, META -$3.46), win rate 25.0%, total P&L +$21.86. performance_metrics.md updated with this week's row and refreshed all-time stats (10 trades, 3 wins, 30.0% win rate, profit factor 0.18). learned_patterns.md appended with Week of 2026-07-20 reflection — key findings: first net-positive week despite low win rate, EOD-no-catalyst force-close rule now accounts for 8/10 lifetime trades (-$372.75 combined drag), live-account/memory drift recurred on 07-20/07-21, and pre-market research staleness caused a missed trading day on 07-23. Weekly summary emailed to jankla2010@gmail.com.
+---
+
+## [2026-07-27 11:30 ET]
+Intraday monitor check (11:30 ET slot). weekly_trade_counter.md: daily_loss_halt=false, no halt. open_positions.md/Alpaca GET /v2/positions both confirm flat — no open positions (AMD was already closed at the 10:30 ET check today per its 7% high-beta stop-loss, realized P&L -$379.26). Account equity $99,293.08 vs last_equity $99,672.34 = -0.381% daily, well within the -2% halt threshold. No SH position held, no exits needed, no action taken this check.
 ---
