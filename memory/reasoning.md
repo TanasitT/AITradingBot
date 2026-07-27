@@ -1,5 +1,9 @@
 # Reasoning Journal
 
+## [2026-07-27 08:37 ET] — Market Open Trade Trigger
+Market-open routine. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded to /trade. research_cache.md candidates >=70: AMD (74), NVDA (70) — both above threshold, no other tickers qualify. open_positions.md/Alpaca confirm 0 open positions (flat since 2026-07-25). daily_context.md: SPY ~$745.5 tentatively above 5-day MA (~$744.06), VIX 18.96 (<28) — regular stock entries unblocked, SH trigger not met. All entry gates passed. Wrote memory/trade_trigger.md with candidates [AMD:74, NVDA:70] for the Python executor to verify volume (>=1.25x) and place orders (5% max position size each) via Alpaca. Did not update open_positions.md/trade_log.md/weekly_trade_counter.md — deferred to Python executor per skill instructions. Waiting for status: done.
+---
+
 ## [2026-07-27 07:33 ET] — Pre-Market Research
 Research complete. 15 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ); SH evaluated but trigger not met (SPY back above its 5-day MA) so no SH score produced. Top candidates: AMD (74), NVDA (70), PLTR (66) — AMD and NVDA both clear the 70 entry threshold for the first time since 2026-07-22. Market TRADE_OK=yes, VIX=18.96. Context: weekend pause in US-Iran strikes sent Brent crude down ~6% to ~$91/bbl, removing the inflation/rate-fear headwind that had driven last week's selloff; SPY pre-market ~$745.5 is tentatively back above its 5-day MA (~$744.06), unblocking regular stock entries. Heavy earnings binary risk all week (FOMC + MSFT + META + SOFI on 7/29; AAPL + AMZN + COIN + RIVN on 7/30) — volume must still be confirmed >=1.25x at market open before any trade is placed. Wrote scores to research_cache.md and market context to daily_context.md.
 ---

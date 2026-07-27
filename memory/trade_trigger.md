@@ -1,6 +1,6 @@
 # Trade Trigger
-status: done
-requested_at: 2026-07-20 09:52 ET
-candidates: META:77, AMZN:73, AAPL:73
-context: SPY above 5-day MA ($743.29 vs $742.96, +$0.33 cushion), VIX 18.77
-already_held: META (7sh @ $640.637143, opened 2026-07-20 by earlier market-open trigger)
+status: pending
+requested_at: 2026-07-27 08:37 ET
+candidates: [AMD:74, NVDA:70]
+context: SPY above 5-day MA (~$745.5 vs MA ~$744.06), VIX 18.96
+already_held: none
