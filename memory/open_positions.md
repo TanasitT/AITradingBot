@@ -1,5 +1,30 @@
 # Open Positions
 
+Last updated: 2026-07-28 10:34 ET (Intraday monitor check)
+
+DRIFT FLAG (recurring): Alpaca GET /v2/positions shows AMD (20sh, avg entry
+$465.966) open, but this file's last entry (2026-07-27 11:30 ET) recorded flat/
+no positions — this is a new AMD entry (different size/price than the AMD
+position closed 2026-07-27) never logged here or in trade_log.md. Same recurring
+memory/live-account write-path drift previously flagged repeatedly (coordinator.py
+/risk_manager.py/technical.py/reporter.py/alpaca_client.py still show uncommitted
+edits per git status — likely still the root cause). Treating Alpaca as source of
+truth; AMD tracked below with stop/TP computed from Alpaca avg_entry_price,
+entry date/order ID unknown.
+
+AMD current price $448.60 vs avg entry $465.966 = -3.727% unrealized (as of
+10:34 ET). AMD is a
+high-beta semiconductor name (beta > 1.5), so stop-loss threshold is 7%
+($433.35), not yet breached — no exit executed. No take-profit tier hit (TP1
++8% = $503.24). No SH position held (SPY inverse-ETF logic not applicable).
+Account equity $98,945.74 vs last_equity $99,293.06 = -0.350% daily, well
+within -2% halt threshold. daily_loss_halt confirmed false in
+weekly_trade_counter.md. No exits needed this check.
+
+| Ticker | Shares | Entry Price | Entry Date | Cost Basis | Stop-Loss (7%, high-beta) | TP1 (+8%) | TP2 (+15%) | TP3 (+25%) | Order ID |
+|---|---|---|---|---|---|---|---|---|---|
+| AMD | 20 | $465.966 (Alpaca avg) | unknown | $9319.32 | $433.35 | $503.24 | $535.86 | $582.46 | unknown |
+
 Last updated: 2026-07-27 11:30 ET (Intraday monitor check — confirmed flat)
 
 NOTE (2026-07-27 11:30 ET): Intraday check. Alpaca GET /v2/positions confirms
