@@ -1,93 +1,99 @@
-# Daily Market Context — 2026-07-27 ET
-Last updated: 2026-07-27 pre-market ET (based on 2026-07-24 close + 2026-07-27 pre-market data)
+# Daily Market Context — 2026-07-28 ET
+Last updated: 2026-07-28 intraday ET (based on 2026-07-27 close + 2026-07-28 session data)
 
 ## SPY Trend
-- SPY July 24 close: $738.93 (range $737.29–$743.72)
-- SPY pre-market July 27: ~$745.5 (futures +0.9% above July 24 close)
-- SPY 5-day MA: ~$744.06 — SPY is ABOVE the 5-day MA by ~$1.44 at pre-market open
-- SPY 50-day MA: ~$750.16 — SPY still BELOW the 50d MA structurally
-- Short-term trend: RECOVERY ATTEMPT — SPY reclaiming 5-day MA after July 22-24 breakdown; driven by US-Iran ceasefire pause + oil drop 5-7%
-- Path: $748.28 (Jul 22 close) → $740.83 (Jul 23 close, S&P -1.2%) → $738.93 (Jul 24 close) → ~$745.5 (Jul 27 pre-market, +0.9%)
-- SPY is ABOVE 5-day MA → regular stock entries TENTATIVELY UNBLOCKED (first unblock since July 22)
+- SPY July 27 close: ~$745 (recovered +0.9% from July 24 close of $738.93)
+- SPY July 28 pre-market: ~$745.81 (+0.94%)
+- SPY July 28 session: S&P 500 finished +0.13% (mixed session — Dow +0.93%, Nasdaq -0.63%)
+- SPY July 28 close estimate: ~$746
+- **SPY 5-day MA: 738.08** — SPY is ABOVE the 5-day MA by approximately $8 → **regular stock entries UNBLOCKED**
+- SPY 50-day MA: 743.39 — SPY is NOW ABOVE the 50d MA (intermediate-term bullish signal)
+- SPY 200-day MA: 745.29 — SPY approximately at/above the 200d MA (key structural level)
+- RSI (14-day): 44.83 — below 50; recovering but not yet confirmed bull momentum
+- MACD: -1.500 — bearish but improving from deeper negative
+- Trend: RECOVERY CONTINUING — SPY above 5-day MA for a second session; now reclaimed 50d MA; testing 200d MA resistance
 - SH trigger: NOT MET — SPY above 5-day MA; SH evaluation not required this run
-- RSI (14-day): ~38-42 — recovering from oversold zone (was 35.3 on July 24); still below 50 = not yet in bull momentum
-- MACD: recovering from -2.00 signal; still negative but improving
-- CONTEXT: Recovery is driven by a specific macro catalyst (US-Iran ceasefire pause → oil relief), not a sustained technical reversal. 50-day MA ~$750.16 is the next key resistance. Treat today's unblock as tentative — monitor close vs. 5-day MA.
+- Path: $748.28 (Jul 22) → $740.83 (Jul 23, -1.2%) → $738.93 (Jul 24) → ~$745 (Jul 27, +0.9%) → ~$746 (Jul 28, +0.13%)
+- CONTEXT: Recovery is holding but semiconductor sector weakness (SOXX -3.9%) is a headwind; Dow/value holding gains while Nasdaq is dragged by AI capex fears. SPY position above 200d MA is tentative — watch close confirmation.
 
 ## VIX
-- VIX July 24 close: 18.58
-- VIX July 27 opening: ~18.96 (slightly above Friday close; will recalibrate intraday)
+- VIX July 27 close: 18.58
+- VIX July 28: 17.76 (DOWN 0.82 or -4.42% from prior close)
 - VIX is BELOW the 28 threshold — TRADE_OK (VIX criterion met)
-- Risk interpretation: MODERATE — elevated vs. early-July range (14-17) but not extreme; ceasefire news should push VIX lower through the session
-- Trend: Elevated (18.96) vs. the stable pre-selloff regime; week-over-week: 16.93 → 17.73 → 18.96; heavy earnings week (FOMC+MSFT+META+AAPL+AMZN) keeps VIX floor elevated
-- 52-day range (June 29 to July 27): high 20.31, avg 16.83, low 14.96
+- VIX futures: 19.43 (modest term structure premium)
+- Risk interpretation: MODERATE and DECLINING — ceasefire optimism and oil pullback continue to reduce volatility expectations; FOMC expected to hold (non-event) reduces event-risk premium
+- Trend: Declining from July peak; 18.58 → 17.76; moving back toward the 14–17 early-July range
+- 52-day range context: High ~20.31, avg ~16.83, low ~14.96
 
 ## Sector Context
-- LEADING TODAY: Technology / Semiconductors — Nasdaq-100 futures +1.4% (outperforming S&P +0.9%); AI chip names (AMD, NVDA) benefit from (1) oil macro relief, (2) AMD's Advancing AI conference, (3) US approval for Chinese firms to buy advanced chips
-- RECOVERY CATALYST: US-Iran paused strikes over the weekend → Brent crude -5.9% to ~$91.08/bbl, WTI -5.4% to ~$84.51/bbl; removes the primary inflation/rate-fear headwind that drove the July 23 selloff
-- LAGGING: Consumer discretionary (TSLA post-earnings miss); EV sector (RIVN cash burn + dilution); crypto-adjacent (COIN near 52-week lows)
-- NEUTRAL/WATCH: Mega-cap tech (MSFT, META, AAPL, AMZN) — earnings binary events this week; positioning cautious ahead of July 29-30 reports
-- BREADTH: S&P 500 futures broad-based recovery; advance-decline ratio expected to improve significantly vs. Thursday's ~3:1 decliners
+- LEADING TODAY: Value/Industrials — Dow Jones +0.93%, led by traditional blue-chip earnings beats; non-semiconductor stocks holding gains well
+- LAGGING TODAY: Semiconductors — SOXX -3.9%; sector index -3.24%; Semiconductor Equipment & Materials -4.96%; Computer Hardware -4.97%
+- SEMICONDUCTOR CATALYST: NVIDIA in talks to provide $250B guarantee for OpenAI Ohio data center project (WSJ report July 27) — investors spooked by AI capex sustainability narrative (balance-sheet risk for NVDA; broader AI spend bubble fears)
+- INTERNET/CLOUD: Mixed to slightly positive — GOOGL gaining ~2% as Q2 cloud beat (+82%) reasserts vs. capex fears; META, AMZN in pre-earnings positioning
+- CONSUMER TECH: AAPL outperforming — hit ATH $337.12 on July 27; outperformed Nasdaq by 23pp in July
+- EV SECTOR: Weak — TSLA down 30% in 2026 post-earnings miss; RIVN pressured by $1.2B equity offering at $15.50
+- CRYPTO-ADJACENT: Modestly recovering — COIN +3% on pre-earnings positioning and improved risk appetite
 
-## Key Movers (July 24-27 context)
-- AMD: Friday pre-market recovery (+1.39% to $547.20 on July 24); Monday continues recovery in +0.9% tape; Advancing AI conference catalysts + GF Securities PT raised to $640 = top candidate
-- NVDA: ~$206.75 area; sitting above 50d EMA ($206.31) and 200d EMA ($204.92); Chinese chip export approval is a fresh positive; RSI ~56
-- TSLA: July 24 close $313.03 (post-earnings selloff -2.08%); Q2 EPS miss $0.33 vs $0.53 expected; FCF -$1.1B; market cap briefly below $1T; structurally weak
-- SMCI: ~$27.65 (-41% past month); Taiwan criminal probe escalating (office raids, detentions, server seizures); $7B dilution overhang; ITC patent probe added; AVOID
-- META: Down 18% YoY; earnings July 29 = key binary; Q1 revenue +33.1% shows strong underlying business; GOOGL capex precedent is the main risk
-- GOOGL: Post-earnings pressure (July 22 report); FCF negative for first time; own capex raise was the July 23 market selloff catalyst
-- PLTR: $133.76; above 20d/50d MA but below 100d/200d MA; strong Q1 (85% revenue growth, 51% adj margin); earnings Aug 3
+## Key Movers (July 27–28 context)
+- NVDA: -5% to ~$196.51 — OpenAI $250B guarantee news; broke below 50d/200d EMA support; AI capex fears
+- AMD: -3.39% to $494.95 — broke below $500 support; volume 0.72x avg (disqualifying); chip sector weakness; pre-earnings de-risking ahead of Aug 5
+- AAPL: +1.2% to ATH $337.12 on July 27 — outperforming; Services resilience; earnings July 30 binary ahead
+- PLTR: +4% to ~$130 on July 27 — DIA withdrew contested military intelligence contract bid (positive for Palantir)
+- SMCI: Probe escalating — Nvidia employee detained July 24; 9 people under investigation; 12 sites searched; stock remains in AVOID territory despite July 22 order/margin surge
+- COIN: +3% on July 28 — pre-earnings positioning; EPS expected +158% YoY; PNC increased position +39.4%
+- TSLA: Structurally weak at ~$310–315; $299 noted as key support; down 30% in 2026
 
 ## Key Macro Notes
-- OIL: Brent ~$91.08, WTI ~$84.51 on July 27 — down 5-7% from above $100 on US-Iran ceasefire pause; removes primary inflation narrative but ceasefire durability uncertain (fewer than 10 vessels transiting Strait of Hormuz daily on weekend)
-- US-IRAN: US and Iran paused strikes over weekend; markets pricing diplomatic resolution optimism; primary risk = ceasefire collapses and oil spikes back above $100
-- FOMC JULY 29: Federal Reserve rate decision — oil drop + ceasefire may reduce urgency for rate-cut signals; remains a binary event for rate-sensitive names (SOFI, financials); same day as MSFT + META earnings
-- SECTION 301 TARIFFS: Effective July 24, no statutory expiration; ongoing structural headwind for AAPL (China manufacturing), TSLA, RIVN, import-exposed names; oil drop partially offsets tariff cost pressures
-- UPCOMING EARNINGS (this week): July 29 — FOMC + MSFT + META + SOFI (quadruple event); July 30 — AAPL + AMZN + COIN + RIVN
-- UPCOMING EARNINGS (next 2 weeks): Aug 3 — PLTR; Aug 4 — AMD; Aug 11 — SMCI; Aug 26 — NVDA
+- OIL: Brent ~$91/bbl, WTI ~$84/bbl — down 5-7% from above $100 on US-Iran ceasefire pause; maintaining deflation of the primary inflation/rate-fear headwind from July 22–23
+- US-IRAN: Ceasefire pause holding; diplomatic restart optimism; key risk = ceasefire collapses and oil spikes back above $100
+- FOMC JULY 29: Chair Warsh expected to HOLD at 3.5%–3.75% (64% CME probability). Warsh has abandoned forward guidance (June statement was significantly streamlined). Market treats as likely non-event. No rate cut expected; no rate hike expected. Press conference at 2:30 PM ET.
+- EARNINGS WALL: July 29 — MSFT (EPS exp. +16%, Azure focus), META (revenue +26.6%, capex is key), SOFI (EPS $0.11, tech platform -27% concern), + FOMC. July 30 — AAPL (16% rev, 20% EPS growth expected), AMZN (AWS +28% Q1, revenue +17.3% exp.), COIN (EPS +158% YoY), RIVN (EPS loss expected).
+- AI CAPEX NARRATIVE: Now the dominant macro market theme — GOOGL FCF negative, META $145B plan, NVDA $250B OpenAI backstop. Market increasingly asking "when does AI ROI materialize?" Semiconductor names most exposed to sentiment shifts on this narrative.
+- SECTION 301 TARIFFS: Effective July 24; ongoing structural headwind for AAPL (China manufacturing), TSLA, RIVN, hardware-import-exposed names. Oil drop partially offsets tariff cost pressures for logistics.
 
 ## Market Entry Status (All Criteria)
-- SPY above 5-day MA: YES (TENTATIVE) — SPY pre-market ~$745.5 vs MA ~$744.06 (ABOVE by ~$1.44) → regular stock entries TENTATIVELY UNBLOCKED
-- VIX < 28: YES — VIX ~18.96; below threshold; macro condition met
+- SPY above 5-day MA: YES — SPY ~$746 vs MA 738.08 (ABOVE by ~$8) → regular stock entries UNBLOCKED
+- VIX < 28: YES — VIX 17.76; declining; well below threshold
 - Daily loss halt: NO — daily_loss_halt: false (confirmed at routine start; no positions held)
 - SH trigger: NOT MET — SPY above 5-day MA; no inverse-ETF evaluation needed
-- Pre-market context: Strong broad recovery (S&P futures +0.9%, Nasdaq +1.4%); oil -7%; ceasefire catalyst = most supportive tape since late June
 
-## Tickers at/Above Entry Threshold (Score >= 70) — 2 CANDIDATES
-- **AMD: 74/100** — Advancing AI 2026 conference catalysts (MI450X, MI500 GPU, EPYC), GF Securities raised PT to $640 (Buy), sector recovery, no near-term earnings binary (Aug 4). **Requires volume ≥1.25x at market open.**
-- **NVDA: 70/100** — Chinese firm chip approvals, above dual EMA support ($206.31/$204.92), strong Buy consensus, AI proxy for big tech earnings week. **Requires volume ≥1.25x at market open.**
+## Tickers at/Above Entry Threshold (Score >= 70) — 0 CANDIDATES
+- **None today.** No ticker clears the 70/100 threshold.
+- Closest: PLTR at 68/100 — blocked by earnings binary (Aug 3) and structural position below 100d/200d MA
 
-## Tickers Below Threshold — Watch
-- PLTR: 66/100 — strong fundamentals (85% rev growth, 51% adj margin) but below 100d/200d MA drag; earnings Aug 3
-- META: 64/100 — earnings binary July 29 + capex-penalty risk; strong underlying business
-- AMZN: 62/100 — earnings July 30; oil cost-reduction positive for logistics; RSI neutral
-- MSFT: 60/100 — earnings July 29 same as FOMC; Azure growth key; double binary risk
-- SOFI: 58/100 — new products, Goldman PT raise; but FOMC + earnings both July 29
-- AAPL: 57/100 — RSI oversold support zone; earnings July 30 binary + tariff exposure
-- GOOGL: 48/100 — own capex raise caused July 23 selloff; FCF negative; lingering penalty
+## Tickers Just Below Threshold (55–69) — Watch for Score Recovery
+- PLTR: 68/100 — DIA catalyst; earnings Aug 3 (15.32% options move); just 2 pts from threshold
+- META: 65/100 — earnings binary July 29 tomorrow; strong analyst consensus (71 analysts, median PT $815)
+- AMZN: 64/100 — earnings binary July 30; AWS Q1 +28% is compelling; 66 analysts Strong Buy
+- AAPL: 63/100 — earnings binary July 30; ATH momentum; 16%/20% rev/EPS growth expected
+- MSFT: 62/100 — earnings binary July 29 + FOMC same day; Strong Buy 35/1/1; EPS +16%
+- NVDA: 55/100 — broke EMA support; AI capex fears; $302.83 avg PT implies massive long-term upside
+- AMD: 55/100 — volume 0.72x (disqualifying); broke $500; sector weakness; Baird PT $1,250
 
-## Tickers Watch List (35-54)
-- RIVN: 46/100 — delivery beat + raised guidance; but dilution (75M shares) + tariff lawsuit + EPS loss
-- COIN: 42/100 — volume 0.76x avg (below entry minimum); near 52-week lows; earnings July 30
-- TSLA: 40/100 — Q2 EPS miss ($0.33 vs $0.53), FCF -$1.1B; structurally weak post-earnings
+## Tickers Watch List (35–54)
+- SOFI: 54/100 — earnings/FOMC binary July 29; down 50% from highs; tech platform -27% YoY
+- GOOGL: 54/100 — cloud +82% Q2 reasserting; 27x earnings (cheapest in a year); capex concerns fading
+- COIN: 50/100 — EPS +158% YoY expected; institutional buying; AI agent narrative; binary July 30
+- RIVN: 42/100 — $1.2B dilution at $15.50; delivery beat and guidance raised; EPS loss July 30
+- TSLA: 35/100 — Q2 EPS miss; capex $25B (3x historical); $299 support; down 30% in 2026
 
 ## Tickers to Avoid
-- SMCI: 25/100 — AVOID: Taiwan criminal probe (office raids, employee detentions); $7B share dilution; ITC patent probe (Samsung memory); stock down 41% in past month
+- SMCI: 28/100 — AVOID: Taiwan criminal probe ESCALATING (9 people investigated, 12 sites searched, Nvidia employee detained); $7B share dilution; ITC patent probe; do not enter regardless of July 22 order surge
 
 ## SH Watch (Inverse ETF)
-- Trigger status: NOT MET — SPY pre-market ~$745.5 is ABOVE the 5-day MA (~$744.06)
+- Trigger status: NOT MET — SPY ~$746 is ABOVE the 5-day MA (738.08)
 - SH score: NOT EVALUATED this run
-- Prior run score (July 24): 55/100 — was below the 60 threshold and trigger is now reset
-- Market regime: RECOVERING — oil drop and ceasefire pause driving tech-led relief rally; SH entry would require SPY to break back below the 5-day MA (~$744) and sustain downtrend
+- Market regime: RECOVERING — SPY above 5-day MA for second session; VIX declining to 17.76
+- SH would be triggered if SPY breaks back below 738.08 (5-day MA) with sustained downtrend
 
 ## Overall Environment
-- SPY above 5-day MA: YES (tentative) — regular entries UNBLOCKED at pre-market
-- VIX < 28: YES — 18.96; below halt threshold
+- SPY above 5-day MA: YES — regular entries UNBLOCKED
+- VIX < 28: YES — 17.76; declining; no halt
 - No daily loss halt: CONFIRMED (daily_loss_halt: false)
-- AMD (74) and NVDA (70) both at or above 70-point entry threshold
-- Volume confirmation required at market open for both candidates (≥1.25x 30-day avg)
-- Primary risk this week: binary earnings events (FOMC+MSFT+META July 29; AAPL+AMZN July 30) — candidates AMD (Aug 4) and NVDA (Aug 26) are not in the immediate earnings window, reducing binary risk for those positions
-- Ceasefire durability is the key macro swing factor — if oil spikes back above $100, the recovery narrative reverses rapidly
+- Tickers at 70+ threshold: ZERO — no trades qualify
+- Primary headwind: Semiconductor sector selloff on AI capex sustainability narrative; earnings wall (July 29–30) creating binary risk for most high-scored tickers
+- Primary tailwind: SPY trend recovering, VIX declining, FOMC expected non-event, oil stable at $91/$84
+- Coordinator action: Do NOT trade today — no ticker clears 70/100 threshold. Re-evaluate post-earnings (July 29 AH and July 30 AH) for MSFT, META, AAPL, AMZN score updates.
 
 TRADE_OK: yes
-*(SPY tentatively above 5-day MA for the first time since July 22, unblocking regular stock entries. VIX 18.96 below 28 halt level. Two tickers clear the 70/100 threshold: AMD (74) and NVDA (70). Volume must be confirmed ≥1.25x at open before any trade is placed. AMD is the top candidate — conference catalysts fresh, GF Securities PT $640, no near-term earnings binary. NVDA is the secondary candidate — Chinese chip approval, dual EMA support, RSI neutral-positive. COIN is explicitly disqualified (volume 0.76x avg). TSLA, SMCI, RIVN are all below threshold or flagged AVOID. Heavy earnings binary risk this week for MSFT, META, AAPL, AMZN — do not enter those ahead of earnings. SH trigger reset (not met).)*
+*(Market conditions are technically met — SPY above 5-day MA, VIX 17.76 below 28, no daily loss halt. However, ZERO tickers currently clear the 70/100 entry threshold. Coordinator should not place trades. Semiconductor sector weakness has dragged AMD and NVDA below threshold. Earnings binaries on July 29–30 are keeping META, AMZN, AAPL, MSFT, SOFI, COIN, RIVN below entry qualification. PLTR at 68 is the closest but blocked by Aug 3 binary. Monitor post-earnings score updates closely — multiple tickers in the 55–68 range could cross 70 on positive earnings surprises.)*
