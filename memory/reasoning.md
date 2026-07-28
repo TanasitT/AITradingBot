@@ -1,5 +1,16 @@
 # Reasoning Journal
 
+## [2026-07-28 10:47 ET]
+Intraday monitor check. AMD (20sh, avg entry $465.966) still open. Current
+price $457.45 = -1.828% unrealized (recovered from -3.727% at the 10:34 ET
+check). High-beta stop-loss (7%) at $433.35 not breached; TP1 (+8%) at
+$503.24 not hit. No SH position held (SPY inverse-ETF logic not applicable).
+Alpaca GET /v2/account: equity $99,125.74 vs last_equity $99,293.06 =
+-0.1685% daily, well within -2% halt cap. daily_loss_halt confirmed false in
+weekly_trade_counter.md. No exits executed, no trades placed this check.
+open_positions.md updated with this check's snapshot.
+---
+
 ## [2026-07-27 EOD ET] — EOD Tuesday-cycle Routine
 EOD close routine (Tuesday-cycle, closing the 2026-07-27 Monday session). Read
 strategy.md and open_positions.md first. open_positions.md/Alpaca GET

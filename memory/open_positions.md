@@ -1,5 +1,16 @@
 # Open Positions
 
+Last updated: 2026-07-28 10:47 ET (Intraday monitor check)
+
+AMD current price $457.45 vs avg entry $465.966 = -1.828% unrealized (Alpaca
+GET /v2/positions). AMD is a high-beta semiconductor name (beta > 1.5), so
+stop-loss threshold is 7% ($433.35) — not breached (price recovered from the
+10:34 ET check's $448.60). No take-profit tier hit (TP1 +8% = $503.24). No SH
+position held (SPY inverse-ETF logic not applicable). Account equity
+$99,125.74 vs last_equity $99,293.06 = -0.1685% daily, well within -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md. No
+exits needed this check.
+
 Last updated: 2026-07-28 10:34 ET (Intraday monitor check)
 
 DRIFT FLAG (recurring): Alpaca GET /v2/positions shows AMD (20sh, avg entry
