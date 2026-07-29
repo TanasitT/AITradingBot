@@ -1,5 +1,19 @@
 # Open Positions
 
+No open positions.
+
+Last updated: 2026-07-29 09:30 ET (Intraday monitor check — AMD fill confirmed)
+
+AMD force-close order 68f02b84-fc37-4125-bb3c-5f905f181850 (queued while market
+was closed at EOD 2026-07-28 submission) confirmed filled at market open:
+20sh @ $449.85 avg, filled_at 2026-07-29T13:34:04Z. Realized P&L -$322.32
+(-6.92%) vs avg entry $465.966 — logged to trade_log.md. Alpaca GET
+/v2/positions confirms empty (0 open positions). Account equity $98,970.73 vs
+last_equity $99,066.13 = -0.0963% daily, well within -2% halt threshold.
+daily_loss_halt confirmed false in weekly_trade_counter.md. No SH position
+held (no SPY inverse-ETF check needed — nothing open). No new exits needed
+this check (no positions to evaluate).
+
 Last updated: 2026-07-29 01:38 ET (EOD Wednesday routine, closing 2026-07-28 session)
 
 No SH position held (SPY inverse-ETF logic not applicable this routine — SPY
