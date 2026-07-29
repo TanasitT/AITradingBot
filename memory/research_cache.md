@@ -1,298 +1,8 @@
-# Research Cache — 2026-07-29 01:43 ET
+# Research Cache — 2026-07-29 01:47 ET
 
-## AMZN | Score: 84/100
+## AMZN | Score: 85/100
 
-Amazon (AMZN) is trading slightly below recent highs, with a major near‑term **catalyst** in its Q2 earnings on July 30 and broadly **bullish sentiment** driven by AI/AWS growth and recent analyst target hikes.[1][2][4][5][10][11][12][13]
-
-Below is a structured, point‑scored view (0–25 each) based only on information from the last ~48 hours.
-
----
-
-## 1. CATALYST (Score: 23/25)
-
-**Key near‑term events**
-
-- **Q2 2026 earnings (primary catalyst):**  
-  - Amazon reports Q2 results on **July 30**; several sources frame this as a critical “prove‑it” moment on whether heavy AI/data‑center and Kuiper investments can scale without crushing free cash flow.[1][2][4][10]  
-  - Zacks notes Wall Street expects **EPS of $1.82**, up **+8.3% YoY**, on higher revenues.[2]  
-  - 24/7 Wall St highlights **3 major reasons to buy AMZN before Q2 earnings**, notably AWS growth, AI infrastructure buildout, and expanding retail/advertising.[1]
-
-- **Capex / AI infrastructure guidance risk:**  
-  - Amazon management has communicated plans to spend **$200+ billion** in 2026 on AI data centers, chips, and network infrastructure.[6][11]  
-  - AWS Q1 2026 revenue was **$37.59B, +28% YoY**, the fastest growth in 15 quarters, while trailing free cash flow fell **95% to $1.2B** as property and equipment additions surged.[6]  
-  - Multiple pieces emphasize that investors will closely watch **whether 2026 capex guidance is raised again** and whether project timelines are delayed, as this is a key overhang.[6][7][10][11]
-
-- **Anthropic / AWS contract:**  
-  - A long‑term deal with **Anthropic** plus Amazon’s own AI chips (e.g., Trainium) is expected to drive AWS‑centric growth and margin improvement.[11]  
-  - The Anthropic contract is estimated to guarantee **at least $10B in additional annual AWS revenue**, roughly **7%** of current AWS annual revenue of **$140–150B**.[11]  
-  - This is cited as a **core structural catalyst** for AWS growth and Amazon’s overall earnings trajectory.[11]
-
-- **Prime Day and retail/ads:**  
-  - Bank of America expects a **modest bump** in retail sales from Prime Day, but sees AWS and AI spending plans as the main focus.[4]  
-  - Advertising is now a **$70B+ trailing‑twelve‑month business** growing **22–24%**, while the Stores segment is growing **15%**, with grocery gross sales above **$150B in 2025**.[1]  
-  - These provide incremental but secondary catalysts relative to AWS/AI.
-
-- **Debt financing for AI buildout:**  
-  - Amazon recently completed a **$24.9B long‑term bond sale** to fund AI infrastructure, viewed positively as evidence management is committed to extending AWS’s competitive edge.[5]  
-  - This financing supports the capex plan and is itself a notable balance‑sheet catalyst.[5]
-
-**No FDA / classical M&A catalysts noted**
-
-- Over the last 48 hours, there are **no FDA decisions** or major new M&A announcements specifically flagged as price drivers for AMZN; focus is squarely on **earnings, capex guidance, AI/Anthropic, and debt funding**.[1][4][5][6][10][11]
-
-**Assessment**
-
-- Multiple, well‑defined catalysts (earnings, capex guidance, Anthropic/AWS contract, AI infrastructure financing, Prime Day) within days justify a **high catalyst score**, slightly below maximum due to capex/Fcf risk.
-
----
-
-## 2. SENTIMENT (Score: 22/25)
-
-**Analyst ratings and target changes**
-
-- Overall analyst consensus is **Buy**, with an average **target price of 309.55** vs current price near **233.53**.[12]  
-- Recent target hike: **MoffettNathanson** lifted its AMZN price target from **$288 to $315**, reinforcing bullish sentiment on long‑term AI/cloud growth.[13]  
-- MarketBeat notes **Bank of America** raised its price target and maintained a **Buy** rating, citing improving domestic sales trends and stronger momentum in core businesses.[5]  
-- **BNP Paribas** called Amazon’s valuation “attractive” ahead of Q2 earnings and maintained an **Outperform** rating, emphasizing solid expected cloud and retail results.[5]
-
-**Narrative tone in news**
-
-- MarketBeat characterizes sentiment as **positive**, stating AMZN is moving higher because investors focus more on AI/cloud growth potential and analyst upgrades than on the short‑term cost of aggressive investment.[5]  
-- Coverage repeatedly frames Amazon as a **key AI winner**, with AWS, custom chips, and infrastructure spending seen as crucial long‑term drivers.[5][11]  
-- Korean coverage acknowledges **AI investment fatigue** and worries over free cash flow deterioration and regulatory/competition risks, but still describes Anthropic/AWS as a major growth driver likely to lead share price higher once the payoff is proven.[11]  
-- NewsBreak/Benzinga describes shares trading “flat” ahead of earnings but frames Thursday as a **referendum** on Amazon’s ability to fund aggressive AI/data‑center investment while expanding margins and cash generation.[10]  
-  - That tone is cautious but not bearish.
-
-**Social & broader market sentiment (indirect)**
-
-- MarketBeat explicitly tags sentiment around the new **$24.9B debt deal** as positive, as investors interpret it as a commitment to AI infrastructure and AWS leadership.[5]  
-- The broader narrative around hyperscalers notes concerns that AI capex could hit a wall, but Amazon is described as carrying the **largest capex commitment (~$200B)** with strong AWS growth, reinforcing its central role in the AI theme.[6]  
-  - This supports a “critical but still favored” positioning.
-
-**Assessment**
-
-- Net sentiment is **constructive/bullish**: multiple target hikes, Buy/Outperform ratings, and narrative emphasis on AI/AWS leadership, partially offset by free‑cash‑flow and capex fatigue concerns.[5][11][12][13]
-
----
-
-## 3. TECHNICAL (Score: 18/25)
-
-*(Only using explicit technical data available in the last 48 hours; no extrapolation.)*
-
-**Price level**
-
-- TradingKey lists **current AMZN price at 233.53**.[12]  
-- NewsBreak/Benzinga reports AMZN being **down 1.12% at $228.80** at the time of publication on Tuesday, indicating very recent trading in the **high‑220s to low‑230s** range and “trading flat ahead of Thursday earnings.”[10]  
-- No explicit 50‑day or 200‑day moving average levels are provided in the results, so exact positioning vs those MAs cannot be quantified from the past 48 hours.
-
-**Trend / signal overview**
-
-- TradingKey’s technical snapshot states:  
-  - Today’s overall technical signal for AMZN is **“Neutral.”**[8]  
-  - Across moving averages (MA5 to MA200), there are **4 buy signals and 2 sell signals**, but the combined interpretation is still neutral.[8]  
-- The site also notes there are **0 buy signals and 0 sell signals** from other technical indicators, reinforcing the neutral stance.[8]
-
-**Momentum indicators**
-
-- RSI level is **not** specified in the provided data; no explicit overbought/oversold reading is available from the last 48 hours.[8][12]  
-- Volume vs 30‑day average is also **not reported** in these sources, so recent relative activity cannot be numerically assessed.
-
-**Assessment**
-
-- From available data:  
-  - Price around **$230**, slightly off recent prints.[10][12]  
-  - **Neutral** technical rating, with a modest bias toward buy signals on longer MAs (4 buy vs 2 sell).[8]  
-- Due to missing quantified RSI/MA/volume metrics, this section cannot score higher despite neutral‑to‑slightly‑positive structure.
-
----
-
-## 4. MARKET CONTEXT (Score: 21/25)
-
-**Sector / thematic backdrop**
-
-- Recent commentary highlights a **rotation within tech**, with some chip stocks entering a bear market while investors may **pivot toward hyperscalers** (cloud platforms) for AI exposure.[3][6][9][13]  
-- Morgan Stanley notes AI investors may **shift from chipmakers to hyperscalers**, directly benefiting names like Amazon.[13]  
-- A 24/7 Wall St piece on hyperscalers flags that if AI capex spending “hits a wall,” the stocks most at risk include the major hyperscalers; Amazon is noted as having the **largest absolute 2026 capex (~$200B)**.[6]  
-  - This frames AMZN as central to the AI‑infrastructure trade, but also as exposed to any macro or market‑level reassessment of AI spending.
-
-**Macro / SPY / VIX environment (last 48 hours)**
-
-- Within the last 48 hours, the provided sources do not give explicit numeric data for **SPY** levels, **S&P 500 performance**, or **VIX** readings; they instead describe sector rotation and AI‑driven volatility qualitatively.[3][6][9][13]  
-- Alphabet’s large capex hike and resulting stock drop are highlighted as a sign of market sensitivity to **negative free cash flow and heavy AI spending**.[6][9]  
-  - This contextualizes the cautious tone around Amazon’s own capex but also shows the market is actively repricing AI‑heavy tech, which affects AMZN.
-
-**Consumer / retail macro**
-
-- Market coverage notes U.S. consumers are bargain hunting ahead of back‑to‑school season due to **higher household bills**, which may affect retail dynamics but is not presented as a direct negative for Amazon; instead it underscores the importance of value‑oriented shopping platforms.[13]  
-- Prime Day and back‑to‑school are cited as supportive but modest near‑term demand drivers for Amazon’s retail segment.[4][13]
-
-**Assessment**
-
-- Market context is **mixed‑to‑supportive**:  
-  - Hyperscalers (including Amazon) are increasingly favored relative to some AI chip names for long‑term AI exposure.[13]  
-  - However, the market is wary of extreme AI capex and negative free cash flow, as seen in Alphabet’s recent reaction, and this sentiment spills over into Amazon’s narrative.[6][9]  
-- Given Amazon’s central role in the AI/hyperscaler theme and the perceived investor pivot towards these names, context is broadly constructive but not without risk.
-
----
-
-**Component Scores**
-
-1. Catalyst: 23/25  
-2. Sentiment: 22/25  
-3. Technical: 18/25  
-4. Market Context: 21/25  
-
-SCORE: 84/100
-
----
-
-## MSFT | Score: 80/100
-
-Microsoft (MSFT) is trading just below recent highs with a major near‑term catalyst in its fiscal Q4 2026 earnings after today’s close; sentiment is positive but focused on AI/cloud growth and capital expenditure guidance, while technically the stock is in a constructive uptrend vs key moving averages in a broadly supportive large‑cap tech environment.
-
-Below is a structured 0–25 scoring by bucket, based only on information available from the last ~48 hours.
-
----
-
-## 1. CATALYST (Score: 23/25)
-
-**Key near‑term catalyst: Fiscal Q4 2026 earnings after the bell on July 29**
-
-- Multiple previews confirm **Microsoft will report fiscal Q4 earnings after market close on Wednesday, July 29**, with AI spending, Azure growth and capex in focus.[1][6][9]  
-- Consensus expectations center around:
-  - **Revenue ≈ $87.6B**, up from ~$76.4B YoY (≈14–15% growth).[1][2][3][6]  
-  - **EPS ≈ $4.21–$4.25**, up from $3.65 YoY (≈15%+ growth).[1][2][3][6]  
-  - FactSet preview: **net income ≈ $31.49B**, EPS $4.24, revenue $87.62B.[6]  
-- Zacks consensus: **Q4 EPS $4.21 (+15.34% YoY), revenue $87.44B (+14.39% YoY)**; full‑year EPS $17.32 (+26.98%), revenue $329.26B (+16.87%).[2]  
-
-**Guidance / capex as primary swing factor**
-
-- Investors are increasingly focused on **capital expenditures and free cash flow** as the main post‑print drivers.[6][9][12]  
-- One preview notes analysts estimate **positive FCF ≈ $16.97B** this quarter, with capex and FCF the “two key metrics” likely to drive reaction.[6]  
-- A recent analysis highlights that **FY27 capex guidance tone** (with scenarios up toward **$230B** cumulative AI infrastructure spending) could trigger FCF repricing if not matched by Azure acceleration.[12]  
-
-**Azure / AI and cloud guidance**
-
-- Management’s existing guidance from Q3 calls for **Azure and other cloud services revenue to grow 39–40% in constant currency**, with Intelligent Cloud revenue guided to **$38.0–$38.3B**.[10]  
-- Multiple previews emphasize **Azure growth**, Copilot adoption, and Microsoft 365 commercial strength as **major catalysts** for the stock and AI‑focused ETFs.[2][9][10]  
-
-**Event risk and implied move**
-
-- One market note suggests Microsoft’s earnings could drive a **~$189B swing in market value**, underscoring the size of the event risk around the print.[8]  
-- Polymarket traders reportedly assign **≈91.5% probability that MSFT beats** expectations, implying that a beat is largely priced in and guidance is the real catalyst.[12]  
-
-**Other catalysts / events in the last 48 hours**
-
-- No FDA decisions or traditional M&A headlines specific to Microsoft appear in the recent feed; the key focus is earnings, AI investment, and cloud metrics.[1][2][6][9][12]  
-
-**Assessment:** Very strong, well‑defined catalyst around earnings, guidance, Azure/AI and capex → **23/25**.
-
----
-
-## 2. SENTIMENT (Score: 20/25)
-
-**Sell‑side / analyst tone**
-
-- Zacks and other previews frame MSFT as benefiting from **AI momentum, Copilot adoption, Azure expansion and strong Microsoft 365 commercial demand**, positioning the stock favorably into earnings.[2][10]  
-- A Benzinga‑linked note cites an analyst (Walravens) who views **Microsoft stock as “attractive heading into earnings” after a significant year‑to‑date slide**, focusing on revenue, Azure growth, capex, Copilot paid seats, and EPS as key metrics.[7]  
-- Another recent preview points out Microsoft’s **consistent history of exceeding Wall Street expectations** and notes estimates have been **reconfirmed over the last 30 days**, signaling stable to positive sell‑side sentiment.[5]  
-
-**Earnings track record**
-
-- Microsoft last reported **Q3 FY2026 EPS of $4.27 vs consensus $4.06**, a beat of $0.21, with **revenue $82.89B vs $81.44B consensus**, +18.3% YoY.[14]  
-- That strong beat and margin profile (ROE ~31.94%, net margin ~39.34%) underpin constructive sentiment around the upcoming quarter.[14]  
-
-**Market / news tone**
-
-- Previews across Yahoo Finance, MarketWatch, Zacks, and Seeking Alpha describe expectations as **“strong quarter,” “blockbuster,” and “AI spending in focus”**, but also caution that **beats may be largely priced in** and that **capex guidance is the true mover**.[1][5][6][9][12]  
-- One comparison piece (“Earnings Showdown: Microsoft or Meta”) indicates both enter earnings with **“roughly 95% beat odds already priced in”**, reinforcing optimistic but valuation‑sensitive sentiment.[12]  
-
-**Flow / positioning**
-
-- MarketBeat reports institutional investors (e.g., Global Assets Advisory LLC) **raising holdings in Microsoft**, suggesting continued institutional confidence and accumulation.[14]  
-
-**Social / retail sentiment (within last 48h)**
-
-- Available sources focus more on professional analysis than social feeds; no specific quantitative social momentum metrics (e.g., Twitter volume, Reddit flow) are reported in the last 48 hours in the cited data.[1][2][5][7][9][12]  
-
-**Assessment:** Professional/institutional sentiment is clearly positive but with a cautious eye on capex and valuation; social data is limited in the sources → **20/25**.
-
----
-
-## 3. TECHNICAL (Score: 19/25)
-
-*(All numbers refer to MSFT common stock; exact intraday prices may vary. Data is taken from very recent market commentary; no speculation beyond reported figures.)*
-
-**Price level vs recent action**
-
-- A Benzinga note indicates **MSFT shares recently traded at $398.63**, up **+2.45%** on the day referenced.[7]  
-- Macroaxis data (as of March 26) showed MSFT at **$370.08** per share with a **negative expected return over the last 90 days**, but that is dated and not used for current technicals.[13]  
-
-**50‑day / 200‑day moving averages**
-
-- The last‑48‑hour sources do not explicitly quote MSFT’s **50‑day or 200‑day moving averages**, nor their exact numerical values.[1][2][4][5][7][9]  
-- However, Investors.com notes Microsoft **“headed higher…building on two straight advances”** and “runs into resistance with earnings next,” implying the stock is trading near resistance rather than deeply below long‑term trend lines.[4]  
-- Because exact MA levels are not specified in the cited material, no precise number for price vs 50d/200d MA can be stated from these sources.  
-
-**Momentum / RSI**
-
-- None of the last‑48‑hour sources provide an **RSI (Relative Strength Index)** reading or formal overbought/oversold characterization.[1][2][4][5][7][9][12][13]  
-- Thus, RSI level cannot be quantified from the given data.  
-
-**Volume vs 30‑day average**
-
-- No article within the last ~48 hours gives **specific volume or volume vs 30‑day average** numbers for MSFT.[1][2][4][5][7][9]  
-
-**Directional takeaway**
-
-- Short‑term commentaries describe MSFT as:
-  - **“Stock headed higher…building on two straight advances”** ahead of earnings, indicating **near‑term upward momentum**.[4]  
-  - **“Shares are gaining”** with a +2.45% move in the preview window, reflecting **buying interest into the print**.[7]  
-
-**Assessment:** Technical backdrop appears constructive (recent upside, resistance near highs), but lack of explicit MA/RSI/volume data limits precision → **19/25**.
-
----
-
-## 4. MARKET CONTEXT (Score: 18/25)
-
-**Sector / peer backdrop**
-
-- MSFT is framed as part of the **“Big Tech” / “Magnificent Seven”** cohort, with a “parade of Big Tech earnings announcements” and a competitive comparison vs Meta around AI and capex.[1][3][12]  
-- The upcoming earnings for MSFT and META are described as an **“earnings showdown”**, with both having **high beat probabilities** and heavy AI infrastructure investment.[12]  
-- Commentary highlights **AI‑focused ETFs** potentially benefiting from Microsoft’s results, reinforcing that MSFT remains central to the **AI/large‑cap tech theme**.[2]  
-
-**Macro / index environment (SPY, VIX)**
-
-- Within the last 48 hours, the cited articles do not provide explicit numerical data on:
-  - **SPY (S&P 500 ETF) performance or trend**
-  - **VIX level or recent moves**  
-- The macro framing is qualitative: IBM’s recent profit warning has “tempered investor expectations,” but analysts still expect **positive FCF from Microsoft**.[6]  
-- The environment is characterized as one where **AI infrastructure capex and cloud growth** are the main macro themes for mega‑cap tech rather than acute risk‑off turmoil.[1][2][6][9][12]  
-
-**Rate / volatility backdrop**
-
-- No specific interest rate or volatility figures are provided, but the focus on **capex affordability, balance sheet strength, and FCF** suggests markets are attentive to **macro funding conditions and cost of capital**, not necessarily in crisis mode.[6][12][13]  
-
-**Assessment:** Large‑cap tech/AI theme is strong and MSFT is central to it; however, the absence of concrete SPY/VIX numbers in the last‑48‑hour sources limits scoring → **18/25**.
-
----
-
-### Aggregate Score
-
-- **Catalyst:** 23/25  
-- **Sentiment:** 20/25  
-- **Technical:** 19/25  
-- **Market Context:** 18/25  
-
-**Total:** 80/100  
-
-SCORE: 80/100
-
----
-
-## SMCI | Score: 80/100
-
-Super Micro Computer (**SMCI**) currently has a strong, very recent fundamental **catalyst** (large AI server order intake and margin surprise), broadly positive **sentiment**, bullish but overextended **technicals**, and operates within a still-constructive but volatile AI/tech **market context**.
+Amazon.com (AMZN) is heading into its Q2 earnings report with a **major near‑term catalyst**, strongly **bullish Street sentiment**, and a **constructive but not euphoric technical setup**, in a generally supportive large‑cap growth/AI market environment.
 
 ---
 
@@ -300,546 +10,280 @@ Super Micro Computer (**SMCI**) currently has a strong, very recent fundamental 
 
 **Score: 23/25**
 
-**Key recent catalysts (last ~10 days):**
+**Key near‑term catalyst: Q2 earnings on July 30**
 
-- **Preliminary FY2026 Q4 update – orders and margins**
-  - Management disclosed **new AI server orders exceeding $60 billion** in the fiscal Q4 quarter.[1][3]
-  - Expected **GAAP and non-GAAP gross margins: 15–17%**, versus prior guidance of ~8.2–8.4%.[1]
-  - **Revenue** for the quarter is expected **near the low end of prior guidance** of **$11.0–12.5 billion** (≈$11B).[1][3]
-  - These preliminary figures were released pre‑market and triggered a sharp move higher in the stock price.[1][4]
+- Amazon is scheduled to report **Q2 FY2026 earnings on Thursday, July 30**, with options pricing implying a **~6% potential move** in the stock by the end of the week.[2][7]  
+- Company guidance for Q2 net sales is **$194–199 billion** and operating income **$20–24 billion**.[1]  
+- Street consensus revenue estimates cluster around **$196–197 billion**, up roughly **17% YoY**, and EPS around **$1.82–1.99**, also up YoY.[2][3][4][6]  
 
-- **Clarification of competitive risk (Musk–Foxconn server rumor)**
-  - Media reported a potential **$52 billion SpaceX–Foxconn AI server deal** that could have displaced SMCI as a supplier.[1]
-  - On July 20, Elon Musk publicly called the report “fake news,” effectively **removing an unverified competitive threat** to SMCI and other existing AI server vendors.[1]
-  - This contributed to a positive reassessment of **supplier risk** and demand visibility in the AI hardware market.[1]
+  - Investopedia cites **$196.75B revenue (+~17% YoY)** and EPS **$1.99**, up from **$1.68** last year.[2]  
+  - Zacks cites consensus **EPS $1.82 (+8.3% YoY)** and revenue **$196.85B (+17.4% YoY)**.[3]  
+  - Benzinga preview references **EPS $1.82** and **revenue $196.02B**, up from **$167.70B YoY**.[4]  
+  - Another preview notes prior quarter revenue **$181.5B (+16.6% YoY)** with a solid beat, and the market now expecting **~17.3% YoY** growth this quarter.[6]  
 
-- **Earlier earnings and guidance (context but slightly outside 48h)**
-  - In its FY2026 Q3 earnings (ended March 31), SMCI reported **revenue of $10.24B**, up **123% YoY** but below the consensus **$12.33B**.[2]
-  - Adjusted **EPS: $0.84 vs Street $0.62**.[2]
-  - For FY2026 Q4, the company guided **revenue $11–12.5B** and adjusted **EPS $0.65–0.79**, both **above consensus** at the time (revenue ≈$11.07B; EPS ≈$0.55).[2]
-  - Post‑earnings, the stock jumped **≈18.8% after hours (from $27.83 to $33.05)**.[2]
+**Guidance / expectations dynamics**
 
-**No FDA, M&A, or regulatory-specific catalyst** is evident in the last 48 hours; the drivers are **earnings pre‑announcement, guidance/margins, and competitive narrative**.[1][4]
+- Zacks notes the **consensus EPS estimate has been revised ~0.92% higher over the last 30 days**, and its model shows a **positive Earnings ESP (+0.16%)**, indicating a higher probability of a beat vs. consensus.[3]  
+- Analysts expect **AWS revenue growth >30% YoY**: visible Alpha/FactSet numbers around **$40.49–40.9B** (+~30–32% YoY).[2][9]  
+- Market commentary highlights **AI/data‑center capex**, **Project Kuiper**, and potential **2026 capex guidance revisions (watching for >$200B)** and **free cash flow trajectory** as key parts of the earnings narrative.[4][9]  
 
-Given:
-- Size and visibility of **$60B+ orders**
-- Material **margin outperformance**
-- Clear removal of a large rumored competitive threat
+**Additional potential earnings‑specific catalyst**
 
-→ This is a **high‑quality, fundamental catalyst**, but revenue is guided only to the *low end* of the prior range, which slightly tempers the score.
+- Bank of America highlights Amazon’s **stake in Anthropic** as a source of a **“sizable mark‑to‑market gain”** in the upcoming report.[12]  
+
+**Other corporate/strategic catalysts**
+
+- Amazon recently completed a **$24.9B long‑term bond sale** to fund AI infrastructure, viewed by Needham and others as a positive signal of **aggressive investment to extend AWS’s competitive edge**.[8]  
+- Multiple previews frame July 30 as a **“referendum”** on whether Amazon can fund AI/data‑center and Kuiper investment while **expanding margins and maintaining/free‑cash‑flow discipline**.[4][9]  
+
+**No major non‑earnings discrete event**
+
+- No new FDA decisions, large M&A deals, or unexpected macro‑company‑specific shocks have been flagged in the last 48 hours for AMZN. Coverage is overwhelmingly focused on the **upcoming Q2 report and AI/cloud capex story**.[2][4][8][9]  
+
+Given a major, imminent earnings event with raised expectations and several sub‑themes (AWS, AI capex, Anthropic mark‑to‑market, free cash flow), **catalyst risk/reward is high**, justifying a **23/25**.
 
 ---
 
 ## 2. SENTIMENT (0–25 pts)
 
-**Score: 20/25**
+**Score: 24/25**
 
-**Analyst & institutional stance**
+**Sell‑side analyst sentiment**
 
-- Aggregated analyst rating shows **overall rating: “signal_hold”**.[4]
-- **Consensus target price: $41.79**, implying **~34% upside** vs the current price **$31.21**.[4]
-- Institutional ownership is described as **“very high”**, indicating robust long‑term participation.[4]
+- MarketBeat reports **57 Buy ratings and 3 Hold ratings**, for a **“Moderate Buy”** consensus.[10]  
+- The **average price target is about $312.91**, implying roughly **mid‑30% upside** from recent levels (e.g., Investopedia cites a mean target of **$312, ~35% upside** from Tuesday’s price).[2][10]  
+- Bank of America **raised its price target** on AMZN and reiterated **Buy**, citing improving domestic sales trends and momentum in core businesses.[8]  
+- BNP Paribas maintains **Outperform**, stating Amazon’s **valuation looks attractive ahead of Q2 earnings**.[8][11]  
 
-**Recent reaction to preliminary Q4 update**
+**Earnings‑related sentiment**
 
-- On July 21:
-  - Intraday SMCI **rose ~7%**, with an intraday high of **$25.54**.[4]
-  - After hours, the stock **spiked ~20.58%**.[4]
-- On July 22, pre‑market:
-  - SMCI **gained >17%** following the preliminary results highlighting **margin recovery and >$600B in new orders** (note: text likely intends **$60B**; consistent with other sources).[1][4]
-- Commentary from investor‑focused outlets (e.g., SimplyWallSt, Motley Fool‑syndicated content) frames SMCI as **“looking cheap”** on ~14.8× earnings **even after the large order backlog and stronger margin guidance**, underscoring a constructive valuation narrative.[5]
+- Zacks notes analysts have **become more bullish** on Amazon’s earnings prospects; the Most Accurate Estimate is **above** the consensus, producing a **positive Earnings ESP**, which historically correlates with a likely beat.[3]  
+- Another earnings preview states analysts have **“generally reconfirmed their estimates”** over the last 30 days and highlights Amazon’s historical pattern of **rarely missing revenue estimates**.[6]  
+- Commentaries emphasize Amazon as a **“key AI winner”** thanks to AWS, custom chips, and related infrastructure spending.[8][2][11]  
 
-**News tone & narrative**
+**News flow / tone (last 24–48 hours)**
 
-- Coverage around the **$60B+ orders and 15–17% margins** is broadly **positive**, emphasizing:
-  - Strong and growing **AI server demand**.[1][4]
-  - Improvement in **profitability profile**.[1][5]
-  - A perception that the **current P/E multiple is discounted** relative to growth prospects.[5]
-- The Musk–Foxconn rumor initially introduced **negative sentiment risk**, but the denial turned into a **positive sentiment inflection** by removing a large perceived competitor threat.[1]
+- MarketBeat summarizes AMZN as **trading higher** on the back of **bullish analyst notes**, **strong expectations for AWS**, and optimism around its **AI infrastructure build‑out**, despite some headlines about **near‑term spending pressure**.[8]  
+- Needham and others frame the recent **$24.9B debt raise** as supportive of the long‑term AI/cloud growth story rather than a red flag, reinforcing positive sentiment on management’s strategy.[8]  
+- Contrasting coverage exists: a recent Taiwanese article highlights concerns about **an 81% increase in debt, negative free cash flow, and the risk that capex guidance could jump above $200B**, showing some **risk‑focused narratives** around leverage and investment intensity.[9]  
 
-**Social / momentum inference (from price and volume)**
+Overall, however, **the dominant tone is clearly bullish**: raised/affirmed price targets, majority Buy ratings, and narratives around AMZN as a leading AI/cloud beneficiary ahead of earnings.[2][8][10][11]  
 
-- Short‑term price behavior (double‑digit % moves intraday and after hours in response to the preliminary update) suggests **strong momentum‑driven interest**.[1][4]
-- No explicit social‑media metrics are in the results, but the magnitude of reaction around AI‑related headlines is consistent with **high social/media attention** in the AI hardware theme.[1][4][5]
+**Social/trader sentiment**
 
-Given:
-- Solid analyst support but “hold” consensus
-- Strong positive reaction to the preliminary update and valuation commentary
-- Removal of a large rumored competitive threat
+- Investopedia and related social posts underscore that **traders expect a “big move”** around earnings, with options implying up to a **6% post‑earnings swing**.[2][7]  
+- Range‑bound recent trading with bullish expectations (see technical section) typically aligns with **positioning for upside** into the event rather than capitulation.[14]  
 
-→ Sentiment is **clearly positive**, but not uniformly “strong buy” at the analyst level, hence not a perfect score.
+Given the strong analyst consensus, recent target hikes, and AI/cloud growth framing—with only modest pockets of caution around debt and capex—sentiment is **solidly positive**, justifying **24/25**.
 
 ---
 
 ## 3. TECHNICAL (0–25 pts)
 
-**Score: 19/25**
+**Score: 18/25**
 
-**Price level**
+*(Note: precise intraday technicals are not fully detailed in the provided sources; scoring is based strictly on cited information, without extrapolation.)*
 
-- **Current SMCI price: $31.21**.[4]
-- Prior close referenced in Q3 earnings coverage: **$27.83**, with a post‑earnings after‑hours move to **$33.05**.[2]
-- Short‑term context:
-  - One recent session high: **$25.54** before a further after‑hours spike.[4]
-  - Pre‑market move >17% after preliminary Q4 update.[4]
+**Price action**
 
-**Trend / channel**
+- Benzinga notes AMZN shares were **$228.80**, down **1.12%** at the time of publication on Tuesday.[4]  
+- TradingKey describes AMZN as **trading sideways between support and resistance levels**, judged **suitable for range‑bound swing trading**.[14]  
+- Over the past month, the stock’s **performance is “average”**, not strongly trending, despite **strong fundamentals**.[14]  
 
-- TradingKey notes SMCI is in a **mid‑term uptrend channel** (“中期看，股价处于上升通道”).[4]
-- Over the **past month**, performance is described as **“average”**, with **fundamental + technical composite score “relatively low”**, but the *structural* trend remains upward.[4]
-- Current price is described as being **“between resistance and support”**, suitable for **range trading / band operations**.[4]
+**Trend vs. moving averages**
 
-**Moving averages & RSI**
+- No explicit 50‑day or 200‑day moving average levels are provided in the last 48‑hour sources, so we cannot quantify price vs. those averages from the supplied data.  
+- Qualitatively, TradingKey’s description of **sideways trading between support and resistance** suggests **no clear strong uptrend or breakdown** in the medium term.[14]  
 
-- Specific numerical **50‑day and 200‑day moving averages**, and **RSI**, are *not* provided in the available data.[4]
-- However:
-  - The characterization of a **mid‑term uptrend channel** implies price is likely **above at least one major moving average** (typically the 50‑day) but this cannot be quantified from the sources.[4]
-  - No overbought/oversold RSI values are stated; thus, **RSI level cannot be assessed numerically** from these results.
+**Momentum (RSI) and volume**
 
-**Volume vs 30‑day average**
+- Recent sources do not report **RSI** or **volume vs. 30‑day average**, so no numeric momentum or liquidity conclusions can be made from the cited material.  
+- The characterization of **“range‑bound”** with **average performance** implies **neither overbought nor oversold extremes**, but this is not backed by hard RSI numbers.[14]  
 
-- No explicit volume figures or 30‑day average volume data are provided.
-- The repeated mention of **double‑digit intraday/after‑hours moves** around the preliminary update strongly suggests **elevated trading interest**, but this cannot be expressed as a % vs 30‑day average from the sources.[1][4]
+**Valuation and risk context**
 
-Because:
-- We know the **trend is upward** and price is in an uptrend channel, with recent strong momentum.
-- But **exact MA, RSI, and volume vs 30‑day numbers are missing**.
+- Despite recent sideways trading, TradingKey notes AMZN’s **fundamentals are relatively healthy** and **growth potential is high**, with the stock **considered fairly valued** and **institutional ownership very high**.[14]  
+- Another article states AMZN **screens as undervalued on market multiples**, with P/E below a fair ratio estimate implied by fundamentals.[11]  
+- Benzinga cites a **P/E of 27.7x**, indicating a **premium but not extreme** multiple for a mega‑cap growth/AI name.[4]  
 
-→ Technicals look **constructively bullish and momentum‑driven**, but lack precise technical statistics in the last 48 hours, so score is capped.
+On the information available, AMZN’s **technical picture is neutral‑constructive** (sideways, supported by strong fundamentals and high institutional ownership, but without clear breakout momentum or quantified over/under‑valuation vs. moving averages). That supports a **middle‑high score of 18/25**, reflecting decent but not strongly bullish technicals.
 
 ---
 
 ## 4. MARKET CONTEXT (0–25 pts)
 
-**Score: 18/25**
+**Score: 20/25**
 
-**Sector / theme**
+*(Sector/market context is inferred only from AMZN‑specific sector commentary in the last 48 hours; broader SPY/VIX numerics are not given in the provided sources.)*
 
-- SMCI sits in the **computer / electronics hardware** space with a strong tie to the **AI server** segment.[1][2][4]
-- TradingKey rates SMCI’s industry position as **19/34** within “computers, mobile phones, and household electronics,” with **“growth potential very large”** and fundamentals “relatively stable.”[4]
-- AI demand context:
-  - Preliminary Q4 update and commentaries explicitly frame SMCI’s performance as driven by **strong and rising AI server demand**.[1][4][5]
-  - Sell‑side projections for **2026 revenue at ~$39.7B**, up ~80% YoY, support a view of **robust AI infrastructure spending**.[8]
+**Sector / theme context**
 
-**Broader market tone (SPY / VIX proxy)**
+- Multiple recent notes position Amazon within the broader **AI/cloud infrastructure and large‑cap growth** narrative:
 
-- Within the last 48 hours, explicit SPY or VIX levels are not in the search results; however:
-  - Earnings season is active, with major companies (e.g., TCS, PepsiCo, others) reporting, which typically **drives short‑term market volatility**.[9][11][12][13]
-  - Headlines emphasize earnings surprises and guidance resets, suggesting a **fundamentally driven tape** rather than purely macro‑driven moves.[12][13]
-- No direct data on broad US indices or volatility (SPY, VIX) is present; thus, **numerical assessment of SPY trend or VIX environment is not possible from these sources.**
+  - MarketBeat describes investors focusing on **AI and cloud growth**, with AMZN seen as a **key AI winner** via AWS, custom chips, and data‑center buildout.[8]  
+  - Capital markets have been receptive to large‑cap tech’s capex plans: Microsoft, Amazon, and Meta are all highlighted in an AI capex context, with **cloud (AWS, Azure) and ads (Meta) leading spending cycles**.[13][9]  
 
-**Macro / AI cycle**
+- The **diversified retail / e‑commerce** backdrop is not described as weak; Bank of America specifically cites **improving domestic sales trends and stronger momentum in core businesses** as part of its positive stance.[8]  
 
-- The AI hardware cycle remains **supportive**, with:
-  - SMCI’s **$60B+ order intake** and **margin expansion** seen as evidence that **AI capex remains strong**.[1][4][5][8]
-  - Collaboration with Red Hat and Everpure on **Kubernetes‑based edge AI appliances** indicates **continued product and ecosystem expansion** at the AI edge, reinforcing sector growth narratives.[8]
+**Broader equity sentiment**
 
-Given:
-- Clearly strong **AI/tech sector demand backdrop**.
-- Lack of explicit SPY/VIX numerical context in the last 48 hours.
+- There is no direct SPY or VIX data in the last‑48‑hour AMZN‑specific sources, but:
 
-→ Market context for SMCI’s niche (AI servers, edge AI) is **strong**, but the absence of direct index/vol data keeps the score below the maximum.
+  - TradingKey notes that **despite an average stock market performance over the past month**, AMZN shows **strong fundamentals**, implying the general market has not strongly dragged the name down.[14]  
+  - The presence of multiple **Buy/Outperform ratings** and high **institutional ownership** suggests AMZN is benefiting from **continued appetite for large‑cap growth and AI‑exposed stocks**.[10][14]  
+
+**Risk considerations in context**
+
+- A Taiwanese market article points out **debt up ~81%** and **free cash flow turning negative**, highlighting that some investors worry about **leveraged AI/data‑center capex cycles** heading into earnings.[9]  
+- Benzinga similarly frames July 30 earnings as a test of whether Amazon can **scale AI/data‑center and Kuiper investments without crushing free cash flow**, noting the **premium P/E (27.7x)** leaves **limited room for disappointment**.[4]  
+
+Overall, sector and macro context for AMZN—AI/cloud and large‑cap growth—remains **supportive**, though **elevated expectations and premium valuation** increase event‑risk sensitivity to the upcoming print. With no explicit negative macro shock or systemic stress indicated, a **20/25** score is warranted.
 
 ---
 
-**Section Scores:**
+### Component Scores
 
-- Catalyst: 23/25  
-- Sentiment: 20/25  
-- Technical: 19/25  
-- Market Context: 18/25  
+- **CATALYST:** 23/25  
+- **SENTIMENT:** 24/25  
+- **TECHNICAL:** 18/25  
+- **MARKET CONTEXT:** 20/25  
+
+**Total:** 23 + 24 + 18 + 20 = **85/100**
+
+SCORE: 85/100
+
+---
+
+## MSFT | Score: 80/100
+
+Microsoft (MSFT) is trading with a clear **near‑term earnings catalyst**, broadly **positive sentiment**, technically in a **constructive but not euphoric** setup, and within a still‑supportive large‑cap tech/AI macro backdrop.
+
+---
+
+## 1. CATALYST (0–25 pts)
+
+**Score: 22/25**
+
+**Primary near‑term catalyst: Q4 FY2026 earnings after the bell on July 29**
+
+- Microsoft is scheduled to report **Q4 FY2026** earnings after the close on Wednesday, with a conference call noted for **Jul 30**.[5][10]
+- Consensus expectations (FactSet/Street/Zacks/Benzinga) cluster around:
+  - **Revenue**: about **$87.4–$87.6 billion**, up from **$76.44–$76.44 billion** a year ago (+~14–15% YoY).[2][3][5]
+  - **Adjusted EPS**: about **$4.21–$4.24**, vs **$3.65** last year (+~15–16% YoY).[2][3][5]
+  - **Net income**: expected around **$31.49 billion**, vs **$27.23 billion** a year ago.[5]
+- Microsoft has a history of solid beats, including **Q3 FY2026**, where it posted **$4.27 EPS** vs **$4.06 consensus** and **$82.89B revenue** vs **$81.44B consensus**, with **18.3% YoY** revenue growth.[1][13]
+
+**Key fundamental swing factors in this print**
+
+- **Azure and Intelligent Cloud**:
+  - Management guided Azure and other cloud services **revenue growth of 39–40% in constant currency**, with Intelligent Cloud revenue guided to **$38.0–$38.3B**.[9]
+  - Multiple previews identify **Azure growth** and overall cloud momentum as the *single most important metric* for investor reaction.[2][8][9]
+- **AI / Copilot adoption**:
+  - Previews emphasize **AI momentum, Copilot adoption, and Azure cloud expansion** as core drivers of the quarter and forward narrative.[2][9]
+- **Capital expenditures and free cash flow**:
+  - MarketWatch notes that **capex and free cash flow** are “two key metrics likely to drive investor reaction,” with analysts looking for **~$16.97B positive FCF**.[5]
+  - A separate earnings showdown analysis highlights **FY27 capex guidance** (potentially drifting toward **$230B** over time) as a major valuation risk if not matched by Azure acceleration and robust free cash flow, underlining capex tone as a primary stock mover.[11]
+
+**Broader macro / event catalysts**
+
+- **Macro calendar**: Tech earnings (Microsoft, Meta, Apple, Amazon) are clustered alongside a **FOMC decision** this week, making MSFT’s report part of a broader macro‑tech inflection.[14]
+- AI‑regulation angle: A recent note references Microsoft urging the **Trump administration not to impose sweeping restrictions on open‑weight AI models**, reflecting ongoing policy/regulatory engagement around AI that can influence sentiment and risk premia, though this is more medium‑term than a discrete price catalyst.[6]
+
+**No FDA/M&A‑type discrete catalyst**
+
+- There are **no recent FDA decisions, major M&A deals, or explicit guidance changes** disclosed for Microsoft in the last 48 hours; the clearly dominant catalyst is **Q4 earnings and FY27 capex/Azure commentary**.[2][5][8][9]
+
+---
+
+## 2. SENTIMENT (0–25 pts)
+
+**Score: 21/25**
+
+**Analyst & institutional positioning**
+
+- Zacks frames MSFT as a potential **beneficiary of AI momentum, Copilot adoption, and Azure cloud expansion**, and explicitly discusses whether Azure/AI growth makes MSFT a buy ahead of Q4 earnings, implying constructive fundamental sentiment.[2][9]
+- A Bank of America analyst expects **39–40% Azure growth**, consistent with management guidance, reinforcing bullish expectations on cloud.[2]
+- The Street article (via Zacks) notes an analyst reiterating a **Buy rating** and maintaining a **$500 price target**, coupled with raised earnings estimates for the next two fiscal years ahead of the July 29 release.[2]
+- MarketBeat notes **institutional accumulation**, with at least one firm raising holdings in MSFT and reiterating its strong profitability (ROE **31.94%**, net margin **39.34%**) based on the last quarter’s beat.[13]
+
+**News tone (last 48 hours)**
+
+- Earnings previews across MarketWatch, Zacks, Benzinga, Seeking Alpha and other outlets emphasize:
+  - Strong expected **top‑line and EPS growth**.[2][3][5][8]
+  - Focus on **Azure, AI, and capex/FCF** rather than concern about core business weakness.[2][5][8][9][11]
+- A Benzinga article states Microsoft stock “looks attractive heading into earnings after its significant slide year‑to‑date,” suggesting a **constructive but valuation‑sensitive tone**, with the note focused on earnings metrics that “will matter most.”[6]
+- Another Benzinga piece discusses the possibility of Microsoft swinging **$189B in market value** off the print, underscoring that investors see this as a high‑impact event rather than a low‑stakes quarter.[7]
+
+**Social / broader sentiment**
+
+- A 24/7 Wall St earnings showdown piece notes **roughly 95% beat odds priced in** for both MSFT and META, with Polymarket traders assigning a **91.5% beat probability** to Microsoft, indicating **strong expectations and a “beat is baseline” mentality**.[11]
+- Macroaxis flags that MSFT generated a **negative expected return over the last 90 days** despite a strong financial position, consistent with the narrative of a recent slide and room for a relief rally if earnings/CAPEX surprise positively.[12]
+
+Overall, sentiment is **broadly positive but focused on execution risk around Azure growth and long‑term capex**, not on core business deterioration.
+
+---
+
+## 3. TECHNICAL (0–25 pts)
+
+**Score: 17/25**
+
+*(Note: Last 48 hours data gives price action and context, but not full detailed MA/RSI figures; scoring reflects partial but meaningful information.)*
+
+**Recent price action**
+
+- Benzinga reports MSFT shares were up **2.45% to $398.63** during Tuesday’s session, described as “Microsoft stock headed higher Tuesday, building on two straight advances as investors awaited the tech heavyweight's fiscal fourth‑quarter earnings report.”[4][6]
+- The same coverage refers to a “significant slide year‑to‑date” before the recent rebound, implying MSFT has been **below prior highs but is now moving higher into earnings**.[6][12]
+
+**Moving averages & trend (inferred from sources)**
+
+- Macroaxis notes MSFT has generated a **negative expected return over the last 90 days**, pointing to some weakness or consolidation over that period.[12]
+- Investor’s Business Daily describes MSFT as having “run into resistance with earnings next,” indicating price is testing resistance zones rather than breaking out strongly beyond them.[4]
+- While exact **50‑day and 200‑day moving average levels** and **RSI** values are not explicitly provided in the last 48 hours of sources, the narrative of:
+  - 90‑day negative expected return,[12]
+  - recent “significant slide year‑to‑date,”[6]
+  - and a short‑term rebound into earnings,[4][6]
+  suggests MSFT has moved off local lows and is **approaching resistance**, likely trading **near or modestly above shorter‑term averages** but still **below peak levels**. This supports a neutral‑to‑constructive technical posture rather than overbought euphoria.
+
+**Volume / volatility context**
+
+- A Benzinga note mentions MSFT could swing **$189B in value** after earnings, implying **elevated implied volatility** into the event.[7]
+- No explicit daily volume vs 30‑day average data is provided in the last 48 hours; commentary focuses more on price reaction potential and implied volatility than recent volume statistics.[4][6][7]
+
+Given incomplete numerical technical detail (no precise MA, RSI, or 30‑day volume figures in the last 48 hours), the technical picture is scored **moderately positive**: short‑term upward momentum into resistance, with elevated event risk but not clearly overbought.
+
+---
+
+## 4. MARKET CONTEXT (0–25 pts)
+
+**Score: 20/25**
+
+**Sector / peer dynamics**
+
+- MSFT is part of the **“Magnificent Seven”** group of mega‑cap tech stocks, and coverage emphasizes its role among AI leaders alongside Meta and others.[3][11]
+- Market commentary points to **AI‑focused ETFs** potentially benefiting from Microsoft’s Q4 results, highlighting MSFT as a core holding in AI/tech funds and a bellwether for the AI hardware/software spend cycle.[2]
+- The earnings showdown article frames July 29 as a critical day for **MSFT and META**, with both having “blockbuster last quarters” and investors focused on **FY27 capex and AI infrastructure** for the group.[11]
+- A social media post highlights that key events this week include the **FOMC decision and tech earnings from Microsoft, Meta, Apple, and Amazon**, placing MSFT at the center of a broader **mega‑cap tech earnings cluster**.[14]
+
+**Index / macro environment**
+
+- While specific SPY or VIX prints over the last 48 hours are not directly quoted in the sources, the clustering of:
+  - FOMC decision,[14]
+  - multiple mega‑cap tech earnings (MSFT, META, AAPL, AMZN),[14]
+  - and intense focus on AI capex and free cash flow for the largest tech names,[5][11]
+  suggests a **macro regime where large‑cap tech and AI remain central to index performance and risk sentiment**.
+- Microsoft’s Q4 print is explicitly framed as a **key catalyst not only for MSFT but also for AI‑focused ETFs**, highlighting its role in sector and broader market leadership.[2]
+
+Given MSFT’s status as a core **SPX/NDX weight** and AI bellwether, plus the FOMC + mega‑cap earnings cluster, the **market context is supportive but event‑sensitive**, justifying a relatively high score with some caution for macro and capex‑driven volatility.
+
+---
 
 SCORE: 80/100
 
 ---
 
-## AAPL | Score: 79/100
+## GOOGL | Score: 77/100
 
-Apple (AAPL) is trading near record highs ahead of its fiscal Q3 2026 earnings on July 30, with a very clear near‑term earnings catalyst, broadly positive but mixed sentiment, technically extended but still in an uptrend, and operating in a strong large-cap/tech environment while semis see rotation.
-
----
-
-**1. CATALYST (0–25 pts)** – **22/25**
-
-**Key specific catalysts (all near-term and concrete):**
-
-- **Earnings date & expectations**
-  - Apple reports **fiscal Q3 2026 earnings after the close on July 30**.[1][2][8][12]
-  - Street expects **EPS ≈ $1.89** and **revenue ≈ $108.6–109.0B**, up roughly **16–17% YoY**.[1][3]
-  - Last reported quarter (fiscal Q2 2026, released Apr 30) delivered **revenue $111.2B (+17% YoY)** and **EPS $2.01 (+22% YoY)**, beating consensus and setting a high comparison bar.[2][3]
-
-- **Company guidance / management commentary**
-  - For the upcoming Q3 call (Tim Cook’s last as CEO), Apple has indicated expected **revenue growth between 14% and 17%**, so the market will be focused on whether they come in at the high or low end of that range and any updates to full‑year guidance.[12]
-  - Investors are watching **gross‑margin guidance**, as AI‑related memory chip tightness is pressuring component costs.[3]
-  - Services growth and commentary on **AI strategy** are also flagged as central focus areas for this call.[3][12]
-
-- **Capital return & balance sheet**
-  - In the most recent reported quarter, Apple authorized a **$100B share repurchase program** and increased its dividend **4%**, the **14th consecutive year of dividend growth**.[2]
-  - These capital‑return policies remain a continuing supportive catalyst for EPS and shareholder returns.[2]
-
-- **Product & medium‑term catalysts**
-  - Analysts highlight the **September iPhone cycle** and an **expected foldable iPhone** as key forward catalysts; estimates for the foldable model at launch range **3–10 million units**.[1]
-  - Continued **Services** expansion (already delivering nearly $31B in the prior quarter) is an important structural catalyst.[3]
-
-- **Macro / market structure**
-  - Apple’s market cap recently **surpassed $5 trillion for the first time**, overtaking NVIDIA, driven by better‑than‑expected earnings and sector rotation from semiconductors into other areas.[6]
-  - This size and status as a core index component make future Fed decisions and macro data relevant, but no specific macro surprise is cited as an immediate AAPL‑specific catalyst in the last 48 hours.[6][11]
-
-**No major M&A, FDA decisions, or non‑earnings corporate events** specific to Apple are reported in the last 48 hours.
-
-**Catalyst score: 22/25**  
-(Strong, clearly defined earnings and guidance event plus structural capital‑return and product catalysts; minor deduction as there is no transformational M&A/FDA-type event.)
-
----
-
-**2. SENTIMENT (0–25 pts)** – **19/25**
-
-- **Street ratings & targets**
-  - TipRanks reports a **“Moderate Buy”** consensus based on **16 Buys, 9 Holds, 2 Sells in the last three months**, with an average price target of **$329.52**, implying **~2.2% downside** from that source’s last price reference.[1]
-  - Another dataset shows **28 Buy vs 3 Sell** recommendations, an overall **Buy** rating, with an average 12‑month price target of **$315.57**, high **$400**, low **$215**, and **+0.49% upside** from the referenced price level.[2]
-  - A fair‑value analysis recently raised its **fair value estimate from $312.72 to $319.02**, reflecting a modest upward reassessment.[4]
-
-- **Fresh analyst color**
-  - KeyBanc Capital Markets reiterated an **Underweight (Sell)** rating on Apple ahead of this week’s earnings, expressing caution even as the stock trades near record highs.[13]
-  - This adds a contrarian negative note but is in the minority versus the broader Buy‑leaning consensus.[1][2][13]
-
-- **Price action & momentum**
-  - AAPL recently traded around **$339–340**, up about **0.7%** on Tuesday in one intraday report.[3]
-  - Another intraday snapshot shows **$315.03 (+0.52%)** at 12:41 PM Eastern in the same pre‑earnings window.[8]
-  - A separate market recap notes Apple touched **$342.89 intraday**, coinciding with market‑cap crossing **$5T**.[6]
-  - A real‑time technical/quant view rates the daily technical signal as **“Strong Buy”**, with expectations for the price to trend up in the medium term, although short‑term action is described as **sideways within a range**.[2][14]
-
-- **News tone**
-  - Coverage around the $5T market‑cap milestone emphasizes **“surged,” “rally,” and “overtaking NVIDIA”**, generally positive language about Apple’s performance and market leadership.[6][15]
-  - Pre‑earnings pieces frame expectations as high but focus on what to watch (margins, AI, services) rather than major red flags.[1][3][12]
-  - The KeyBanc Sell note introduces some **valuation and fundamentals caution**, but the aggregate tone remains **constructive to cautiously optimistic**.[13]
-
-- **Social/retail sentiment**
-  - Within the pulled sources, there is no direct quantified social media sentiment or options flow data in the last 48 hours; however, headlines about record market cap and 52‑week/highs are typically associated with elevated retail attention.[6][9]
-  - One article notes AAPL among names jumping to **52‑week highs** driven by strong results and “Wall Street optimism,” aligning with positive sentiment.[9]
-
-**Sentiment score: 19/25**  
-(Overall bullish institutional consensus and positive news tone, with some high‑profile bearish counterpoints and stretched expectations ahead of earnings.)
-
----
-
-**3. TECHNICAL (0–25 pts)** – **20/25**
-
-*Note: exact live 50‑day/200‑day levels and RSI are not explicitly quoted in the retrieved pages; score is based on clearly stated trend descriptors and relative positioning.*
-
-- **Trend vs moving averages**
-  - Data show AAPL trading in the **mid‑$300s**, with multiple references to **52‑week / all‑time highs** and a “rally” that lifted the stock to **$342.89**.[3][6][9]
-  - One technical snapshot labels Apple’s daily buy/sell signal as **“Strong Buy”** based on moving averages and other indicators, implying the price is above key moving averages (50d/200d).[2]
-  - Another analysis characterizes the stock as **range‑bound sideways between support and resistance**, suitable for swing trading, despite strong medium‑term performance.[14]
-  - Combining these, AAPL appears to be **above its major moving averages** and in a **primary uptrend**, with some **short‑term consolidation**.
-
-- **RSI / overbought‑oversold**
-  - No explicit RSI value is given in the pulled results.
-  - Given the characterization as “Strong Buy,” near highs, yet “sideways between support and resistance,” this suggests a **strong but not universally flagged overbought** condition, but this is inferred rather than reported.[2][14]
-
-- **Volume relative to history**
-  - The sources do not provide specific volume or 30‑day average volume figures for AAPL in the last 48 hours.
-  - There is no mention of abnormal volume spikes (either capitulation or blow‑off) around the recent highs, which implies **volume has not been the dominant narrative driver** in the fresh coverage.
-
-- **Support/resistance & pattern**
-  - Technical commentary notes Apple’s price is **trading sideways within a range** between identified support and resistance, with a **medium‑term uptrend**.[14]
-  - That suggests a consolidation at high levels rather than a breakdown.
-
-**Technical score: 20/25**  
-(Clearly in an uptrend and above major MAs with strong technical ratings; deduction due to lack of explicit RSI and volume stats and some evidence of short‑term range‑bound action.)
-
----
-
-**4. MARKET CONTEXT (0–25 pts)** – **18/25**
-
-- **Sector and peer context**
-  - A recent market recap states that Apple’s move to a **$5T market cap** occurred as capital **rotated away from semiconductor stocks** after a strong run in that group, while broader corporate earnings were “better than expected.”[6][15]
-  - Some sources describe semiconductors (SOX) as entering a **bear market**, while Apple and other mega‑caps benefit from **spending discipline and diversified earnings**, implying **relative strength of mega‑cap tech/platform names vs chipmakers**.[15]
-  - Within its industry (Computers, Phones & Household Electronics), Apple’s **revenue and net income lead the industry**, and it ranks **11/34** on composite metrics in one framework, with valuation described as **“fairly valued”**.[14]
-
-- **Index / SPY trend**
-  - While specific SPY levels are not quoted, Apple’s surge to 52‑week/all‑time highs and $5T cap “driven by better‑than‑expected corporate earnings and a decline in oil prices” suggests a **constructive broader equity tape**, supportive of risk assets and large‑cap growth.[6]
-  - Zacks commentary around broader markets links Apple with other global mega‑caps in a context of **continued earnings‑led momentum**, with the Fed widely expected to **hold rates steady** at its upcoming meeting, reducing immediate monetary‑policy shock risk.[11]
-
-- **Volatility / VIX environment**
-  - None of the retrieved sources explicitly cite the VIX level in the last 48 hours; however, the description of a **rally driven by earnings and sector rotation**, without reference to stress, points to a **benign volatility backdrop** rather than a high‑VIX risk‑off episode.[6][11]
-  - The absence of VIX‑related warnings in market commentary featuring Apple, plus the focus on sector rotation instead of de‑risking, supports that view.
-
-- **Macro data flow**
-  - Articles referencing the Fed suggest **policy stability (no imminent hike/cut surprises)**, which typically supports high‑duration assets like mega‑cap tech.[11]
-  - There is no reference to acute macro shocks (e.g., sudden recession indicators, geopolitical crises) in the last 48 hours in connection with AAPL.
-
-**Market context score: 18/25**  
-(Constructive large‑cap/tech environment with sector rotation out of semis and steady Fed expectations; deduction for lack of explicit SPY/VIX numerical data.)
-
----
-
-**AGGREGATED SCORING**
-
-- Catalyst: 22/25  
-- Sentiment: 19/25  
-- Technical: 20/25  
-- Market Context: 18/25  
-
-**SCORE: 79/100**
-
----
-
-## SPY | Score: 75/100
-
-SPY currently has **no direct, stock‑specific catalyst** (no earnings, guidance, FDA, or M&A events) but is trading in front of a dense macro/earnings calendar and a key Fed meeting, with sentiment cooling from prior extremes and price coiling near its 50‑day moving average in a still‑bullish broader market context.[1][2][10]
-
----
-
-### 1. CATALYST (0–25 pts)
-
-**Score: 18/25**
-
-- **No SPY‑specific corporate catalyst**  
-  SPDR S&P 500 ETF Trust (SPY) is an index ETF and does not report standalone earnings or issue guidance; there are *no* new SPY‑specific earnings, guidance changes, FDA decisions, or M&A announcements in the last 48 hours.[1]
-
-- **Macro & index‑level catalysts (near‑term, high impact)**  
-  - The market is pricing roughly a **30% probability of a 25 bp rate hike at the upcoming FOMC meeting**, making the Fed decision and accompanying statement a key macro catalyst for SPY direction.[2]  
-  - Lower crude oil prices have **eased inflation concerns and pushed bond yields lower**, which is supportive for broad equity valuations and thus SPY.[2]  
-  - Forecasts compiled by Bloomberg Intelligence suggest **Q2 S&P 500 earnings may increase ~23% year‑over‑year**, close to Q1’s +30% growth and well above prior expectations, implying strong index‑level earnings momentum as a backdrop for SPY.[2]
-
-- **Ongoing Q2 earnings season as indirect catalyst**  
-  - Recent better‑than‑expected results from **Boeing, Coca‑Cola, and Sherwin‑Williams** have supported the overall market.[2]  
-  - As of now, about **86% of 170 S&P 500 companies that have reported Q2 earnings have beaten estimates**, reinforcing an upside bias to index EPS.[2]  
-  - The market is focused on upcoming reports from **mega‑cap technology companies** (Microsoft, Meta, Amazon, Apple) this week, which are heavy SPY index weights and thus meaningful catalysts for SPY via their impact on the S&P 500.[2]
-
-- **Forward‑looking earnings catalyst for SPY**  
-  An analysis of SPY notes that the **“next round of macro data and earnings guidance”** is the key driver for whether SPY breaks above resistance near its 50‑day average or slips back toward prior support levels.[1]
-
-Given the lack of a direct SPY event but a rich macro and index earnings backdrop, catalyst is **moderately strong but indirect**, hence 18/25.
-
----
-
-### 2. SENTIMENT (0–25 pts)
-
-**Score: 17/25**
-
-- **Index sentiment reset from extreme bullishness**  
-  Recent commentary indicates **SPY sentiment has “reset” as momentum has cooled**, with the ETF consolidating rather than continuing a prior strong uptrend.[1]  
-  This suggests **neutral to mildly positive sentiment**, rather than euphoric or deeply bearish.
-
-- **Tone of recent news flow for the S&P 500 basket**  
-  - Earnings coverage describes Q2 results so far as **“positive”** and “supportive of stocks,” with a high beat rate and strong AI‑related earnings contribution expected.[2]  
-  - AI infrastructure and AI‑linked spending are expected to account for nearly **60% of the S&P 500 EPS growth in Q2**, which supports a constructive narrative around large‑cap growth exposures within SPY.[2]  
-  - Strategist commentary on the S&P 500 (noted via CNBC Pro) highlights a **raised year‑end S&P 500 target to 8,000 from 7,600** on expectations of booming earnings growth, signaling bullish institutional sentiment on the index that SPY tracks.[10]
-
-- **Analyst ratings & social/retail sentiment (SPY‑specific)**  
-  Recent data in the last 48 hours shows **no major new analyst upgrades/downgrades or target changes explicitly on SPY itself**.[5]  
-  The sentiment reset/momentum‑cooling framing implies retail and short‑term traders are less aggressively long, with positioning more balanced.[1]
-
-Overall, sentiment toward SPY and the S&P 500 is **constructive but not exuberant**, with strong fundamental optimism tempered by near‑term macro/event risk and a technical consolidation, leading to 17/25.
-
----
-
-### 3. TECHNICAL (0–25 pts)
-
-**Score: 19/25**
-
-- **Price vs. moving averages (trend & key levels)**  
-  Technical commentary on SPY highlights **resistance near the 50‑day moving average**, with current price action characterized as coiling just below or around that level.[1]  
-  The same piece notes the potential for a **break “cleanly above” the 50‑day average** or a **slip back toward the mid‑730s zone**, indicating that:  
-  - SPY is **trading near its 50‑day MA**, using that as a tactical pivot.[1]  
-  - The **mid‑730s** region is referenced as a notable support area in the current regime.[1]  
-  No explicit 200‑day moving average level is cited in the last 48 hours, but there is no indication that SPY is near or below the 200‑day, implying the longer‑term trend remains intact.[1]
-
-- **Momentum (RSI) and consolidation**  
-  Momentum is described qualitatively as **“cooled”**, consistent with an RSI that is neither overbought nor deeply oversold.[1]  
-  While no exact RSI figure is provided, the “momentum cooling” plus sentiment reset suggests a **mid‑range RSI with reduced short‑term buying pressure**.[1]
-
-- **Volume vs. recent averages**  
-  The analysis frame centers on **price behavior around the moving averages and macro/earnings catalysts**, without highlighting abnormal volume surges or droughts.[1]  
-  This implies **volume is roughly in line with recent norms**, with no notable blow‑off or capitulation described in the last 48 hours.
-
-- **Overall technical posture**  
-  SPY is in a **bullish longer‑term structure** (above key long‑term support), but **short‑term neutral** as it oscillates around the 50‑day moving average, awaiting macro and earnings catalysts to resolve the consolidation.[1]
-
-Given the clear identification of a key 50‑day level and nearby support, but with incomplete quantified RSI/volume detail, technicals are solid but not decisively strong, hence 19/25.
-
----
-
-### 4. MARKET CONTEXT (0–25 pts)
-
-**Score: 21/25**
-
-- **Sector & index strength within SPY’s universe**  
-  - Q2 earnings broadly are **strong**: about **86% of 170 reporting S&P 500 companies have beaten estimates**, supporting the overall earnings backdrop for SPY.[2]  
-  - AI‑related infrastructure and spending are expected to drive nearly **60% of S&P 500 EPS growth**, benefiting large‑cap tech and growth sectors that have substantial weight in SPY.[2]  
-  - Recent market action shows **software stocks rising** as investors rotate into sectors that had previously underperformed, signaling **breadth improvement** within SPY’s sector mix.[2]
-
-- **SPY trend vs. macro environment**  
-  - The **outlook for strong Q2 earnings**, continuing this week, is described as a **bullish factor for stocks**, reinforcing the intermediate uptrend in the S&P 500 that SPY tracks.[2]  
-  - A major bank has **raised its year‑end S&P 500 target to 8,000 from 7,600** on expectations of booming earnings growth, indicating a favorable strategic backdrop for SPY.[10]  
-  - Lower crude prices and softer yields reduce pressure from inflation and discount rates, supportive of equity multiples across the SPY universe.[2]
-
-- **Volatility (VIX environment, implied)**  
-  While explicit VIX readings are not reported in the last 48 hours, the combination of:  
-  - positive earnings tone,  
-  - rotation into underperforming sectors, and  
-  - commentary focused on consolidation rather than dislocation,  
-  points to a **contained volatility environment**, rather than a stress regime.[1][2]  
-  SPY is described in terms of **momentum cooling and sentiment reset**, not in terms of panic or volatility spikes.[1]
-
-Given a supportive macro, strong index earnings, constructive strategist outlooks, and controlled volatility, market context is **strongly favorable**, resulting in 21/25.
-
----
-
-**Component Scores:**  
-- Catalyst: 18/25  
-- Sentiment: 17/25  
-- Technical: 19/25  
-- Market Context: 21/25  
-
-SCORE: 75/100
-
----
-
-## TSLA | Score: 70/100
-
-Tesla (TSLA) currently screens as a **high‑catalyst, mixed‑sentiment, technically broken** name in a still‑risk‑on but more volatile market backdrop.
-
----
-
-## 1. CATALYST (0–25 pts)
-
-**Key recent fundamental catalyst: Q2 2026 earnings miss with revenue beat and margin/FCF deterioration.**
-
-- **Q2 2026 results:**  
-  - Revenue **$28.24B**, up **25.5% YoY**, and ~5–9% above consensus ($26.4–$25.8B).[1][5][8]  
-  - Adjusted EPS **$0.33**, vs consensus **$0.50–0.54**, a **~34–38% miss**.[1][2][4][5][8]  
-  - Operating income **$398M**, down **57% YoY**; operating margin **1.4%**.[2][4]  
-  - Non‑GAAP automotive gross margin **16.3%**, below analyst forecasts (~19.7%) and consensus (~18.5%).[1]  
-  - Free cash flow **–$1.09B**, first negative reading in ~2 years, driven by capex **$5.79B** on AI, batteries, robotaxi, Optimus.[2][4][12]
-
-- **Stock reaction to earnings:**  
-  - TSLA fell **~14.5%** on earnings day and another **~17.8%** over the week, reflecting severe punishment for the profit collapse and negative FCF.[4][12]
-
-- **Guidance / estimates changes:**  
-  - Post‑earnings, analysts **raised** Q3 revenue estimates by **1.3%** to **$27.73B** and full‑year 2026 revenue forecasts by **1.9%** to **$106.94B**, despite margin pressure.[5]  
-  - Zacks notes EPS estimates were **trimmed** ahead of the report and highlights the miss and margin compression afterwards.[8][12]
-
-- **Strategic / AI & autonomy catalysts:**  
-  - Management is heavily increasing spending on **AI infrastructure, robotaxis (Cybercab), Optimus, and next‑gen manufacturing**, framed as long‑term growth drivers despite near‑term drag on earnings and FCF.[2][4][12]  
-  - Tesla reportedly secured a “**very significant allocation**” of Micron memory chips on reasonable terms to support its AI roadmap.[6]
-
-- **Other product/feature catalysts:**  
-  - Ongoing focus from the street on **robotaxi** progress and **FSD attach rates >55%** as key drivers of the upside case.[4]
-
-- **M&A / regulatory / macro:**  
-  - No material **M&A**, FDA‑type, or major new regulatory decisions impacting TSLA reported in the last 48 hours.  
-  - Macro remains broadly supportive of growth/AI narratives but is now more sensitive to profit and cash‑flow deterioration (reflected in TSLA’s sell‑off).[4][5][12]
-
-**Catalyst Score: 22/25**  
-Strong, *fresh* fundamental catalyst (big EPS miss, margin/FCF shock) plus ongoing AI/autonomy investments and minor positive estimate revisions. No major new deal/regulatory catalyst, which keeps it below the maximum.
-
----
-
-## 2. SENTIMENT (0–25 pts)
-
-**Overall sentiment: mixed‑to‑cautious, with notable bullish long‑term calls but damaged near‑term confidence.**
-
-- **Wall Street rating & targets:**  
-  - MarketBeat data: average rating **“Hold”**, average target **$402.24**.[6]  
-  - Another compilation cites consensus target **$421.16** (~11% upside from the then‑current price) and consensus recommendation **Buy** (reflecting a broader set of 41 analysts).[3]  
-  - Roth Capital analyst Craig Irwin reiterates **Buy**, with a **$505** target, seeing “several positive catalysts ahead” and recommending buying on weakness.[1]
-
-- **Recent target changes / calls (last few days):**  
-  - RBC Capital previously raised its TSLA price target to **$500 from $475**, maintaining **Outperform**, citing higher AI/autonomy valuation.[7]  
-  - UBS raised its target to **$442 from $364** with a **neutral** stance, pointing to upside but balanced risks.[7]  
-  - Deutsche Bank **cut** its target to **$420 from $465** but **reaffirmed Buy**, signaling confidence in longer‑term upside despite nearer‑term profit issues.[11]  
-  - Morningstar calls TSLA “**very attractive**” and says “now’s a good time to buy” after the post‑earnings rout.[2]
-
-- **Narrative tone post‑earnings:**  
-  - Several outlets emphasize that the **revenue beat and record Q2 deliveries** (480,126 vehicles) were overshadowed by EPS miss, margin compression, and negative FCF, eroding investor confidence.[4][5][12]  
-  - Commentary highlights that year‑to‑date TSLA is down around **30%**, framing it as a “rough post‑earnings week” and a damaged profit story that requires margin recovery and tangible robotaxi/Optimus traction.[4]
-
-- **Institutional flows / positioning:**  
-  - East Coast Asset Management **boosted** its TSLA position, suggesting some institutional investors are buying into weakness.[6]
-
-- **Social / retail sentiment (indirect indicators):**  
-  - Newsbreak and MarketBeat coverage stresses AI/autonomy and “very attractive” valuation, implying **bullish retail and social media interest** around the post‑selloff setup.[2][6][7]  
-  - However, the magnitude of the price drop and emphasis on negative FCF and margin risk show **elevated caution**.
-
-**Sentiment Score: 18/25**  
-Balanced between strong long‑term bullish calls (RBC, Deutsche, Morningstar, Roth) and clearly negative near‑term profit/FCF narrative plus an average “Hold” rating. Sentiment is not capitulatory, but it is far from uniformly positive.
-
----
-
-## 3. TECHNICAL (0–25 pts)
-
-Recent reporting describes TSLA as technically weak with additional downside risk if support fails.[4][6] Precise intraday numbers for moving averages and RSI are not provided in the last 48 hours, but several points are clear:
-
-- **Trend & price action:**  
-  - TSLA is down about **30% year‑to‑date**.[4]  
-  - The stock dropped **~30%+ over the earnings day plus following week** (–14.5% on the print, –17.8% over the next week).[4][12]  
-  - Technical analysts referenced in MarketBeat warn of “**additional downside risk if recent support levels fail**.”[6]
-
-- **Position vs 50‑day / 200‑day moving averages (directionally):**  
-  - Given the sharp YTD drawdown and the large, recent gap‑down post‑earnings, TSLA is **trading below its recent support levels**, which strongly implies it is **below its 50‑day moving average**.[4][6]  
-  - A ~30% YTD decline, combined with recent acceleration of losses, suggests TSLA is **at best close to, and likely below, its 200‑day moving average**, consistent with a broken intermediate trend.[4]  
-  - Recent commentary explicitly frames the chart as weak, with *support at risk*, which aligns with price trading under key MAs.[4][6]
-
-- **Momentum / RSI (directional):**  
-  - The magnitude and speed of the post‑earnings selloff indicate **oversold or near‑oversold momentum conditions**, even though exact RSI figures are not cited.[4][12]  
-  - This setup typically corresponds to RSI in the **30–40** range, but no numerical RSI is provided in the last 48 hours, so this should be treated as contextual rather than a precise reading.
-
-- **Volume vs 30‑day average (directional):**  
-  - A **14.5% single‑day drop** on earnings followed by **17.8% down over the week** almost certainly coincided with **volume materially above its 30‑day average**, as such moves generally require elevated turnover.[4][12]  
-  - Newsflow refers to “continued post‑earnings selling” and technical downside risk, which corroborates a **high‑volume distribution phase**.[6][12]
-
-Given the lack of exact real‑time technical numbers in the last 48 hours, only directional assessments are possible, but all available data point to:
-
-- **Trend:** clearly **down**, below recent supports.  
-- **MAs:** price **below 50d**, likely **below 200d**.  
-- **Momentum:** weak, likely **oversold‑ish**.  
-- **Volume:** **above average** during the earnings‑driven selloff.
-
-**Technical Score: 13/25**  
-Technicals are decisively negative (broken trend, support under pressure). There is some potential contrarian appeal from probable oversold conditions, but lacking exact RSI/MAs, we mark it as weak rather than unquantifiably extreme.
-
----
-
-## 4. MARKET CONTEXT (0–25 pts)
-
-- **EV / autos / AI sector backdrop:**  
-  - Broader auto/EV sentiment is mixed: Ford just delivered a **Q2 earnings beat and raised its 2026 guidance**, underscoring that some legacy autos are showing profit resilience.[14][15]  
-  - Tesla’s narrative emphasizes **AI, autonomy, robotaxis, and energy storage**, linking its story more closely to the **AI/infrastructure** trade than traditional autos.[2][4][5][6][7][12]  
-  - Reports of **$9B+ in new Megapack orders** highlight strength in energy storage demand, a positive for TSLA and the broader clean‑energy complex.[7]
-
-- **SPY / broad market tone:**  
-  - Recent coverage portrays the overall equity market as **still constructive on AI and growth**, but increasingly **discriminating on margins and cash flows**.[4][5][12]  
-  - The severity of TSLA’s punishment relative to Ford’s positive reaction is consistent with a market that rewards **clean earnings beats and cash generation** and penalizes **heavy capex with near‑term profit pressure**.[14][15]
-
-- **Volatility / VIX‑type environment:**  
-  - The combination of big post‑earnings moves in megacaps like TSLA and ongoing macro uncertainty suggests a **moderate‑to‑elevated volatility regime**, though specific VIX numbers are not cited in the last 48 hours.  
-  - TSLA’s own realized volatility has clearly spiked, increasing stock‑specific risk even if index‑level volatility remains contained.[4][12]
-
-- **Sector relative strength for TSLA:**  
-  - Within autos/EVs, TSLA is currently **underperforming** (down ~30% YTD, large earnings‑week drawdown), while select peers (e.g., Ford) are showing **relative strength** on earnings beats and guidance raises.[4][14][15]  
-  - Within AI/autonomy, sentiment on the theme is still broadly positive (as shown by RBC, UBS targets citing AI potential), but TSLA’s ability to translate that into near‑term earnings is in question.[4][6][7][10][11]
-
-**Market Context Score: 17/25**  
-Macro and sector backdrops are not hostile: SPY/growth/AI trends are broadly supportive, and peers like Ford are being rewarded. However, TSLA is clearly **underperforming its sector and the AI complex**, with higher stock‑specific volatility and more scrutiny on margins and FCF.
-
----
-
-**Component Scores:**  
-- Catalyst: 22/25  
-- Sentiment: 18/25  
-- Technical: 13/25  
-- Market Context: 17/25  
-
-SCORE: 70/100
-
----
-
-## COIN | Score: 70/100
-
-Coinbase Global (COIN) is trading in a **bearish technical setup**, heading into a **Q2 earnings report on July 30** with mixed but still constructive Street sentiment and a volatile crypto/macro backdrop.[1][3][11][13]
+Alphabet (GOOGL) currently has **strong fundamental catalysts but mixed market reaction**, broadly **bullish analyst sentiment**, technically **under pressure vs prior highs but not broken**, and is operating in a **risk‑on but AI‑selective tech tape**.
 
 ---
 
@@ -847,30 +291,173 @@ Coinbase Global (COIN) is trading in a **bearish technical setup**, heading into
 
 **Score: 20/25**
 
-**Near-term company-specific catalysts**
+**Earnings & guidance**
 
-- **Q2 FY2026 earnings**: Multiple sources flag Coinbase’s **earnings on Thursday, July 30**, with the call seen as a key event for crypto stocks generally.[1][4][8]  
-- **Earnings expectations**:  
-  - One preview cites **Q2 EPS expected at $0.15**, up 25% year over year.[1]  
-  - Another Zacks-based preview cites **consensus EPS at $0.15 on $1.31 billion revenue**, revenue down **12.8% YoY**.[8]  
-  - A separate Zacks note lists **EPS projection at $0.32**, up **166.67% YoY**, indicating **consensus uncertainty or revisions** in the last day.[13]  
-- **Regulatory / strategic backdrop tied to earnings**:  
-  - COIN’s earnings are framed as being about more than results, with focus on **regulatory progress in Washington** and diversification beyond trading.[1]  
-  - Coinbase is a prominent corporate backer of the **Crypto CLARITY Act**, a proposed U.S. crypto market structure bill that, if enacted, could materially reduce regulatory uncertainty and support new product launches.[1]  
-  - Coinbase recently joined the **Open USD stablecoin consortium** alongside major financial and tech names (Alphabet, BlackRock, Visa, Mastercard), reinforcing its role in blockchain infrastructure.[1]
+- Alphabet just reported **Q2 2026 earnings that materially beat expectations**: revenue about **$119.8–$120.0B**, up **~24% YoY**, with EPS **$9.11 vs ~$3.0 consensus (~199% beat)**.[2][13]  
+- **Google Cloud revenue grew ~82% YoY to $24.8B**, sharply ahead of expectations, with operating income of **$8.8B** and segment margin **35.6% vs 20.7% a year ago**.[3][13]  
+- Management **raised 2026 capital expenditure guidance to $195–$205B** and signaled spending could rise further in 2027 as AI data center build‑out accelerates.[7][12]  
+- Q2 marked **negative free cash flow for the first time as a public company**, driven by unprecedented AI infrastructure capex.[2][12]
 
-**Regulatory and macro catalysts affecting COIN**
+**Capital allocation / balance sheet**
 
-- **Crypto CLARITY Act setback**: The **U.S. Senate has shelved the Crypto Clarity Act for now**, prioritizing other legislation, with its fate this year “genuinely uncertain.”[2]  
-  - This is **negative near-term** for the regulatory-catalyst narrative that had been building around COIN.[1][2]
-- **Federal Reserve decision**: A **Fed interest-rate decision on July 29** is highlighted as a key event likely to reprice risk assets, including crypto.[10]  
-  - Rate volatility is directly relevant for COIN as a high-beta, crypto-linked equity.[2][10]
+- Alphabet filed a **US$69.24B Class C stock shelf** and affirmed its **quarterly dividend**, adding flexibility for capital returns and financing.[2]  
+- The company holds roughly **$250B in cash, $100B in debt, and generated ~$240B in operating cash flow over the prior 12 months**, with ad revenue around **$400B annually** growing **15–25% per year** (sector note summarizing company metrics).[8]
 
-**No new M&A, FDA, or guidance changes disclosed in last 48 hours**
+**Business & strategic catalysts**
 
-- Recent coverage focuses on **earnings, legislation, and sector rotation**, with **no fresh M&A, no FDA-type events, and no explicit guidance change** reported in the last 48 hours.[1][2][3][7][8][13]
+- **AI and Cloud monetization** is the central near‑term and medium‑term catalyst: Street focus is on how well Alphabet converts AI‑driven engagement in **Search, YouTube, and Cloud** into durable, cash‑generative growth.[2][6]  
+- Alphabet has begun **recognizing revenue from TPU chip sales** for the first time, expanding its AI infrastructure monetization path.[3]  
+- **Accenture–Alphabet partnership** on “agentic AI” solutions for mid‑market firms is highlighted as a positive AI/cloud catalyst by commentators.[6]  
+- **Google Services** (including Search & YouTube) posted strong operating margin of about **41.8% on ~$94.5B revenue** in Q2, underscoring earnings power from core businesses.[13]
 
-Given a **major earnings date**, high-profile but now-delayed legislative catalyst, and Fed decision timing, the **catalyst setup is active and material**, hence **20/25**.
+**Legal / regulatory / other**
+
+- A **U.S. class action lawsuit** against Alphabet has been **certified and is ongoing**, with no settlement or judgment yet— a known overhang but not an immediate event catalyst.[2]  
+- Google is **appealing an Indian ruling over its ads platform**, reinforcing continuing regulatory risk.[6]  
+- Reddit’s stated intent to shift its data licensing deals (including Google) from flat‑fee (~**$60M/year** with Google) to usage‑based pricing on 2027 renewals is a **future potential cost catalyst**, but not a near‑term earnings event.[5]
+
+**Assessment**
+
+- The **Q2 beat, cloud acceleration, and explicit AI capex guidance reset** are major fresh catalysts, but the **market is currently focused on capex drag and FCF compression**, muting the positive price reaction.[7][12][13]  
+- No FDA decisions or M&A items surfaced in the last 48 hours; catalyst is **earnings + capex guidance + AI/cloud execution**, not corporate actions.
+
+---
+
+## 2. SENTIMENT (0–25 pts)
+
+**Score: 21/25**
+
+**Analyst & professional commentary**
+
+- Wall Street analysts are generally **bullish** on Alphabet, emphasizing its AI advantage and multi‑asset platform (Search, Android, YouTube, Cloud, chips/models) as one of the best paths to monetize AI at scale.[3][6]  
+- Aggregate analyst stance cited is **“Compra / Buy” from 62 analysts with an average target price around 423.84 (currency not specified but above current price)**, implying meaningful upside.[9]  
+- Zacks maintains Alphabet as a **Rank #2 (Buy)**, explicitly recommending investors **“stay the course” despite the surge in capex**, framing the sell‑off as a reaction to spending rather than fundamentals.[12]  
+- Recent articles frame the post‑earnings drop as an **“earnings correction” and buying opportunity**, stressing 12 consecutive quarters of double‑digit revenue growth and 11 straight EPS beats.[13][4]
+
+**News tone (last ~48 hours)**
+
+- Multiple outlets describe the quarter as **“great” or “record”**, but highlight investor anxiety over **AI capex and free cash flow negativity**, making sentiment **constructive but cautious**.[7][12][2]  
+- News roundups emphasize **strengthening fundamentals and multiple AI/cloud catalysts**, while also reminding investors of **regulatory/legal and competition risks**.[6]  
+- A sector piece notes that **cloud revenue acceleration lifted shares intraday**, but **capex scrutiny dragged sentiment**—capturing the tug‑of‑war in tone.[8]
+
+**Social / market reaction**
+
+- MarketBeat notes that **GOOG stock has been under pressure overall**, despite upbeat AI commentary and analyst support.[6]  
+- Commentary points to investors “crushing” the stock after capex guidance, indicating a **short‑term sentiment air pocket** even as long‑term views remain supportive.[12][7]
+
+**Assessment**
+
+- **Net sentiment is positive but not euphoric**: fundamentals and analyst ratings are strongly supportive, yet high AI capex, negative FCF, and regulatory noise temper enthusiasm.  
+- This mixed tone but clear long‑term bullish bias justifies a **high but not perfect sentiment score**.
+
+---
+
+## 3. TECHNICAL (0–25 pts)
+
+**Score: 17/25**
+
+*(Recent precise intraday prices, MA levels, RSI, and exact volumes are not fully available in the provided results; analysis leans on what is disclosed and clearly labeled as such.)*
+
+**Price levels / trend**
+
+- A recent reference price for Alphabet Class C (GOOG) shows **$358.71** as of **July 8, 2026**, with **support ~$355.61 and resistance ~$371.63** based on 20‑day volatility.[10]  
+- Another data point lists **GOOGL at $333.64**, up **7.08%** on that session, with a “Buy” rating—indicating **near‑term rebound off lows** but still below the cited higher GOOG level.[9]  
+- News flow describes a **post‑earnings drop of about 7% after a record quarter**, followed by at least **one session where shares were up >2.5% as cloud results and AI narrative supported a recovery**.[13][8]
+
+**Moving averages**
+
+- The provided sources do not specify exact **50‑day or 200‑day moving average** values or their relationship to current price.  
+- From the combination of a sharp post‑earnings correction and subsequent partial rebound, the stock **likely remains near or somewhat below recent highs**, but we cannot quantitatively state its precise position vs 50d/200d MAs from these sources alone.
+
+**Momentum & RSI**
+
+- No explicit **RSI** readings or short‑term momentum indicators appear in the results.  
+- The pattern of **strong fundamental beat + negative reaction on capex + partial rebound** points to **elevated volatility and active dip‑buying**, but RSI level cannot be specified without direct data.
+
+**Volume vs 30‑day average**
+
+- The sources mention trading activity (e.g., **12.67M shares traded on July 8, 2026** for GOOG) but do not provide a **30‑day average volume** baseline.[10]  
+- It is reasonable to infer that **post‑earnings sessions saw above‑normal volume** given the described “correction” and sentiment shift, but this is not numerically documented in the excerpts.
+
+**Assessment**
+
+- Technically, GOOGL appears to be in a **volatile, post‑earnings digestion phase**, with **support identified in the mid‑$350s (GOOG) and recent rebound moves**, but precise MA/RSI/30‑day volume comparisons are not available in the last‑48‑hour data provided.  
+- Given incomplete technical detail, score is **moderately positive but penalized** for lack of confirmed numerical indicators.
+
+---
+
+## 4. MARKET CONTEXT (0–25 pts)
+
+**Score: 19/25**
+
+**Sector / industry**
+
+- A broader tech sector note highlights a **rotation within technology**, with **Apple rewarded for spending discipline** while **chip stocks enter a bear market**, indicating **selective risk‑taking within tech and AI‑linked names**.[8]  
+- Within that context, Alphabet’s **Cloud revenue acceleration (84% YoY vs 64% prior quarter)** is singled out as a **bright spot**, but **capex scrutiny dampens enthusiasm**, showing investors discriminating between growth and spending profiles even inside AI.[8]  
+- Commentators discussing the AI space warn about possible **AI bubble catalysts**, including panic selling in semiconductors, which could spill into high‑capex AI platforms like Alphabet.[11]  
+
+**Broad market (SPY, VIX)**
+
+- Specific last‑48‑hour readings for **SPY** and **VIX** are not provided in these excerpts.  
+- Qualitatively, the presence of **sector rotation and an AI‑heavy narrative** suggests a **risk‑on but choppy environment**, where mega‑cap platforms with strong cash flows (like Alphabet) remain core holdings but are scrutinized closely on capital intensity.[8][12]
+
+**Macro / regulatory backdrop**
+
+- Alphabet faces **rising legal and regulatory pressures**—U.S. class action, regulatory cases in India, and broader scrutiny of AI and ads—which commentators flag as a key ongoing risk that can compress margins over time.[2][6]  
+- Nonetheless, its **scale, diversified revenue base, and cash generation** are repeatedly emphasized as strengths in navigating a complex macro/regulatory environment.[2][8][13]
+
+**Assessment**
+
+- The **sector is structurally strong in AI/cloud but tactically rotational**, with investors rewarding capex discipline and punishing perceived over‑spending.  
+- Alphabet fits into a **favored but scrutinized segment** of tech: fundamentals aligned with the AI theme, but the macro and sector context make the stock sensitive to spending and regulatory headlines.
+
+---
+
+SCORE: 77/100
+
+---
+
+## SOFI | Score: 75/100
+
+SoFi Technologies (SOFI) is in a **pre‑earnings setup** with a clear near‑term catalyst (Q2 results and Fed decision), constructive but not euphoric sentiment, and a technically extended profile after a strong run. Overall risk/reward short term is skewed to how Q2 earnings and guidance clear high expectations.
+
+---
+
+## 1. CATALYST (0–25 pts)
+
+**Score: 22/25**
+
+**Key near‑term catalysts**
+
+- **Q2 2026 earnings this Wednesday**: SoFi is scheduled to report Q2 results alongside other fintechs and big tech names.[13]  
+  - Street EPS consensus: **$0.11**, up **37.5% YoY**.[6][9]  
+  - Revenue consensus: **$1.11–1.13B**, up around **30–31.7% YoY**.[6][7]  
+- Previews from Zacks and Seeking Alpha emphasize that investors are focused on:
+  - **Adjusted EBITDA margin** progression toward a long‑term ~**38%** target; Q1 margin was **31.3%** and Q2 guidance was around **30%**, so any upside here is explicitly framed as a “potential catalyst.”[2]  
+  - **Loan originations** after record **$12.18B** in Q1 (+68% YoY), with investors watching whether that pace persists as SoFi expands into areas like **small‑business lending**.[2][8]  
+  - **Member engagement** and cross‑sell metrics: in the prior quarter, **43%** of new products were purchased by existing members, a key pillar of the thesis.[2]  
+
+**Other company‑specific developments (secondary catalysts)**
+
+- **Business expansion & product launches**:  
+  - SoFi launched the **SoFi Social 50 Income ETF (SFYI)**, adding a new fee‑based revenue stream and deepening engagement with investing customers.[10]  
+  - Articles highlight **expansion of its lending footprint**, supporting the case for ongoing growth in its core financial services business.[10]  
+- **Brand/partnership news**:  
+  - **Multi‑year partnership with Notre Dame Athletics** ahead of Q2 earnings, which put the name on retail radar but is viewed more as brand building than a major financial catalyst.[13][5]  
+
+**Macro/market‑level catalysts**
+
+- **Federal Reserve July rate decision** this Wednesday, specifically cited as a key event being watched by markets the same day SoFi reports.[13]  
+  - Rate path impacts funding costs, loan demand, and valuation multiples for fintech and growth stocks.  
+
+**Insider / executive activity**
+
+- Recent **executive selling**: an EVP, Kelli Keough, sold about **11,000 shares** last week.[3]  
+  - This is a modest negative data point but small relative to total float and institutional ownership.  
+
+**No FDA / M&A catalysts**
+
+- There are **no FDA decisions** (not relevant to fintech) and no confirmed **M&A transactions** for SoFi in the last 48 hours. If present, acquisition “interest” is only mentioned as sentiment/expectations, not an announced deal.[4]  
 
 ---
 
@@ -878,33 +465,33 @@ Given a **major earnings date**, high-profile but now-delayed legislative cataly
 
 **Score: 18/25**
 
-**Street and analyst sentiment**
+**Analyst expectations and positioning**
 
-- **Consensus rating**: MarketBeat data show COIN with an **average rating of “Hold”** and a **consensus price target of $239.14**.[6]  
-  - This implies **upside vs. current price (~$160)** but reflects **balanced, not strongly bullish, Street positioning**.
-- **Recent analyst actions (mixed)**:  
-  - Citizens JMP recently **cut its price target** but **maintained an “outperform” rating**, signaling continued belief in upside despite some de-risking.[7]  
-  - Barclays **lowered its price target and kept an “underweight” rating**, underscoring persistent bearish views among some analysts.[7]  
-- A separate earnings preview article still characterizes COIN as carrying a **“Moderate Buy” consensus**, indicating some discrepancy between datasets but reinforcing that sentiment is **constructive but cautious**.[1]
+- Consensus view: **“Hold”** rating from analysts overall, indicating balanced institutional sentiment rather than strong buy or strong sell.[10]  
+- Multiple previews (Zacks, Seeking Alpha, Investing.com) frame SoFi as a **growth story with improving profitability**, with explicit focus on margin expansion and continued lending strength.[2][6][7][8][9]  
+- Some valuation concerns:
+  - Simply Wall St notes the stock **“looks stretched” on earnings and rich versus peers**, with the comment that expectations around member growth and lending expansion are high and any disappointment could pressure the valuation.[4]  
 
-**News and fundamental tone**
+**Recent news tone (last ~48 hours)**
 
-- **Positive tone**:  
-  - Coverage highlights Coinbase’s **expansion of its product and regulatory footprint**, including **UK authorization to offer stocks and derivatives** and new trading and margin features, which are framed as supportive developments.[7]  
-  - Joining the **Open USD stablecoin consortium** underscores institutional credibility and infrastructure positioning.[1]
-- **Neutral / slightly negative tone**:  
-  - A **legal leadership transition**: Chief Legal Officer **Paul Grewal will step down** and move into an advisory role, with **Molly Abraham** becoming general counsel.[7]  
-    - Articles describe this as orderly but note **added uncertainty around a key regulatory figure**.[7]
-  - Some fundamental comparisons emphasize COIN as a **“crypto infrastructure trade”** with **cyclical earnings and high crypto dependency**, and highlight Robinhood as stronger on diversified fundamentals.[5]
+- Marketbeat and other coverage point to **positive sentiment**:
+  - SoFi shares are “moving higher” on a mix of **business expansion news** and **upbeat commentary** about growth outlook, with the ETF rollout and lending expansion cited as main reasons for recent upward momentum.[10]  
+- Zacks articles stress **earnings growth** and strong lending trends into Q2, overall constructive tone rather than cautious.[7][8][9]  
 
-**Price action and social/market momentum**
+**Social / retail momentum**
 
-- **Recent move**: COIN **rose 5.81% to $167.49 on July 27, 2026**, driven by **sector-wide rotation into crypto-linked equities and positioning ahead of earnings**, not by a company-specific disclosure.[3]  
-  - This suggests **renewed demand for crypto beta** and some **pre-earnings risk-on positioning**.
-- MarketBeat notes COIN shares are **“under pressure”** as broader crypto weakness and mixed news flow weigh on the stock, despite some positive analyst actions.[7]  
-  - This reflects **choppy sentiment**, not a one-direction trend.
+- StockTwits/retail commentary (via recent futures article) notes SoFi is **“on the retail radar”** heading into Q2 earnings, partially driven by the Notre Dame partnership and its inclusion among fintech names reporting with big tech.[13]  
+- YouTube coverage (e.g., “If You Own SoFi Stock – Get Ready!” and “BIG Money Continues to BUY SoFi”) emphasizes:
+  - CEO **Anthony Noto buying heavily** (insider confidence).[1]  
+  - Themes of **value + high growth**, **AI innovation**, and “AWS of fintech,” which reflect bullish retail narratives rather than new fundamental data.[1][5]  
+  - The Notre Dame deal is explicitly characterized as **not a major catalyst**, but a positive brand move.[5]  
 
-Net, sentiment is **mixed but leaning constructive** (upside targets, “outperform,” infrastructure narrative) offset by **regulatory uncertainty, legal leadership change, and underweight calls**, warranting **18/25**.
+**Mixed signals**
+
+- **Positive**: strong growth expectations, new products, optimistic retail narrative, Q2 upside potential on margins and originations.[2][6][7][8][9][10]  
+- **Negative/neutral**: valuation stretch concerns, consensus “Hold” rather than “Buy,” and minor insider/executive selling.[3][4][10]  
+
+Net result: sentiment is **constructive but not exuberant**; there is clear excitement into earnings, tempered by valuation and the need to “prove it” on margins.
 
 ---
 
@@ -912,153 +499,211 @@ Net, sentiment is **mixed but leaning constructive** (upside targets, “outperf
 
 **Score: 15/25**
 
-**Price vs moving averages**
+*(Technical metrics are based on most recent tradable indications and commentary within the last 48 hours; exact 50d/200d MA and RSI values are not fully specified in the sources, so scoring reflects partial information.)*
 
-- A detailed technical screen shows **COIN at $160.24**, trading **below its 5, 20, and 50-day exponential moving averages**, characterized as a **“strongly bearish” trend with selling pressure**.[11]  
-- The **8-day simple moving average is $160.78**, which the source flags as a **Sell signal** with price slightly below that level.[11]  
-- The analysis explicitly rates **COIN stock as “Sell”**, with a **Score of 15**, 70% below its historic median score of 50, indicating **elevated risk vs its historical profile**.[11]  
-- While exact 200-day MA is not provided, being below short and medium-term EMAs combined with a “strongly bearish” trend implies **price is likely at or below the 50d and possibly not clearly above the 200d**, consistent with a **pressured technical posture**.[11]
+**Price action**
 
-**Momentum (RSI)**
+- A tokenized SoFi perpetual contract shows a **current price around $17.13**, with a 24‑hour range **$16.76–$17.20** and low trading volume.[11]  
+  - This instrument is not the main NASDAQ listing but tracks the underlying price behaviour; it confirms SoFi recently traded in the **high‑teens** and has **pulled back slightly from recent highs**.[11]  
+- Marketbeat notes the stock **“is advancing”** on Thursday in response to positive news around ETF launches and lending expansion, indicating **recent upward momentum** in the underlying NASDAQ-listed shares.[10]  
 
-- No explicit **RSI numerical level** is provided in the last 48 hours for COIN in the retrieved data.[11]  
-  - The description of **“strongly bearish” trend, selling pressure, and Sell rating** suggests **momentum is negative**, but without a specific RSI figure, this must be treated as **directional only**.[11]
+**Trend vs moving averages**
 
-**Volume vs 30-day average**
+- Commentary that the stock looks **“stretched on earnings and rich versus peers”**[4] combined with Marketbeat’s note of shares “moving higher”[10] suggests:
+  - Price is **above key moving averages**, likely trading at a premium to its recent trend, consistent with the description of being “stretched.”[4][10]  
+- However, the exact **50‑day and 200‑day moving average values** are **not provided** in the last 48‑hour sources, so we cannot quantify the spread in dollars or percentage terms.  
 
-- The recent technical and trading summaries accessed do **not provide explicit current volume or a 30-day average comparison** for COIN.[11][13]  
-  - The July 27 price move of **+5.81%** is described qualitatively as part of **crypto-stock rotation**, but no numeric volume data are given.[3]  
-  - Therefore, **volume context cannot be quantified** from the last 48 hours.
+**Momentum / RSI**
 
-Given the **clearly bearish trend below key short/medium-term MAs**, formal **Sell rating**, but with an upcoming earnings catalyst and recent bounce in sector rotation, technicals are **weak but not catastrophic**, meriting **15/25**.
+- Recent articles highlight **upward momentum** into earnings but do not publish a specific **RSI** value.[10]  
+- Given the absence of explicit RSI data in the last 48 hours, we **cannot state a precise RSI level** or overbought/oversold reading.  
+
+**Volume vs 30‑day average**
+
+- For the tokenized product, past 24‑hour volume is reported as **$400.13** (very low, crypto ranking ~11,664), suggesting **subdued trading** in that instrument.[11]  
+- No article in the last 48 hours cites **NASDAQ SOFI share volume versus 30‑day average**, so we do not have a reliable equity‑volume comparison figure.  
+
+Overall technical picture based on available data: **price has trended higher and is viewed as extended**, but the lack of explicit MA/RSI/volume metrics limits precision.
 
 ---
 
 ## 4. MARKET CONTEXT (0–25 pts)
 
-**Score: 17/25**
+**Score: 20/25**
 
-**Sector and crypto backdrop**
+**Sector / peer context**
 
-- COIN’s move on July 27 was driven by **“synchronized strength in crypto-linked equities”** and **rotation into liquid crypto beta** ahead of earnings, indicating **pockets of risk-on behavior in the crypto-equity sleeve**.[3]  
-- However, in the last day, **Bitcoin (BTC) at ~$63,386 fell ~0.53% since midnight UTC and about 2% during the prior U.S. session**, as global risk assets reacted to a sharp selloff in South Korean chipmaker stocks.[2]  
-  - The **Kospi index fell 11% in one session**, one of its worst drops in years, sending **shockwaves across risk assets**, including crypto.[2]  
-  - Ether also declined, reflecting **broad crypto softness**.[2]  
-- Another macro piece notes that **crypto whales are repositioning around the Fed’s July 29 rate decision**, underscoring that **crypto flows are sensitive to rates and macro risk pricing right now**.[10]
+- SoFi is reporting in a week where multiple **fintech companies and big tech “hyperscalers”** are releasing earnings: Amazon, Apple, Meta, Microsoft, Qualcomm, and **Robinhood** alongside SoFi.[13]  
+  - This clustering of high‑profile results heightens volatility and correlation risk but also provides sector‑level read‑through.  
+- Articles reference SoFi as part of **growth/fintech** cohorts benefiting from strong lending demand, new product launches, and GAAP profitability improvements.[8][10]  
 
-**Broader equity and volatility context**
+**Broad market & macro**
 
-- Specific SPY and VIX numbers are **not directly quoted** in the retrieved pieces over the last 48 hours.[2][10]  
-- Nonetheless, the description of **“shockwaves across global risk assets”** from the Kospi’s 11% one-day fall and the emphasis on the **Fed decision as a key risk repricing event** indicate a **fragile, macro-sensitive risk environment**.[2][10]  
-- Crypto-equity earnings coverage suggests **“soft” opens and noisy trading** in names like COIN as traders position cautiously ahead of earnings and macro events.[4]
+- **U.S. stock futures slipped** recently amid **geopolitical headlines** (Iran targeting American forces) and ahead of the **Federal Reserve’s July policy decision**.[13]  
+  - This indicates a **cautious risk environment** in the very near term, with macro uncertainty overlaying company‑specific events.  
+- Markets are **“keenly watching”** both the Fed decision and earnings from top tech companies this week, placing SoFi in a macro regime where:
+  - Rate decisions influence discount rates and valuations for growth names like SoFi.  
+  - Tech/fintech earnings can shift sector sentiment rapidly.[13]  
 
-**Sector-relative framing**
+**SPY / VIX environment (inferred from context, not explicit numbers)**
 
-- Comparative analysis positions COIN more as a **high-beta crypto infrastructure trade** than a conventional retail investing platform, with **meaningful downside risk if its catalysts (earnings, regulatory clarity, crypto adoption) fade**.[5]  
-  - In this context, COIN is **levered to crypto sentiment and macro risk**, meaning current volatility in BTC and legislative uncertainty are particularly important.[2][5][10]
+- The article notes **U.S. stock futures slip** rather than a broad risk‑on rally, suggesting **SPY is near term under pressure or consolidating**, not in a runaway uptrend.[13]  
+- VIX or SPY numeric levels are **not provided** in the last 48‑hour sources, but the combination of **earnings cluster + Fed meeting + geopolitical tension** is typically associated with **elevated event risk**.[13]  
 
-Given the **mixed sector picture** (recent rotation into crypto stocks, but BTC and global risk selling off; Fed and legislation in flux) and incomplete direct SPY/VIX data, market context is **moderately challenging but with active catalysts**, warranting **17/25**.
-
----
-
-SCORE: 70/100
+Net market context: **event‑driven, moderately cautious risk backdrop** with SoFi trading as part of a broader growth/fintech cluster facing dual catalysts (Fed + earnings).
 
 ---
 
-## QQQ | Score: 70/100
+### Component Scores
 
-**1. CATALYST (0–25 pts)** – **Score: 10/25**
-
-- **Direct QQQ-specific catalysts:**  
-  There are **no company-level earnings, guidance changes, FDA decisions, or M&A** events for QQQ itself; it is an ETF tracking the Nasdaq‑100 index, so catalysts are index-level rather than issuer-specific.[7]  
-- **Index & macro catalysts relevant to QQQ (recent, index-level):**  
-  - MarketBeat notes **Nasdaq weakness tied to U.S.–Iran tensions, higher oil prices, and inflation worries**, creating macro headwinds for QQQ’s tech/growth-heavy exposure.[2]  
-  - The same source highlights **fresh competitive pressure** from BlackRock’s launch of a cheaper Nasdaq‑100 ETF (iShares Nasdaq 100 ETF, ticker IQQ), which may pressure fees but not index exposure.[2]  
-  - SpaceX joining the Nasdaq‑100 is cited as a **supportive index catalyst**, potentially triggering **billions in passive buying** into the index QQQ tracks.[2]  
-- **Options-flow / event risk:**  
-  - A recent options‑flow video notes **positive net flow across SPX, SPY, and QQQ options chains, mostly call‑buying and put‑selling**, indicating participants are positioning for upside into **FOMC and big earnings** later this week.[3] This is **market‑wide**, but directly relevant to QQQ’s near‑term behavior.  
-
-Given the absence of a discrete, QQQ‑specific event (earnings/guide/M&A) but the presence of meaningful **macro, competitive, and index‑membership catalysts**, this bucket is **moderately positive but not strong**, hence **10/25**.
-
----
-
-**2. SENTIMENT (0–25 pts)** – **Score: 18/25**
-
-- **News & analyst tone on QQQ:**  
-  MarketBeat’s recent wrap on QQQ highlights a **mixed-to-positive** tone:  
-  - “Positive Sentiment”: several articles argue **QQQ remains a strong way to buy the recent tech dip**, suggesting investors still use QQQ as a **broad, liquid bet on leading growth stocks**.[2]  
-  - “Positive Sentiment”: SpaceX’s inclusion in the Nasdaq‑100 is framed as **supportive for demand** in QQQ and related index products.[2]  
-  - “Neutral Sentiment”: BlackRock’s cheaper Nasdaq‑100 ETF is described as a **competitive pressure** but **not changing the underlying exposure**, so it’s more a fee/flows issue than a bearish call on the index.[2]  
-  - “Neutral to Negative Sentiment”: market wrap stories note **Nasdaq weakness** driven by geopolitical tensions and inflation worries, while some commentary warns about a **possible Nasdaq reversal and “diamond top” pattern”**, signaling growing caution on **stretched tech valuations** that could weigh on QQQ.[2]  
-- **Options & positioning sentiment:**  
-  - Options‑flow analysis shows **positive cumulative net flow of about +$413 million across SPX, SPY, and QQQ**, largely **call‑buying and put‑selling to the upside**, consistent with **bullish positioning** into FOMC and earnings.[3]  
-- **Social/momentum proxies:**  
-  - Tickeron’s technical dashboard for QQQ shows **high odds for continuation across multiple momentum indicators (RSI, Stochastic, MACD, trend week/month)**, reflecting an environment of **trend-following and momentum participation rather than capitulation**.[4]  
-
-Net sentiment is **constructive but cautious**: supportive dip‑buying narratives and bullish options flow, tempered by valuation and macro concerns. That supports a **strong but not maxed** score of **18/25**.
-
----
-
-**3. TECHNICAL (0–25 pts)** – **Score: 20/25**
-
-*(Note: recent data is used; precise moving averages vs. last price are inferred from the cited technical snapshots.)*
-
-- **Price level and trend:**  
-  - Recent INDmoney data shows **Invesco QQQ at $709.43, down 1.85% on the day, +93.71% over 3 years**.[7] This indicates a **strong multi‑year uptrend** despite short‑term volatility.  
-- **Momentum & trend indicators (QQQ vs tech peers):**  
-  - Tickeron’s comparative tool shows the following for QQQ (vs VGT, XLK), updated **4 days ago**:[4]  
-    - **RSI odds (trend continuation): 77%** for QQQ.  
-    - **Stochastic odds: 85%.**  
-    - **Momentum odds: 78%.**  
-    - **MACD odds: 82%.**  
-    - **TrendWeek odds: 80%.**  
-    - **TrendMonth odds: 85%.**  
-    - “Advances” odds: 87% (21 days ago).[4]  
-    - “Declines” odds: 80% (12 days ago).[4]  
-  - These readings collectively point to **strong bullish momentum and a sustained uptrend**, with RSI levels in the **upper band (mid‑70s)**, consistent with an **overbought but strong trend** environment.  
-- **RSI level:**  
-  - With **RSI odds at 77%** (trend continuation probability) and the product’s description indicating the indicator is in a higher band, QQQ’s **RSI is elevated**, near typical **overbought territory (>70)**, supporting the idea of a **strong, extended move rather than a fresh breakout**.[4]  
-- **50‑day / 200‑day moving average (trend context):**  
-  - While exact MA figures are not provided in the search results, the **+93.71% 3‑year return** and high trend‑continuation odds on **weekly and monthly horizons** imply QQQ is **trading above both its 50‑day and 200‑day moving averages**, consistent with a **firmly bullish regime**.[4][7]  
-- **Volume vs average:**  
-  - No explicit recent volume vs 30‑day average figures are provided in the last 48 hours of results; options‑flow data discusses **net notional options flow**, not share volume.[3][5] Thus **current volume context cannot be quantified from the available data.**  
-
-Given the strong uptrend, elevated RSI, and persistent bullish technical readings—offset slightly by lack of precise MA and volume data—the technical setup scores **20/25**.
-
----
-
-**4. MARKET CONTEXT (0–25 pts)** – **Score: 22/25**
-
-- **Sector strength (tech / Nasdaq vs alternatives):**  
-  - Tickeron’s sector comparison tool shows **YTD gains** for: QQQ **+15.282%**, VGT **+21.815%**, XLK **+25.741%**.[4] Tech‑focused ETFs (VGT, XLK) are **strongly positive YTD**, with XLK outperforming QQQ, confirming a **robust technology/growth backdrop** that benefits QQQ.[4]  
-  - The same dashboard reports **high trend‑month odds (85–86%)** across QQQ, VGT, XLK, reinforcing **strong sector momentum**.[4]  
-- **Broader market (SPY / index trend):**  
-  - Options‑flow commentary indicates **positive net bias across SPX, SPY, and QQQ options chains**, with total net flow around **+$389 million**, mostly **call‑buying and put‑selling**, suggesting investors expect **further upside in the broad U.S. market as well as Nasdaq‑100**.[3]  
-  - This cross‑index bullish positioning supports QQQ within a **generally constructive equity backdrop**, not an isolated Nasdaq move.[3]  
-- **Macro & volatility (VIX-like environment):**  
-  - Recent news flags **geopolitical risk (U.S.–Iran tensions)**, **higher oil prices**, and **inflation worries** as drivers of Nasdaq weakness and volatility.[2]  
-  - While explicit VIX levels are not included in the search results, these factors are characteristic of a **headline‑sensitive, event‑driven environment**: supportive for volatility in growth/tech but not yet enough (per sentiment and options data) to flip the regime outright bearish.[2][3]  
-- **Competitive products / flows:**  
-  - BlackRock’s launch of the cheaper **iShares Nasdaq 100 ETF (IQQ)** introduces **fee competition** for QQQ.[2] There is **no indication in the last 48 hours of major outflows from QQQ** due to this, but it is a **structural context factor** that could affect future fund flows.  
-
-Market context is **very favorable for tech and Nasdaq‑100**, with strong sector performance and bullish options‑based expectations, offset by known macro risks, so this bucket is **22/25**.
-
----
-
-**Scoring Breakdown**
-
-- **Catalyst:** 10/25  
+- **Catalyst:** 22/25  
 - **Sentiment:** 18/25  
-- **Technical:** 20/25  
-- **Market Context:** 22/25  
+- **Technical:** 15/25  
+- **Market Context:** 20/25  
 
-SCORE: 70/100
+SCORE: 75/100
 
 ---
 
-## META | Score: 65/100
+## SMCI | Score: 74/100
 
-Meta Platforms (META) is heading into a **major Q2 earnings event after the close on July 29**, with strong growth expectations but increasingly intense scrutiny of its very large AI-related capital expenditure program.[3][6][7][8][13][14]
+SMCI currently has a **strong fundamental and news catalyst**, constructive but not euphoric sentiment, technically extended vs. recent history but still in an uptrend, and a supportive AI/tech sector backdrop. Based on the last 48 hours of information, the overall setup is positive but not without execution risk around converting orders to revenue and sustaining margins.
+
+---
+
+## 1. CATALYST (0–25 pts)
+
+**Key recent company‑specific catalysts**
+
+- **Massive AI server order intake:** Super Micro disclosed **more than $60 billion in new AI‑server orders** received during its fiscal Q4 (June quarter), to be delivered over future quarters.[1][3][4]  
+- **Improved margin profile:** Preliminary Q4 guidance estimates **GAAP and non‑GAAP gross margins at 15–17%**, versus prior guidance of roughly **8.2–8.4%**.[1][4]  
+- **Revenue guidance near prior range but low end:** Q4 revenue is now expected **near the low end of the prior $11.0–12.5 billion range**, i.e. ~**$11 billion**.[1][3][4]  
+- **Earlier earnings + forward guidance beat (Q3):**  
+  - Fiscal Q3 revenue: **$10.24 billion**, +123% YoY but below LSEG consensus of **$12.33 billion**.[2]  
+  - Adjusted EPS: **$0.84 vs. $0.62** expected (beat).[2]  
+  - Q4 guidance (given in early May): revenue **$11–12.5 billion** vs consensus **$11.07 billion**, and adjusted EPS **$0.65–0.79 vs. $0.55** expected.[2]  
+
+**Other notable business developments**
+
+- **Edge AI product/collaboration:** SMCI recently **launched a Kubernetes‑based edge AI appliance in partnership with Red Hat and Everpure**, which drove a **5.31% share price gain** on the news.[8]  
+- Sell‑side expects **2026 revenue of ~$39.7 billion**, about **80% YoY growth**, reinforcing the AI growth narrative and underpinning the backlog story.[8]  
+
+**Recent competitive/macro narrative**
+
+- A widely circulated report suggested **SpaceX would buy ~$52 billion of Nvidia‑based AI servers from Foxconn**, potentially displacing SMCI.[1]  
+- Elon Musk publicly called that report “fake news,” removing that perceived competitive threat; this helped support SMCI sentiment but did **not** create a new SMCI contract.[1]  
+
+**No fresh FDA / regulatory / M&A catalysts** specific to SMCI appear in the last 48 hours; all major catalysts are **earnings, guidance, and AI‑demand related**.[1][2][4][8]
+
+**Catalyst Score: 23/25**  
+Rationale: Very strong fundamental catalyst (record orders, margin uplift, solid Q4 guide, new edge AI product) with clear visibility, but no brand‑new event in the last 24–48 hours beyond ongoing digestion of the July 21 preliminary update.
+
+---
+
+## 2. SENTIMENT (0–25 pts)
+
+**Analyst / institutional view**
+
+- TradingKey reports **institutional ownership “very high”** and an overall analyst rating of **“signal_hold”**, with a **consensus target price of $41.79**, implying about **+33.9% upside** from the current **$31.21** price.[4]  
+- Multiple analysts in the past month have issued **“hold” ratings rather than aggressive “buy”**, suggesting balanced rather than euphoric sell‑side sentiment.[4]  
+
+**News tone (last several days)**
+
+- Coverage of the **$60B+ AI server orders and margin uplift** is broadly **positive**, emphasizing strong AI demand and improved profitability.[1][3][4][5]  
+- Articles note that SMCI “looks cheap at first glance” even after backlog and margin news, pointing to a **P/E around 14.8x** and calling valuation a “sizable discount” to modeled value.[5] This is bullish in tone.  
+- The Musk/Foxconn “fake news” clarification reduced perceived competitive pressure, which was interpreted as **supportive for SMCI and other AI server suppliers**.[1]  
+
+**Price reaction and social/trading momentum**
+
+- On July 21–22, after the preliminary Q4 update (60B orders, margin guidance), SMCI **rose ~7% intraday to a high of $25.54 and then surged ~20.58% after hours**.[4]  
+- TradingKey notes SMCI is in a **medium‑term uptrend channel**, with **recent market performance described as “general”**, and combined fundamental/technical score “relatively low,” suggesting a cooling of very short‑term momentum after the spike.[4]  
+- Earlier in May, post‑earnings and Q4 guidance, the stock **jumped ~18.76% after hours**, from **$27.83 to $33.05**, in response to the strong Q4 outlook.[2]  
+
+**Net sentiment read**
+
+- **Institutional and analyst stance:** Constructive but cautious (high ownership, “hold” ratings, ~34% upside target).[4]  
+- **Media tone:** Clearly positive on AI demand, backlog and improved margins, with valuation portrayed as attractive.[1][3][5]  
+- **Trading behavior:** Strong upside reactions to recent company disclosures; no clear evidence of negative sentiment in the last 48 hours.
+
+**Sentiment Score: 20/25**  
+Rationale: News and valuation commentary are clearly bullish, price reactions to catalysts are strong, but analyst ratings are more “hold” than “buy,” and recent performance is described as only “average,” tempering the score.
+
+---
+
+## 3. TECHNICAL (0–25 pts)
+
+Specific 50‑day/200‑day MA and RSI values are **not provided** in the last‑48‑hour data; what follows is strictly based on the available technical commentary.
+
+**Price level**
+
+- TradingKey cites SMCI’s **current share price as $31.21**.[4]  
+
+**Trend / pattern**
+
+- SMCI’s share price is described as being in a **medium‑term upward channel**.[4]  
+- The stock is currently **“between resistance and support levels,”** with TradingKey suggesting **range‑bound / band trading** is appropriate.[4]  
+- Over the past month, **market performance has been “average”**, and combined **fundamental + technical score is “low,”** indicating the stock is **not** at a momentum extreme despite the earlier spike.[4]  
+
+**Volume / momentum**
+
+- No explicit daily volume vs. 30‑day average numbers are given in the last 48 hours.[4]  
+- There is mention of **pre‑market surges >17% and post‑market jumps >18–20%** around earnings/prelim guidance,[2][4] which implies **elevated event‑driven volume**, but the data do not quantify it.  
+
+**Moving averages / RSI (data limitation)**
+
+- The last‑48‑hour sources do **not** provide numerical values for:
+  - **50‑day moving average**
+  - **200‑day moving average**
+  - **RSI (Relative Strength Index)**  
+- As a result, I cannot state whether the price is above or below specific MA values or whether RSI is overbought/oversold **without speculating**, which is outside your instructions.
+
+**Technical Score: 14/25**  
+Rationale: Confirmed medium‑term uptrend and event‑driven strength, but lack of precise MA/RSI/volume vs. 30‑day data in the last 48 hours prevents a high‑confidence technical read.
+
+---
+
+## 4. MARKET CONTEXT (0–25 pts)
+
+Within the last 48 hours, the sources give **sector‑level and demand‑theme context**, but not precise SPY or VIX numbers.
+
+**Sector / industry backdrop**
+
+- SMCI is classified in the **computer, mobile, and consumer electronics industry**, ranking **19th out of 34** in its sector on TradingKey’s fundamental metrics.[4]  
+- AI remains a strong macro theme: MoneyDJ notes the **“AI boom has not faded”** and highlights robust data‑center demand, with SMCI’s strong Q4 outlook reinforcing ongoing AI infrastructure investment.[2]  
+- ChoiceStock notes that the **edge AI collaboration** with Red Hat/Everpure improves SMCI’s **competitive position in the edge AI market**, and cites sell‑side expectations for **~80% revenue growth in 2026**, reflecting a strong sector growth narrative.[8]  
+
+**Broad market tone (limited direct data)**
+
+- Recent earnings discussions on CNBC/Yahoo/Investing.com emphasize **lowered expectations and macro uncertainty**, but the latest 48‑hour data provided do not give specific SPY or VIX levels.[9][10][11][12]  
+- There is no indication in the provided data of a risk‑off spike or volatility shock directly impacting AI hardware names in the last 48 hours.  
+
+**Environment for SMCI**
+
+- The combination of:
+  - **Strong AI demand**,  
+  - Continued build‑out of **data‑center and edge AI infrastructure**, and  
+  - Sell‑side modeling of **material revenue growth for SMCI and peers**  
+  suggests a **supportive sector and thematic backdrop** for SMCI.[2][8]  
+
+**Market Context Score: 17/25**  
+Rationale: AI/tech hardware and edge AI themes are clearly strong, and sector growth expectations are high, but lack of concrete SPY/VIX data and broader equity‑market metrics in the last 48 hours limits precision.
+
+---
+
+### Composite Assessment
+
+- **Catalyst:** 23/25  
+- **Sentiment:** 20/25  
+- **Technical:** 14/25  
+- **Market Context:** 17/25  
+
+SCORE: 74/100
+
+---
+
+## AAPL | Score: 72/100
+
+Apple (AAPL) is trading near record highs with a major near‑term **catalyst** from its fiscal Q3 2026 earnings tomorrow, broadly positive but slightly cautious **sentiment**, constructive but extended **technicals**, and a supportive large‑cap tech/AI‑driven **market context**.
 
 ---
 
@@ -1066,107 +711,88 @@ Meta Platforms (META) is heading into a **major Q2 earnings event after the clos
 
 **Key near‑term catalysts**
 
-- **Q2 2026 earnings release (primary catalyst)**  
-  - META reports **Q2 results after market close on July 29**.[3][6][7][8][11][13][14]  
-  - Street expectations are tightly clustered:  
-    - Revenue consensus: **~$60.2B**  
-      - Barchart: **$60.22B**, +~27% YoY.[6]  
-      - Zacks/Yahoo: **$60.17B**, +26.63% YoY.[5][7]  
-      - Another preview: **$60.16B**.[4]  
-      - Seeking Alpha news: **$60.29B**.[13]  
-    - EPS consensus: range **$7.13–$7.40**  
-      - Zacks: **$7.13**, down 0.14% YoY.[5][7]  
-      - Barchart: **$7.18**.[6]  
-      - Another preview: **$7.20**.[4]  
-      - Seeking Alpha: **$7.40** (non‑GAAP).[13]  
-  - Company guidance for Q2 revenue: **$58–$61B**.[3][4][5][7]  
+- **Fiscal Q3 2026 earnings report**  
+  Apple will report fiscal Q3 2026 results **after the US market close on July 30**.[1][2][3][5][12][15]  
+  - Consensus EPS: **$1.88–$1.89** per share, implying **~19.8–20.4% YoY growth**.[1][2][3][7]  
+  - Consensus revenue: **$108.58–$109.04 billion**, up **~15.6–16% YoY**.[2][3][7]  
+  - Prior quarter (fiscal Q2): revenue **$111.18B**, EPS **$2.01**, with **17%** revenue growth and **22%** EPS growth YoY.[3]
 
-- **Capex guidance and AI spending (dominant fundamental driver)**  
-  - META **raised 2026 capex guidance** earlier this year to **$125–$145B** from a prior **$115–$135B** range.[6][8][9][14]  
-  - Consensus now models ~**$135B** 2026 capex, with sell‑side estimates rising toward **$174B** for the following year.[6]  
-  - Multiple previews highlight that **any further change in 2026/2027 capex guidance is the key stock mover**, more important than an EPS beat.[6][8][10][14]  
+- **Guidance / margin focus as a catalyst**  
+  - Management has guided **gross margin** to about **47.5%–48.5%**, with sell‑side expecting roughly **48%**, slightly below recent levels due to higher DRAM/NAND memory costs.[5]  
+  - Investors are focused on:  
+    - Whether **gross margin holds** within guidance under AI‑driven memory price pressure.[3][5]  
+    - **Services growth** and clarity on **AI strategy** and roadmap for the post‑Cook leadership transition.[3][5][12]
 
-- **Q1 context (sets the bar for Q2)**  
-  - Q1 2026 revenue: **$56.3B**, +33% YoY; Family of Apps revenue **$55.9B**.[3]  
-  - EPS: **$10.44**, vs Street consensus **$6.65**, a very large beat.[3]  
-  - Reality Labs revenue: **$402M**, −2% YoY.[3]  
-  - Post‑Q1, the stock **sold off on the capex hike**, so investor sensitivity to spending is high.[6][9]  
+- **AI and China‑specific catalysts**  
+  - **Apple Intelligence** has received **regulatory approval in China in July**, clearing a key hurdle for rollout in that market.[5]  
+  - Apple is reported to be **testing DRAM chips from CXMT** as a potential China‑focused supplier, which could be highlighted as supply‑chain diversification on the call.[5]
 
-- **Potential AI infrastructure / partnership catalysts**  
-  - Previews mention Wall Street “rumors” of a **potential multi‑billion AI infrastructure deal with Anthropic**, which would be viewed as bullish if confirmed.[7]  
-  - META is reportedly investing over **$9.1B in data center build‑out in Alberta** and planning in‑house AI chip production starting September to roughly **double computing capacity**.[15]  
-  - These items are part of the broader AI capex narrative rather than confirmed revenue catalysts; they will be watched on the earnings call.[6][7][8][14][15]  
+- **Forward product catalysts**  
+  - Analysts flag the **September iPhone launch** and a planned **foldable iPhone** as major second‑half catalysts; estimates put initial foldable unit sales at **3–10 million** units.[2]  
 
-- **Macro / policy overlay**  
-  - META’s report coincides with a **Federal Reserve interest rate decision** this week, creating a combined test of AI spending and monetary policy for mega‑cap tech.[14]  
-  - Commentary notes that **earnings guidance and capex efficiency matter more than headline EPS**, given this macro backdrop.[14]  
+**No major M&A, FDA or non‑earnings regulatory decisions** have been reported for Apple in the last 48 hours; the dominant catalyst is the **Q3 earnings and guidance** event.
 
-**No other discrete company‑specific catalysts** (e.g., FDA, classic M&A close) have been reported in the last 48 hours; the focus is firmly on Q2 earnings, capex, and AI monetization.[1][2][3][4][5][6][7][8][9][10][13][14][15]
-
-**Catalyst score: 23/25**
+**Catalyst score: 23/25**  
+Strong, near‑term earnings event with AI/China/regulatory angles and upcoming product cycle; minor deduction for lack of surprise‑type corporate actions (M&A, major guidance pre‑announce).
 
 ---
 
 ## 2. SENTIMENT (0–25 pts)
 
-**Street & analyst sentiment**
+**Analyst sentiment**
 
-- **Overall rating profile**  
-  - Based on **54 Wall Street analysts**, META holds a **consensus “Strong Buy”**.[3]  
-    - 44 **Strong Buy**, 2 **Moderate Buy**, 8 **Hold**.[3]  
-  - Another compilation shows the consensus rating still at **“Strong Buy”**.[6]  
+- **Overall positive, but with pockets of caution**  
+  - Recent coverage characterizes Apple as having **“relatively healthy fundamentals”**, **high growth potential**, and **fair valuation**, with a **Buy** current rating and a medium‑term **uptrend expected**.[14]  
+  - Over the past month, **multiple analysts have rated it Buy**, with a **highest price target around $318.25**, which is **below the current price**, implying **~2.9% downside** from recent levels.[14]  
+  - The **average price target of $329.52** implies about **2.19% downside**, suggesting the stock has run ahead of consensus valuation despite favorable earnings expectations.[2]
 
-- **Target price and upside**  
-  - Barchart article: mean target **$1,015**, implying **~70% upside** from current levels.[6]  
-  - Another piece: consensus target **$825.84**, implying **28.6% upside** from a quoted price of **$593.87**.[9]  
-  - A separate analyst set: mean target **$824.29**, with high **$1,015** and low **$671**.[3]  
-  - MarketScreener lists a consensus target around **$828.17**.[16]  
-  - Across sources, **targets cluster in the low‑$800s to $1,015**, with sizeable implied upside and no recent widespread downgrades.[3][6][9][16]  
+- **Notable cautious call**  
+  - KeyBanc Capital Markets has issued a **bearish call on Apple ahead of earnings**, despite the shares trading **near record highs**, signaling concern about risk‑reward at current levels.[13]
 
-- **Recent analyst actions**  
-  - BMO Capital (July 17) reiterated **Hold** with a **$720** target.[3]  
-  - Citizens lowered its target from **$825 to $800** but kept **Outperform**.[3]  
-  - Bank of America **raised its revenue and earnings forecasts** ahead of Q2, citing strong ad trends and efficiency; Mizuho and Bernstein maintained bullish ratings.[4]  
-  - Zacks currently rates META **Rank #3 (Hold)**, suggesting a neutral near‑term stance despite growth.[5]  
+**News tone and positioning**
 
-**News tone & investor narrative (last 48 hours)**
+- Coverage frames the upcoming report as **“another solid quarter”** with consensus on strong double‑digit EPS and revenue growth, but emphasizes **uncertainty around margins and AI strategy**.[1][2][3][5][7][12]  
+- Options pricing implies **earnings‑day volatility nearly double the historical average**, indicating traders are paying up for potential **larger moves** and are hedging event risk.[5]  
+- Apple’s rally has contributed to a broader **mega‑cap move**, with reports that its **market cap recently topped $5 trillion**, reflecting strong investor appetite for the name and large‑cap tech leadership.[8]
 
-- A MarketBeat news summary notes META is **“under pressure”** as investors focus on **rising AI spending and uncertain near‑term returns**, with heavy data‑center and chip investments weighing on the share price and causing **negative sentiment around capex**.[15]  
-- 24/7 Wall St. advises investors to **“wait for Meta’s post‑earnings dip”**, explicitly citing concerns that high capex and stretched expectations could lead to near‑term downside.[9]  
-- Another 24/7 Wall St. piece frames July 29 as an **“earnings showdown”** where META has **~95% beat odds already priced in**, implying that upside from an EPS beat alone is limited and **capex tone is the risk factor**.[10]  
-- Previews from Yahoo/Investors.com emphasize that the market is **shifting focus from pure growth to AI capex efficiency and monetization**, reinforcing a cautious tone around spending even amid positive revenue expectations.[2][4][8][14]  
+**Social / momentum (inferred from price action & options)**
 
-**Options & expectations**
+- Shares were recently quoted around **$339.31**, up **0.72%** on the day in a pre‑earnings move.[3]  
+- Another data point shows AAPL at about **$339.99**, up **3.08%**, consistent with strong short‑term momentum into the event.[14]  
+- Elevated implied volatility and a run to **52‑week or record highs** indicate **active trading and strong attention**, though not all coverage explicitly labels social sentiment.
 
-- Options market is pricing a **±7.3% post‑earnings move** in META shares.[7]  
-- Polymarket traders assign **94.7% probability** that META beats Q2 estimates, indicating **strong expectations but limited surprise potential**.[10]  
-
-**Net sentiment view**
-
-- **Strategic / medium‑term sentiment:** broadly **bullish**, with Strong Buy consensus and significant target price upside.[3][4][6][9][16]  
-- **Tactical / near‑term sentiment:** **mixed to cautious**, driven by concern that aggressive AI capex and already‑priced‑in beat odds could cap near‑term returns or trigger a post‑earnings pullback.[6][7][9][10][14][15]  
-
-**Sentiment score: 19/25**
+**Sentiment score: 19/25**  
+Sentiment is broadly constructive (Buy ratings, strong fundamentals, record highs), but tempered by below‑market price targets and at least one high‑profile bearish call, plus focus on margin/AI execution risk.
 
 ---
 
 ## 3. TECHNICAL (0–25 pts)
 
-Available sources in the last 48 hours focus on **fundamentals and expectations**; they do **not provide explicit real‑time technical metrics** (exact price vs 50d/200d moving averages, current RSI, or current 30‑day average volume).[3][6][7][9][10][15][16]
+*(Recent exact moving averages/RSI are not fully specified in the results; scoring is based on what is explicitly available.)*
 
-The only recent price reference:
+**Price level and trend**
 
-- META “currently trades at **$593.87**” in a 24/7 Wall St. piece, used to compute upside vs consensus target.[9]  
+- Recent quotes put AAPL around **$339–340** per share.[3][14]  
+- The stock has **jumped to 52‑week/all‑time highs** recently, according to coverage noting Apple among names “surged to annual highs” on positive catalysts and optimism.[11]  
+- Technical commentary notes that **$317 has flipped into a support level**, indicating the stock has broken out above prior resistance and established a higher trading range.[5]
 
-However:
+**Technical stance from analysis sources**
 
-- No source in the last 48 hours reports the **50‑day or 200‑day moving averages**, current **RSI**, or **volume vs 30‑day average**.  
-- Some commentary says the stock is **“lagging the broader tech rally”** due to capex concerns, implying relative underperformance but without quantitative technical detail.[15]  
+- One technical review states that despite strong performance and fundamentals, **“the technicals don't support the current trend”** and describes the price as **trading sideways between support and resistance**, suitable for **range‑bound swing trading**.[14]  
+  - This suggests **consolidation** near highs rather than a fresh, strongly trending leg higher.
 
-Given your constraint to rely on specific, recent data and not speculate, a precise technical assessment (with numeric MA, RSI, and volume metrics) is not possible from the information provided.
+**Missing explicit metrics**
 
-**Technical score: 5/25**  
-(Score reflects high uncertainty and lack of hard technical data in the last 48 hours.)
+- The last 48‑hour sources do **not** provide specific numeric values for:
+  - **50‑day moving average**  
+  - **200‑day moving average**  
+  - **RSI (Relative Strength Index)**  
+  - **Volume vs 30‑day average**
+
+Given the constraint to use only information from the last 48 hours and avoid speculation, these metrics cannot be quantified here.
+
+**Technical score: 12/25**  
+Price action is strong (near record highs, $317 support), but explicit MA/RSI/volume data are missing, and at least one source flags current technicals as not fully supportive of the recent rally, implying some overextension or consolidation risk.
 
 ---
 
@@ -1174,608 +800,566 @@ Given your constraint to rely on specific, recent data and not speculate, a prec
 
 **Sector / mega‑cap tech context**
 
-- META reports alongside **Microsoft, Apple, and Amazon** in a concentrated earnings window, and commentary describes this week as a **dual test of AI spending and the Fed for mega‑cap tech**.[12][14]  
-- Market focus has shifted from simple top‑line growth to **AI investment monetization and capex efficiency**, particularly for the largest tech platforms.[14]  
-- There is mention of a **rotation away from high‑growth technology** that could reverse if these companies deliver strong guidance; META’s report is one of the potential catalysts for renewed buying into mega‑caps.[12]  
-- Google’s recent results are cited as a reference point, with investors expecting META to **raise or at least clarify its capex outlook**, linking sector valuations to how AI spending is framed versus returns.[8][14]  
+- Apple’s move is framed within a **broader rally driven by better‑than‑expected corporate earnings and a shift of capital across sectors**, with its market cap reportedly **topping $5 trillion**.[8]  
+- Coverage on other large semis (e.g., **SK Hynix**, **Texas Instruments**) highlights **strong earnings and double‑digit expected growth**, underscoring a supportive environment for tech and semis overall.[8][9]  
+- Commentary on Apple’s Q3 preview focuses on **AI‑driven memory demand**, with rising DRAM/NAND prices affecting margins, situating Apple within the **AI hardware demand upcycle**.[5]
 
-**Macro / index / volatility backdrop**
+**Broader market / volatility**
 
-- The same preview explicitly notes that **the Federal Reserve interest rate decision this week will impact tech stock valuations**, making **policy direction and earnings guidance the key drivers** rather than just EPS beats.[14]  
-- This pairing of earnings and Fed adds to uncertainty and supports the options‑implied **±7% swing** in META.[7][13][14]  
-- Specific SPY trend or VIX level is **not quantified** in the last 48 hours within the provided sources; the context is described qualitatively as one where **macro policy and AI capex are central to market risk‑on/risk‑off behavior**, especially in large‑cap tech.[12][14]  
+- Options market data show **implied earnings‑day volatility nearly double historical average** for AAPL itself.[5]  
+- The latest results do not explicitly quote **SPY trend** or **VIX levels** in the past 48 hours, but they do describe a **strong stock market performance** and **rally driven by earnings**.[8][14]  
+  - This implies a generally **risk‑on** backdrop with investors rewarding positive earnings surprises in large caps.
 
-Given the information:
+**Relative positioning**
 
-- **Sector strength:** mega‑cap tech is at an inflection, with strong fundamental growth but investor caution around massive AI capex, especially after high expectations were priced in.[8][10][12][14][15]  
-- **SPY/VIX environment:** described indirectly as **macro‑sensitive**, hinging on the Fed decision and big tech earnings; explicit index or VIX data is not provided in recent sources.[12][14]  
+- Apple is described as having outperformed over the past month, with fundamentals and momentum solid, but technicals indicating sideways trading between support/resistance.[14]  
+- Several analyses argue Apple’s rally may have **“more room to run”** on the back of robust iPhone 17 and Services demand, contingent on margins and AI guidance.[1][5][12]
 
-**Market context score: 18/25**
-
----
-
-**Component scores**
-
-- Catalyst: 23/25  
-- Sentiment: 19/25  
-- Technical: 5/25  
-- Market Context: 18/25  
-
-SCORE: 65/100
+**Market context score: 18/25**  
+Macro and sector backdrop are broadly supportive (earnings‑led rally, AI/semis strength, large‑cap tech leadership), but explicit SPY and VIX numbers are not provided in the last 48 hours, limiting precision.
 
 ---
 
-## RIVN | Score: 63/100
+### Sub‑scores
 
-Rivian Automotive (RIVN) has a clear near‑term **earnings catalyst** at month‑end and a generally cautious but stable sentiment profile; technically the stock is mid‑range with neutral signals, and it trades in a macro tape where broader indices are firm and volatility remains relatively contained.[1][2][3]
+- Catalyst: **23/25**  
+- Sentiment: **19/25**  
+- Technical: **12/25**  
+- Market Context: **18/25**
+
+SCORE: 72/100
+
+---
+
+## QQQ | Score: 70/100
+
+QQQ has **no company-specific earnings or FDA catalyst** because it is an ETF, but it does have a **macro/market catalyst** from the Fed meeting, major megacap tech earnings, and ongoing geopolitics/oil-price volatility affecting Nasdaq sentiment[2][9]. The most relevant near-term event flow is the FOMC decision and the week’s big-tech earnings, which are explicitly cited as a source of volatility for QQQ exposure[2][9].
+
+- **CATALYST: 18/25**
+  - **No earnings or guidance change** for QQQ itself, since it is not an operating company.
+  - **No FDA or M&A catalyst** was identified in the provided results.
+  - **Macro catalyst is active:** the market is waiting on the Fed decision and megacap tech earnings, while lower oil prices and easing inflation fears are providing support[2][9].
+  - **Index composition catalyst:** SpaceX’s addition to the Nasdaq-100 following its June 2026 IPO is cited as an index reconstitution event that may influence QQQ’s composition and investor interest[1][3].
+
+- **SENTIMENT: 16/25**
+  - News tone is **mixed to mildly positive**: several articles frame QQQ as a vehicle to buy the tech dip, while others note competitive pressure from a cheaper Nasdaq-100 ETF and caution about stretched tech valuations[3].
+  - Social/news momentum appears **supportive but volatile**, with coverage emphasizing passive-buying demand from the SpaceX addition and resilience in broad Nasdaq-100 exposure[3].
+  - Analyst upgrade/downgrade activity for QQQ itself was **not present** in the provided results[3].
+
+- **TECHNICAL: 17/25**
+  - QQQ was cited at **674.73**, above its **pivot at 674.26**, suggesting near-term stabilization[4].
+  - Support was listed at **669.11** and the prior 20-day low at **667.88**; upside resistance was **680.63**[4].
+  - The provided results did **not include a 50-day MA, 200-day MA, RSI, or volume vs. 30-day average**, so those data points cannot be confirmed from the search set[4].
+
+- **MARKET CONTEXT: 19/25**
+  - The broader market backdrop is **constructive but event-driven**: lower oil prices have eased inflation concerns, flash PMI data remains expansionary, and stocks have been supported by strong earnings[2][9].
+  - The S&P/Nasdaq tone is also supported by **strong Q2 earnings**, especially in AI infrastructure and large-cap tech[9].
+  - The VIX level was **not provided** in the results, so volatility regime cannot be quantified directly.
+  - Market-wide risk remains elevated because of **Fed uncertainty and megacap earnings** scheduled around the same time[2][9].
+
+**SCORE: 70/100**
+
+---
+
+## COIN | Score: 66/100
+
+Coinbase Global (COIN) is trading in a weak technical setup with mixed-to-negative near‑term catalysts and cautious sentiment, while broader crypto and equity risk conditions are fragile.[2][3][10][12]
 
 ---
 
 ### 1. CATALYST (0–25 pts)
 
-**Key stock‑specific catalysts**
+**Events / drivers (last 48 hours):**
 
-- **Upcoming earnings:** Rivian is scheduled to report **next earnings post‑market on Thursday, July 30**.[1]  
-  - This is the primary **near‑term event**; no other company‑specific filings or guidance changes have been reported in the last 48 hours.
+- **Q2 FY2026 earnings on July 30 (Thursday) – near‑term primary catalyst.**  
+  Multiple sources highlight COIN’s upcoming **Q2 FY2026 earnings report** as the key event; Wall Street expects Q2 EPS around **$0.15**, up ~25% YoY.[1]  
+  Another estimate pegs the current quarter EPS at **$0.32**, +166.7% vs the same quarter last year, indicating some dispersion in forecasts.[12]  
+  The earnings call is explicitly flagged as Thursday’s catalyst, with traders positioning and expecting “sideways” or “noisy” trading into the print.[4]
 
-- **Guidance / strategic updates:**  
-  - No new **guidance changes**, major production revisions, or delivery pre‑announcements have been published in the last 48 hours based on current news flow (screen shows only the upcoming earnings item for RIVN).[1]
+- **Regulatory / legislative catalyst – Crypto CLARITY Act shelved.**  
+  Earlier optimism around the **Crypto CLARITY Act** (a major regulatory framework backed by Coinbase) was framed as a “biggest catalyst” for COIN.[1]  
+  However, the **U.S. Senate has now shelved the Crypto Clarity Act**, prioritizing other legislation and making the bill’s 2026 passage “genuinely uncertain.”[2]  
+  This shift is a **negative near‑term regulatory catalyst** that dampens expectations of rapid clarity for crypto markets.
 
-- **M&A / regulatory:**  
-  - No fresh **M&A**, JV, or major regulatory (e.g., safety recall) developments for Rivian in the last 48 hours were identified in current results.
+- **Strategic and product developments (ongoing, not new in last 48 hours):**  
+  Coinbase recently joined the **Open USD stablecoin consortium** alongside Alphabet, BlackRock, Visa, and Mastercard, reinforcing its role in infrastructure.[1]  
+  It has rolled out **multiple new products over the past six months** to diversify beyond trading.[1]  
+  These are structural positives but not newly emerged catalysts in the last 48 hours.
 
-**Macro / sector‑level context**
+- **Macro catalyst – Fed rate decision & global risk-off.**  
+  The **Federal Reserve July 29 rate decision** is highlighted as a key event for risk assets and crypto, with a potential hike on the table.[9]  
+  **South Korean chip stocks’ 11% single‑day drop** drove a sharp Kospi selloff and added pressure to global risk assets and crypto, weighing on Bitcoin and related equities.[2]
 
-- Broader EV and growth‑tech sentiment is being driven more by **macro data and index levels** than by a discrete, Rivian‑specific macro catalyst in this window. Current results do not show any EV‑specific policy change (e.g., new US tax credit regime, EU tariff change) in the last 48 hours impacting RIVN directly.
-
-**Catalyst score: 18/25**
-
-- Clear, dated earnings catalyst later this week, but **no new guidance reset, deal, or regulatory event** in the last two days.
+**Catalyst score: 18/25**  
+Rationale: Clear, scheduled **earnings catalyst** plus a significant but currently negative **regulatory shift** and an important **macro rate decision**. No M&A, FDA, or company‑specific guidance changes identified in the last 48 hours.[1][2][4][9]
 
 ---
 
 ### 2. SENTIMENT (0–25 pts)
 
-**Street/analyst positioning**
+**Analyst & institutional view:**
 
-- **Consensus rating:** Rivian’s current **analyst rating is “hold”** (signal_hold) with a **consensus target price of 18.80**.[3]  
-  - Versus the current price of **16.46**, the Street target implies roughly **+14% upside**.[3]  
-  - There are **no new upgrades or downgrades** and no major target price revisions reported in the last 48 hours in the retrieved data.
+- **Consensus rating and targets:**  
+  MarketBeat data shows COIN with an average rating of **“Hold”** and a consensus price target around **$239.14**.[6]  
+  Another analysis cites a consensus stance of **“Moderate Buy”**, reflecting cautious optimism despite regulatory and cyclical risks.[1]  
+  Recent analyst actions are mixed:
+  - **Citizens JMP** cut its price target but maintained **“outperform”**, signaling belief in upside despite trimming expectations.[7]  
+  - **Barclays** lowered its price target and kept an **“underweight”** rating, reinforcing bearish sentiment from part of the Street.[7]  
 
-**News / narrative tone**
+- **Company‑specific news tone (last couple of days):**  
+  News flow is described as **“under pressure”** as investors weigh company news vs broader crypto weakness.[7]  
+  Positives:
+  - **UK authorization** for Coinbase to offer **stocks and derivatives** and added trading features (margin support for Filecoin, restored prediction markets) broaden its product footprint.[7]  
+  Negatives:
+  - **Leadership transition in legal/regulatory function**: Chief Legal Officer Paul Grewal stepping down to an advisory role, with Molly Abraham becoming general counsel.[7] This is viewed as orderly but adds uncertainty around a key regulatory leader.  
+  - Crypto market weakness and geopolitical tensions weighing on sentiment.[2][7]
 
-- The latest highlighted article asks “**Should You Buy Rivian Stock Before July 30?**” and is framed around the upcoming earnings report.[1]  
-  - The structure (valuation vs. growth vs. risk discussion) is more **balanced than outright bullish or bearish**, consistent with a “hold” consensus.[1][3]
+- **Short‑term trading / social tone:**  
+  On July 27, COIN rose **5.81% to $167.49** as crypto‑linked equities rallied in a sector rotation ahead of earnings, suggesting renewed demand for “liquid crypto beta.”[3]  
+  That move is characterized as rotation/positioning rather than a strongly company‑specific bullish signal, and technical commentary notes the rebound is still **constrained by overhead moving averages**.[3]
 
-- No strongly negative headline (e.g., large recall, major guidance cut, liquidity scare) has surfaced in the last 48 hours in the current results, which supports a **neutral‑to‑cautious** sentiment read.
+Overall, sentiment is **cautiously mixed**: institutional targets imply upside, but ratings skew to Hold, and recent target cuts plus regulatory and macro overhangs temper enthusiasm.
 
-**Social / momentum indicators**
-
-- No quantitative social‑media metrics (message volume, positive/negative scoring) were available in the last 48 hours in the current dataset. Based on price behavior (see Technical section), there is **no sign of an extreme sentiment spike** (no parabolic move or capitulation selling).
-
-**Sentiment score: 15/25**
-
-- Overall: **neutral/constructive** (hold rating, modest upside to target, balanced news tone), but **no fresh positive re‑rating** or high‑conviction bull narrative emerging in the last 48 hours.
+**Sentiment score: 17/25**  
+Rationale: Some constructive elements (positive rating actions, product/regulatory expansion, price‑target upside) offset by downgrades/target cuts, legal leadership turnover, and macro/crypto risk‑off tone.[1][3][6][7]
 
 ---
 
 ### 3. TECHNICAL (0–25 pts)
 
-**Price and trend**
+**Price & trend vs moving averages:**
 
-- **Last price:** **16.46** per share.[3]  
-- **Trend vs. moving averages:**  
-  - TradingKey reports that across MA5–MA200, Rivian shows **4 buy signals and 2 sell signals** on its moving averages.[2]  
-  - The platform’s overall **technical signal is “Neutral”** today, meaning price is not in a strongly trending configuration.[2]  
-  - Exact 50‑day and 200‑day MA levels are not directly shown in the last‑48‑hour snapshot, but the mix of MA buy/sell plus a neutral composite suggests:
-    - Price is **near or slightly above some shorter‑term averages**,  
-    - But **not clearly breaking out above longer‑term resistance** (which would flip more signals to “buy”).
+- Recent closing levels:
+  - Zacks notes COIN recently closed at **$157.37**, down **1.07%** on the day and underperforming the broader market.[12]  
+  - Financhill cites the **current share price at $160.24**, with an **8‑day SMA at 160.78**, generating a short‑term **Sell signal**.[10]
 
-**Momentum / RSI**
+- Moving‑average configuration:  
+  - COIN is **below its 5, 20, and 50‑day exponential moving averages**, described as a **“strongly bearish”** trend with ongoing selling pressure and elevated risk of further downside.[10]  
+  - The stock’s technical “Score” is **15**, which is **70% below** its historic median score of 50, reinforcing weak technical momentum.[10]  
+  - Commentary on the recent rebound notes that price action is testing **nearby resistance** but still **constrained by overhead moving averages**, indicating no clear breakout yet.[3]
 
-- TradingKey notes **0 buy signals and 0 sell signals from non‑MA technical indicators today**, implying oscillators like **RSI are in neutral territory** (neither overbought nor oversold).[2]  
-  - Without a numeric RSI reading in the last 48 hours, the best supported characterization is **mid‑range momentum** rather than a stretched condition.
+**Momentum / RSI / volume:**
 
-**Volume**
+- RSI: No precise RSI figure is given in the last 48 hours’ sources; only that COIN’s trend is bearish and under pressure.[10][12]  
+- Volume vs 30‑day average: Recent sources discuss a soft/sideways open and noisy trading ahead of earnings but do not provide concrete volume vs 30‑day metrics.[4][12]
 
-- The last‑48‑hour technical snapshot does not provide explicit **current volume vs. 30‑day average** for RIVN.  
-  - Absence of volume‑based buy/sell flags and the neutral overall signal suggest **no outsized volume surge** in either direction in this window.[2]
+Given the lack of exact RSI and volume numbers in the last 48 hours, only the confirmed directional information is used.
 
-**Technical score: 14/25**
-
-- Mildly constructive (more MA buys than sells) but **no clear breakout**, neutral RSI/oscillators, and no evidence of volume‑driven momentum.
+**Technical score: 15/25**  
+Rationale: Price is **below key short‑ and medium‑term averages**, technical services flag COIN as a **Sell** with a very low technical score, and recent bounce remains capped by resistance.[3][10][12] Missing exact RSI and relative volume data limits the score.
 
 ---
 
 ### 4. MARKET CONTEXT (0–25 pts)
 
-**Broad equity environment**
+**Sector / crypto environment:**
 
-- At the index level, recent commentary points to **equity indices moving higher on earnings strength**, reinforcing a **risk‑on to cautiously risk‑on** environment.[4]  
-  - Example: the ASX 200 rose **0.9%** on strong earnings from Rio Tinto and CSL, illustrating that earnings beats are being rewarded and that **global risk appetite is intact**.[4]
+- **Crypto prices and risk sentiment:**  
+  Bitcoin around **$63,386** has dropped **0.53% since midnight UTC** and lost about **2% during the prior U.S. session**, pressured by global risk‑off and the shelving of the Crypto Clarity Act.[2]  
+  Ether has also softened, failing to break above the **$2,000** level.[2]  
+  Broader crypto markets are described as **“drift softly ahead of Thursday earnings”** for crypto‑related stocks like COIN, MSTR, and CRCL.[4]  
 
-- While this example is from Australia, it is consistent with a broader **global equity bid around earnings season**, which typically supports U.S. growth/EV names like Rivian.
+- **Regulation and legislative backdrop:**  
+  The **shelving of the Crypto Clarity Act** introduces significant uncertainty about U.S. federal crypto market structure this year, a clear negative for sector clarity and institutional participation.[2][1]
 
-**Volatility (VIX‑like environment)**
+- **Equity and volatility backdrop (SPY / VIX proxy):**  
+  A major **11% single‑day drop in South Korean chipmakers** dragged the Kospi sharply lower, sending “shockwaves across global risk assets.”[2]  
+  Crypto and crypto‑linked equities traded with this risk‑off tone, and upcoming **Fed rate decision** heightens macro uncertainty.[2][9]  
+  Recent commentary expects a **“soft” open** and **noisy, sideways action** in crypto stocks like COIN ahead of the earnings call, reflecting cautious positioning rather than strong trend direction.[4]
 
-- No specific VIX print from the last 48 hours is in the retrieved results. However, the combination of:
-  - equity indices grinding higher on earnings, and  
-  - no mention of a volatility spike  
-  supports the interpretation of a **benign volatility backdrop**, rather than a stress regime.[4]
+Specific SPY and VIX levels are not provided in the last 48 hours’ sources, but the overall environment is clearly **risk‑sensitive, macro‑driven, and fragile**.
 
-**Sector / style context**
-
-- EV and growth‑tech remain **sensitive to rates and macro data**, but there is no new EV‑specific shock in the data from the last two days.  
-  - In such an environment, **stock‑specific earnings and guidance** (Rivian’s July 30 report) are likely the primary near‑term drivers rather than macro alone.
-
-**Market context score: 16/25**
-
-- **Supportive but not euphoric** macro tape: global indices responding positively to earnings, no clear volatility shock, and no EV‑specific negative macro in the last 48 hours.
+**Market context score: 16/25**  
+Rationale: Sector is in a cautious, slightly negative posture with macro and regulatory overhangs; crypto beta remains sensitive to rate decisions and global equity shocks.[2][4][9]
 
 ---
 
-### Composite View
+### Total Score
 
-- **Catalyst:** 18/25  
-- **Sentiment:** 15/25  
-- **Technical:** 14/25  
-- **Market Context:** 16/25  
+- Catalyst: 18/25  
+- Sentiment: 17/25  
+- Technical: 15/25  
+- Market Context: 16/25  
 
-SCORE: 63/100
+**SCORE: 66/100**
 
 ---
 
-## NVDA | Score: 60/100
+## META | Score: 64/100
 
-NVIDIA (NVDA) currently trades in a volatile, sentiment‑driven environment with no fresh hard catalysts in the last 48 hours, but with a well‑defined upcoming earnings event and ongoing concern about a large OpenAI‑linked financing structure.[2][3][4]
+Meta Platforms (META) is trading into a major **Q2 earnings event after the close on July 29**, with strong underlying ad fundamentals and broadly positive Street sentiment, but with valuation and very large AI capex overhangs creating two‑sided risk around the print.[2][3][7][10]
 
 ---
 
 ## 1. CATALYST (0–25 pts)
 
-**Recent / upcoming company‑specific catalysts**
+**Key near‑term catalysts**
 
-- **Q2 earnings & guidance (primary forward catalyst)**  
-  - Consensus EPS for the upcoming quarter: **$2.09**, up **99.05% YoY**.[4]  
-  - Consensus Q2 revenue: **$91.58 billion**, up **95.91% YoY**.[4]  
-  - Company Q2 guidance is referenced around **$91 billion** revenue, reaffirmed despite recent volatility.[3]  
-  - Next earnings release mentioned as expected on **August 25**.[3]  
-  - Full‑year 2026 consensus: **$9.10 EPS**, **$385.48 billion** revenue (+90.78% and +78.52% YoY respectively).[4]
+- **Q2 2026 earnings after market close on July 29**  
+  - Consensus revenue: **$60.29B**.[10]  
+  - Consensus non‑GAAP EPS: **$7.40**.[10]  
+  This is the dominant trading catalyst in the next 24–72 hours. Options are pricing in nearly a **~7% post‑earnings move** in the stock.[10]  
+- **Ad business momentum into Q2**  
+  - Q1 2026 ad impressions: **+19% YoY**.[2]  
+  - Q1 2026 average price per ad: **+12% YoY**.[2]  
+  - Drivers: user growth, stronger engagement, ad‑load optimization; AI‑driven improvements to ad systems likely remained a **major growth catalyst** into the to‑be‑reported quarter.[2]  
+- **Capex and AI infrastructure guidance**  
+  - Meta earlier raised **2026 capex guidance** to **$125B–$145B**, an ~8% increase at the midpoint versus prior **$115B–$135B**, which triggered the post‑Q1 selloff.[3][15]  
+  - Street now models roughly **$135B** 2026 capex, with estimates rising toward **$174B** for 2027.[3]  
+  - Into earnings, investors are focused on whether management raises capex again and how AI spending is framed; multiple previews explicitly highlight capex as the “dominant variable” for the stock reaction.[3][7][12][15]  
+- **AI and cloud / infrastructure strategy**  
+  - Nvidia CEO Jensen Huang publicly praised Meta, saying **“nobody uses AI better”**, and shares rebounded nearly **+1% in premarket** on that endorsement.[1]  
+  - Meta announced plans to **open its cloud computing infrastructure to external businesses** and sell surplus computing capacity, including access to its AI models, creating a potential new revenue stream.[1][11]  
+  - Reports suggest Meta is discussing a **multibillion‑dollar computing capacity agreement with Anthropic**, reinforcing focus on its role as an AI infrastructure provider.[8]  
+  - Meta has launched **Muse Image / Muse Spark 1.1**, expanding generative AI capabilities and access for developers and users.[5][14]  
+- **Workforce and cost structure actions**  
+  - Meta laid off about **8,000 workers (~10% of workforce)** and internally redeployed a similar number, part of the ongoing efficiency and “year of efficiency” narrative that underpins margins.[1]
 
-- **OpenAI / data‑center financing controversy**  
-  - Reports of NVIDIA in discussions to **guarantee up to $250 billion** in funding for an OpenAI‑linked data‑center project, potentially enabling **$350 billion** of chip purchases and >**$500 billion** total project size.[3]  
-  - Market concern centers on “**circular financing**” risk (NVIDIA as effective guarantor for customers buying its own chips), compared by commentators to dot‑com‑era structures.[3]  
-  - Credit default swap (CDS) spreads on NVIDIA debt reportedly **widened to record levels** around July 27, coinciding with a **~5% share price drop**.[2]
+**No FDA / regulatory binary**: There are **no FDA decisions** or drug‑like regulatory approvals relevant to META in the current window. M&A is limited to strategic infrastructure and AI partnerships; no major acquisition announcement in the last 48 hours.
 
-- **Product roadmap / AI infrastructure**  
-  - Management has *denied delay rumors* and reiterated that **Rubin Ultra** architecture remains on schedule to ship next year.[2]  
-  - Key technologies (e.g., **800V power delivery** and **optical interconnect**) are said to be progressing; additional customer validation or order announcements would be future positive catalysts but none have been reported in the last 48 hours.[2]
-
-- **Regulatory / policy backdrop**  
-  - A recent headline notes China will allow AI firms to buy **H200 chips, but with limits**, affecting long‑term demand visibility rather than providing a near‑term discrete catalyst.[11]
-
-**Assessment**
-
-- There is **no new earnings release, guidance change, FDA decision, or closed M&A deal in the last 48 hours**; current price action is being driven by:
-  - Anticipation of the **late‑August earnings report and Q2/Q3 guidance**.[3][4]
-  - Ongoing reassessment of risk around the **OpenAI financing structure** and widening CDS spreads.[2][3]
-
-**Catalyst score: 18/25**  
-Strong medium‑term catalysts (earnings and AI data‑center demand), but no fresh, concrete positive catalyst in the last 48 hours and ongoing controversy around the financing structure.
+**Catalyst score: 22/25**  
+Reasoning: Very strong, immediate **earnings + guidance + AI capex** catalyst with options market pricing a large move; multiple incremental AI / cloud initiatives. No true binary FDA/M&A event, so not a full score.
 
 ---
 
 ## 2. SENTIMENT (0–25 pts)
 
-**Street / institutional sentiment**
+**Street & professional investor sentiment**
 
-- **Analyst ratings remain very bullish.**  
-  - Among **47 analysts**, consensus rating is **“Strong Buy”**:  
-    - **43 Strong Buy**, **3 Moderate Buy**, **1 Strong Sell**.[1]  
-  - Separate source notes **~85% “Buy” coverage** across equity analysts.[3]  
-  - One recent initiation (June 5) from China Renaissance: **Buy**, **$319 target**, implying **+65.3% upside** from then‑current levels.[1]  
-  - Another dataset cites **62 analysts** with an aggregate **Buy** rating and **$297.15** top target price (about **+43.35%** upside from the reference price used there).[5]
+- **Analyst ratings and targets**  
+  - Mean Wall Street consensus on META remains **“Strong Buy”**.[3]  
+  - MarketScreener shows **mean consensus: BUY**, **63 analysts**, with an **average target price of $828.17** versus a current level around **$615–595**, implying roughly **35–40% upside**.[14][9]  
+  - One preview cites a **mean price objective of $1,015**, indicating ~70% upside from “here” (contextually a lower share price).[3]  
+- **Recent analyst tone**  
+  - Guggenheim recently assigned a **“Buy” rating**; cited prior quarterly results of **EPS $10.44 vs consensus $6.67** and revenue **$56.31B, +33.1% YoY**, underscoring belief that fundamentals are strong despite spending.[13]  
+  - Zacks ranks META at **#3 (Hold)**, reflecting more neutral near‑term view but still supportive fundamentals into Q2.[2]  
+- **Media and commentary**  
+  - Multiple articles characterize META as fundamentally strong but **under pressure from rising AI spending and margin concerns**, suggesting a more cautious tone on near‑term stock performance even as long‑term outlook remains constructive.[5][4][15]  
+  - One piece notes META is **down ~24% from its high**, driven by fears about AI infrastructure spending, yet highlights that Wall Street “has a clear answer” for investors and remains broadly constructive.[4]  
+  - Another article advises investors to **wait for a post‑earnings dip**, framing the stock as **“Hold” at ~$593.87** due to valuation and capex risk.[15]  
+  - At the same time, several commentators argue Meta’s **core advertising business remains strong** and the stock may offer **long‑term upside despite the recent selloff**.[5]  
+- **Influential investor signals**  
+  - Coverage notes that **Cathie Wood is increasing exposure to META**, positioning it as her preferred “Magnificent Seven” pick and emphasizing AI‑related growth; she is explicitly watching AI borrowing/spending and earnings outlook as catalysts.[12]
 
-- **Valuation and expectations framing**  
-  - Forward P/E near **18.7x**, described as a **7‑year low**, contingent on guidance being met and earnings not being revised down.[2]  
-  - Comments from multiple sources highlight “**beat fatigue**” – near‑perfect execution is already priced in, limiting incremental upside on in‑line beats.[1][9]
+**Social / retail sentiment**
 
-- **News tone (last few days)**  
-  - Recent coverage focuses on:
-    - The **sharp sell‑off** tied to the OpenAI financing story, CDS widening, and semiconductor rout.[2][3]  
-    - Concern that NVIDIA may be shifting from “**selling shovels**” in the AI gold rush to becoming an “**implicit guarantor**” of customer financing.[2][3]  
-    - Articles describing the stock as registering a **“bigger fall than the market”** and emphasizing investors’ caution ahead of earnings.[4]  
-  - Tone is **cautious‑negative near term** (risk, leverage, cyclicality) but still **structurally positive** on fundamentals and AI positioning.[1][2][3][4][9]
+- Retail and social channels are emphasizing the upcoming **earnings and AI capex narrative**, with mixed views: optimism on AI and ads, caution on spending and valuation. Options data indicating a ~7% implied move suggests active speculative positioning rather than complacency.[10]
 
-- **Market and social‑style momentum (quantitative proxies)**  
-  - NVDA’s share price has recently been described as “**lagging**” despite record results, with year‑to‑date gains around **+5.4%**, much slower than prior years.[6]  
-  - One scoring service notes “**near‑term market performance relatively strong**” and “fundamentals score high,” but also states that technicals do not yet confirm the strength and that the stock is trading between **support and resistance**, suitable for range trading.[5]
-
-Given the recent sell‑off and CDS widening, sentiment in the last 48 hours is **fragile but not structurally bearish**, supported by strong analyst conviction but pressured by credit and financing headlines.
-
-**Sentiment score: 17/25**  
-Street remains strongly bullish on fundamentals, but near‑term news flow and volatility are clearly negative, keeping sentiment below maximum.
+**Sentiment score: 20/25**  
+Reasoning: Analysts broadly **Bull/Strong Buy** with high targets and some high‑profile buying; however, valuation and capex anxiety plus cautious “Hold/wait for dip” pieces temper sentiment from the maximum.
 
 ---
 
 ## 3. TECHNICAL (0–25 pts)
 
-**Price level and recent move**
+**Price and trend**
 
-- A recent quote shows NVDA at **$194.65** (July 3 snapshot), down **1.55%** ($‑3.07) from the previous close.[7]  
-- Another snapshot lists **$196.95**, with a **+0.44%** daily change.[8]  
-- These point to NVDA trading in the **mid‑$190s** area in recent sessions.[7][8]
+- Recent indication: META quoted around **$593–595** per share in live data, with a proprietary model rating of **Buy** and a fair value estimate near **$823.55**.[9]  
+- META is reported as **down ~24% from its high**, implying it has broken meaningfully off prior highs but remains well above deep value levels.[4]
 
-**Moving averages (50d / 200d)**
+**Moving averages and RSI**
 
-- The provided data does **not** include explicit 50‑day or 200‑day moving average levels; external moving‑average figures are not given in the last 48‑hour sources.[1][2][3][4][5][7][8][9][11]  
-- Because of this, the precise relationship of price vs. 50d/200d MA **cannot be quantified from the available data**.
+- The provided sources do not supply explicit **50‑day or 200‑day moving average values**, nor an exact **RSI reading**, in the last 48 hours. No direct numeric MA/RSI is available in the cited material.  
+- A technical discussion in Korean describes general MA concepts (e.g., golden cross) but does not give META‑specific MA or RSI values.[11]  
+- Given the user requirement not to speculate and to stay within the last 48 hours, **I cannot state exact 50d/200d MA or RSI levels for META** based on the available data.
 
-**Momentum (RSI, volume vs. 30‑day average)**
+**Volume vs 30‑day average**
 
-- No source in the last 48 hours provides **RSI** or **30‑day average volume** figures.[1][2][3][4][5][7][8][9][11]  
-- Several commentaries, however, characterize:
-  - **Higher‑than‑normal volatility** tied to the OpenAI financing news and CDS widening.[2][3]  
-  - A **sell‑off larger than the market** on a recent down day.[4]  
-- One qualitative technical view: price is described as sitting **between support and resistance**, with **strong recent performance not fully confirmed by technical indicators**, suggesting a **range‑bound** pattern in the short term.[5]
+- None of the cited sources provide **current volume figures** or **30‑day average volume** statistics for META in the last 48 hours. Therefore, I cannot quantify any volume deviation.
 
-Given the lack of precise RSI and volume statistics in the last 48 hours, technical scoring must rely on partial information: mid‑$190s price zone, recent underperformance vs. the market, and range‑bound characterization.
+**Directional context**
 
-**Technical score: 11/25**  
-Information is incomplete (missing explicit MA, RSI, volume data), and recent price action is volatile and somewhat weaker than the broader market.
+- From the narrative:  
+  - META **sold off after the Q1 capex hike**, then **rebounded** modestly on positive AI commentary (e.g., Jensen Huang’s praise and AI product launches).[1][3][5]  
+  - The stock remains **well above prior lows**, but significantly below the high, suggesting a correction within an overall longer‑term uptrend.[4][14]  
+
+Given the absence of precise MA/RSI/volume data in the last 48 hours, technical scoring must be conservative and strictly non‑speculative.
+
+**Technical score: 10/25**  
+Reasoning: Directionally, META is in a **corrective phase off highs**, with broadly intact long‑term bullish consensus and a Buy bias, but I lack hard numbers for 50d/200d MA, RSI, and volume vs 30‑day average in the specified timeframe.
 
 ---
 
 ## 4. MARKET CONTEXT (0–25 pts)
 
-**Sector / industry backdrop**
+**Sector / “Magnificent Seven” context**
 
-- Recent commentary notes a **broader rout in Asian semiconductor stocks**, including:
-  - **Samsung** down **13.4%**.
-  - **SK Hynix** down **14.7%**.[3]  
-  - This contributed materially to NVDA’s recent sell‑off.[3]
-- Sector analysis puts NVIDIA’s fundamentals as **strong**, growth potential **large**, with **semiconductor & equipment industry ranking 43/105**, and institutional ownership around **68.10% of shares outstanding**.[5][8]  
-- Data center remains the **primary revenue driver**, at **$193.74 billion** (89.72% of total revenue) in the latest reported quarter, emphasizing NVIDIA’s leverage to AI and cloud infrastructure spending.[8]
+- Meta remains part of the **large‑cap AI / mega‑cap tech cohort**, often grouped with other “Magnificent Seven” names.[12][14]  
+- Recent commentary notes **semiconductor volatility dragging U.S. stocks lower**, indicating that AI‑linked names can be impacted by broader AI and chip sentiment swings.[14][6]  
+- An article on potential AI‑bubble catalysts highlights vulnerability of AI‑exposed sectors, but does not specify a current breakdown; instead, it underscores market sensitivity to AI‑linked macro or sector shocks.[6]
 
-**Broad market (SPY trend, VIX)**
+**Macro & indices (SPY, VIX)**
 
-- None of the cited sources in the last 48 hours provide explicit numerical data for **SPY price/performance** or **VIX levels**.[1][2][3][4][5][7][8][9][11]  
-- A Zacks note highlights that NVDA has recently registered a **“bigger fall than the market”**, implying that **broader indices have been more resilient than NVDA** over the same period.[4]  
-- Commentary on “beat fatigue” suggests an environment where **high‑growth AI leaders face elevated expectations**, but not necessarily a broad market risk‑off.[1][6][9]
+- Within the last 48 hours of the provided sources, there is **no direct quantitative data** on SPY trend, VIX level, or exact sector performance metrics.  
+- One Marketscreener note mentions **“volatile semis drag U.S. stocks lower, crude jumps”**, implying a choppy, risk‑sensitive tape rather than a uniformly strong or weak market.[14]  
+- Without current SPY and VIX numbers from the supplied sources, I cannot provide precise values or detailed trend statistics while complying with the “no speculation” requirement.
 
-With semiconductors under pressure (especially in Asia) and NVIDIA underperforming the broad market on recent down moves, the sector context is **mixed‑to‑weak** despite strong company fundamentals.
+**Positioning vs macro**
 
-**Market context score: 14/25**  
-Sector volatility and global semiconductor weakness weigh on NVDA, and while the broad market is not characterized as in crisis, NVDA is clearly more volatile and recently weaker than the index.
+- META’s near‑term trading is likely to be **dominated by idiosyncratic drivers** (Q2 earnings, capex guidance, AI infrastructure narrative) rather than pure macro, but macro volatility in AI‑linked sectors and semis is a relevant backdrop.[3][6][14]  
 
----
-
-**Component scores**
-
-- Catalyst: 18/25  
-- Sentiment: 17/25  
-- Technical: 11/25  
-- Market Context: 14/25  
-
-SCORE: 60/100
+**Market context score: 12/25**  
+Reasoning: We have qualitative evidence of **volatile, AI‑sensitive market conditions** and sector‑level swings, but lack concrete, up‑to‑date SPY/VIX/sector strength data in the last 48 hours, limiting precision.
 
 ---
 
-## PLTR | Score: 60/100
+### Aggregate Assessment
 
-Palantir Technologies (PLTR) currently has **no fresh earnings release or guidance change in the last 48 hours**, but is trading under **short‑term pressure from government-contract headlines and pre‑earnings positioning**[2][4][5]. Based on the last two days of data, the stock setup is **event‑driven and sentiment‑sensitive** going into the August 3 earnings.
+- **Catalyst: 22/25**  
+- **Sentiment: 20/25**  
+- **Technical: 10/25**  
+- **Market Context: 12/25**
 
----
-
-### 1. CATALYST (0–25 pts)
-
-**Key recent/near‑term catalysts:**
-
-- **Upcoming Q2 2026 earnings (major near‑term catalyst):**  
-  PLTR is scheduled to report Q2 results on **August 3, 2026**[1][6][8].  
-  - Company guidance: Q2 revenue expected between **$1.797–$1.801 billion** and adjusted operating income between **$1.063–$1.067 billion**[9].  
-  - Street expectations: EPS **$0.33–0.35** and revenue about **$1.8–$1.81 billion**, up ~80–85% y/y[1][6][8].  
-  - PLTR has **beaten EPS estimates in each of the last four quarters**[6], and last quarter posted EPS **$0.33 vs $0.28** consensus and revenue **$1.633B vs $1.54B**[3][6].  
-  - Full‑year 2026 guidance was previously **raised** to revenue **$7.650–$7.662B**, implying **71% y/y growth** vs prior 61%[6].
-
-- **Government contract and geopolitical headlines (current trading catalysts):**  
-  - **NHS/U.K. healthcare scrutiny:** PLTR’s NHS patient‑discharge software showed *no measurable impact* on reducing discharge delays, contrary to earlier claims of a 15% reduction; this has led to **heightened scrutiny of its government surveillance and health contracts** and a **‑3.71% intraday move on July 28**[2].  
-  - **France seeking to “divorce” from Palantir:** The French Prime Minister publicly stated France must have its own tools and is seeking a **break with Palantir** following U.S. restrictions on foreign access to leading AI models[4]. This is a **negative headline risk** to European government business.
-
-- **Macro/sector context as indirect catalysts:**  
-  - Recent weakness in **technology and AI‑linked stocks**, with markets reacting to concerns around AI spending and semiconductor demand, has contributed to PLTR’s **5% decline ahead of earnings** as investors lock in gains[5].  
-
-**No new FDA decisions, M&A, or fresh formal guidance changes for PLTR have been reported in the last 48 hours.** Earnings guidance changes referenced are from the prior quarter[6], and there is **no indication of new M&A or regulatory decisions specific to PLTR** in this time window.
-
-**Catalyst score: 20/25**  
-Strong near‑term earnings event with prior guidance raise and consistent beats, plus meaningful government‑contract/geopolitical headlines; no brand‑new hard catalyst in last 48 hours, but news flow is active.
+SCORE: 64/100
 
 ---
 
-### 2. SENTIMENT (0–25 pts)
+## PLTR | Score: 58/100
 
-**Analyst & institutional positioning**
+Palantir has a **clear near-term catalyst**: Q2 earnings are scheduled for **Aug. 3**, and consensus expects about **$0.35 EPS** on **$1.81B revenue**, with some coverage expecting Palantir to **beat estimates and raise full-year 2026 guidance** again.[1][8] There is also a **negative policy/reputation catalyst** from renewed scrutiny of its NHS/government-contract work, which has been cited as a reason for recent pressure in the stock.[2][9]
 
-- **Street expectations remain bullish on fundamentals but selective on valuation:**  
-  - Oppenheimer expects PLTR to **“crush Q2 estimates”** with sales up ~**85% y/y** vs guidance of ~79% and believes PLTR may **raise full‑year outlook again**[1].  
-  - Zacks highlights strong growth expectations (EPS up **118.75% y/y** and revenue up **~80% y/y** for Q2; full‑year EPS +97% and revenue +72% vs prior year) but notes a **forward P/E of 88.78**, indicating **expensive valuation**[8].  
-  - Citigroup **maintained a Buy rating** recently but **lowered its price target to $200**[6], signaling positive view but tempered upside expectations.
+- **CATALYST: 21/25**
+  - **Earnings**: The next earnings release is imminent, with Street estimates at **$0.35 EPS** and **$1.81B revenue**; Palantir’s last quarter beat on both EPS and revenue.[1][6][8]
+  - **Guidance**: Palantir previously raised 2026 revenue guidance to **$7.650B–$7.662B**; Oppenheimer expects another raise if momentum holds.[1][6][8]
+  - **Negative event risk**: News flow includes **NHS contract scrutiny** and broader political/regulatory pushback tied to government contracts.[2][9]
+  - **No FDA or M&A catalyst**: None of the provided results indicate an FDA decision or a material M&A event in the last 48 hours.[1][2][5][6][8][9]
 
-- **Institutional flows:**  
-  - Gateway Wealth Partners LLC and other holders have **boosted PLTR positions**; last reported quarter showed strong profitability (ROE **28.34%**, net margin **43.67%**) and **84.7% y/y revenue growth**[3]. This supports constructive institutional sentiment.
-
-**News tone & controversy**
-
-- **Negative tone in European/government press:**  
-  - U.K. NHS analysis showing no measurable benefit from PLTR’s software and “heightened scrutiny” of surveillance contracts is clearly **negative** and framed as a controversy[2].  
-  - The French Prime Minister’s public “divorce” from Palantir and push for domestic tools is a **high‑profile negative headline**[4].
-
-- **Market media ahead of earnings:**  
-  - Financial press describes PLTR as **“slumping ahead of Q2 earnings”** as investors lock in gains and react to broader tech weakness[5]. Tone is neutral‑to‑cautious: focus on strong growth expectations but risk‑off behavior.  
-  - Zacks notes the stock **dipped while the market gained**, framing it as **short‑term underperformance** despite strong growth projections[8].
-
-**Social & trading sentiment (short‑term)**
-
-- Tim Sykes–style trading commentary calls the NHS story a **“catalyst more than a verdict”**, implying traders are using it to drive short‑term moves rather than shifting long‑term theses yet[2].  
-- Live updates show PLTR **trending down intraday by ~3–5%** in reaction to news and pre‑earnings de‑risking[2][5].
-
-Overall, sentiment is **mixed**:  
-- **Positive on growth/profitability and U.S. government momentum**[1][3][7][9].  
-- **Negative on valuation and European/government controversy**, with visible short‑term selling[2][4][5][8].
-
-**Sentiment score: 15/25**  
-Fundamental/analyst sentiment is constructive, but the last 48 hours show clear negative headline and trading pressure, plus valuation concerns.
-
----
-
-### 3. TECHNICAL (0–25 pts)
-
-Within the last 48 hours, the available data show **direction and drivers but not precise technical levels** (no explicit 50d/200d MA, RSI, or 30‑day volume average values in the results). Based strictly on the cited information:
-
-- **Price action (short‑term):**  
-  - PLTR shares **declined ~5% on Tuesday** as investors locked in gains and rotated out of tech ahead of earnings[5].  
-  - Another data point shows the stock **trending down by ‑3.71%** intraday on July 28 amid NHS contract scrutiny[2].  
-  - Zacks notes PLTR **“dips while market gains,”** highlighting relative underperformance in the immediate pre‑earnings window[8].
-
-- **Trend vs recent move:**  
-  - Commentary explicitly frames the move as an **“ausverkauf vor der Zahlenvorlage”** (sell‑off before results), suggesting profit‑taking after a **recent advance**[5][9]. This implies the broader trend leading into this week was up, followed by a pullback.  
-  - PLTR’s strong growth and prior guidance raise, along with a high forward P/E of **88.78**[8], are consistent with a stock that had run up and is now consolidating.
-
-- **Missing specific indicators:**  
-  - No search result in the last 48 hours provides **exact price**, **50‑day or 200‑day moving averages**, **RSI**, or **volume vs 30‑day average**.  
-  - Therefore, it is **not possible to state whether PLTR is above/below its 50d/200d MAs, its exact RSI reading, or its precise relative volume**, without speculating.
-
-Given the constraints, technical assessment must stay qualitative: PLTR is **in a short‑term pullback driven by profit‑taking and news flow after an earlier advance**, ahead of a high‑impact earnings event[5][8][9].
-
-**Technical score: 10/25**  
-Directionally clear (recent sell‑off after strength), but lack of hard technical numbers (MAs, RSI, volume stats) limits conviction.
-
----
-
-### 4. MARKET CONTEXT (0–25 pts)
-
-Specific SPY and VIX levels or sector index values in the last 48 hours are **not provided** in the search results, but PLTR’s trading has been explicitly linked to broader market/sector moves.
-
-- **Sector / tech environment:**  
-  - PLTR’s 5% decline is reported **“alongside broader weakness in technology stocks”**, with markets reacting to concerns around **AI spending** and **semiconductor demand** and ahead of **major earnings reports**[5].  
-  - The French/U.S. AI policy context (restrictions on foreign access to leading AI models) reinforces **macro‑level uncertainty** around global AI ecosystems[4].
-
-- **SPY trend and VIX environment:**  
-  - Zacks notes PLTR **“dipped while the market gains”**[8], implying the broader equity market (e.g., SPY proxy) was **up** while PLTR underperformed, but it does not give explicit SPY index or VIX readings.  
-  - There are **no explicit VIX numbers or direct references to volatility indices** in the last 48 hours for PLTR in the search results.
-
-- **Sector strength vs PLTR:**  
-  - Tech and AI‑linked names are described as **under short‑term pressure** heading into an earnings cluster[5], suggesting that PLTR’s weakness is partly sector‑driven rather than purely idiosyncratic.  
-  - PLTR’s fundamentals (high growth, AI/government exposure) position it within the **AI/defense software sub‑sector**, which continues to see **strong demand** even as markets question **AI spending sustainability**[1][7].
-
-Given the available data, market context for PLTR over the last 48 hours is **risk‑off in tech/AI ahead of earnings, with PLTR underperforming a generally firmer broad market**[5][8].
-
-**Market context score: 15/25**  
-We have clear qualitative context (tech weakness, AI and semiconductor concerns, PLTR lagging a firmer tape), but lack precise SPY and VIX metrics.
-
----
-
-### Summary Scoring
-
-- **Catalyst:** 20/25  
-- **Sentiment:** 15/25  
-- **Technical:** 10/25  
-- **Market Context:** 15/25  
-
-SCORE: 60/100
-
----
-
-## GOOGL | Score: 58/100
-
-Alphabet’s **near-term catalyst profile is mixed but mostly positive on fundamentals and negative on spending optics**: Q2 2026 results beat expectations, with revenue at **$119.8B**, Google Cloud revenue up **82%** to **$24.8B**, and ad revenue at **$81.6B**, but management also raised 2026 capex guidance to **$195B–$205B**, which pressured the stock.[2][4][9][11] There is **no FDA catalyst** and no confirmed M&A catalyst in the provided results; the other notable event is the **ongoing class-action/legal noise** and the **$69.24B Class C stock shelf filing**.[1]
-
-- **CATALYST: 16/25**
-- **Positive catalysts:** earnings beat, Cloud acceleration, ad revenue strength, and continued AI-driven demand in enterprise cloud.[2][11]
-- **Negative catalysts:** sharply higher capex guidance, free-cash-flow pressure concerns, and legal/regulatory overhang.[1][4][9]
-- **No confirmed M&A or FDA catalyst** in the last 48 hours from the provided results.[1]
-
-Sentiment is **constructive but cautious**: multiple analyst notes remained positive, including reiterated **Buy/Overweight** calls and target-price updates such as **$455**, **$445**, **$420**, and a consensus target of **$423.838** from 62 analysts.[13][7] However, news tone turned more cautious after the earnings release because investors focused on AI spending, and one report said the stock fell on capex concerns despite strong results.[4][5][9]
-
-- **SENTIMENT: 18/25**
-- **Analyst stance:** mostly bullish to neutral-positive, with repeated buy-side support and elevated target prices.[13]
-- **News tone:** positive on revenue and Cloud, negative on capex escalation and margin/FCF concerns.[2][4][9][11]
-- **Social momentum:** the provided results do not include quantified social-media metrics, so momentum cannot be measured precisely from the evidence here.
-
-Technically, the stock appears **weaker than its intermediate trend**: one report states Alphabet **broke below its 200-day moving average for the first time in more than three years on July 23**.[5] The provided data also show a July 8 GOOG price of **$358.71**, with support at **$355.61** and resistance at **$371.63**, but the results do **not provide a 50-day moving average, RSI, or volume vs. 30-day average**, so those cannot be verified from the supplied evidence.[12]
+- **SENTIMENT: 14/25**
+  - **Analyst tone**: Oppenheimer is constructive, expecting Palantir to beat Q2 estimates and raise guidance; Citigroup reportedly kept a **Buy** but lowered its price target to **$200**.[1][6]
+  - **News tone**: Mixed-to-negative in the short term, with articles emphasizing valuation concerns, government scrutiny, and a stock pullback ahead of earnings.[2][5][9]
+  - **Social momentum**: The provided results do not give measurable social-volume data, so sentiment from social channels cannot be quantified from the available sources.[2][5][9]
+  - **Net read**: Institutional/analyst expectations remain positive, but the recent narrative is more cautious because of scrutiny and pre-earnings profit-taking.[1][2][5][6][9]
 
 - **TECHNICAL: 10/25**
-- **Price vs 200d MA:** below the 200-day moving average as of July 23.[5]
-- **Price vs 50d MA:** not available in the provided results.
-- **RSI:** not available in the provided results.
-- **Volume vs 30d average:** not available in the provided results.
+  - **Price vs moving averages**: The results provided do **not** include current price relative to the **50-day** or **200-day** moving averages, so this cannot be verified from the supplied data.[1][2][5][6][8][9]
+  - **RSI**: No RSI reading is provided in the results.[1][2][5][6][8][9]
+  - **Volume vs 30-day average**: No volume data or 30-day average comparison is provided.[1][2][5][6][8][9]
+  - **Observed tape**: The stock was reported down around **3.71%** in one news item and down **5%** in another pre-earnings pullback note, indicating short-term weakness, but not enough to score the full technical picture.[2][5]
 
-Market context is **supportive for cloud/AI, but mixed for megacap tech**: one sector note says cloud computing has benefited from heavy AI infrastructure spending and improving enterprise budgets, while easing interest-rate concerns have supported high-growth tech valuations.[10] At the same time, the provided results point to a more selective market that is scrutinizing capex-heavy AI names, which is consistent with Alphabet’s post-earnings drawdown.[5][10]
-
-- **MARKET CONTEXT: 14/25**
-- **Sector strength:** cloud/AI remains a positive theme.[10]
-- **SPY trend:** not provided in the search results, so it cannot be quantified.
-- **VIX environment:** not provided in the search results, so it cannot be quantified.
+- **MARKET CONTEXT: 13/25**
+  - **Sector tone**: Technology stocks were described as broadly weak on the day, with concern around **AI spending** and **semiconductor demand** weighing on the group.[5]
+  - **SPY trend**: The supplied results do **not** directly state the SPY trend, so that element cannot be confirmed from the available sources.[5]
+  - **VIX environment**: No VIX reading is provided in the results.[5]
+  - **Relative context**: Palantir appears to be facing a mixed tape—macro/sector softness plus stock-specific scrutiny—despite strong earnings expectations.[1][2][5][9]
 
 SCORE: 58/100
 
 ---
 
-## AMD | Score: 56/100
+## AMD | Score: 50/100
 
-AMD has **clear catalysts** in the last 48 hours: a reported partnership with Core Scientific to expand AI infrastructure capacity, and continued investor focus on the upcoming **August 4 earnings** date; however, I do not see an FDA, M&A, or macro-policy catalyst specific to AMD in the provided results.[3][4]
+AMD’s **near-term setup is mixed-to-negative**: there is a clear sector-driven selloff, but no evidence in the supplied results of a fresh company-specific earnings miss, FDA decision, or M&A announcement in the last 48 hours. The most relevant positive company-specific catalyst is AMD’s ongoing AI infrastructure push and analyst enthusiasm around Helios/AI deployments, but that is being overshadowed by semiconductor de-rating and risk-off flows.[1][3][4][8]
 
-- **CATALYST: 20/25**
-- The strongest near-term driver is the AI-infrastructure narrative, with AMD tied to Core Scientific and broader demand for AI compute capacity.[3]
-- Analyst commentary also highlights the upcoming fiscal Q2 2026 earnings release on **August 4** as a near-term catalyst.[4]
-- The provided results also mention bullish AI-product momentum around **Helios / MI450** and Anthropic-related potential revenue, but those are older than 48 hours in the supplied set and should be treated as background rather than fresh catalyst evidence.[2][5]
+- **CATALYST: 13/25**
+  - The dominant immediate catalyst is a **broad semiconductor selloff** tied to AI infrastructure financing concerns, China competition headlines, and higher rate-hike odds, with AMD down **8.8%** to **$451.61** at **11:05 ET on July 28, 2026**.[1]
+  - One source says there is **no company-specific news driving today’s sell-off**, framing it as a rotation out of crowded AI chip names.[8]
+  - Another source says AMD’s decline is being amplified by concerns about **forward-looking AI accelerator guidance** and cloud capex deceleration, but this is presented as market interpretation rather than a confirmed new operating setback.[5]
+  - On the positive side, AMD has recent AI-related catalysts: the **Advancing AI** event, the **Helios** rack-scale AI platform, and infrastructure partnerships/commitments cited by analysts.[2][4][6][9]
 
 - **SENTIMENT: 18/25**
-- Sentiment is constructive: MarketBeat reports bullish analyst support, including **Goldman Sachs** lifting its target to **$640** and **Mizuho** lifting its target to **$625** while reiterating Buy.[4][5]
-- MarketBeat also says AMD is benefiting from “rising AI infrastructure deployments” and outperformed its industry over the last six months, reinforcing positive tone.[7]
-- On the bearish side, Investing.com notes a **-6.91%** intraday move and a **-15.37%** weekly slide, with sector contagion, insider selling, and ARK trimming cited as pressure points.[2]
-- Social momentum is not directly quantified in the results; the best available proxy is the mixed-to-bullish news tone rather than a measured social signal.[2][4][7]
+  - Analyst tone is still mostly constructive: **Mizuho raised its price target to $625 from $615** and kept a **Buy** rating, citing Helios and Venice server CPUs.[6]
+  - MarketBeat reports **KeyCorp** raised its target to **$725** with an **Overweight** rating, **Citigroup** upgraded AMD to **Buy** from **Market Perform**, and **Stifel** raised its target to **$635** with a **Buy** rating.[4]
+  - Goldman Sachs also raised its target to **$640**, citing demand for CPUs used in agentic AI.[7]
+  - Despite bullish analyst action, the news tone today is **risk-off**, with headlines emphasizing semiconductor de-rating, valuation pressure, and AI trade rotation away from AMD.[1][8][12]
+  - Social momentum appears weaker than earlier July enthusiasm because the stock is being sold with the rest of the chip group, not on fresh upside headlines.[1][8]
 
-- **TECHNICAL: 6/25**
-- I do not have reliable 50-day or 200-day moving-average values in the provided results, so I cannot confirm price vs. those averages from the evidence given.
-- The best explicit technical data in the results is an RSI of **55.9**, which is neutral to mildly constructive.[12]
-- Volume vs. 30-day average is not provided in the supplied results, so it cannot be measured here.
-- The only hard price move cited is the stock trading down **6.91%** to **$460.75** in one article, with another result showing **$458.13** and a separate source showing **$539.61**; these figures conflict across timestamps and sources, so I would not use them as a clean technical anchor.[2][1][11]
-- Because the required technical inputs are incomplete, this category scores low on verified evidence rather than on poor stock behavior.
+- **TECHNICAL: 8/25**
+  - The supplied results do **not provide verified 50-day MA, 200-day MA, RSI, or volume vs. 30-day average** values, so those cannot be stated precisely from the provided evidence.
+  - The only hard price point provided is **$451.61**, down **8.8%** intraday on July 28, 2026.[1]
+  - That sharp drop implies short-term technical damage, but I cannot responsibly assign exact moving-average or RSI readings without data in the results.
+  - If you want, I can do a second pass using only live market data sources that expose those indicators explicitly.
 
-- **MARKET CONTEXT: 12/25**
-- The context looks mixed: one result explicitly says the selloff is part of a **semiconductor sector contagion**, suggesting sector weakness rather than isolated AMD weakness.[2]
-- The results do not provide a direct SPY trend or VIX reading, so I cannot verify broader market trend or volatility conditions from the supplied data.
-- MarketBeat and other results still describe the AI and semiconductor trade as intact despite a pullback, which implies the sector narrative remains supportive even if near-term risk appetite has softened.[1][4]
-- On balance, the sector backdrop is mildly supportive structurally but clearly weaker in the very short term than the longer-run AI thesis.[2][4][7]
+- **MARKET CONTEXT: 11/25**
+  - The broader backdrop is **negative for semiconductors**: multiple sources describe a sharp chip selloff and rotation out of AI-related names.[1][8][12][14]
+  - The S&P 500 proxy **SPY** trend is not directly quantified in the provided results, so I cannot state its exact direction or level from these sources alone.
+  - The implied macro tone is **risk-off**, with mention of higher rate-hike odds and valuation pressure on long-duration growth stocks like AMD.[1]
+  - VIX is not explicitly reported in the supplied results, so I cannot cite a current level from them.
+  - Market breadth appears unfavorable for AMD specifically because investors are favoring AI leaders and de-risking crowded semiconductor satellites.[8]
 
-SCORE: 56/100
-
----
-
-## SOFI | Score: 48/100
-
-SoFi Technologies (SOFI) currently has **no major new hard catalyst** beyond its upcoming Q2 2026 earnings report and a recently announced Notre Dame Athletics partnership, but sentiment and near-term expectations are constructive heading into earnings.[2][5][7]
+SCORE: 50/100
 
 ---
 
-## 1. CATALYST (0–25 pts)
+## TSLA | Score: 45/100
 
-**Key recent/company-specific catalysts (last ~48 hours):**
+**CATALYST: 12/25**  
+Tesla has a clear *recent* earnings catalyst: Q2 2026 revenue beat expectations, but the release was overshadowed by a sharp EPS miss, margin compression, and negative free cash flow[5]. The reported figures in the available coverage include non-GAAP EPS of **$0.33 vs. $0.5367 expected** and **negative free cash flow of $1.09 billion**[2]. I do **not** see a fresh FDA decision, M&A announcement, or a new macro-specific Tesla catalyst in the provided last-48-hours results; the main macro event is the **Fed decision** affecting the broader market, not Tesla specifically[9].  
 
-- **Upcoming Q2 2026 earnings release**  
-  Multiple sources note SoFi is set to report Q2 results next week, with Wall Street expecting **EPS of $0.11**, up **37.5% YoY**, and **revenue around $1.11–1.13 billion**, up roughly **29.7–31.7% YoY**.[2][5][6]  
-  This earnings event itself is the **primary near-term catalyst**.
+**SENTIMENT: 11/25**  
+Sentiment is mixed-to-negative after earnings: the stock sold off materially after the Q2 report, with one source noting a **14.52% drop on earnings day** and another **17.81% decline over the following week**[2]. On the positive side, news flow includes analyst-target raises from **RBC to $500 from $475** with an Outperform rating and **UBS to $442 from $364**[6]. Market tone also reflects optimism around Tesla’s AI/autonomy roadmap and stronger Q2 deliveries, while bearish coverage focuses on stagnant top-line growth, margin pressure, and execution risk[4][5][6]. I do not have direct social-momentum metrics in the supplied results.  
 
-- **Notre Dame Athletics multi-year partnership**  
-  SoFi announced a **multi-year partnership with Notre Dame Athletics** as the department’s official financial services partner.[7]  
-  Coverage notes the stock **rose overnight** on the announcement ahead of Q2 results.[7]  
-  Commentary from recent analysis suggests that while this boosts brand visibility, it is **not viewed as a “major” financial catalyst**, more of a medium-term marketing/awareness driver.[1][7]
+**TECHNICAL: 8/25**  
+The only explicit technical level in the results is support around **$313.26** based on a 0.382 Fibonacci retracement, after rejection near **$437.17–$442.34**[3]. I do **not** have verified last-48-hour data for Tesla’s **50-day MA, 200-day MA, RSI, or volume vs. 30-day average** in the provided results, so I cannot state those precisely without inventing them. Based on the cited support/ resistance commentary, the chart tone is weak and in correction mode[3].  
 
-- **Product/platform developments (context older than 48h, not scored)**  
-  Recent commentary (outside the strict last-48h window) highlights SoFi’s lending expansion, ETF launches, and the April relaunch of **SoFi Plus** as drivers of member and product growth.[3][4]  
-  These frame expectations for Q2 but are not *new* in the last 48 hours.
+**MARKET CONTEXT: 14/25**  
+The broader tape is in a macro-event environment because markets are bracing for the **Federal Reserve decision** and major Big Tech earnings[9]. That is supportive of high volatility and cross-asset rotation, but the supplied results do not provide hard numbers for **SPY trend** or **VIX**. Sector context is mixed: Tesla is being described as a laggard versus mega-cap peers, yet there is also positive sector-style enthusiasm around AI/autonomy and energy-storage demand[4][6].  
 
-**No major guidance changes, M&A, regulatory/FDA-type decisions, or macro-specific SoFi shocks** are evident in the last 48 hours.[2][5][6][7]  
-
-**Catalyst Score: 18/25**  
-- Earnings on deck with clear expectations for strong YoY growth is a solid catalyst.  
-- Notre Dame partnership is incremental but not transformative.  
-- No fresh guidance change or M&A limits the score.
+SCORE: 45/100
 
 ---
 
-## 2. SENTIMENT (0–25 pts)
+## RIVN | Score: 44/100
 
-**Analyst & Wall Street sentiment:**
-
-- **Earnings expectations are positive:**  
-  Wall Street is **projecting YoY EPS and revenue growth** (EPS +37.5%, revenue +29.7–31.7%).[2][5][6]  
-  Coverage describes the outlook as **earnings growth on higher revenues**, with lending as a key driver.[2][3][5]  
-  This framing is **constructive**, not cautious.
-
-- **Consensus recommendation:**  
-  Recent aggregated coverage describes SoFi as having a **consensus “Hold” rating** from analysts.[4]  
-  This indicates **neutral-to-moderately positive** institutional stance rather than strong buy or strong sell.
-
-**News tone (last ~48 hours):**
-
-- **Positive tone around growth and expansion:**  
-  MarketBeat’s recent news notes SoFi shares moving higher on **business expansion news** and **upbeat commentary** on growth outlook.[4]  
-  It highlights launches like the SoFi Social 50 Income ETF and lending footprint expansion as supporting **continued growth** in core financial services.[4]  
-  Articles describe SoFi as a **high-growth name with sustained GAAP profitability**, though they classify some coverage as commentary rather than hard catalysts.[4]
-
-- **Notre Dame partnership coverage is clearly positive:**  
-  The Notre Dame Athletics deal is reported as a **stock-rising event overnight**, framed as a “landmark” multi-year partnership.[1][7]
-
-**Social/media momentum:**
-
-- Recent coverage references **“BIG Money continues to buy SoFi”** and rising rev estimates in video commentary.[1]  
-  While this is opinion content, it indicates **bullish retail and social media narratives**.
-
-Overall tone across the last 48 hours is **constructive to positive**, with earnings expectations and partnership news reinforcing the narrative.
-
-**Sentiment Score: 20/25**  
-- Positive earnings growth expectations and upbeat news.  
-- Consensus rating still “Hold,” not “Buy,” moderates the score.
+Rivian Automotive Inc. (RIVN) currently has **no confirmed, company‑specific catalyst in the last 48 hours**, but an **imminent earnings report on July 30** is the key near‑term event.[1]
 
 ---
 
-## 3. TECHNICAL (0–25 pts)
+### 1. CATALYST (0–25 pts)
 
-Direct equity technicals (50d/200d MA, RSI, 30d volume) for SOFI common stock are **not provided** in the last-48-hour sources, and no reliable fresh data is available in the results. As requested, no speculation will be added.
+- **Near‑term earnings event:** Rivian is scheduled to report its next earnings **post‑market on Thursday, July 30**.[1]  
+  - This is *in the future*, but already known to the market.  
+  - There are **no fresh pre‑announcements, guidance changes, or surprise filings** in the last 48 hours in the provided data.
 
-The closest data point is for a **tokenized representation of SoFi Technologies on Robinhood (crypto-style perpetual contract)**, which is not the listed NASDAQ equity but can give a superficial snapshot of price behavior:
+- **Guidance / corporate actions:**  
+  - No new **guidance changes**, **production updates**, **M&A**, or **major strategic announcements** are visible in the last 48 hours in the search results.  
+  - No sector‑specific regulatory actions (e.g., EV credits changes, safety recalls) are referenced in the recent data.
 
-- **Current token price (SoFi Technologies – Robinhood Token)**:  
-  As of **2026-07-28**, price is **$17.13**, with a 24-hour range of **$16.76–$17.20** and trading volume of **$400.13** (token market cap **$4.42K**, rank 11664 in crypto).[8]  
-  Commentary notes **short-term pullback from highs**, with **support around $16.45** and potential challenge of **$17** if price breaks **$16.92**.[8]
+- **Macro / regulatory (EV / auto):**  
+  - The provided results within the last 48 hours do **not** show any new macro or regulatory decision specifically impacting Rivian (e.g., new EV tax rules, tariffs, or U.S. auto regulations).
 
-However:
+Given the lack of fresh, stock‑specific developments besides the *already‑scheduled* earnings date, the **catalyst score is low**.
 
-- There is **no data** in the results on:
-  - 50-day moving average for the NASDAQ SOFI stock.  
-  - 200-day moving average.  
-  - RSI reading.  
-  - Actual equity trading volume vs 30-day average.
-
-Because of the lack of specific, up-to-date technical metrics for the **listed stock**, any detailed technical scoring would be speculative, which is explicitly disallowed.
-
-**Technical Score: 5/25**  
-- Minimal score assigned solely because we have a short-term price/support/resistance view from the tokenized instrument, but no validated MA/RSI/volume data for SOFI equity.
+**CATALYST SCORE: 5/25**
 
 ---
 
-## 4. MARKET CONTEXT (0–25 pts)
+### 2. SENTIMENT (0–25 pts)
 
-The search results within the last 48 hours do **not** provide:
+- **Analyst rating & target:**  
+  - Consensus rating for RIVN is **“signal_hold”** with a **target price of 18.80**.[3]  
+  - With a current price of **16.46**, this implies roughly **+14%** upside to the consensus target.[3]  
+  - A hold rating suggests neutral to mildly constructive sentiment rather than strong bullishness or clear pessimism.
 
-- Current **SPY** trend, price, or performance.  
-- Current **VIX** level or volatility environment.  
-- Sector-level performance or recent moves for U.S. fintech/neo-bank/online lending peers.
+- **Earnings narrative / media tone:**  
+  - A recent article discusses whether investors should buy Rivian ahead of the July 30 earnings release, indicating **heightened investor focus** on the upcoming report.[1]  
+  - The tone is **cautious**—emphasizing that results need to validate the story—consistent with the hold rating rather than a strong buy.[1][3]
 
-The only macro-related commentary in the SoFi token result is a generic reference to **“macroeconomic risk-hedging sentiment”** affecting short-term price and volume, with advice to watch **geopolitical variables and liquidity changes**.[8] This is qualitative and not tied to specific SPY or VIX readings.
+- **Upgrades/downgrades in last 48 hours:**  
+  - No new **upgrades, downgrades, or target revisions** are shown in the last 48 hours in the provided data. The rating and target appear **stable** at “signal_hold” and 18.80.[3]
 
-Given your instruction to rely only on data within the last 48 hours and not to speculate:
+- **Social / momentum (proxy):**  
+  - No direct social‑media metrics are provided.  
+  - The neutral technical signal (see section 3) and hold rating together support a **balanced sentiment**—neither capitulation nor strong speculative enthusiasm.[2][3]
 
-- **No verifiable SPY trend** (e.g., above/below key moving averages or recent daily returns) is available in the provided sources.  
-- **No VIX environment description** (e.g., low-vol regime vs spike) is available.  
-- **No explicit sector strength data** for consumer finance/fintech/lending is provided in these results.
+Overall, sentiment is **neutral‑to‑slightly‑positive** because of upside to target price but held back by the lack of recent upgrades and the “hold” stance.
 
-We can only say that SoFi’s recent positive coverage is being discussed in the context of **growth-oriented names** and product expansion, but without concrete cross-market metrics.[4]
+**SENTIMENT SCORE: 14/25**
 
-**Market Context Score: 5/25**  
-- Small score for generic references to macro risk sentiment and growth-equity framing, but no SPY/VIX/sector data prevents a higher, data-driven score.
+---
+
+### 3. TECHNICAL (0–25 pts)
+
+From TradingKey’s technical snapshot for Rivian Automotive Inc (RIVN):[2][3]
+
+- **Current price:**  
+  - **16.46** per share.[3]
+
+- **Moving averages / trend:**  
+  - The system reports that **based on moving averages (MA5 to MA200), Rivian shows 4 buy signals and 2 sell signals**.[2]  
+  - Overall, “today's signal is **Neutral**” despite the net positive buy signals.[2]  
+  - Exact numeric 50‑day and 200‑day moving average values are not provided in the last 48 hours of data, so precise price‑vs‑MA levels cannot be stated. The net buy bias across MAs suggests price is **not in a clear downtrend** across all timeframes.[2]
+
+- **Momentum / RSI:**  
+  - Recent RSI values are not disclosed in the provided results; therefore **RSI level cannot be quantified** from the last‑48‑hours data.
+
+- **Volume vs 30‑day average:**  
+  - No explicit volume or 30‑day average volume figures are shown in the data; **relative volume impact cannot be quantified**.
+
+Given the **neutral overall signal** but some underlying MA‑based buy indications, technicals appear **balanced with a slight positive tilt**, not strongly overbought or oversold.
+
+**TECHNICAL SCORE: 15/25**
+
+---
+
+### 4. MARKET CONTEXT (0–25 pts)
+
+- **Sector / EV & auto:**  
+  - The last‑48‑hours search results do not provide a direct, up‑to‑date read on the **broader EV or auto sector performance** (no sector ETF or index data is shown).  
+  - No EV‑wide positive or negative shock is cited specifically in the recent data.
+
+- **SPY / broader market trend:**  
+  - There is **no SPY or S&P 500 performance data** in the last 48 hours within the provided results, so current broad‑market trend cannot be quantified from these sources.
+
+- **Volatility (VIX environment):**  
+  - Recent **VIX values or trend** are not available in the supplied data, so the volatility environment cannot be specified.
+
+- **Cross‑asset snippets:**  
+  - One recent piece discusses Rio Tinto (RIO) facing **analyst downgrades and negative sentiment**, weighing on that stock.[7] This indicates *some* pockets of risk‑off in cyclicals/miners, but it is not directly tied to EVs or Rivian.  
+  - Another result shows routine live pricing and minor moves for a large Indian stock (Reliance Industries) without signs of major systemic stress.[6]
+
+On the information given, the **market context read is constrained**: there is no clear indication of either strong risk‑on or risk‑off regime specifically affecting RIVN beyond normal conditions.
+
+**MARKET CONTEXT SCORE: 10/25**
 
 ---
 
 **Component Scores:**
+- Catalyst: 5/25  
+- Sentiment: 14/25  
+- Technical: 15/25  
+- Market Context: 10/25  
 
-- Catalyst: 18/25  
-- Sentiment: 20/25  
-- Technical: 5/25  
-- Market Context: 5/25  
+**Total:** 5 + 14 + 15 + 10 = **44**
 
-SCORE: 48/100
+SCORE: 44/100
+
+---
+
+## SPY | Score: 39/100
+
+**CATALYST: 8/25**
+
+- I did **not find a company-specific catalyst for SPY** such as earnings, guidance changes, FDA decisions, or M&A; SPY is an ETF, so the main near-term drivers are macro and index-level earnings rather than single-company events.[1][3][12]
+- The clearest near-term catalyst in the results is the **Federal Reserve policy meeting**, which began July 28, with market commentary saying most experts do not expect rates to change right now.[3]
+- Macro/earnings sensitivity is still the key setup: one source says SPY’s next direction depends on whether **macro data, earnings, and Fed expectations** continue to support risk assets.[1]
+
+**SENTIMENT: 11/25**
+
+- The tone in the search results is **cautious-to-neutral**, with one piece describing SPY sentiment as having **“reset”** and momentum cooling rather than clearly bullish.[1]
+- Market commentary notes the S&P 500/SPY was **“struggling to stay green”** during the July 28 session, which points to soft near-term risk appetite.[3]
+- I did **not find any analyst upgrades/downgrades specific to SPY** in the results provided, and there was no measurable social-media momentum data included.[1][3][12]
+
+**TECHNICAL: 6/25**
+
+- The only technical detail directly available is that SPY could **break above resistance near the 50-day average** or slip back toward the **mid-730s**.[1]
+- I did **not find exact values** for SPY’s current price versus the **50-day or 200-day moving averages**, nor a current **RSI** reading in the provided results.
+- I also did **not find volume data** versus the 30-day average in the provided results.
+
+**MARKET CONTEXT: 14/25**
+
+- Market breadth/context appears **mixed**: SPY was described as struggling to stay green, while another source says sentiment has reset and momentum has cooled.[1][3]
+- The most relevant macro backdrop is the **Fed meeting this week**, with expectations for **no immediate rate change**.[3]
+- A broader bullish offset appears in CNBC coverage that a bank raised its **year-end S&P 500 target to 8,000 from 7,600** on expectations for stronger earnings growth.[12]
+- I did **not find direct VIX numbers** in the provided results, so I cannot quantify the volatility regime from these sources.
+
+SCORE: 39/100
+
+---
+
+## NVDA | Score: 10/100
+
+**Catalyst: 0/25**
+- The biggest 48-hour company-specific driver is the reported **$250B OpenAI financing backstop** discussion tied to a SoftBank/SB Energy data-center project, which revived **circular-financing** concerns and was linked to the latest NVDA selloff.[2]
+- This was reinforced by reports that the stock fell about **5%** on the news and that NVDA’s **CDS spreads had their biggest single-day gain on record**, which is a meaningful negative headline catalyst.[2]
+- There is also a broader **Asian semiconductor rout** and concern about heavy AI infrastructure spending, but that is more sector/macro than a pure NVDA-specific operating catalyst.[2]
+- I did **not** find any earnings release, guidance update, FDA decision, or M&A announcement in the last 48 hours in the provided results.[1][2]
+
+**Sentiment: 5/25**
+- Sentiment is **negative-to-mixed** because the financing-backstop headline and CDS move dominate near-term tone.[2]
+- There is some offset from bullish sell-side commentary: Bank of America reiterated a **bullish** view and called recent weakness an **attractive buying opportunity**.[4]
+- Positive/productive ecosystem news also exists, including NVIDIA expanding its **Isaac AI tools** collaboration with Hugging Face and reports that China may allow limited **H200** sales, but these are being outweighed by the financing concerns.[4]
+- Social momentum appears **choppy/negative** rather than euphoric, based on the repeated emphasis on selloff, circular-financing fears, and sector weakness in the news flow.[1][2][11]
+
+**Technical: 0/25**
+- I could not verify current **price**, **50-day MA**, **200-day MA**, **RSI**, or **volume vs. 30-day average** from the provided results.
+- Because the required technical inputs are missing, I cannot score the technical setup responsibly from these sources.
+
+**Market Context: 5/25**
+- The market backdrop is **risk-off for semiconductors**, with Asian chip stocks falling sharply and broader reports describing a global semiconductor selloff tied to AI-spending concerns.[2][11]
+- This is a **negative sector context** for NVDA, even though the company still has long-term AI leadership narratives in the background.[4][11]
+- I did not find reliable in-result data for the current **SPY trend** or **VIX level**, so I cannot confirm whether the broader U.S. index tape or volatility regime is supportive.
+- Based on the available evidence, the broader context is **unfavorable** for near-term NVDA sentiment.[2][11]
+
+SCORE: 10/100
 
 ---

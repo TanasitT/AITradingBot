@@ -1,14 +1,14 @@
 # Daily Market Context
-Last updated: 2026-07-29 01:37 ET
+Last updated: 2026-07-29 01:43 ET
 
-- **SPY trend & today’s direction:** SPX cash is trading modestly higher in futures (+0.1–0.2%) after a small decline in the prior cash session, leaving the index still **above its 5‑day MA and in a short‑term uptrend** within a broader bullish structure.[6][9]  
+- **SPY / S&P 500 trend & today’s direction:** The S&P 500 is trading *above* its recent levels, with a derived index up about **+0.7% on the day**, indicating a short‑term uptrend consistent with price above short MAs and intraday strength.[14][15]
 
-- **VIX level & signal:** VIX is in a **low-to-mid teens range** (suppressed volatility), consistent with **complacent / calm risk conditions** rather than stress; volatility is elevated more at single‑stock level than at the index level.[16]  
+- **VIX level & signal:** The S&P 500 VIX derived index is around **15.6**, down ~1% on the day, which signals a **low‑volatility, complacent / risk-on** backdrop rather than stress.[14]
 
-- **Top performing sector today:** In overnight / early trade, **tech‑heavy, growth‑oriented sectors (communication services / information technology)** are leading on futures and pre‑market indications, while cyclicals are more mixed.  
+- **Top performing sector today:** The Nasdaq is outperforming with a gain of about **+1.1%**, implying **growth/tech‑heavy sectors** are leading performance today.[14]
 
-- **Major macro events next 48h:** No FOMC decision or CPI print is scheduled in the next 48 hours; focus is on a **heavy earnings calendar from large‑cap US names** and ongoing geopolitical headlines rather than a single binary macro event.  
+- **Major macro events next 48 hours:** No evidence of imminent **Fed meeting, CPI release, or mega-cap earnings** in the next 48 hours from the data provided; near-term macro calendar looks **light** based on current sources.[14]
 
-- **Overall regime:** Backdrop is **moderate risk‑on** (index grinding higher, breadth reasonable, low headline vol), but with **under‑the‑surface dispersion and stock‑specific volatility** that argues for selective rather than blanket risk‑taking.[15][16]  
+- **Overall environment – risk-on or risk-off:** With equities broadly higher (S&P +0.7%, Nasdaq +1.1%), VIX in the mid-teens and falling, and no near-term macro shock flagged, the backdrop is **moderate risk-on**.[14]
 
 TRADE_OK: yes
