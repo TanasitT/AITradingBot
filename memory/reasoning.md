@@ -1,5 +1,9 @@
 # Reasoning Journal
 
+## [2026-07-29 08:35 ET]
+Research complete. 15 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ). Top candidates: AMZN(83) — Q2 earnings tomorrow July 30, Strong Buy consensus 44/1, avg PT $318.93 (+37% upside); META(80) — earnings today after close, potential cloud business announcement, Strong Buy ratings to $1,000; MSFT(76) — earnings today after close, 95% analysts Buy, median PT $550 vs $397 (+38% upside), Azure guided 39-40% growth. Also clearing the 70 threshold: AMD(75), AAPL(72), GOOGL(70, at threshold). Market TRADE_OK=yes, VIX=18.19-18.96 (well below 28 cap, moderate event uncertainty from FOMC). SPY above its 5-day MA — regular stock entries unblocked, SH not evaluated. Flags: META and MSFT report tonight after close, so any entry today holds into a binary earnings event — apply risk manager's binary event caution; SMCI scored 28/100 and is under active DOJ investigation (co-founder charged with routing restricted Nvidia chips to China) — hard block regardless of any future score recovery. Wrote scores to research_cache.md and market context to daily_context.md.
+---
+
 ## [2026-07-28 10:47 ET]
 Intraday monitor check. AMD (20sh, avg entry $465.966) still open. Current
 price $457.45 = -1.828% unrealized (recovered from -3.727% at the 10:34 ET
@@ -1077,4 +1081,8 @@ Research complete. 15 tickers scanned. Top candidates: AMZN(85), MSFT(80), GOOGL
 
 ## 2026-07-29 04:47 ET
 EOD report sent to jankla2010@gmail.com.
+---
+
+## [2026-07-29 08:37 ET] — Market Open Trade Trigger
+Market-open routine. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded to /trade. research_cache.md candidates >=70 (excluding SPY/QQQ benchmarks): AMZN(83), META(80), MSFT(76), AMD(75), AAPL(72), GOOGL(70). open_positions.md/Alpaca: 0 open positions — prior AMD (20sh) force-close order 68f02b84-fc37-4125-bb3c-5f905f181850 from the last EOD routine is still pending fill (qty_available 0), so nothing currently held. daily_context.md: SPY above 5-day MA, VIX 18.19 (<28) — regular stock entries unblocked, SH not evaluated. Note: META and MSFT report earnings tonight after close, AMZN and AAPL tomorrow after close — any entry today carries binary earnings risk; no hard rule blocks it, flagging for risk-manager caution per research notes. All entry gates passed. Wrote memory/trade_trigger.md with candidates [AMZN:83, META:80, MSFT:76, AMD:75, AAPL:72, GOOGL:70] for the Python executor to verify volume (>=1.25x) and place orders (5% max position size each) via Alpaca. Did not update open_positions.md/trade_log.md/weekly_trade_counter.md — deferred to Python executor per skill instructions. Waiting for status: done.
 ---
