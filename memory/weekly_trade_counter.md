@@ -93,3 +93,10 @@ daily_loss_halt re-confirmed false (was already false). trades_this_week re-conf
 fields for the same session (see entry above) — no change was needed, values re-verified
 against live Alpaca account (equity $99,672.34, 0 open positions, market closed until
 2026-07-27).
+
+## EOD Reset — 2026-07-29 (Wednesday EOD, closing 2026-07-28 Tuesday session)
+daily_loss_halt set to false (was already false; daily change -0.32%, well within -2% cap).
+trades_this_week reset to 0/3 (was already 0/3 — no new entries placed 2026-07-28; the
+20sh AMD position had been opened earlier via a prior market-open trigger). AMD force-closed
+this routine via sell-to-close order 68f02b84-fc37-4125-bb3c-5f905f181850 — order queued,
+pending fill at next market open since Alpaca clock showed market closed at submission time.

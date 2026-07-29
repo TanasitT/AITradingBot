@@ -1,5 +1,23 @@
 # Open Positions
 
+Last updated: 2026-07-29 01:38 ET (EOD Wednesday routine, closing 2026-07-28 session)
+
+No SH position held (SPY inverse-ETF logic not applicable this routine — SPY
+above 5-day MA per 2026-07-28 19:33 ET research). AMD (20sh, avg entry
+$465.966, high-beta) was the only open position. Perplexity-equivalent web
+research found no strong positive overnight catalyst — AMD fell -8.85% on
+7/28 on disappointing 2026 AI-accelerator revenue targets and margin pressure
+from aggressive Nvidia-competitive pricing; next earnings 8/4 (6 days out).
+Force-close trigger applied: market sell-to-close order
+68f02b84-fc37-4125-bb3c-5f905f181850 submitted for all 20sh. Market was
+closed at submission (next_open 2026-07-29 09:30 ET) so the order is
+accepted/queued, not yet filled — qty_available is now 0 (shares held for
+the pending order). Unrealized P&L at submission: -$319.92 (-3.43%),
+current price $449.97 vs avg entry $465.966. Will confirm the fill and log
+realized P&L to trade_log.md on the next check. Account equity $98,973.14
+vs last EOD equity $99,293.08 = -0.322% daily, well within -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md.
+
 Last updated: 2026-07-28 11:30 ET (Intraday monitor check)
 
 AMD current price $460.98 vs avg entry $465.966 = -1.070% unrealized (Alpaca

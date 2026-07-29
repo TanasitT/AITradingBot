@@ -1054,3 +1054,19 @@ Intraday monitor check (09:30 slot, market open confirmed via Alpaca clock). wee
 ## [2026-07-28 11:30 ET]
 Intraday monitor check. daily_loss_halt confirmed false (weekly_trade_counter.md). Single open position AMD (20sh, avg entry $465.966, high-beta): current price $460.98, -1.070% unrealized. Stop-loss 7% ($433.35) not breached; TP1 (+8% = $503.24) not hit. No SH position held (SPY inverse-ETF logic not applicable). Account equity $99,193.64 vs last_equity $99,293.06 = -0.1001% daily, well within -2% halt threshold. No exits executed, no trades placed this check.
 ---
+
+## [2026-07-29 01:38 ET]
+EOD Wednesday routine (closing 2026-07-28 Tuesday session). No SH position held. Single open position: AMD (20sh, avg entry $465.966, high-beta). Web research (Perplexity-equivalent) found no strong overnight catalyst — instead a negative one: AMD fell -8.85% on 7/28 after 2026 AI-accelerator revenue targets missed elevated expectations and aggressive Nvidia-competitive pricing pressured non-GAAP gross margins; next earnings not until Tue 8/4 (6 days out), so no near-term positive catalyst to justify holding overnight. Force-close trigger applied: submitted market sell-to-close order 68f02b84-fc37-4125-bb3c-5f905f181850 for 20sh via Alpaca. Market was closed at submission time (clock is_open=false, next_open 2026-07-29 09:30 ET) so the order is queued/accepted, not yet filled (qty_available now 0, shares held for the pending order) — will fill at next market open. Unrealized P&L at submission: -$319.92 (-3.43%), current price $449.97 vs avg entry $465.966. Account equity $98,973.14 vs last EOD equity $99,293.08 = -0.322% daily, well within -2% halt threshold. daily_loss_halt remains false.
+---
+
+## [2026-07-29 01:39 ET]
+Benchmark logged. Portfolio: $98,973.14 (-0.32%) | SPY: $740.67 (+0.25%) | Alpha: -0.57%
+---
+
+## [2026-07-29 01:41 ET]
+EOD report sent to jankla2010@gmail.com.
+---
+
+## 2026-07-29 01:43 ET
+Research complete. 15 tickers scanned. Top candidates: AMZN(84), MSFT(80), SMCI(80), AAPL(79), SPY(75). Market TRADE_OK=True, VIX=20.0.
+---

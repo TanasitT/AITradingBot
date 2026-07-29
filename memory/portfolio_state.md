@@ -1,15 +1,28 @@
 # Portfolio State
-Last updated: 2026-07-27 EOD ET (EOD Tuesday-cycle routine, closing 2026-07-27 Monday session — Alpaca GET /v2/account live-confirmed)
+Last updated: 2026-07-29 01:38 ET (EOD Wednesday routine, closing 2026-07-28 Tuesday session — Alpaca GET /v2/account live-confirmed)
 
-- Cash available: $99,293.08
-- Invested: $0.00
-- Total equity: $99,293.08
-- Daily P&L: -$379.26 (-0.38%) vs prior EOD equity $99,672.34 — driven by AMD's realized stop-loss loss earlier in the session; no positions held at close
-- Open positions: 0
-- Buying power: $397,172.32
+- Cash available: $89,973.74
+- Invested: $8,999.40 (AMD, 20sh — sell-to-close order queued, not yet filled; market closed at routine run time)
+- Total equity: $98,973.14
+- Daily P&L: -$319.94 (-0.32%) vs prior EOD equity $99,293.08 — AMD unrealized loss; close order submitted but pending fill at next market open (09:30 ET)
+- Open positions: 1 (AMD, pending close)
+- Buying power: $385,093.28
 - Account status: ACTIVE
 - Mode: PAPER TRADING
 - Account number: PA3XB7R3677S
+
+## Today's Trade Summary (2026-07-29 EOD, closing 2026-07-28 session)
+- No SH position held. AMD (20sh, avg entry $465.966) was the only open
+  position. Web research found no strong overnight catalyst (AMD -8.85% on
+  7/28 on AI-accelerator revenue-target/margin concerns; earnings 8/4, 6
+  days out) — force-close trigger applied.
+- Sell-to-close order 68f02b84-fc37-4125-bb3c-5f905f181850 submitted for
+  20sh. Market was closed (next_open 2026-07-29 09:30 ET), so the order is
+  accepted/queued rather than filled. Realized P&L will be confirmed and
+  logged to trade_log.md on the next check once it fills.
+- Benchmark: portfolio -0.32% vs SPY +0.25% (740.67 vs 738.83) — alpha -0.57%.
+- daily_loss_halt: false — daily change -0.32%, well within -2% cap.
+- trades_this_week reset to 0/3 per this EOD routine's instructions.
 
 ## Today's Trade Summary (2026-07-27 EOD)
 - Alpaca GET /v2/positions confirmed 0 open positions at EOD — no SH, no regular
