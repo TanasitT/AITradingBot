@@ -1,5 +1,31 @@
 # Reasoning Journal
 
+## [2026-07-30 08:37 ET] — Market Open Trade Trigger
+Market-open routine. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded to /trade. research_cache.md (07:33 ET pre-market) candidates >=70: MSFT (80, post-earnings +9.21% pre-market gap-up), AMZN (72, earnings tonight after close). open_positions.md/Alpaca confirm 0 open positions (flat since 2026-07-29 EOD). daily_context.md: SPY $731 vs 5-day MA ~$742 — SPY is BELOW its 5-day MA as of the 07:33 ET pre-market snapshot, blocking regular stock entries (MSFT, AMZN excluded despite qualifying scores) and triggering SH fallback evaluation. SH scored 48/100 in research_cache.md — below the 60/100 SH entry threshold. No candidate satisfies both the SPY-MA gate and score threshold on either branch. No trade placed today; no memory/trade_trigger.md written. VIX 20.66 (<28, not the blocking factor).
+---
+
+## [2026-07-29 15:53 ET] — EOD Thursday Routine
+EOD close routine. open_positions.md/Alpaca GET /v2/positions both confirm 0
+open positions (AMD force-closed EOD 2026-07-28, filled at market open this
+session — already logged). No SH held, no regular stock positions, so no
+overnight-thesis check or force-close needed on either branch. Alpaca GET
+/v2/account: equity $98,970.73 vs last_equity $99,066.13 — daily P&L -$95.40
+(-0.0963%), well within the -2% halt threshold. daily_loss_halt confirmed
+false. Wrote portfolio_state.md with updated account snapshot.
+---
+
+## [2026-07-29 15:53 ET] — Benchmark Logged
+Benchmark logged. Portfolio: $98,970.73 (-0.00%) | SPY: $728.00 (-1.71%) | Alpha: +1.71%
+---
+
+## [2026-07-29 15:53 ET] — EOD Report Sent
+EOD report sent to jankla2010@gmail.com. Subject: Trading Bot - EOD Summary 2026-07-29 | P&L: $-95.40 (-0.0963%). Note: engine/reporter.py's run_eod() couldn't be called directly this run (utils/github_sync.py imports gitpython at module level, which was missing — installed it, but per CLAUDE.md SYNC_TO_GITHUB=False and github_sync.push() has no gate to respect that flag, so an automatic git push would have fired). Composed and sent the report manually via utils/email_client.send_email using the same data sources reporter.py uses, and skipped the auto-push. Flagging for follow-up: github_sync.push() should check config.SYNC_TO_GITHUB before pushing.
+---
+
+## [2026-07-29 15:53 ET] — Weekly Counter Reset
+daily_loss_halt set to false (was already false; daily change -0.0963%, well within -2% cap, no positions held). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed 2026-07-29; the AMD close was a queued exit order from 2026-07-28, not a new trade).
+---
+
 ## [2026-07-29 11:30 ET] — Intraday Monitor Check
 Intraday monitor (11:30 AM ET scheduled run). strategy.md hard rules confirmed. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded. Queried Alpaca directly via Python (utils/alpaca_client.py): GET /v2/clock confirms market open (next_close 16:00 ET). GET /v2/positions returned [] — 0 open positions (matches the 10:30 ET check; AMD fill already closed and logged). No SH held, no regular-stock positions to check against stop-loss/take-profit. GET /v2/account: equity $98,970.73 vs last_equity $99,066.13 = -0.0963% daily, well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results.
 ---
@@ -1097,4 +1123,8 @@ EOD report sent to jankla2010@gmail.com.
 
 ## [2026-07-29 08:37 ET] — Market Open Trade Trigger
 Market-open routine. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded to /trade. research_cache.md candidates >=70 (excluding SPY/QQQ benchmarks): AMZN(83), META(80), MSFT(76), AMD(75), AAPL(72), GOOGL(70). open_positions.md/Alpaca: 0 open positions — prior AMD (20sh) force-close order 68f02b84-fc37-4125-bb3c-5f905f181850 from the last EOD routine is still pending fill (qty_available 0), so nothing currently held. daily_context.md: SPY above 5-day MA, VIX 18.19 (<28) — regular stock entries unblocked, SH not evaluated. Note: META and MSFT report earnings tonight after close, AMZN and AAPL tomorrow after close — any entry today carries binary earnings risk; no hard rule blocks it, flagging for risk-manager caution per research notes. All entry gates passed. Wrote memory/trade_trigger.md with candidates [AMZN:83, META:80, MSFT:76, AMD:75, AAPL:72, GOOGL:70] for the Python executor to verify volume (>=1.25x) and place orders (5% max position size each) via Alpaca. Did not update open_positions.md/trade_log.md/weekly_trade_counter.md — deferred to Python executor per skill instructions. Waiting for status: done.
+---
+
+## [2026-07-30 07:33 ET] — Pre-Market Research
+Research complete. 16 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ, SH). Top candidates: MSFT(80) — massive Q4 FY2026 beat, EPS $4.74 vs $4.24 expected, Azure +40%, stock +9.21% pre-market; AMZN(72) — reports Q2 today after close, MSFT's Azure beat is the strongest possible AWS read-through, 44 Buys/1 Hold consensus; AAPL(68, just under threshold) — reports Q3 FY2026 today after close, iPhone 17 + Services strong but avg analyst PT ($318.81) is below current price (~$339). Market TRADE_OK=no: SPY closed $731 on 7/29, below its 5-day MA (~$742) after the Fed held rates unchanged and disappointed markets — regular stock entries blocked. SH inverse ETF evaluated as fallback: scored 48/100, below the 60 threshold (MSFT's pre-market pop makes shorting SPY high-risk into an expected recovery) — no SH entry either. VIX=20.66 (up 13.45% on the day, still well below the 28 halt cap). Key overnight developments: META missed EPS ($6.18 vs $7.19) and FCF collapsed 91%, stock -9% pre-market — DO NOT ENTER; SOFI beat on revenue but left profit guidance unchanged, stock -8.9% sell-on-news; SMCI hit with a new ITC patent investigation on top of the existing DOJ criminal charges — DO NOT ENTER; TSLA had its worst week since 2022, RSI ~27 deeply oversold. AMZN, AAPL, RIVN, and COIN all report earnings today after close — binary event risk across much of the watchlist. No entry criteria fully satisfied as of the pre-market snapshot; coordinator must re-check SPY vs. 5-day MA at 9:30 AM ET market open. Results written to research_cache.md and daily_context.md.
 ---
