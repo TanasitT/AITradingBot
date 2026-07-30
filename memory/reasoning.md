@@ -1,5 +1,13 @@
 # Reasoning Journal
 
+## [2026-07-30 10:30 ET] — Intraday Monitor Check
+Intraday monitor (10:30 AM ET scheduled run). strategy.md hard rules confirmed. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded. open_positions.md/Alpaca GET /v2/positions both confirm 0 open positions (flat since 08:37 ET market-open routine found no qualifying trade). No SH held, no regular-stock positions to check against stop-loss/take-profit. Alpaca GET /v2/account: equity $98,970.71 = last_equity $98,970.71 — daily P&L $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results.
+---
+
+## [2026-07-30 09:30 ET] — Intraday Monitor Check
+Intraday monitor (9:30 AM ET scheduled run). strategy.md hard rules confirmed. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded. open_positions.md/Alpaca GET /v2/positions both confirm 0 open positions (flat since the 08:37 ET market-open routine found no qualifying trade — SPY below 5-day MA blocked regular entries, SH scored 48/100 below the 60 threshold). No SH held, no regular-stock positions to check against stop-loss/take-profit. Alpaca GET /v2/account: equity $98,970.71 = last_equity $98,970.71 — daily P&L $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results.
+---
+
 ## [2026-07-30 08:37 ET] — Market Open Trade Trigger
 Market-open routine. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded to /trade. research_cache.md (07:33 ET pre-market) candidates >=70: MSFT (80, post-earnings +9.21% pre-market gap-up), AMZN (72, earnings tonight after close). open_positions.md/Alpaca confirm 0 open positions (flat since 2026-07-29 EOD). daily_context.md: SPY $731 vs 5-day MA ~$742 — SPY is BELOW its 5-day MA as of the 07:33 ET pre-market snapshot, blocking regular stock entries (MSFT, AMZN excluded despite qualifying scores) and triggering SH fallback evaluation. SH scored 48/100 in research_cache.md — below the 60/100 SH entry threshold. No candidate satisfies both the SPY-MA gate and score threshold on either branch. No trade placed today; no memory/trade_trigger.md written. VIX 20.66 (<28, not the blocking factor).
 ---
@@ -1123,6 +1131,10 @@ EOD report sent to jankla2010@gmail.com.
 
 ## [2026-07-29 08:37 ET] — Market Open Trade Trigger
 Market-open routine. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded to /trade. research_cache.md candidates >=70 (excluding SPY/QQQ benchmarks): AMZN(83), META(80), MSFT(76), AMD(75), AAPL(72), GOOGL(70). open_positions.md/Alpaca: 0 open positions — prior AMD (20sh) force-close order 68f02b84-fc37-4125-bb3c-5f905f181850 from the last EOD routine is still pending fill (qty_available 0), so nothing currently held. daily_context.md: SPY above 5-day MA, VIX 18.19 (<28) — regular stock entries unblocked, SH not evaluated. Note: META and MSFT report earnings tonight after close, AMZN and AAPL tomorrow after close — any entry today carries binary earnings risk; no hard rule blocks it, flagging for risk-manager caution per research notes. All entry gates passed. Wrote memory/trade_trigger.md with candidates [AMZN:83, META:80, MSFT:76, AMD:75, AAPL:72, GOOGL:70] for the Python executor to verify volume (>=1.25x) and place orders (5% max position size each) via Alpaca. Did not update open_positions.md/trade_log.md/weekly_trade_counter.md — deferred to Python executor per skill instructions. Waiting for status: done.
+---
+
+## [2026-07-30 11:30 ET]
+Intraday monitor check. weekly_trade_counter.md: daily_loss_halt=false, no halt. open_positions.md: 0 open positions (confirmed live via Alpaca GET /v2/positions, returned []). No SH position held — inverse-ETF SPY check not applicable, nothing to evaluate. No stop-loss/take-profit checks needed (no positions held). Account equity $98,970.71 vs last_equity $98,970.71 = 0.00% daily, well within the -2% halt threshold. No exits executed, no trades placed this check.
 ---
 
 ## [2026-07-30 07:33 ET] — Pre-Market Research
