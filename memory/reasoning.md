@@ -1,5 +1,18 @@
 # Reasoning Journal
 
+## [2026-07-31 19:33 ET]
+Pre-market research complete. 16 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN,
+META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ, SH). Top candidates:
+AMZN(83) — AWS +37% Q2 beat, revenue $200.6B; MSFT(82) — Azure +40%+ Q4 beat,
++15.51% single-day move; AMD(79) — pre-earnings momentum, AI chip demand
+double-confirmed by MSFT/AMZN results. Market TRADE_OK=yes: SPY above 5-day MA
+(~$743-744 vs MA ~$738.08), VIX=17.09 (well below 28 halt threshold),
+daily_loss_halt=false. Flagged DO NOT ENTER: SMCI (DOJ criminal probe + ITC
+patent case), TSLA (RSI 25.4, broken EMAs, safety probe), COIN (Q2 revenue
+miss -18.5% YoY). SH inverse ETF not triggered (SPY above MA). Scores written
+to research_cache.md, market context to daily_context.md.
+---
+
 ## [2026-07-31 09:30 ET]
 Intraday monitor check (09:30 ET slot). weekly_trade_counter.md confirmed
 daily_loss_halt=false — proceeded. Alpaca GET /v2/positions returned 0 open
