@@ -1,5 +1,46 @@
 # Reasoning Journal
 
+## [2026-07-31 09:30 ET]
+Intraday monitor check (09:30 ET slot). weekly_trade_counter.md confirmed
+daily_loss_halt=false — proceeded. Alpaca GET /v2/positions returned 0 open
+positions (no SH, no regular stock positions) — no stop-loss/take-profit or
+SPY-reclaim checks were applicable. Alpaca GET /v2/account: equity $98,970.71
+vs last_equity $98,970.71 = 0.00% daily, well within the -2% halt cap — no
+halt triggered, no alert sent. No exits executed. open_positions.md updated
+to log this check; trade_log.md unchanged (no trades).
+---
+
+## [2026-07-30 15:49 ET] — EOD Friday-cycle Routine
+EOD routine (closing 2026-07-30 session). open_positions.md/Alpaca GET
+/v2/positions both confirm 0 open positions (flat all day — market-open
+routine found no qualifying trade). No SH held, no regular stock positions,
+so no overnight-thesis check or force-close was needed on either branch.
+Alpaca GET /v2/account: equity $98,970.71 = last_equity $98,970.71 — daily
+P&L $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt
+confirmed false. Wrote portfolio_state.md with updated account snapshot.
+---
+
+## [2026-07-30 15:49 ET] — Benchmark Logged
+Benchmark logged. Portfolio: $98,970.71 (-0.00%) | SPY: $741.44 (+1.85%) | Alpha: -1.85%
+---
+
+## [2026-07-30 15:49 ET] — EOD Report Sent
+EOD report sent to jankla2010@gmail.com. Subject: Trading Bot - EOD Summary
+2026-07-30 | P&L: $-0.02 (-0.00%). Composed and sent manually via
+utils/email_client.send_email using the same data sources reporter.py uses
+(reasoning per 2026-07-29 flag: engine/reporter.py's run_eod() path can
+trigger an ungated github_sync.push() despite SYNC_TO_GITHUB=False — still
+unresolved, see follow-up note below). No git push performed.
+---
+
+## [2026-07-30 15:49 ET] — Weekly Counter Reset
+daily_loss_halt set to false (was already false; daily change ~0.00%, well
+within -2% cap, 0 open positions). trades_this_week reset to 0/3 (was
+already 0/3 — no new entries placed today; SPY remained below its 5-day MA
+per daily_context.md, blocking regular entries, and SH scored 48/100, below
+the 60 threshold, so no SH entry either).
+---
+
 ## [2026-07-30 10:30 ET] — Intraday Monitor Check
 Intraday monitor (10:30 AM ET scheduled run). strategy.md hard rules confirmed. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded. open_positions.md/Alpaca GET /v2/positions both confirm 0 open positions (flat since 08:37 ET market-open routine found no qualifying trade). No SH held, no regular-stock positions to check against stop-loss/take-profit. Alpaca GET /v2/account: equity $98,970.71 = last_equity $98,970.71 — daily P&L $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results.
 ---
@@ -1131,6 +1172,10 @@ EOD report sent to jankla2010@gmail.com.
 
 ## [2026-07-29 08:37 ET] — Market Open Trade Trigger
 Market-open routine. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded to /trade. research_cache.md candidates >=70 (excluding SPY/QQQ benchmarks): AMZN(83), META(80), MSFT(76), AMD(75), AAPL(72), GOOGL(70). open_positions.md/Alpaca: 0 open positions — prior AMD (20sh) force-close order 68f02b84-fc37-4125-bb3c-5f905f181850 from the last EOD routine is still pending fill (qty_available 0), so nothing currently held. daily_context.md: SPY above 5-day MA, VIX 18.19 (<28) — regular stock entries unblocked, SH not evaluated. Note: META and MSFT report earnings tonight after close, AMZN and AAPL tomorrow after close — any entry today carries binary earnings risk; no hard rule blocks it, flagging for risk-manager caution per research notes. All entry gates passed. Wrote memory/trade_trigger.md with candidates [AMZN:83, META:80, MSFT:76, AMD:75, AAPL:72, GOOGL:70] for the Python executor to verify volume (>=1.25x) and place orders (5% max position size each) via Alpaca. Did not update open_positions.md/trade_log.md/weekly_trade_counter.md — deferred to Python executor per skill instructions. Waiting for status: done.
+---
+
+## [2026-07-31 08:37 ET] — Market Open Trade Trigger
+Market-open routine. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-07-07) — no halt, proceeded to /trade. STOPPED at candidate-loading step: memory/research_cache.md and memory/daily_context.md are both dated 2026-07-30 07:33 ET (pre-market) — no pre-market-research run appears to have executed on 2026-07-31 (today). The cached scores reference stale, since-resolved conditions (MSFT/AMZN pre-earnings framing, AMZN/AAPL/RIVN/COIN earnings "today after close" July 30, SPY vs 5-day MA as of July 29 close) that no longer reflect current market state. Placing trades off 1-day-stale research would violate the intent of the entry criteria (which depend on current SPY/VIX/volume conditions), so no trade was placed today. Same pattern as the 2026-07-23 08:37 ET stale-research stop. Flagging for follow-up: confirm the pre-market-research scheduled task ran and committed for 2026-07-31 — it appears to have been skipped or failed silently.
 ---
 
 ## [2026-07-30 11:30 ET]
