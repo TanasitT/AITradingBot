@@ -10,6 +10,23 @@ daily_loss_halt: false
 halt_reason:
 halt_date:
 
+## EOD Reset — 2026-07-31 (Saturday-cycle EOD, closing 2026-07-31 Friday session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+today).
+
+## EOD Reset — 2026-07-30 (Friday-cycle EOD, closing 2026-07-30 session)
+daily_loss_halt set to false (was already false; daily change ~0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+today; SPY remained below its 5-day MA per daily_context.md, blocking regular stock entries,
+and SH scored 48/100, below the 60 threshold, so no SH entry either).
+
+## EOD Reset — 2026-07-29 (Thursday-cycle EOD, closing 2026-07-29 session)
+daily_loss_halt set to false (was already false; daily change -0.0963%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+today; the AMD sell filled today was a queued exit order from the 2026-07-28 EOD routine,
+not a new trade).
+
 ## EOD Reset — 2026-07-27 (Tuesday-cycle EOD, closing Monday 2026-07-27 session)
 daily_loss_halt set to false (was already false; daily change -0.38% — AMD's
 stop-loss realized loss — well within -2% cap). trades_this_week reset to 0/3
