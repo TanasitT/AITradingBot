@@ -215,3 +215,41 @@
 4. *(Unresolved, 5 weeks running)* Add VIX at entry to trade log template.
 5. *(Unresolved, 5 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
 6. *(Unresolved)* Log skip decisions in trade_log.md daily — 07-22 through 07-24 (3 of 5 trading days) have no skip-reason entries logged, only reconstructed from portfolio_state.md/open_positions.md notes.
+
+---
+
+## Weekly Reflection — Week of 2026-07-27 (Final, logged 2026-08-01)
+
+### Week Stats
+- Trades executed: 2 | Wins: 0 | Losses: 2 | Win rate: 0.0%
+- Net P&L: -$701.58 (AMD -$379.26 on 07-27, AMD -$322.32 on 07-29 — same ticker, re-entered and stopped out twice)
+- Portfolio: $99,672.34 (07-24 close) -> $98,970.71 (07-31 close), -0.70%
+- SPY performance this week: $735.98 (07-24) -> $746.79 (07-31), +1.47%
+- Alpha vs SPY: ~-2.17% — the worst weekly alpha since tracking began (2026-06-15 baseline)
+- Cumulative alpha since inception: turned negative for the first time this week; prior weeks' thin positive alpha (built mostly on sitting out declining SPY days) was erased by this week's real losses on a rising SPY
+
+### Signals That Worked
+- **The 7% high-beta stop-loss rule fired as designed, twice**: unlike every prior loss (which came from the mechanical EOD no-overnight-catalyst rule), both AMD losses this week were genuine stop-loss triggers (07-27: stop at $485.08, filled $479.57; 07-29: exit $449.85 after a queued force-close from 07-28's -8.85% AMD reaction to disappointing 2026 AI-accelerator revenue targets). This is the first week the stop-loss mechanism — not the overnight-catalyst mechanism — was the binding exit rule, confirming it functions correctly under a real adverse move.
+- **No hard rules broken**: both AMD positions (9sh and 20sh) stayed within the 5% max position cap, and the daily loss cap never triggered despite the -8.09% and -6.92% single-trade losses (daily portfolio drawdown stayed under -0.4% on the worst day, 07-27).
+
+### Signals That Failed
+- **Re-entering the same ticker right after a stop-loss cost a second loss**: AMD was stopped out 07-27, then a new/carried AMD position was force-closed again 07-29 (queued 07-28) for -6.92% on the same disappointing AI-accelerator-revenue catalyst. Re-entering (or holding through) the same name shortly after a stop-loss, without a new confirmed catalyst, effectively doubled down on a thesis that had already been invalidated by price action. No rule currently prevents same-ticker re-entry within days of a stop-loss.
+- **High-beta stop-loss (7%) is materially more expensive than the standard 5% stop or the EOD no-catalyst exits**: this week's two losses (-8.09%, -6.92%) are now the two largest single-trade losses in the bot's history, both exceeding the prior record (NVDA -2.58%) by more than 3x. The wider stop for high-beta names is doing its job (letting the position breathe) but is also the most expensive failure mode observed so far.
+- **AMD's own negative catalyst (weak 2026 AI-accelerator revenue targets, -8.85% reaction) was known before the 07-29 exit filled** — the 07-28 EOD force-close order was correctly queued, but it sat pending overnight because the market was closed at submission time, meaning the position was exposed to a full extra session (07-28 close to 07-29 open) of AMD-specific downside gap risk on a name that had already broken its thesis.
+
+### VIX Conditions
+- VIX conditions were not explicitly logged for either AMD entry in trade_log.md — the VIX-at-entry gap flagged since Week 1 remains unresolved after 7 weeks of tracking, and it is now specifically blocking analysis of whether elevated VIX contributed to this week's losses.
+- SPY itself gained +1.47% this week (738.83 -> 746.79), so the losses were stock-specific (AMD earnings-adjacent news), not a broad market/VIX-driven drawdown — the SPY 5-day MA and VIX<28 gates were not the constraint here.
+
+### Emerging Patterns (7 weeks tracked — moderate confidence)
+- **First week where stop-losses, not EOD no-catalyst force-closes, drove all realized losses** — a genuinely new failure mode distinct from the pattern documented in every prior reflection (06-22 through 07-20). The bot's other structural issue (mechanical EOD exits costing -$372.75 lifetime through 07-24) did not fire even once this week; instead, a single bad-news ticker (AMD) cost more in one week (-$701.58) than the EOD-exit rule has cost across its entire multi-week history.
+- **Single-ticker concentration risk surfaced for the first time**: both trades this week were AMD, and both lost. With only 2 trades in the week, this is a 1-name sample, but it is the first time the weekly reflection has nothing to say about "signal type worked" beyond "the stop-loss rule functioned" — every AMD entry this week lost money.
+- **Cumulative alpha turned negative this week** — a milestone worth tracking going forward; 6 of 7 weeks had been flat-to-positive alpha, mostly earned by sitting out declining-SPY days rather than by winning trades outright.
+
+### Open Action Items (carry forward to next week)
+1. **New, high priority**: Add a same-ticker cooldown after a stop-loss exit (e.g., no re-entry within N days without a new confirmed catalyst) — AMD's back-to-back losses this week (07-27 stop-loss, 07-29 force-close on the same broken thesis) suggest the bot re-engaged a name whose catalyst had already failed.
+2. *(Unresolved from prior weeks)* Root-cause and fix the engine/coordinator.py position-logging bug causing live Alpaca fills to go unrecorded in open_positions.md/trade_log.md at entry time — engine/coordinator.py, engine/risk_manager.py, engine/technical.py, utils/alpaca_client.py all still show uncommitted edits in git status as of this writing.
+3. *(Unresolved, 3 weeks running)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — still 8 of 10 pre-this-week trades affected; this week's losses came from a different mechanism (stop-loss) so the underlying question is still open.
+4. *(Unresolved, 6 weeks running)* Add VIX at entry to trade log template — now also needed to determine whether VIX context played any role in AMD's move.
+5. *(Unresolved, 6 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
+6. **New**: Investigate whether queued EOD force-close orders that fill at next-day market open (as happened 07-28 -> 07-29 for AMD) should instead be submitted as a market-on-close or pre-market order to avoid overnight gap exposure on names with an already-broken thesis.
