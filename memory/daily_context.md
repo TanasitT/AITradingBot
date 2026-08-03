@@ -1,44 +1,44 @@
 # Daily Market Context
-Last updated: 2026-07-31 07:33 ET
+Last updated: 2026-08-04 07:33 ET
 
 ---
 
-- **SPY / S&P 500 trend & today's direction:** S&P 500 closed at 7,437.63 on July 31, 2026, up 1.66% — a strong recovery driven by three simultaneous mega-cap earnings beats (MSFT +15.51%, AMZN +9%, AAPL Q3 FY2026 beat). SPY ~$743–$744 as of July 31 close. The 5-day moving average is approximately $738.08. **SPY is ABOVE its 5-day moving average as of July 31.** This is a decisive MA reclaim: SPY went from $731 (below MA ~$742 on July 29) to ~$743–$744 (above MA ~$738 on July 31). The primary bearish regime from the prior two sessions is reversed. Regular stock entry criteria are now ENABLED per strategy rules.
+- **SPY / S&P 500 trend & today's direction:** S&P 500 rose to approximately 7,524 by August 2, 2026 (up from 7,437 on July 31), and started the week of August 3-4 with a fresh gap higher (+0.9% at the open on August 3). SPY is estimated at approximately $752 as of pre-market August 4. The 5-day moving average (covering July 29 through August 4 trading sessions) is estimated at approximately $741–$745, well below the current SPY level. **SPY is ABOVE its 5-day moving average as of August 4.** The market has built on last week's mega-cap earnings surge (MSFT +15.51%, AMZN +9%, AAPL beat) with continued positive momentum entering the AMD earnings event tonight. Regular stock entry criteria are ENABLED per strategy rules.
 
 - **SPY MA STATUS: ABOVE 5-day MA** — regular stock entries are ENABLED. SH inverse ETF mode is NOT triggered.
 
-- **VIX level & signal:** VIX closed at **17.09** on July 31 (down from 20.66 on July 29; a 17% decline in fear over two days). Well below the 28 halt threshold. VIX condition passes comfortably. The decline in VIX from 20.66 to 17.09 reflects the removal of the biggest macro uncertainties: MSFT Azure +40%, AMZN AWS +37%, AAPL beat — three AI/tech tail risks resolved simultaneously. Treasury 30-year yield above 5.2% remains as a background concern but is not driving VIX higher today.
+- **VIX level & signal:** VIX is estimated approximately **18** as of pre-market August 4, 2026 (VIX futures were showing 18.03 in overnight trading). This is up modestly from the July 31 close of 17.09 but well below the 28 halt threshold. The slight VIX uptick from 17.09 to ~18 reflects mild uncertainty ahead of the AMD earnings binary event tonight, but does not signal a risk-off regime. VIX condition passes comfortably.
 
-- **Top performing sector / sector context:** Large-cap enterprise cloud/AI tech is the clear leadership sector. MSFT's +15.51% surge (largest single-day US corporate market cap gain in history, +$450B) was the dominant catalyst. AMZN +9% after AWS +37% (fastest growth in 18 quarters) added to the rally. AAPL beat all metrics (revenue record, EPS +29%, iPhone +22%, Services +12%). The "AI capex concerns will crater earnings" narrative that dominated July is now substantially invalidated by the data. Secondary upside: AMD +3.56% pre-market on pre-earnings momentum. VIX decline signals fear exiting the market. Laggards: TSLA (RSI 25.4, deeply oversold, suspension probe), COIN (Q2 revenue miss -18.5% YoY, down 5%+ AH), SMCI (DOJ investigation ongoing despite MSFT capex tailwind). META partially recovering after -9% earnings drop; RIVN mixed post-earnings (beat on revenue/EPS but initial gap-up reversed in session). Financials, energy, and industrials — which benefited from mid-July AI rotation — are giving back relative performance as tech leadership reasserts.
+- **Top performing sector / sector context:** Large-cap AI tech and cloud infrastructure remains the primary leadership sector. The week of August 4 has the S&P 500 entering with the second consecutive quarter of 20%+ earnings growth (FactSet: Q2 2026 S&P 500 EPS growth +24.7% YoY). The dominant event for August 4 is AMD's Q2 2026 earnings after close (5 PM ET): consensus EPS $1.62 (+235% YoY), revenue $11.2B (+46% YoY). A strong AMD beat would validate AI chip demand after MSFT Azure +40% and AWS +37% last week, lifting the entire AI semiconductor sector (NVDA, AMD, QQQ). Secondary dynamics: NVDA recovering from circular financing concerns ($750B+ in deals flagged by Bloomberg, IMF, BIS as systemic risk); PLTR reported Q2 yesterday (Aug 3) — resolution of that binary event is now priced in. SMCI jumped 24% on preliminary Q4 gross margin raise (15-17% vs 8.2-8.4% prior guidance) and $60B record backlog, but DOJ criminal charges remain active. EV sector (TSLA, RIVN) is lagging. COIN is recovering from Q2 miss but lacks a Bitcoin catalyst.
 
-- **Major macro events today (July 31) / key events this week:**
-  - **MSFT Q4 FY2026 results (July 30 AH, confirmed):** Azure +40%+, EPS $4.74 beat $4.24, revenue $90.01B beat $87.62B. Stock +15.51% to $451.10. Analyst avg PT $560.95 (56 analysts Strong Buy) = 24% additional upside.
-  - **AMZN Q2 2026 results (July 30 AH, confirmed):** AWS +37% to $42.2B (fastest growth in 18 quarters), revenue $200.6B beat $196.47B, EPS $5.75 (includes $53.4B Anthropic gain). Stock +9% to ~$265–$270. JP Morgan raised PT to $365.
-  - **AAPL Q3 FY2026 results (July 30 AH, confirmed):** Revenue $109.4B beat $108.96B (+16% YoY), EPS $2.02 beat $1.89 (+29% YoY). iPhone +22%, Services $30.7B (+12%), Mac +29%. Tim Cook's final earnings call; John Ternus becomes CEO September 1.
-  - **RIVN Q2 2026 results (July 30 AH, confirmed):** Revenue $1.66B beat $1.58B (+27% YoY), EPS loss -$0.63 beat -$0.82. Gross margin 11% ($179M). R2 deliveries began. Stock volatile: initial $17.55 high reversed to $16 range.
-  - **COIN Q2 2026 results (July 30 AH, confirmed):** Revenue $1.22B missed $1.29–$1.31B (-18.5% YoY). GAAP net loss -$1.36/share. Stock -5%+ AH. DO NOT ENTER.
-  - **Upcoming key catalyst:** PLTR Q2 earnings August 3; AMD Q2 earnings August 4; SMCI earnings August 11.
+- **Major macro events today (August 4) / key events this week:**
+  - **AMD Q2 2026 earnings tonight (Aug 4 AH):** The single most important remaining event this earnings season for the AI chip sector. Consensus: EPS $1.62 (+235% YoY), revenue $11.2B (+46% YoY). A beat validates the AI chip demand super-cycle. A miss on guidance creates significant sector risk for NVDA, QQQ, and the broader AI trade.
+  - **PLTR Q2 2026 results (Aug 3 AH, confirmed resolved):** Binary event resolved yesterday. 8th consecutive EPS beat expected; guidance raise was the critical variable. Stock has fallen after each of the last 4 reports despite beats. Pattern suggests caution.
+  - **SMCI Q4 FY2026 preliminary update (July 21, confirmed):** Gross margins 15-17% (vs 8.2-8.4% guidance), $60B Q4 new orders. Full earnings August 11. DOJ charges still active — DO NOT ENTER.
+  - **NVDA circular financing risk (ongoing):** Bloomberg reported $540B+ in circular financing deals in 2026 (OpenAI $250B backstop, SK Group $500B+). IMF and BIS flagged as systemic downside risk. UBS called the selloff overblown. Monitoring required.
+  - **S&P 500 earnings season:** FactSet projects Q2 2026 S&P 500 EPS growth +24.7% YoY — second straight quarter above 20%. Broadly supportive of equity valuations.
 
 - **Key risks to monitor:**
-  - 30-year Treasury yield above 5.2% (highest since 2007): Background systemic risk; compresses equity multiples for high-P/E names. Monitor but not a halt condition today.
-  - Post-gap consolidation risk: MSFT (+15.51%) and AMZN (+9%) both gapped sharply. Day 2 intraday reversals are possible; confirm volume holds at open before any entry.
-  - CEO transition at Apple (Tim Cook → John Ternus, September 1): Institutional repositioning risk in coming weeks; not an immediate negative but a medium-term uncertainty.
-  - PLTR earnings August 3: Insider selling at $130–$137 (Karp, Sankar); France contract loss to ChapsVision; valuation at 130–150x trailing earnings. Elevated binary risk.
-  - AMD earnings August 4: Expectations very high after MSFT/AMZN double confirmation; a beat is now priced in and miss risk could be sharp.
+  - AMD earnings binary (Aug 4 AH): Options imply ~12% swing. Strong expectations mean a miss on guidance could hurt the entire AI chip sector sharply.
+  - NVDA circular financing: If a second wave of concern emerges (regulatory action, new deal announcement), NVDA could see another 4-5% selloff regardless of broad market direction. Watch Bloomberg/IMF coverage.
   - SMCI: Active DOJ criminal investigation + ITC patent probe. DO NOT ENTER under any circumstances.
-  - TSLA: RSI 25.4 (deeply oversold), MACD sell, EMA20/50/200 all broken. Suspension safety probe adding company-specific headwind. Avoid.
+  - TSLA: RSI 25.4 (deeply oversold), MACD sell, all EMAs broken. Suspension safety probe (1.2M vehicles). Avoid.
+  - August seasonality: S&P 500 averages only +0.2% in August historically (third weakest month). Not a halt condition but creates headline risk.
+  - 30-year Treasury yield above 5.2%: Background systemic risk; compresses multiples for high-P/E names. Monitor.
+  - PLTR post-earnings resolution: Pattern of declining post-beat for last 4 quarters. Unclear if guidance raise broke the pattern.
 
-- **Overall environment — risk-on or risk-off:** **Risk-on — decisively.** All three primary entry conditions are satisfied today: SPY above 5-day MA, VIX at 17.09 (well below 28), daily_loss_halt false. The three simultaneous mega-cap earnings beats (MSFT, AMZN, AAPL) represent the single most bullish earnings outcome the market could have received this week. The July AI capex concerns are now substantially invalidated by actual cloud growth data. Friday end-of-month flows may add volatility but the primary direction is constructive.
+- **Overall environment — risk-on or risk-off:** **Risk-on — constructive.** All three primary entry conditions are satisfied as of pre-market August 4: SPY above 5-day MA, VIX ~18 (well below 28), daily_loss_halt false. The earnings season is delivering exceptionally strong results (S&P 500 Q2 EPS +24.7% YoY), and stocks started the week with a fresh gap higher. AMD earnings tonight are the principal near-term binary risk for the session. The AI infrastructure demand thesis — twice confirmed last week by MSFT and AMZN — remains the dominant market narrative driving sector leadership. Minor caution: August seasonal weakness and elevated AMD expectations create a balanced risk/reward for entering AI chip names before the close.
 
-- **Tickers meeting entry threshold (score ≥70):** AMZN (83), MSFT (82), AMD (79), SPY (75), AAPL (73), NVDA (72), QQQ (70)
-- **Tickers below threshold but notable:** GOOGL (66, AI cloud read-through positive, no direct catalyst), RIVN (62, earnings beat confirmed, R2 deliveries begun), PLTR (56, earnings Aug 3 binary), META (53, recovering from -9% but fundamental concerns persist), SOFI (52, Q2 beat but sell-on-news, $15 support critical)
-- **Tickers to avoid:** TSLA (33 — deeply oversold, suspension probe, deteriorating fundamentals), COIN (33 — Q2 revenue miss -18.5% YoY, AH selloff), SMCI (23 — DOJ investigation + ITC probe — DO NOT ENTER)
-- **SH (inverse ETF):** Score 10/100 — NOT evaluated; SPY is above its 5-day MA. SH inverse mode deactivated per strategy rules. Do not enter.
+- **Tickers meeting entry threshold (score ≥70):** AMD (76 — ⚠️ EARNINGS BINARY TONIGHT), AMZN (74), MSFT (72), SPY (72), AAPL (70)
+- **Tickers just below threshold — notable:** QQQ (68, AMD earnings tonight is catalyst), NVDA (67, circular financing overhang, AMD read-through pending), GOOGL (65, recovering post-earnings, cloud +82%, avg PT $427)
+- **Tickers below threshold — watch/monitor:** RIVN (55, Q2 beat, capex cut, EV sector weak), PLTR (52, post-Q2 settling, pattern of post-beat declines), META (52, recovering from -9% gap, FCF concerns), SOFI (50, record Q2 revenue, analyst PT cuts, at $15 support)
+- **Tickers to avoid:** COIN (40 — Q2 revenue miss, no Bitcoin catalyst), TSLA (35 — deeply oversold, all EMAs broken, fundamentals deteriorating), SMCI (28 — DOJ criminal investigation + ITC probe — DO NOT ENTER regardless of backlog/margin news)
+- **SH (inverse ETF):** Score 8/100 — NOT evaluated; SPY is above its 5-day MA. SH inverse mode deactivated per strategy rules. Do not enter.
 
 - **Entry gate status:**
-  - VIX < 28: YES (17.09) ✓
+  - VIX < 28: YES (~18) ✓
   - daily_loss_halt: NO (false) ✓
-  - SPY above 5-day MA: YES — SPY ~$743–$744 vs MA ~$738.08 ✓
-  - **Conclusion: All primary entry criteria are satisfied as of pre-market snapshot. Coordinator should confirm volume ≥1.25x 30-day average at 9:30 AM ET open. Top candidates by score: AMZN (83), MSFT (82), AMD (79). Note: AMZN and MSFT both gapped 9–15% — entering Day 2 of a gap requires confirming the move is holding, not reversing. AMD pre-earnings momentum with Aug 4 earnings binary is the cleanest setup if volume confirms.**
+  - SPY above 5-day MA: YES — SPY ~$752 vs 5-day MA ~$742-745 ✓
+  - **Conclusion: All primary entry criteria are satisfied. Top candidates by score: AMD (76), AMZN (74), MSFT (72). CRITICAL NOTE on AMD: Entering AMD today means holding through Q2 earnings after close tonight — options imply a 12% binary swing. Coordinator must decide whether to enter AMD pre-earnings given this binary risk. If AMD is skipped due to earnings risk, next candidates are AMZN (74, post-earnings consolidation, no binary risk) and MSFT (72, day 4 of gap, consolidating). Coordinator must also confirm volume ≥1.25x 30-day average at market open before any entry.**
 
 TRADE_OK: yes

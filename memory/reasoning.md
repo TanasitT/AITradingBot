@@ -1,5 +1,9 @@
 # Reasoning Journal
 
+## [2026-08-04 19:33 ET]
+Pre-market research complete. 16 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ, SH). Top candidates: AMD(76) — ⚠️ Q2 2026 earnings tonight after close, options pricing ~12% binary swing; AMZN(74) — post-earnings consolidation, no binary event; MSFT(72) — day 4 of post-earnings gap, consolidating. Also at/above threshold: SPY(72), AAPL(70). Market TRADE_OK=yes: SPY above 5-day MA (~$752 vs MA ~$741-745), VIX~18 (well below 28 cap), daily_loss_halt=false. SH inverse mode not triggered (SPY above MA); SH scored 8/100. SMCI(28) flagged DO NOT ENTER regardless of score — active DOJ criminal charges. TSLA(35) and COIN(40) flagged avoid. Coordinator must weigh AMD's earnings binary risk before any entry at market-open; if skipped, AMZN/MSFT are the clean alternatives. Volume >=1.25x 30-day average must still be confirmed at market open before any trade. Scores written to research_cache.md, market context to daily_context.md.
+---
+
 ## [2026-08-04 11:30 ET]
 Intraday monitor check (11:30 ET slot). weekly_trade_counter.md confirmed
 daily_loss_halt=false, trades_this_week=0/3 — proceeded. Alpaca GET
