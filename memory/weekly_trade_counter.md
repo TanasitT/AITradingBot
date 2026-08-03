@@ -1,6 +1,6 @@
 # Weekly Trade Counter
 
-Week of: 2026-07-07
+Week of: 2026-08-03
 trades_this_week: 0
 max_trades_per_week: 3
 trades_remaining: 3
@@ -117,3 +117,11 @@ trades_this_week reset to 0/3 (was already 0/3 — no new entries placed 2026-07
 20sh AMD position had been opened earlier via a prior market-open trigger). AMD force-closed
 this routine via sell-to-close order 68f02b84-fc37-4125-bb3c-5f905f181850 — order queued,
 pending fill at next market open since Alpaca clock showed market closed at submission time.
+
+## EOD Reset — 2026-08-04 (Tuesday-cycle EOD, closing 2026-08-03 Monday session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+this week; market-open routine on 2026-08-04 skipped trading due to 4-day-stale pre-market
+research). "Week of" header advanced from stale 2026-07-07 to 2026-08-03 (current week) —
+the header had not been advancing on prior EOD resets despite the reset log entries below
+it moving forward; corrected here.
