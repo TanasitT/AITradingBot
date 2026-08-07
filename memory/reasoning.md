@@ -1334,3 +1334,15 @@ Intraday monitor check. weekly_trade_counter.md: daily_loss_halt=false, no halt.
 ## 2026-08-06 15:49 ET
 EOD report sent to jankla2010@gmail.com.
 ---
+
+## [2026-08-08 08:37 ET]
+Market-open routine. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 — proceeded. research_cache.md candidates >=70 (excluding SPY/QQQ): PLTR(73), AMZN(70), NVDA(70). open_positions.md: no existing positions. daily_context.md: SPY above 5-day MA, VIX 15.48 (<28) — regular stock entries enabled, SH not evaluated. Trade trigger written to memory/trade_trigger.md (candidates PLTR:73, AMZN:70, NVDA:70) for the Python executor to validate against live Alpaca account and place an order if all criteria pass. Note: research_cache.md/daily_context.md are timestamped 2026-08-06 07:33 ET — no fresher pre-market research was found on file for today; flagged this staleness in the trigger file for the executor/next research routine to address. Waiting for Python executor to process trigger and update open_positions.md/trade_log.md/weekly_trade_counter.md.
+---
+
+## [2026-08-08 11:30 ET]
+Intraday monitor check. weekly_trade_counter.md: daily_loss_halt=false, no halt. open_positions.md: 0 open positions (confirmed live via Alpaca GET /v2/positions, returned []). No SH position held — inverse-ETF SPY check not applicable, nothing to evaluate. No stop-loss/take-profit checks needed (no positions held). Account equity $98,970.71 vs last_equity $98,970.71 = 0.00% daily, well within the -2% halt threshold. No exits executed, no trades placed this check.
+---
+
+## [2026-08-08 10:30 ET]
+Intraday monitor check (10:30 ET slot). strategy.md hard rules reviewed. weekly_trade_counter.md: daily_loss_halt=false — no halt, proceeded. open_positions.md/Alpaca GET /v2/positions both confirm 0 open positions (no SH, no regular stock positions) — no stop-loss/take-profit or SPY-reclaim checks were applicable. Alpaca GET /v2/account: equity $98,970.71 vs last_equity $98,970.71 = 0.00% daily, well within the -2% halt cap — no halt triggered, no alert sent. No exits executed, no trades placed. open_positions.md updated to log this check; trade_log.md unchanged (no trades).
+---
