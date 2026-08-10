@@ -421,6 +421,22 @@ EOD report sent to jankla2010@gmail.com.
 ---
 
 Append-only log of bot decisions, rationale, and reflections.
+
+## [2026-08-08 04:23 ET] — Benchmark Logged
+Benchmark logged. Portfolio: $98,970.71 (0.00%) | SPY: $773.16 (+0.67%) | Alpha: -0.67%
+---
+
+## [2026-08-08 04:23 ET] — Weekly Summary Sent
+Weekly summary report sent to jankla2010@gmail.com. Subject: Trading Bot —
+Weekly Summary | 2026-08-08 | Week P&L: 0.00%. Week of 2026-08-03 to
+2026-08-08: 0 trades, portfolio flat at $98,970.71, SPY +3.53% (746.79 ->
+773.16), weekly alpha -3.53% — worst weekly alpha since inception, driven
+entirely by sitting out a rally (no realized losses). 08-04 market-open
+routine skipped trading due to 4-day-stale pre-market research. performance_metrics.md
+and learned_patterns.md updated with this week's reflection. No git push
+performed per config.SYNC_TO_GITHUB=False (see 2026-07-29 flag: github_sync.push()
+is not gated on this flag, so pushing was skipped manually).
+---
 Each entry is timestamped and written by the /journal skill or agents.
 
 ## [2026-07-13 19:33 ET]
@@ -1349,4 +1365,24 @@ Intraday monitor check (10:30 ET slot). strategy.md hard rules reviewed. weekly_
 
 ## [2026-08-08 19:33 ET] — Pre-Market Research
 Research complete. 16 tickers scanned (AAPL, MSFT, NVDA, TSLA, AMZN, META, GOOGL, AMD, SMCI, PLTR, SOFI, RIVN, COIN, SPY, QQQ, SH). Top 3 candidates: PLTR(72) — post-earnings PT upgrades from UBS/Mizuho/Goldman, +3.78% on Aug 7, week-2 momentum intact; NVDA(71) — sovereign AI research confirms 92% of global sovereign LLM deployments use NVDA, +1.19%, Aug 26 earnings setup building; AMZN(70) — AWS +37% thesis intact, day-8 post-earnings consolidation. VIX=15.15 (declining, well below the 28 halt cap, lowest reading since mid-July). Market TRADE_OK=yes with a caveat: SPY closed $768.56 vs an estimated 5-day MA of $768-$770 — margin within $1-$2, so the market-open routine must re-verify SPY vs. 5-day MA live before trading; if SPY opens below MA, SH (scored only 30/100, below the 60 threshold) should not be entered either. Other notes: July jobs report showed a loss of 23,000 jobs (miss), raising Fed rate-cut odds — medium-term positive for the top candidates; AAPL score dropped on a Chinese investment firm's downgrade to Hold ($280 PT); SOFI surged to $18.18 on the rate-cut thesis; SMCI reports earnings Aug 11 — DO NOT ENTER (active DOJ criminal investigation). Results written to research_cache.md and daily_context.md.
+---
+
+## 2026-08-07 21:21 ET
+EOD report sent to jankla2010@gmail.com. Saturday-cycle EOD routine closing 2026-08-07 (Friday) session. Alpaca GET /v2/positions confirmed empty (0 open positions, no SH held). Account equity $98,970.71 = last_equity $98,970.71 = 0.00% daily P&L. daily_loss_halt: false. trades_this_week reset to 0/3. SPY closed $773.16 (+0.67% vs prior close $768.03), alpha -0.67%. No trades placed. github_sync.push() intentionally skipped this run per SYNC_TO_GITHUB=False (known ungated-push bug already flagged in this file; see 2026-07-29 and later entries).
+---
+
+## [2026-08-10 19:33 ET]
+Pre-market research complete. 16 tickers scanned (15 watchlist + SH). Top 3
+candidates: NVDA 77/100 (PLTR-NVDA classified AI partnership, Blackwell Ultra
+GPU, $3B Lancium data center investment, above all MAs), MSFT 75/100 (Azure
+$100B+ run rate, guidance raised to 45%, OpenAI $250B commitment through 2032
+-- NOTE: price discrepancy flagged, prior cache $414.44 vs current search
+data $499.99, coordinator must verify actual open price before acting), PLTR
+74/100 (NVDA partnership primary catalyst, Q2 revenue +93% YoY, Rule of 40
+155%). Market TRADE_OK=yes, VIX=15.45 (well below 28 halt threshold). SPY at
+~$775-776, clearly above 5-day MA ($769.70) -- regular stock entries enabled,
+SH inverse mode not triggered (SH scored 20/100). Key risk: July CPI report
+Aug 12 is the week's binary macro event. SMCI earnings Aug 11 -- DO NOT ENTER
+(active DOJ criminal investigation). research_cache.md and daily_context.md
+updated.
 ---
