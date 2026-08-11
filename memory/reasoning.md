@@ -1,5 +1,25 @@
 # Reasoning Journal
 
+## [2026-08-11 19:33 ET]
+Research complete. 16 tickers scanned. Top candidates: NVDA(76), MSFT(74), PLTR(71). Market TRADE_OK=yes, VIX=15.30. Flags: AMD fails 1.25x volume gate despite score; SMCI excluded (earnings tonight + DOJ investigation); SOFI downgraded to 48 (Morgan Stanley Underweight). Pre-CPI caution noted for Wed 8/12 report given oil surge.
+---
+
+## [2026-08-11 20:37 ET]
+Trade trigger written. Candidates: NVDA(76), MSFT(74), PLTR(71). All entry gates pass (0 open positions, 0/3 trades this week, daily_loss_halt false, SPY above 5-day MA ~$773-775 vs ~$769.70, VIX 15.30 < 28). AMD/SOFI/META/AAPL/TSLA/COIN/GOOGL/RIVN/SMCI/SH all below threshold or disqualified (AMD fails volume, SMCI has active DOJ investigation, SH mode not triggered). Waiting for Python executor to confirm volume ≥1.25x avg at open and place order via Alpaca.
+---
+
+## [2026-08-11 02:47 ET]
+EOD Tuesday routine, closing 2026-08-10 Monday session. Alpaca GET /v2/positions
+confirmed empty — no open positions (no SH, no regular stock positions), so no
+overnight-thesis check or force-close was needed. Account equity $98,970.71 vs
+last_equity $98,970.71 = 0.00% daily P&L, well within -2% halt threshold.
+Benchmark logged: Portfolio $98,970.71 (0.00%) | SPY $772.59 (-0.07%) | Alpha
++0.07%. daily_loss_halt reset to false (was already false), trades_this_week
+reset to 0/3 (was already 0/3 — market-open trade trigger for NVDA/MSFT/PLTR
+written at 09:37 ET never resulted in a logged fill). EOD report sent to
+jankla2010@gmail.com. No git push performed (SYNC_TO_GITHUB=False in config.py).
+---
+
 ## [2026-08-10 11:30 ET]
 Intraday monitor check. Market open. Alpaca GET /v2/positions confirmed empty —
 0 open positions. GET /v2/account: equity $98,970.71 vs last_equity $98,970.71 =
