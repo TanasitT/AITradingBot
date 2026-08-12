@@ -1,7 +1,8 @@
 # Weekly Trade Counter
 
-Week of: 2026-08-03
+Week of: 2026-08-10
 trades_this_week: 0
+last_eod_reset: 2026-08-12
 max_trades_per_week: 3
 trades_remaining: 3
 
@@ -125,3 +126,24 @@ this week; market-open routine on 2026-08-04 skipped trading due to 4-day-stale 
 research). "Week of" header advanced from stale 2026-07-07 to 2026-08-03 (current week) —
 the header had not been advancing on prior EOD resets despite the reset log entries below
 it moving forward; corrected here.
+
+## EOD Reset — 2026-08-06 (Friday-cycle EOD, closing 2026-08-06 Friday session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+this week).
+
+## EOD Reset — 2026-08-08 (Saturday-cycle EOD, closing 2026-08-07 Friday session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+this week).
+
+## EOD Reset — 2026-08-11 (Tuesday-cycle EOD, closing 2026-08-10 Monday session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+this week).
+
+## EOD Reset — 2026-08-12 (Wednesday-cycle EOD, closing 2026-08-11 Tuesday session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — the 20:37 ET
+market-open trigger flagged NVDA/MSFT/PLTR but no fill was ever confirmed on Alpaca,
+so no trade counted this week).
