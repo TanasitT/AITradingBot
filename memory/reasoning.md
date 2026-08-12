@@ -1,5 +1,29 @@
 # Reasoning Journal
 
+## [2026-08-12 20:37 ET] — Market Open
+Trade trigger written. Candidates: NVDA 77/100, MSFT 74/100 (both above 70 threshold;
+PLTR excluded — dropped to 67/100 on Michael Burry short disclosure). Gates checked:
+daily_loss_halt=false, trades_this_week=0/3, SPY above 5-day MA (~$772-775 vs
+~$769.70), VIX=15.28 (well below 28). No open positions held. Wrote
+memory/trade_trigger.md (status: pending) for the Python executor to verify volume
+≥1.25x average, check buying power, and place limit orders under the 5% position
+size cap. Not updating open_positions.md/trade_log.md/weekly_trade_counter.md here —
+Python executor owns those after confirming fills via Alpaca. No git push performed
+(SYNC_TO_GITHUB=False per CLAUDE.md, consistent with prior routine runs today).
+---
+
+## [2026-08-12 19:33 ET]
+Pre-market research complete. 16 tickers scanned (15 watchlist + SH). Top candidates:
+NVDA 77/100 ($500B AI infra deal, 61 analysts Strong Buy, Aug 27 earnings), MSFT 74/100
+(Maia 300 chip reveal, Azure $100B+ run rate), AMZN 68/100 (below 70 threshold — AWS
++37%, Meta Graviton deal). Market TRADE_OK=yes, VIX=15.28 (well below 28), SPY above
+5-day MA ($772-775 vs ~$769.70) — regular stock entries enabled, SH not triggered
+(score 16/100). Flags: AMD volume-disqualified (0.587x avg, below 1.25x minimum),
+SMCI do-not-enter (active DOJ investigation overrides earnings beat), PLTR dropped to
+67/100 (Michael Burry disclosed bearish short position). research_cache.md and
+daily_context.md updated. No git push performed (SYNC_TO_GITHUB=False per CLAUDE.md).
+---
+
 ## [2026-08-12 02:47 ET] — EOD Report Sent
 EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — EOD Summary 2026-08-11 | P&L: $0.00 (0.00%).
 ---
@@ -1478,4 +1502,8 @@ updated.
 
 ## [2026-08-10 09:30 ET]
 Intraday monitor (9:30 AM ET scheduled run). weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-08-03) — no halt, proceeded. open_positions.md said "no open positions" and Alpaca GET /v2/positions confirmed empty (0 open positions) — no drift this check, portfolio flat. No SH held, no regular-stock positions to check against stop-loss/take-profit. Alpaca GET /v2/account: equity $98,970.71 = last_equity $98,970.71 — daily P&L $0.00 (0.00%), well within the -2% halt threshold. daily_loss_halt remains false. No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results.
+---
+
+## [2026-08-12 09:30 ET]
+Intraday monitor (9:30 AM ET scheduled run). strategy.md hard rules reviewed. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-08-10) — no halt, proceeded. open_positions.md and Alpaca GET /v2/positions both confirmed 0 open positions (no SH, no regular stock positions) — no stop-loss/take-profit or SPY-reclaim checks were applicable. Alpaca GET /v2/account: equity $98,970.71 vs last_equity $98,970.71 = 0.00% daily, well within the -2% halt cap — no halt triggered, no alert sent. No exits executed, no trades placed. open_positions.md updated to log this check; trade_log.md unchanged (no trades). github_sync.push() intentionally skipped this run per SYNC_TO_GITHUB=False.
 ---
