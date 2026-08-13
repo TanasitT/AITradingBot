@@ -1,5 +1,36 @@
 # Reasoning Journal
 
+## [2026-08-13 09:33 ET]
+Intraday monitor check. Read strategy.md, weekly_trade_counter.md, and
+open_positions.md per task instructions. daily_loss_halt=false — proceeded.
+Alpaca GET /v2/clock confirms market open (next_close 16:00 ET). Alpaca GET
+/v2/positions returned [] — 0 open positions. The NVDA/MSFT entries logged in
+open_positions.md from 2026-08-12 20:43/20:59 ET were never actually filled
+live (consistent with weekly_trade_counter.md's note that those market-open
+triggers flagged trades but no fill was ever confirmed on Alpaca). Alpaca GET
+/v2/account: equity $98,970.71 vs last_equity $98,970.71 = 0.00% daily, well
+within the -2% halt threshold. No SH position held (inverse-ETF check not
+applicable — nothing open). No stop-loss/take-profit checks needed. No exits
+executed. No trade_log.md update needed. No halt triggered. Updated
+open_positions.md with this check's results.
+---
+
+## [2026-08-13 20:37 ET] — Market Open (Skipped — Weekly Trade Limit)
+Market-open routine. Read strategy.md and weekly_trade_counter.md per task
+instructions. weekly_trade_counter.md header (week of 2026-08-10) shows
+trades_this_week: 3, trades_remaining: 0 — at the 3-trades-per-week cap. Per
+task gate ("if trades_this_week >= 3, skip entry"), halted before running
+/trade — no research candidates were loaded, no Alpaca calls made, no order
+placed. Note: the header's 3/3 count reflects three BUY entries logged this
+week (NVDA @ $224.11 x2, MSFT @ $492.45 on 2026-08-12), even though several
+EOD-reset narrative entries earlier this week described resetting the count
+to 0/3; the header field itself was never actually rewritten by those resets
+(same write-path drift flagged in earlier entries, e.g. 2026-07-27) — treating
+the header as authoritative per task instructions rather than the narrative
+text. daily_loss_halt confirmed false (not the blocking condition here). No
+trade placed today.
+---
+
 ## [2026-08-13 02:47 ET]
 EOD Thursday routine (closing 2026-08-12 Wednesday session). Alpaca GET
 /v2/positions confirmed empty — no open positions (no SH, no regular stock),
@@ -1556,4 +1587,23 @@ Bought 22 shares of NVDA @ $224.11. Score: 76/100. Stop: $212.90. Targets: $242.
 
 ## 2026-08-12 20:59 ET
 WARNING: stop-limit order for NVDA failed to place (403 Client Error: Forbidden for url: https://paper-api.alpaca.markets/v2/orders). Position is open on Alpaca WITHOUT a broker-side stop-loss — needs a manual check until this is resolved.
+---
+
+## [2026-08-13 19:33 ET]
+Pre-market research complete. 16 tickers scanned (15 watchlist + SH). Top candidates:
+NVDA 77/100 (pre-market +1.37% to $220.49, $500B AI infra deal, 61 analysts Strong
+Buy avg PT $302-304, Aug 27 earnings building), MSFT 72/100 (Wells Fargo raised
+Street-high PT to $700, ex-dividend Aug 20 in 7 days, Maia 300 + India DC), PLTR
+64/100 (below 70 threshold for the third consecutive run - Michael Burry doubled
+down with March 2027 puts; Phillip Securities counter-raised PT to $215). Market
+TRADE_OK=yes, VIX=14.68 (2026 low, well below 28 halt threshold). SPY above 5-day
+MA - regular stock entries enabled, SH not triggered (score 15/100). Flags: AMD
+volume-disqualified for the third consecutive run (~0.63x avg, below 1.25x
+minimum), SMCI do-not-enter (active DOJ investigation, unresolved), META avoid
+ahead of Aug 18 AG lawsuit opening arguments, AMZN dropped to 62/100 (NJ antitrust
+lawsuit) - below threshold. PPI due 8:30 AM ET same day as this run (expectations
+subdued) - treat as active binary event if market-open routine executes before
+PPI result confirmed benign. research_cache.md and daily_context.md updated
+(2026-08-13 sections appended). No git push performed (SYNC_TO_GITHUB=False per
+CLAUDE.md).
 ---
