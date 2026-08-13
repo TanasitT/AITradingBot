@@ -1,10 +1,10 @@
 # Weekly Trade Counter
 
 Week of: 2026-08-10
-trades_this_week: 2
+trades_this_week: 3
 last_eod_reset: 2026-08-12
 max_trades_per_week: 3
-trades_remaining: 1
+trades_remaining: 0
 
 ## Halt Flags
 daily_loss_halt: false
@@ -157,3 +157,5 @@ trade counted this week).
 - 2026-08-12: BUY NVDA @ $224.11 (counted)
 
 - 2026-08-12: BUY MSFT @ $492.45 (counted)
+
+- 2026-08-12: BUY NVDA @ $224.11 (counted)

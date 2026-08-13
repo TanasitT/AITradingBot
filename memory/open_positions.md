@@ -717,3 +717,15 @@ Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy for
 - Research score: 74/100
 - High-beta: False
 
+
+
+## NVDA — Opened 2026-08-12 20:59 ET
+- Entry: $224.11 | Shares: 22 | Cost: $4930.42
+- Stop-loss: $212.90 (5% below entry)
+- Target 1: $242.04 (+8%) — sell 7 shares
+- Target 2: $257.73 (+15%) — sell 7 shares
+- Target 3: $280.14 (+25%) — sell 8 shares
+- Thesis: See research cache
+- Research score: 76/100
+- High-beta: False
+
