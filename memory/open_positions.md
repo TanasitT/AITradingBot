@@ -1,6 +1,40 @@
 # Open Positions
 
-No open positions.
+## NVDA — 44 shares open (avg entry $224.10)
+
+Last updated: 2026-08-13 12:38 ET (Intraday monitor check)
+
+NOTE (2026-08-13 12:38 ET): Intraday check. Live Alpaca API confirmed via
+utils/alpaca_client.py: GET /v2/clock shows market open (next_close 16:00 ET).
+GET /v2/positions returned NVDA, 44sh, avg_entry_price $224.10, current_price
+$225.2677, unrealized P&L +$51.38 (+0.52%). No MSFT position (never filled,
+consistent with prior checks). Stop-loss check (5% below entry, not
+high-beta): trigger $212.90 — current $225.2677, not breached. Take-profit
+tier 1 (+8%): trigger $242.03 — not hit. No SH position held (SPY
+inverse-ETF check not applicable). GET /v2/account shows equity $99,022.63
+vs last_equity $98,970.71 = +0.0524% daily, well within the -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md (no
+change needed). No exits executed. No trade_log.md update needed. No halt
+triggered.
+
+Last updated: 2026-08-13 11:34 ET (Intraday monitor check)
+
+NOTE (2026-08-13 11:34 ET): Intraday check. Live Alpaca API confirmed via
+utils/alpaca_client.py: GET /v2/clock shows market open (next_close 16:00 ET).
+GET /v2/positions returned NVDA, 44sh, avg_entry_price $224.10, current_price
+$224.035, unrealized P&L -$2.86 (-0.03%) — both 2026-08-12 NVDA buy orders
+(20:43 ET and 20:59 ET, 22sh each) have now filled and combined into one
+44sh position; this was previously flagged as unconfirmed (see 09:33 ET entry
+below). The MSFT buy (10sh @ $492.45, logged 2026-08-12 20:43 ET) still shows
+NO fill — GET /v2/positions has no MSFT entry, consistent with prior notes
+that the MSFT market-open trigger never confirmed a live fill.
+Stop-loss check (5% below entry, not high-beta): trigger $212.90 — current
+$224.035, not breached. Take-profit tier 1 (+8%): trigger $242.03 — not hit.
+No SH position held (SPY inverse-ETF check not applicable). GET /v2/account
+shows equity $98,967.85 vs last_equity $98,970.71 = -0.0029% daily, well
+within the -2% halt threshold. daily_loss_halt confirmed false in
+weekly_trade_counter.md (no change needed). No exits executed. trade_log.md
+updated to reflect combined 44sh NVDA position. No halt triggered.
 
 Last updated: 2026-08-13 09:33 ET (Intraday monitor check — confirmed flat)
 
@@ -710,19 +744,19 @@ Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy for
 - High-beta: False
 
 
-## NVDA — Opened 2026-08-12 20:43 ET
-- Entry: $224.11 | Shares: 22 | Cost: $4930.42
+## NVDA — Opened 2026-08-12 20:43 ET + 20:59 ET (confirmed filled, combined 44sh as of 2026-08-13 11:34 ET check)
+- Entry: $224.11 (logged) / $224.10 (Alpaca avg) | Shares: 44 combined (22+22) | Cost: ~$9860.40
 - Stop-loss: $212.90 (5% below entry)
-- Target 1: $242.04 (+8%) — sell 7 shares
-- Target 2: $257.73 (+15%) — sell 7 shares
-- Target 3: $280.14 (+25%) — sell 8 shares
+- Target 1: $242.03 (+8%) — sell ~15 shares
+- Target 2: $257.72 (+15%) — sell ~15 shares
+- Target 3: $280.13 (+25%) — sell ~14 shares
 - Thesis: See research cache
 - Research score: 76/100
 - High-beta: False
 
 
 
-## MSFT — Opened 2026-08-12 20:43 ET
+## MSFT — Opened 2026-08-12 20:43 ET (logged, NEVER CONFIRMED FILLED)
 - Entry: $492.45 | Shares: 10 | Cost: $4924.50
 - Stop-loss: $467.83 (5% below entry)
 - Target 1: $531.85 (+8%) — sell 3 shares
@@ -731,16 +765,6 @@ Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy for
 - Thesis: See research cache
 - Research score: 74/100
 - High-beta: False
-
-
-
-## NVDA — Opened 2026-08-12 20:59 ET
-- Entry: $224.11 | Shares: 22 | Cost: $4930.42
-- Stop-loss: $212.90 (5% below entry)
-- Target 1: $242.04 (+8%) — sell 7 shares
-- Target 2: $257.73 (+15%) — sell 7 shares
-- Target 3: $280.14 (+25%) — sell 8 shares
-- Thesis: See research cache
-- Research score: 76/100
-- High-beta: False
+- STATUS (2026-08-13 11:34 ET): Alpaca GET /v2/positions has no MSFT entry —
+  this buy order never filled live. Treating as not open; no exit needed.
 
