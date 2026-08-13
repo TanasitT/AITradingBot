@@ -253,3 +253,42 @@
 4. *(Unresolved, 6 weeks running)* Add VIX at entry to trade log template — now also needed to determine whether VIX context played any role in AMD's move.
 5. *(Unresolved, 6 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
 6. **New**: Investigate whether queued EOD force-close orders that fill at next-day market open (as happened 07-28 -> 07-29 for AMD) should instead be submitted as a market-on-close or pre-market order to avoid overnight gap exposure on names with an already-broken thesis.
+
+---
+
+## Weekly Reflection — Week of 2026-08-03 (Final, logged 2026-08-08)
+
+### Week Stats
+- Trades executed: 0 | Wins: 0 | Losses: 0 | Win rate: N/A
+- Net P&L: $0.00 (no trade log entries for any day 08-03 through 08-08)
+- Portfolio: $98,970.71 (07-31 close) -> $98,970.71 (08-07 close), 0.00%
+- SPY performance this week: $746.79 (07-31) -> $773.16 (08-07), +3.53%
+- Alpha vs SPY: ~-3.53% — the worst weekly alpha since tracking began (2026-06-15 baseline), surpassing the prior worst (-2.17%, week of 07-27)
+- Cumulative alpha since inception: extended its decline from last week; unlike 07-27's negative alpha (driven by realized AMD losses), this week's alpha loss came entirely from sitting out a strong, uninterrupted SPY rally with zero trades
+
+### Signals That Worked
+- **No hard rules broken**: daily loss cap and 3-trades/day limit never triggered because zero trades were placed; the bot did not force a bad entry just to stay active during the rally.
+- **Zero realized losses**: for the first time since 07-20, a full week passed with no stop-loss or EOD force-close losses — because no positions were ever opened.
+
+### Signals That Failed
+- **Missed a sustained, low-volatility SPY rally**: SPY climbed +3.53% over the week (746.79 -> 773.16) in a steady uptrend with no drawdown days visible in benchmark_tracking.md, yet the bot placed zero trades. This is the clearest case yet of the "under-trading during a calm, rising market" pattern first flagged in the 06-30 and 07-07 reflections — except this time the opportunity cost (-3.53% alpha) is the largest single-week cost the bot has recorded, larger even than the 07-27 AMD stop-loss week (-2.17%).
+- **Pre-market research staleness blocked trading again**: the 08-04 market-open routine explicitly skipped trading because research_cache.md/daily_context.md was 4 days stale (per weekly_trade_counter.md's 2026-08-04 EOD entry). This is the same failure mode first identified on 07-23 and flagged as an open action item every week since — it has now caused at least two full missed trading days across two separate weeks (07-23, 08-04) and has not been fixed.
+- **No trade_log.md entries at all for 08-03 through 08-08**, including no skip-reason entries — the "log skip decisions daily" action item (open since Week 2, 2026-06-30) remains unresolved after 6+ weeks, making it impossible to tell from the trade log alone whether the other 4 trading days (08-03, 08-05, 08-06, 08-07) had near-miss setups or genuinely no qualifying candidates.
+
+### VIX Conditions
+- VIX was not logged for this week in any memory file — the VIX-at-entry/VIX-at-decision gap flagged since Week 1 remains unresolved after 8 weeks of tracking, and now also blocks any explanation of why zero candidates qualified during a week when SPY rose steadily (a backdrop that historically correlates with low, calm VIX).
+- SPY's steady +3.53% climb with no logged pullback days is consistent with a low-VIX, low-fear environment — suggesting the VIX<28 gate was not the constraint; the volume/score/staleness gates were.
+
+### Emerging Patterns (8 weeks tracked — moderate-to-high confidence on recurring issues)
+- **Pre-market research staleness is now a confirmed 2-week-recurring bug (07-23, 08-04), not a one-off**: both times it blocked the market-open routine on the day it happened. This should be escalated from "investigate" to "fix" — the standing action item from 07-20's reflection has now cost a second missed trading day.
+- **The bot's largest weekly alpha losses are now split evenly between two distinct causes**: realized stock-specific losses (07-27 week, AMD, -2.17% alpha) and pure opportunity cost from under-trading a rally (08-03 week, -3.53% alpha). Both are real costs; the under-trading cost is now demonstrably larger, which argues against loosening risk rules further and instead argues for fixing the research-freshness pipeline so more candidate-days are actually evaluated.
+- **Skip-reason logging remains the single most-repeated unresolved action item** (raised in Week 2, 3, 4, 5, 6, 7, and now Week 8) — its absence directly limited this week's reflection depth, since it's unknown whether 08-03, 08-05, 08-06, or 08-07 had any near-miss candidates.
+
+### Open Action Items (carry forward to next week)
+1. **Escalated, 2nd occurrence**: Fix the pre-market research pipeline so daily_context.md/research_cache.md does not go stale (now confirmed to have blocked trading on both 07-23 and 08-04) — this is no longer a hypothesis, it's a repeat failure with a direct, attributable cost.
+2. *(Unresolved, 4th week running)* Root-cause and fix the engine/coordinator.py position-logging bug causing live Alpaca fills to go unrecorded in open_positions.md/trade_log.md at entry time — not observed this week only because no trades occurred, not because it was fixed.
+3. *(Unresolved, 7 weeks running — now the most-repeated open item)* Log skip decisions in trade_log.md daily, including reason and top candidate scores/volume — 08-03 through 08-08 has zero entries of any kind.
+4. *(Unresolved, 8 weeks running)* Add VIX at entry/decision time to trade log and daily_context.md.
+5. *(Unresolved, 7 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
+6. *(Unresolved from 07-27)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — still open, no new data this week since zero trades occurred.
+7. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested this week.

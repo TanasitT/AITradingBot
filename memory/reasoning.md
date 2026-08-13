@@ -1,5 +1,17 @@
 # Reasoning Journal
 
+## [2026-08-13 02:47 ET]
+EOD Thursday routine (closing 2026-08-12 Wednesday session). Alpaca GET
+/v2/positions confirmed empty — no open positions (no SH, no regular stock),
+so no overnight-thesis check or force-close was needed for either branch.
+Account equity $98,970.71 vs last_equity $98,970.71 = 0.00% daily, well
+within the -2% halt threshold. Benchmark logged: Portfolio 0.00% | SPY +0.24%
+| Alpha -0.24%. daily_loss_halt set to false (was already false).
+trades_this_week reset to 0/3 (was already 0/3 — the 20:37 ET market-open
+trigger flagged NVDA/MSFT but no fill was ever confirmed on Alpaca, so no
+trade counted this week). EOD report sent to jankla2010@gmail.com.
+---
+
 ## [2026-08-12 10:30 ET]
 Intraday monitor check. weekly_trade_counter.md confirmed daily_loss_halt=false,
 trades_this_week=0/3 — no halt, proceeded. Alpaca GET /v2/positions returned 0
@@ -1520,4 +1532,12 @@ Intraday monitor (9:30 AM ET scheduled run). strategy.md hard rules reviewed. we
 
 ## [2026-08-12 11:30 ET]
 Intraday monitor (11:30 AM ET scheduled run). strategy.md hard rules reviewed. weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 (week of 2026-08-10) — no halt, proceeded. open_positions.md and Alpaca GET /v2/positions both confirmed 0 open positions (no SH, no regular stock positions) — no stop-loss/take-profit or SPY-reclaim checks were applicable. Alpaca GET /v2/account: equity $98,970.71 vs last_equity $98,970.71 = 0.00% daily, well within the -2% halt cap — no halt triggered, no alert sent. No exits executed, no trades placed. open_positions.md updated to log this check; trade_log.md unchanged (no trades). github_sync.push() intentionally skipped this run per SYNC_TO_GITHUB=False.
+---
+
+## 2026-08-12 20:43 ET
+Bought 22 shares of NVDA @ $224.11. Score: 76/100. Stop: $212.90. Targets: $242.04/$257.73/$280.14. Thesis: See research cache
+---
+
+## 2026-08-12 20:43 ET
+WARNING: stop-limit order for NVDA failed to place (403 Client Error: Forbidden for url: https://paper-api.alpaca.markets/v2/orders). Position is open on Alpaca WITHOUT a broker-side stop-loss — needs a manual check until this is resolved.
 ---

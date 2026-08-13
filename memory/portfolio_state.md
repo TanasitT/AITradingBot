@@ -1,5 +1,21 @@
 # Portfolio State
-Last updated: 2026-08-12 EOD routine (Wednesday-cycle, closing 2026-08-11 Tuesday session)
+Last updated: 2026-08-13 EOD routine (Thursday-cycle, closing 2026-08-12 Wednesday session)
+
+- Cash available: $98,970.71
+- Invested: $0.00
+- Total equity: $98,970.71
+- Daily P&L: $0.00 (0.00%)
+- Open positions: 0
+
+NOTE: Alpaca GET /v2/positions confirmed empty — no SH, no regular stock
+positions, so no overnight-thesis check or force-close was needed for either
+branch of the EOD routine. Account equity $98,970.71 vs last_equity
+$98,970.71 = 0.00% daily, well within the -2% halt threshold. daily_loss_halt
+confirmed false. No exits needed (nothing open). NVDA/MSFT candidates flagged
+by the 20:37 ET market-open trigger on 2026-08-12 never confirmed a fill on
+Alpaca, so no trade counted for the day. No action taken.
+
+NOTE: (prior entry, 2026-08-12 EOD routine (Wednesday-cycle, closing 2026-08-11 Tuesday session))
 
 - Cash available: $98,970.71
 - Invested: $0.00

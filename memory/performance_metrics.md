@@ -1,6 +1,6 @@
 # Performance Metrics
 
-Last updated: 2026-08-01 (weekly close)
+Last updated: 2026-08-08 (weekly close)
 
 ## All-Time Stats
 - Total trades: 12
@@ -11,6 +11,20 @@ Last updated: 2026-08-01 (weekly close)
 - Profit factor: 0.066 (gross win $73.24 / gross loss $1,104.79)
 - Largest single gain: +$38.26 (META, 2026-07-20)
 - Largest single loss: -$379.26 (AMD, 2026-07-27)
+
+## This Week (2026-08-03 to 2026-08-08) — Final
+- Trades: 0
+- Wins: 0
+- Losses: 0
+- Win rate: N/A
+- Total P&L: $0.00
+- Best trade: — (no trades)
+- Worst trade: — (no trades)
+- No trades placed all week; 0 open positions throughout; market-open routine skipped trading on 08-04 due to 4-day-stale pre-market research (per weekly_trade_counter.md 08-04 EOD entry)
+- Portfolio: $98,970.71 (07-31 close) -> $98,970.71 (08-07 close), 0.00%
+- SPY: $746.79 (07-31) -> $773.16 (08-07), +3.53%
+- Weekly alpha: ~-3.53% (worst weekly alpha since tracking began, driven entirely by sitting out a strong SPY rally rather than by realized losses)
+- All-time stats below are unchanged from the prior week since no new trades were logged
 
 ## This Week (2026-07-27 to 2026-07-31) — Final
 - Trades: 2 (AMD 07-27, AMD 07-29)
@@ -35,6 +49,7 @@ Last updated: 2026-08-01 (weekly close)
 | 2026-07-13 | 5 | 2 | 40.0% | -$225.20 | First active trading week since inception (5 fills across 2 days); all 5 exits were EOD force-closes for lack of overnight catalyst, none hit stop-loss/take-profit; portfolio $99,873.35 -> $99,648.14 (-0.23%); SPY $749.13 -> $743.68 (-0.73%) over same span; weekly alpha ~+0.50% |
 | 2026-07-20 | 4 | 1 | 25.0% | +$21.86 | AAPL/AMZN/META entered and force-closed same day (07-20); META (7sh) reopened live without a logged entry and force-closed again 07-21; all 4 exits were EOD no-overnight-catalyst force-closes, none hit stop-loss/take-profit; portfolio $99,648.14 -> $99,672.34 (+0.02%) over 07-20 to 07-24; SPY $741.99 -> $735.98 (-0.81%) over same span; weekly alpha ~+0.83%; 0 trades placed 07-22 through 07-24 |
 | 2026-07-27 | 2 | 0 | 0% | -$701.58 | AMD entered and stop-loss-closed twice in one week (07-27, re-entered and closed again 07-29) — first week where losses came from the 7% high-beta stop-loss rather than EOD no-catalyst force-close; portfolio $99,672.34 -> $98,970.71 (-0.70%); SPY $735.98 -> $746.79 (+1.47%); weekly alpha ~-2.17%, worst week since inception; 0 trades placed 07-30/07-31 |
+| 2026-08-03 | 0 | 0 | N/A | $0.00 | No trades all week; market-open routine skipped 08-04 due to stale pre-market research; portfolio flat $98,970.71; SPY $746.79 -> $773.16 (+3.53%); weekly alpha ~-3.53%, worst alpha since inception (rally sat out, no realized losses) |
 
 ## By Signal Type
 | Signal | Trades | Win Rate | Avg P&L |

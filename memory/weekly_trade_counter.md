@@ -1,10 +1,10 @@
 # Weekly Trade Counter
 
 Week of: 2026-08-10
-trades_this_week: 0
+trades_this_week: 1
 last_eod_reset: 2026-08-12
 max_trades_per_week: 3
-trades_remaining: 3
+trades_remaining: 2
 
 ## Halt Flags
 daily_loss_halt: false
@@ -147,3 +147,11 @@ daily_loss_halt set to false (was already false; daily change 0.00%, well within
 0 open positions). trades_this_week reset to 0/3 (was already 0/3 — the 20:37 ET
 market-open trigger flagged NVDA/MSFT/PLTR but no fill was ever confirmed on Alpaca,
 so no trade counted this week).
+
+## EOD Reset — 2026-08-13 (Thursday-cycle EOD, closing 2026-08-12 Wednesday session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — the 20:37 ET
+market-open trigger flagged NVDA/MSFT but no fill was ever confirmed on Alpaca, so no
+trade counted this week).
+
+- 2026-08-12: BUY NVDA @ $224.11 (counted)

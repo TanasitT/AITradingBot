@@ -693,3 +693,15 @@ Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy for
 - Thesis: Up 22% YTD; briefly overtook NVDA as #1 by market cap ($4.88T); HSBC Hold→Buy PT $260→$366 intact; ATH momentum; earnings July 30 (10 days); RSI elevated post-ATH
 - Research score: 73/100
 - High-beta: False
+
+
+## NVDA — Opened 2026-08-12 20:43 ET
+- Entry: $224.11 | Shares: 22 | Cost: $4930.42
+- Stop-loss: $212.90 (5% below entry)
+- Target 1: $242.04 (+8%) — sell 7 shares
+- Target 2: $257.73 (+15%) — sell 7 shares
+- Target 3: $280.14 (+25%) — sell 8 shares
+- Thesis: See research cache
+- Research score: 76/100
+- High-beta: False
+
