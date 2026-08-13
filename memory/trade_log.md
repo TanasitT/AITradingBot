@@ -19,3 +19,5 @@
 | 2026-07-29 | AMD | $465.966 | $449.85 | 20 | -$322.32 (-6.92%) | ❌ | Force-close order 68f02b84-fc37-4125-bb3c-5f905f181850 submitted EOD 2026-07-28 (no overnight catalyst — AMD -8.85% on disappointing 2026 AI-accelerator revenue targets, earnings 8/4); order queued while market closed, filled 2026-07-29 09:34:04 ET at market open |
 
 | 2026-08-12 | NVDA | $224.11 | open | 22 | — | — | See research cache |
+
+| 2026-08-12 | MSFT | $492.45 | open | 10 | — | — | See research cache |

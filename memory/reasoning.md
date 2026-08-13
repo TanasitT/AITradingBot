@@ -1541,3 +1541,11 @@ Bought 22 shares of NVDA @ $224.11. Score: 76/100. Stop: $212.90. Targets: $242.
 ## 2026-08-12 20:43 ET
 WARNING: stop-limit order for NVDA failed to place (403 Client Error: Forbidden for url: https://paper-api.alpaca.markets/v2/orders). Position is open on Alpaca WITHOUT a broker-side stop-loss — needs a manual check until this is resolved.
 ---
+
+## 2026-08-12 20:43 ET
+Bought 10 shares of MSFT @ $492.45. Score: 74/100. Stop: $467.83. Targets: $531.85/$566.32/$615.56. Thesis: See research cache
+---
+
+## 2026-08-12 20:43 ET
+WARNING: stop-limit order for MSFT failed to place (403 Client Error: Forbidden for url: https://paper-api.alpaca.markets/v2/orders). Position is open on Alpaca WITHOUT a broker-side stop-loss — needs a manual check until this is resolved.
+---

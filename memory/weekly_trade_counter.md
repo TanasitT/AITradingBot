@@ -1,10 +1,10 @@
 # Weekly Trade Counter
 
 Week of: 2026-08-10
-trades_this_week: 1
+trades_this_week: 2
 last_eod_reset: 2026-08-12
 max_trades_per_week: 3
-trades_remaining: 2
+trades_remaining: 1
 
 ## Halt Flags
 daily_loss_halt: false
@@ -155,3 +155,5 @@ market-open trigger flagged NVDA/MSFT but no fill was ever confirmed on Alpaca, 
 trade counted this week).
 
 - 2026-08-12: BUY NVDA @ $224.11 (counted)
+
+- 2026-08-12: BUY MSFT @ $492.45 (counted)

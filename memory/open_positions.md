@@ -705,3 +705,15 @@ Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy for
 - Research score: 76/100
 - High-beta: False
 
+
+
+## MSFT — Opened 2026-08-12 20:43 ET
+- Entry: $492.45 | Shares: 10 | Cost: $4924.50
+- Stop-loss: $467.83 (5% below entry)
+- Target 1: $531.85 (+8%) — sell 3 shares
+- Target 2: $566.32 (+15%) — sell 3 shares
+- Target 3: $615.56 (+25%) — sell 4 shares
+- Thesis: See research cache
+- Research score: 74/100
+- High-beta: False
+
