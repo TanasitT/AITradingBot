@@ -1,5 +1,16 @@
 # Reasoning Journal
 
+## [2026-08-14 20:37 ET] — Market Open (Skipped — Weekly Trade Limit)
+Market-open routine. Read strategy.md and weekly_trade_counter.md per task
+instructions. weekly_trade_counter.md header (week of 2026-08-10) shows
+trades_this_week: 3, trades_remaining: 0, max_trades_per_week: 3 — at the
+3-trades-per-week cap (NVDA @ $224.11 x2, MSFT @ $492.45 on 2026-08-12, all
+counted). daily_loss_halt confirmed false (not the blocking condition here).
+Per task gate ("if trades_this_week >= 3, skip entry"), halted before running
+/trade — no research candidates were loaded, no Alpaca calls made, no order
+placed. No trade placed today.
+---
+
 ## [2026-08-13 09:33 ET]
 Intraday monitor check. Read strategy.md, weekly_trade_counter.md, and
 open_positions.md per task instructions. daily_loss_halt=false — proceeded.
