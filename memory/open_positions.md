@@ -1,6 +1,29 @@
 # Open Positions
 
-## NVDA — 44 shares open (avg entry $224.10)
+## No open positions (confirmed flat)
+
+Last updated: 2026-08-14 09:30 ET (Intraday monitor check)
+
+NOTE (2026-08-14 09:30 ET): Intraday check. Live Alpaca API confirmed via
+utils/alpaca_client.py: GET /v2/positions returned [] (0 open positions).
+GET /v2/orders (closed, NVDA) shows the 44sh NVDA position (avg entry $224.10)
+was sold-to-close via market order cf7dc8ee-71c3-415f-84a8-2034c219dc40,
+filled 2026-08-14T13:33:17Z (09:33 ET) at avg $226.973636 — realized P&L
++$126.44 (+1.28%). This fill happened before this check ran; neither the 5%
+stop-loss ($212.90) nor take-profit tier 1 (+8%, $242.03) was breached at the
+exit price, so this was not a rule-triggered exit from this routine — reason
+for the close is not recorded (see trade_log.md 2026-08-14 entry). MSFT
+10sh buy order (limit $492.45, submitted 2026-08-12) expired unfilled
+2026-08-13 20:00 ET per Alpaca order history — confirmed not open. GET
+/v2/account shows equity $99,097.14 vs last_equity $99,023.50 = +0.0743%
+daily, well within the -2% halt threshold. daily_loss_halt confirmed false
+in weekly_trade_counter.md (no change needed). No SH position held (SPY
+inverse-ETF check not applicable — nothing open). No stop-loss/take-profit
+checks needed (no positions to evaluate). No new exits executed this check.
+trade_log.md and this file updated to reflect the NVDA close. No halt
+triggered.
+
+## Position History (most recent first)
 
 Last updated: 2026-08-13 12:38 ET (Intraday monitor check)
 

@@ -20,6 +20,8 @@
 
 | 2026-08-12 | NVDA | $224.11 | open | 22 | — | — | See research cache |
 
-| 2026-08-12 | MSFT | $492.45 | open | 10 | — | — | See research cache |
+| 2026-08-12 | MSFT | $492.45 | NEVER FILLED | 10 | — | — | Confirmed via Alpaca GET /v2/positions on 2026-08-13 11:34 ET intraday check — no MSFT position exists live; order never filled |
 
 | 2026-08-12 | NVDA | $224.11 | open | 22 | — | — | See research cache |
+| 2026-08-13 | NVDA | — | combined position confirmed | 44 | — | — | Intraday check 11:34 ET: both 2026-08-12 NVDA buys (22sh + 22sh) confirmed filled live on Alpaca, combined avg entry $224.10, 44sh total open |
+| 2026-08-14 | NVDA | $224.10 | $226.973636 | 44 | +$126.44 (+1.28%) | ✅ | Position discovered already closed live on Alpaca at 09:33 monitor check — sell order cf7dc8ee-71c3-415f-84a8-2034c219dc40 filled 2026-08-14T13:33:17Z (09:33 ET), before this check ran; no stop-loss or take-profit tier was breached at exit (TP1 trigger was $242.03), so this was not a rule-triggered exit — reason for the close is unknown/not logged by whatever process executed it |
