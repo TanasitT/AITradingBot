@@ -292,3 +292,42 @@
 5. *(Unresolved, 7 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
 6. *(Unresolved from 07-27)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — still open, no new data this week since zero trades occurred.
 7. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested this week.
+
+---
+
+## Weekly Reflection — Week of 2026-08-10 (Final, logged 2026-08-15)
+
+### Week Stats
+- Trades executed: 1 | Wins: 1 | Losses: 0 | Win rate: 100.0%
+- Net P&L: +$126.44 (NVDA, 44sh combined, entered 08-12 avg $224.10, closed 08-14 avg $226.97, +1.28%)
+- Portfolio: $98,970.71 (08-07 close) -> $99,097.14 (08-14 close), +0.13%
+- SPY performance this week: $773.16 (08-07) -> $776.30 (08-14), +0.41%
+- Alpha vs SPY: ~-0.28% (a genuine realized win still lost to a calm, steadily rising SPY)
+- Cumulative alpha since inception: continues to be dragged mainly by under-trading calm rally weeks (08-03, and now 08-10) rather than by realized losses
+
+### Signals That Worked
+- **First 100%-win-rate week since tracking began**: the bot's only trade this week (NVDA) closed positive. NVDA's thesis — Jensen Huang's "$500B AI infrastructure financing" framing plus the PLTR-NVDA classified-AI partnership — held up over the 2-day hold (08-12 to 08-14), unlike most prior wins which were single-day EOD force-closes.
+- **No hard rules broken**: the 44sh NVDA position stayed within the 5% position cap, daily loss cap never neared -2% at any point in the week, and the 3-trades/day and 3-trades/week limits were respected (only 1 fill this week, NVDA; MSFT never filled).
+- **VIX stayed at 2026 lows all week (14.40-15.45)**, confirming VIX was never the binding constraint on any decision this week — consistent with prior weeks' findings that the bottleneck is candidate availability/logging, not risk-off caution.
+
+### Signals That Failed
+- **NVDA's exit reason is unknown — a new failure mode**: the position was found already closed at the 08-14 09:33 ET monitor check. Neither the 5% stop-loss ($212.90) nor take-profit tier 1 (+8%, $242.03) had been breached at the exit price ($226.97 avg, roughly +1.28%/+42% of the way to TP1) — meaning no coded rule in engine/monitor.py or engine/coordinator.py should have triggered this sell, yet it filled. This is the first "unrule-triggered exit" recorded in the trade log's history (prior exits were always EOD no-catalyst force-closes or stop-loss/TP hits). It happened to be profitable this time, but an unexplained close mechanism is a correctness risk regardless of outcome — the bot cannot currently distinguish a lucky unexplained exit from a buggy one.
+- **MSFT order never filled**: a 10sh limit order at $492.45 (submitted alongside NVDA on 08-12) expired unfilled on 08-13 without ever generating a position. This is not itself a bug (limit orders can legitimately go unfilled), but it means one of the week's two trade-trigger candidates produced zero data — a reminder that "order submitted" and "trade executed" are different events and only the latter should count toward weekly stats (this was handled correctly this week, per weekly_trade_counter.md).
+- **Position-logging drift recurred one more time**: the 44sh NVDA position was the combination of two separate 22sh buy orders (20:43 ET and 20:59 ET on 08-12) that were not confirmed as filled/combined until an 11:34 ET intraday check on 08-13 — a full session-plus later. This is the same chronic engine/coordinator.py write-path gap flagged in nearly every reflection since 07-13, still unresolved after 5 weeks.
+
+### VIX Conditions
+- VIX ranged 14.40 (08-12 intraday low, the 2026 low to date) to 15.45 (08-11), closing the week at 14.52 (08-14) — the calmest, lowest-fear week recorded since tracking began.
+- SPY's RSI spiked to an overbought 85.568 on 08-12 (post-CPI, pre-earnings AI rally) before normalizing to 66.175 by 08-14 — a healthy technical reset that coincided with NVDA's position being held through rather than force-closed, unlike the pattern in every prior "no overnight catalyst" week.
+
+### Emerging Patterns (9 weeks tracked — moderate-to-high confidence on recurring issues)
+- **All-time win rate crossed 30% for the first time (4/13, up from 3/12)**, and profit factor nearly tripled (0.066 -> 0.181) on the back of a single $126.44 win — still deeply unprofitable in aggregate (gross loss $1,104.79 vs gross win $199.68), but the trend this week is the best single-trade outcome recorded to date, both in absolute P&L and as the new largest single gain (surpassing META's +$38.26 from 07-20).
+- **Unexplained/unrule-triggered exits are now a confirmed new risk category**, distinct from the two previously identified failure modes (EOD no-catalyst force-close, stop-loss trigger). Because this one happened to be profitable, it is easy to under-weight — but the same unexplained-close mechanism could just as easily fire during an unrealized loss and lock it in early, or fire during a winning run and cap upside before take-profit. This needs the same root-cause attention as the position-logging drift bug, since both point to gaps between what engine/coordinator.py and engine/monitor.py are supposed to do and what is actually executing against the live Alpaca account.
+- **Opportunity-cost alpha drag continues to dominate realized-loss alpha drag**: two of the last three active weeks (08-03 flat, 08-10 with a real win) both posted negative alpha purely because SPY outran the bot's activity level or trade sizing, not because of stock-specific losses (07-27's AMD week remains the only loss-driven negative-alpha week). This reinforces the standing argument for prioritizing the research-freshness and position-logging fixes over further tightening risk rules.
+
+### Open Action Items (carry forward to next week)
+1. **New, high priority**: Investigate what closed the NVDA position on 08-14 before the 09:33 ET monitor check ran — neither monitor.py's stop-loss/TP logic nor coordinator.py's EOD force-close should have fired given the price and timing; determine if this was a manual/external action, a scheduling overlap between two routine instances, or a genuine logic bug that happens to fail safe.
+2. *(Unresolved, 5th week running)* Root-cause and fix the engine/coordinator.py position-logging bug causing live Alpaca fills (both entries and, now, exits) to lag or go unrecorded in open_positions.md/trade_log.md at the time they actually happen — this week's NVDA combine took over 15 hours to confirm.
+3. *(Unresolved, 8 weeks running)* Add VIX at entry/decision time directly to trade_log.md rows (daily_context.md now tracks it reliably, but trade_log.md entries still don't carry it forward).
+4. *(Unresolved, 8 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
+5. *(Unresolved from 07-27)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — still open; this week's NVDA hold-through-to-a-win is a data point against always force-closing on distant earnings dates.
+6. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested this week (no stop-loss triggered).

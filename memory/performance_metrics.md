@@ -1,16 +1,31 @@
 # Performance Metrics
 
-Last updated: 2026-08-08 (weekly close)
+Last updated: 2026-08-14 (weekly close)
 
 ## All-Time Stats
-- Total trades: 12
-- Winning trades: 3
-- Win rate: 25.0%
-- Average gain (winners): +$24.41 (+0.54%)
+- Total trades: 13
+- Winning trades: 4
+- Win rate: 30.8%
+- Average gain (winners): +$49.92 (+0.73%)
 - Average loss (losers): -$122.75 (-2.99%)
-- Profit factor: 0.066 (gross win $73.24 / gross loss $1,104.79)
-- Largest single gain: +$38.26 (META, 2026-07-20)
+- Profit factor: 0.181 (gross win $199.68 / gross loss $1,104.79)
+- Largest single gain: +$126.44 (NVDA, 2026-08-14)
 - Largest single loss: -$379.26 (AMD, 2026-07-27)
+
+## This Week (2026-08-10 to 2026-08-14) — Final
+- Trades: 1 (NVDA, opened 2026-08-12 combined 44sh, closed 2026-08-14)
+- Wins: 1
+- Losses: 0
+- Win rate: 100.0%
+- Total P&L: +$126.44
+- Best trade: NVDA +$126.44 (+1.28%)
+- Worst trade: NVDA +$126.44 (+1.28%) (only trade this week)
+- MSFT 10sh limit order ($492.45, submitted 2026-08-12) expired unfilled 2026-08-13 — not counted as a trade
+- NVDA's exit was not a rule-triggered close: neither the 5% stop-loss ($212.90) nor take-profit tier 1 (+8%, $242.03) was breached at the exit price ($226.97 avg); the position was found already closed at the 09:33 ET monitor check on 2026-08-14, and no process logged the reason for the close — first "unknown-reason exit" recorded since tracking began
+- Portfolio: $98,970.71 (08-07 close) -> $99,097.14 (08-14 close), +0.13%
+- SPY: $773.16 (08-07) -> $776.30 (08-14), +0.41%
+- Weekly alpha: ~-0.28% (a real trading win was still outweighed by a calmly rallying SPY)
+- VIX stayed low all week (14.40-15.45 range, 2026 lows) — not a binding constraint on any decision
 
 ## This Week (2026-08-03 to 2026-08-08) — Final
 - Trades: 0
@@ -50,6 +65,7 @@ Last updated: 2026-08-08 (weekly close)
 | 2026-07-20 | 4 | 1 | 25.0% | +$21.86 | AAPL/AMZN/META entered and force-closed same day (07-20); META (7sh) reopened live without a logged entry and force-closed again 07-21; all 4 exits were EOD no-overnight-catalyst force-closes, none hit stop-loss/take-profit; portfolio $99,648.14 -> $99,672.34 (+0.02%) over 07-20 to 07-24; SPY $741.99 -> $735.98 (-0.81%) over same span; weekly alpha ~+0.83%; 0 trades placed 07-22 through 07-24 |
 | 2026-07-27 | 2 | 0 | 0% | -$701.58 | AMD entered and stop-loss-closed twice in one week (07-27, re-entered and closed again 07-29) — first week where losses came from the 7% high-beta stop-loss rather than EOD no-catalyst force-close; portfolio $99,672.34 -> $98,970.71 (-0.70%); SPY $735.98 -> $746.79 (+1.47%); weekly alpha ~-2.17%, worst week since inception; 0 trades placed 07-30/07-31 |
 | 2026-08-03 | 0 | 0 | N/A | $0.00 | No trades all week; market-open routine skipped 08-04 due to stale pre-market research; portfolio flat $98,970.71; SPY $746.79 -> $773.16 (+3.53%); weekly alpha ~-3.53%, worst alpha since inception (rally sat out, no realized losses) |
+| 2026-08-10 | 1 | 1 | 100.0% | +$126.44 | First win-only week since inception; NVDA (44sh, entered 08-12) closed 08-14 for +$126.44 (+1.28%) via an unrule-triggered exit (no stop-loss/TP breach, reason not logged); MSFT 10sh order expired unfilled; portfolio $98,970.71 -> $99,097.14 (+0.13%); SPY $773.16 -> $776.30 (+0.41%); weekly alpha ~-0.28% |
 
 ## By Signal Type
 | Signal | Trades | Win Rate | Avg P&L |
@@ -61,6 +77,6 @@ Last updated: 2026-08-08 (weekly close)
 | AI thesis (high score ≥90) | 1 | 0% | -$126.63 |
 | AWS/cloud momentum (AMZN) | 2 | 0% | -$57.28 |
 | Meta Compute/AI infra catalyst (META) | 4 | 50% | +$15.01 |
-| AI infra demand (NVDA, non-≥90 score) | 1 | 0% | -$49.22 |
+| AI infra demand (NVDA, non-≥90 score) | 2 | 50% | +$38.61 |
 | Analyst upgrade + ATH momentum (AAPL) | 2 | 50% | +$0.20 |
 | AI-accelerator/chip thesis, high-beta stop-loss (AMD) | 2 | 0% | -$350.79 |

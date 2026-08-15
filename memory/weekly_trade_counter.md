@@ -1,10 +1,10 @@
 # Weekly Trade Counter
 
 Week of: 2026-08-10
-trades_this_week: 3
-last_eod_reset: 2026-08-12
+trades_this_week: 0
+last_eod_reset: 2026-08-15
 max_trades_per_week: 3
-trades_remaining: 0
+trades_remaining: 3
 
 ## Halt Flags
 daily_loss_halt: false
