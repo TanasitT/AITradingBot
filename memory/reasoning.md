@@ -1,5 +1,20 @@
 # Reasoning Journal
 
+## [2026-08-23 19:33 ET]
+Pre-market research complete. 16 tickers scanned (15 watchlist + SH). Top candidates:
+NVDA 84/100 (Aug 26 earnings driving pre-event momentum, near-universal analyst Buy
+ratings, Blackwell GPU ramp intact — binary risk around Wednesday's report must be
+weighed by market-open routine), PLTR 81/100 (Q2 revenue $1.94B at 55% net margin,
+raised full-year guidance, cleanest setup post-earnings), AMZN 80/100 (market cap
+crossed $3T, AWS +37% YoY, AI/chip businesses each ~$25B annual revenue run rate).
+Market TRADE_OK=yes: SPY closed ~$767.00 (Aug 21) vs 5-day MA ~$766.46 — marginally
+above (thin buffer; a down Monday open could flip the regime signal), longer-term
+structure solidly bullish (50d $742.9 > 200d $706.1). VIX ~15.13, well below the 28
+threshold (2026 low of 14.18 hit Aug 17) — low-fear, risk-on regime. SH inverse mode
+not applicable (SPY above MA). research_cache.md and daily_context.md updated. No git
+push performed (SYNC_TO_GITHUB not enabled per config.py/CLAUDE.md).
+---
+
 ## [2026-08-23 11:30 ET]
 Intraday monitor check. Read strategy.md, weekly_trade_counter.md, and
 open_positions.md per task instructions. daily_loss_halt=false — proceeded.
@@ -1813,3 +1828,30 @@ Market-open routine skipped trading. weekly_trade_counter.md shows daily_loss_ha
 ## [2026-08-23 10:30 ET]
 Intraday monitor check. Read strategy.md, weekly_trade_counter.md, and open_positions.md per task instructions. daily_loss_halt=false — proceeded. Alpaca GET /v2/clock confirms market CLOSED (is_open=false, next_open 2026-08-24T09:30:00-04:00 Monday — 2026-08-23 is a Sunday). Alpaca GET /v2/positions returned [] (0 open positions) — nothing to check for stop-loss/take-profit or SPY-reclaim (no SH held). Alpaca GET /v2/account: equity $99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the -2% halt threshold. daily_loss_halt confirmed false in weekly_trade_counter.md (no change needed). No exits executed, no trades placed, no alerts sent. Updated open_positions.md with this check's results. No trade_log.md update needed. No halt triggered.
 ---
+
+## [2026-08-23 EOD] -- Saturday-cycle EOD routine (closing 2026-08-21 Friday session)
+Task file "4--trading-bot-eod-saturday" fired 2026-08-23. Read strategy.md and
+open_positions.md per instructions. Live Alpaca GET /v2/positions confirmed []
+(0 open positions) and GET /v2/account: equity $99,096.91 = last_equity
+$99,096.91 = 0.00% daily, well within -2% halt threshold. No SH held, no
+regular stock positions -- no overnight-thesis check or force-close needed for
+either branch.
+
+Found portfolio_state.md, benchmark_tracking.md (2026-08-21 row), and
+weekly_trade_counter.md (EOD Reset -- 2026-08-23, daily_loss_halt false,
+trades_this_week 0/3) already correctly updated for this same session by an
+earlier uncommitted pass today -- left those as-is rather than duplicating
+rows/entries (same handling as the 2026-08-20 duplicate-EOD precedent).
+However, no reasoning.md entry or email-sent confirmation existed for that
+earlier pass, so the report had NOT actually been sent yet. Composed the EOD
+summary manually from portfolio_state.md/benchmark_tracking.md/
+weekly_trade_counter.md and sent it via utils.email_client.send_email()
+directly (Subject: "Trading Bot - EOD Summary 2026-08-21 | P&L: $0.00 (0.00%)"),
+sent to jankla2010@gmail.com successfully. Did NOT call
+engine.reporter.run_eod() -- it unconditionally calls utils/github_sync.push(),
+which would violate CLAUDE.md's SYNC_TO_GITHUB=False / do-not-push instruction
+(the config flag no longer exists in config.py, an in-progress uncommitted
+refactor left it unguarded -- same issue flagged 2026-08-20). No git
+commit/push performed. daily_loss_halt and trades_this_week already correctly
+reset to false/0 by the earlier pass -- no change needed. No action taken
+beyond the email send.
