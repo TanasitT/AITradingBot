@@ -2,6 +2,54 @@
 
 ## No open positions (confirmed flat)
 
+Last updated: 2026-08-23 EOD routine (Sunday, EOD Friday cycle — closing 2026-08-21 Friday session)
+
+NOTE (2026-08-23 EOD): EOD Friday routine. Alpaca GET /v2/positions confirmed
+empty — no open positions (no SH, no regular stock positions), so no
+overnight-thesis check or force-close was needed for either branch. Account
+equity $99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the
+-2% halt threshold. daily_loss_halt confirmed false. No exits needed
+(nothing open). No action taken.
+
+Last updated: 2026-08-23 11:30 ET (Intraday monitor check)
+
+NOTE (2026-08-23 11:30 ET): Intraday check. Live Alpaca API confirmed via
+utils/alpaca_client.py: GET /v2/clock shows market CLOSED (is_open=false,
+next_open 2026-08-24T09:30:00-04:00 Monday — 2026-08-23 is a Sunday). GET
+/v2/positions returned [] (0 open positions). GET /v2/account shows equity
+$99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md (no
+change needed). No SH position held (SPY inverse-ETF check not applicable —
+nothing open). No stop-loss/take-profit checks needed (no positions to
+evaluate). No exits executed this check. No trade_log.md update needed. No
+halt triggered.
+
+Last updated: 2026-08-23 10:30 ET (Intraday monitor check)
+
+NOTE (2026-08-23 10:30 ET): Intraday check. Live Alpaca API confirmed via
+utils/alpaca_client.py: GET /v2/clock shows market CLOSED (is_open=false,
+next_open 2026-08-24T09:30:00-04:00 Monday — 2026-08-23 is a Sunday). GET
+/v2/positions returned [] (0 open positions). GET /v2/account shows equity
+$99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md (no
+change needed). No SH position held (SPY inverse-ETF check not applicable —
+nothing open). No stop-loss/take-profit checks needed (no positions to
+evaluate). No exits executed this check. No trade_log.md update needed. No
+halt triggered.
+
+Last updated: 2026-08-23 09:30 ET (Intraday monitor check)
+
+NOTE (2026-08-23 09:30 ET): Intraday check. Live Alpaca API confirmed via
+utils/alpaca_client.py: GET /v2/clock shows market CLOSED (is_open=false,
+next_open 2026-08-24T09:30:00-04:00 Monday — 2026-08-23 is a Sunday). GET
+/v2/positions returned [] (0 open positions). GET /v2/account shows equity
+$99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md (no
+change needed). No SH position held (SPY inverse-ETF check not applicable —
+nothing open). No stop-loss/take-profit checks needed (no positions to
+evaluate). No exits executed this check. No trade_log.md update needed. No
+halt triggered.
+
 Last updated: 2026-08-20 11:30 ET (Intraday monitor check)
 
 NOTE (2026-08-20 11:30 ET): Intraday check. Live Alpaca API confirmed via
