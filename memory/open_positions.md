@@ -1,6 +1,42 @@
 # Open Positions
 
+## Intraday check 2026-08-26 11:30 ET
+
+NOTE (2026-08-26 11:30 ET): Intraday check. Live Alpaca API confirmed via
+utils/alpaca_client.py: GET /v2/clock shows market open (next_close 16:00 ET).
+GET /v2/positions returned [] (0 open positions). GET /v2/account shows equity
+$99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md (no
+change needed). No SH position held (SPY inverse-ETF check not applicable -
+nothing open). No stop-loss/take-profit checks needed (no positions to
+evaluate). No exits executed this check. No trade_log.md update needed. No
+halt triggered.
+
 ## No open positions (confirmed flat)
+
+Last updated: 2026-08-26 10:30 ET (Intraday monitor check — confirmed flat)
+
+NOTE (2026-08-26 10:30 ET): Intraday check. Live Alpaca API confirmed via
+utils.alpaca_client: GET /v2/clock shows market open (next_close 16:00 ET).
+GET /v2/positions returned [] (0 open positions). GET /v2/account shows equity
+$99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md (no
+change needed). No SH position held (SPY inverse-ETF check not applicable —
+nothing open). No stop-loss/take-profit checks needed (no positions to
+evaluate). No exits executed this check. No trade_log.md update needed. No
+halt triggered.
+
+Last updated: 2026-08-26 09:30 ET (Intraday monitor check — confirmed flat)
+
+NOTE (2026-08-26 09:30 ET): Intraday check. Live Alpaca API confirmed via
+utils/alpaca_client.py: GET /v2/clock shows market open (next_close 16:00 ET).
+GET /v2/positions returned [] (0 open positions). GET /v2/account shows equity
+$99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the -2% halt
+threshold. daily_loss_halt confirmed false in weekly_trade_counter.md (no
+change needed). No SH position held (SPY inverse-ETF check not applicable —
+nothing open). No stop-loss/take-profit checks needed (no positions to
+evaluate). No exits executed this check. No trade_log.md update needed. No
+halt triggered.
 
 Last updated: 2026-08-23 EOD routine (Sunday, EOD Friday cycle — closing 2026-08-21 Friday session)
 
