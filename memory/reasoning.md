@@ -2078,3 +2078,7 @@ WARNING: stop-limit order for NVDA failed to place (403 Client Error: Forbidden 
 ## 2026-09-01 10:26 ET
 Bought 19 shares of AMZN @ $254.24. Score: 80/100. Stop: $241.53. Targets: $274.58/$292.38/$317.8. Thesis: Volume elevated; strong momentum
 ---
+
+## 2026-09-01 10:26 ET
+Bought 10 shares of AMD @ $454.50. Score: 80/100. Stop: $431.77. Targets: $490.86/$522.67/$568.12. Thesis: Volume above average; AI-chip trade very active
+---

@@ -1016,3 +1016,15 @@ Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy for
 - Research score: 80/100
 - High-beta: False
 
+
+
+## AMD — Opened 2026-09-01 10:26 ET
+- Entry: $454.50 | Shares: 10 | Cost: $4545.00
+- Stop-loss: $431.77 (5% below entry)
+- Target 1: $490.86 (+8%) — sell 3 shares
+- Target 2: $522.67 (+15%) — sell 3 shares
+- Target 3: $568.12 (+25%) — sell 4 shares
+- Thesis: Volume above average; AI-chip trade very active
+- Research score: 80/100
+- High-beta: False
+

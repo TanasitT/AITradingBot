@@ -29,3 +29,5 @@
 | 2026-09-01 | NVDA | $217.99 | open | 22 | — | — | Volume surging (earnings) — well above 30-day avg |
 
 | 2026-09-01 | AMZN | $254.24 | open | 19 | — | — | Volume elevated; strong momentum |
+
+| 2026-09-01 | AMD | $454.50 | open | 10 | — | — | Volume above average; AI-chip trade very active |
