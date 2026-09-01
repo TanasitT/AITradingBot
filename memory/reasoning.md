@@ -1914,3 +1914,163 @@ positions to evaluate). No exits executed. No trade_log.md update needed. No
 halt triggered. open_positions.md updated. No git push performed
 (SYNC_TO_GITHUB=False per CLAUDE.md).
 ---
+
+## [2026-08-26 EOD] (Wednesday-cycle EOD, closing 2026-08-25 session)
+EOD routine. Read strategy.md and open_positions.md per task instructions.
+Alpaca GET /v2/positions confirmed empty — no SH, no regular stock positions
+held, so no overnight-thesis check or force-close was needed for either
+branch. Alpaca GET /v2/account: equity $99,096.91 vs last_equity $99,096.91 =
+0.00% daily, well within the -2% halt threshold (balance_asof 2026-08-25).
+portfolio_state.md updated. Benchmark logged via Alpaca SPY latest bar
+($765.695 vs prior $765.55 = +0.02%): Portfolio $99,096.91 (0.00%) | SPY
+$765.695 (+0.02%) | Alpha -0.02%. daily_loss_halt reset to false (was
+already false); trades_this_week reset to 0/3 (was already 0/3 — no trades
+this week); "Week of" header advanced to 2026-08-24. EOD report composed and
+sent to jankla2010@gmail.com. No git commit/push performed (SYNC_TO_GITHUB
+disabled per CLAUDE.md).
+---
+
+## [2026-08-26 EOD report]
+EOD report sent to jankla2010@gmail.com.
+---
+
+## [2026-08-26 19:33 ET]
+Pre-market research complete. Read strategy.md (paper trading, no halt override)
+and weekly_trade_counter.md (daily_loss_halt=false) per task instructions before
+proceeding. Researched 16 tickers (15 watchlist + SH) via web search in place of
+Perplexity API. Top candidates: AMZN(78), AMD(78), SMCI(77). Market TRADE_OK=yes,
+VIX~15.5 (well below 28 cap). Critical flag for market-open routine: NVDA reports
+earnings after the bell today — AMD and SMCI carry direct NVDA sympathy risk;
+AMZN has the cleanest setup independent of tonight's result. PCE inflation report
+Thursday and Fed Chair Warsh speaking this week add macro risk. research_cache.md
+and daily_context.md updated. No git push performed (SYNC_TO_GITHUB=False per
+CLAUDE.md).
+---
+
+## [2026-08-26 09:30 ET]
+Intraday monitor check. Live Alpaca API confirmed via utils/alpaca_client.py:
+GET /v2/clock shows market open (next_close 16:00 ET, next_open 2026-08-27
+09:30 ET). GET /v2/positions returned [] (0 open positions). GET /v2/account
+shows equity $99,096.91 vs last_equity $99,096.91 = 0.00% daily change, well
+within the -2% halt threshold. daily_loss_halt confirmed false in
+weekly_trade_counter.md (no change needed). No SH position held (SPY
+inverse-ETF check not applicable — nothing open). No stop-loss/take-profit
+checks needed (no positions to evaluate). No exits executed. No trade_log.md
+update needed. No halt triggered. open_positions.md updated with this check's
+entry. No git push performed (SYNC_TO_GITHUB=False per CLAUDE.md).
+---
+
+## [2026-08-26 12:38 ET]
+Intraday monitor check. Live Alpaca API confirmed via utils/alpaca_client.py:
+GET /v2/clock shows market open (is_open=true, next_close 16:00 ET). GET
+/v2/positions returned [] (0 open positions). GET /v2/account shows equity
+$99,096.91 vs last_equity $99,096.91 = 0.00% daily change, well within the
+-2% halt threshold. daily_loss_halt confirmed false in weekly_trade_counter.md
+(no change needed). No SH position held (SPY inverse-ETF check not
+applicable — nothing open). No stop-loss/take-profit checks needed (no
+positions to evaluate). No exits executed. No trade_log.md update needed.
+No halt triggered. open_positions.md updated with this check's entry. No git
+push performed (SYNC_TO_GITHUB=False per CLAUDE.md).
+---
+
+## 2026-08-26 15:54 ET
+EOD Thursday-cycle routine (closing 2026-08-26 session). Read strategy.md and
+open_positions.md first. Alpaca GET /v2/positions confirmed empty -- no SH,
+no regular stock positions, so no overnight-thesis check or force-close was
+needed for either branch. GET /v2/account: equity $99,096.91 vs last_equity
+$99,096.91 = 0.00% daily, well within the -2% halt threshold. daily_loss_halt
+confirmed false. No exits needed (nothing open). Wrote portfolio_state.md
+with updated account snapshot.
+---
+
+## 2026-08-26 15:54 ET
+Benchmark logged. Portfolio: $99,096.91 (0.00%) | SPY: $766.60 (+0.12%) | Alpha: -0.12%
+---
+
+## 2026-08-26 15:55 ET
+EOD report sent to jankla2010@gmail.com. Subject: Trading Bot — EOD Summary
+2026-08-26 | P&L: $0.00 (0.00%). Composed and sent manually via
+utils/email_client.send_email using the same data sources reporter.py uses
+(SYNC_TO_GITHUB=False per config.py/CLAUDE.md, and engine/reporter.py's
+run_eod() calls github_sync.push() ungated — same known issue flagged in
+prior routine runs — so skipped calling reporter.py directly and sent the
+report manually to avoid an unintended push). No git push performed.
+---
+
+## [2026-08-27 08:33 ET] — Pre-Market Research
+Research complete. 16 tickers scanned (15 active watchlist + SH). Top candidates:
+NVDA(82), AMD(80), AMZN(80), SMCI(78), PLTR(76). Market TRADE_OK=yes, VIX=~15.4.
+SPY above its 5-day MA (~$767 vs ~$765.5) so regular stock entries allowed; SH
+blocked (score 22, bearish-regime criteria not met). Key driver: NVDA reported
+Q2 after the bell 08-26 and BEAT big — rev $96.2B (+106% YoY), EPS $2.22, Q3
+guide $108B (+~89%), "supply for 70% growth" into FY28; NVDA +5-6% pre-market.
+That resolves the largest AI/chip binary event to the upside and lifts the
+sympathy-risk flags on AMD/SMCI/MSFT/QQQ. Offsetting: core PCE (July) +3.3% YoY
+in line but sticky, 10Y yield up to ~4.66%, trimming rate-cut odds. Caveat for
+the market-open routine: NVDA/AMD/SMCI all gapped up pre-market, so a 5% stop on
+an opening entry sits inside likely gap-fill range; AMZN is the cleanest entry
+with the least chase risk. Trade counts 0/3 daily, 0/3 weekly; daily_loss_halt
+false. Scores written to research_cache.md, market context to daily_context.md.
+GitHub push skipped (SYNC_TO_GITHUB=False).
+---
+
+## [2026-08-27 12:32 ET]
+Intraday monitor check. daily_loss_halt=false, so proceeded. Live Alpaca API
+(utils/alpaca_client.py): clock is_open=true (next_close 16:00 ET); GET
+/v2/positions=[] (0 open positions); GET /v2/account equity $99,096.91 vs
+last_equity $99,096.91 = 0.00% daily, well within -2% halt. No SH position, so
+SPY 5-day MA / inverse-ETF check not applicable. No positions to evaluate for
+stop-loss or take-profit. No exits executed. No halt triggered. trades_this_week
+0/3, week of 2026-08-24. open_positions.md updated with the check note;
+trade_log.md unchanged. GitHub push skipped (SYNC_TO_GITHUB=False).
+---
+
+## [2026-08-27 08:37 ET] — Market Open
+Gates checked: strategy.md read (live_trading=false → paper account).
+weekly_trade_counter.md: daily_loss_halt=false, trades_this_week=0/3 — not
+halted, under limit, proceeded. open_positions.md: confirmed flat (no open
+positions per last intraday check 2026-08-26). daily_context.md: SPY ABOVE
+5-day MA (~$767 vs ~$765.5), VIX ~15.4 (<28), TRADE_OK=yes. Regular stock
+entries allowed; SH blocked (score 22).
+
+Candidates from research_cache.md (2026-08-27 fresh pre-market run), score>=70,
+SPY/QQQ excluded: NVDA 82, AMD 80, AMZN 80, SMCI 78, PLTR 76, MSFT 74, META 72,
+COIN 72. NVDA reported Q2 after the bell 08-26 — BEAT (rev $96.2B +106% YoY, Q3
+guide $108B); NVDA/AMD/SMCI gapped up +5-6% pre-market. Flagged gap-chase risk:
+a 5% stop on an opening entry in the gapped chip names sits inside likely
+intraday gap-fill range. research_cache.md recommends AMZN as the cleanest,
+least-chase entry (AWS +37%, JPMorgan PT $365).
+
+Action: wrote memory/trade_trigger.md (status: pending) with the 8 candidates,
+paper_trading=true, and priority_order_for_executor = AMZN, then PLTR, then MSFT
+(NVDA/AMD/SMCI eligible by score but gap-chase-flagged). The prior trigger
+(2026-08-26 20:37 ET) was still status:pending and never executed by the Python
+executor — superseded by this run. Per skill, memory/open_positions.md,
+trade_log.md, and weekly_trade_counter.md NOT updated here — the Python executor
+owns those after confirming fills via the Alpaca API. Waiting for executor.
+GitHub push skipped (SYNC_TO_GITHUB=False).
+---
+
+## [2026-08-27 12:32 ET]
+Intraday monitor check (scheduled 10:30 routine, ran late). daily_loss_halt =
+false, so proceeded. Live Alpaca API via utils/alpaca_client.py: GET /v2/clock
+is_open=true (next_close 16:00 ET). GET /v2/positions returned [] — 0 open
+positions (no SH, no regular stock). GET /v2/account equity $99,096.91 vs
+last_equity $99,096.91 = 0.00% daily, well within the -2% halt threshold. No
+stop-loss / take-profit / SH-vs-SPY-5dMA checks needed (nothing open). No exits
+executed. open_positions.md updated with the flat confirmation; trade_log.md and
+weekly_trade_counter.md unchanged (no fills, halt stays false). GitHub push
+skipped (SYNC_TO_GITHUB=False).
+---
+
+## [2026-08-27 12:33 ET]
+Intraday monitor (scheduled 11:30 run). daily_loss_halt=false. Alpaca live: market open, GET /v2/positions = [] (flat, no SH, no stock). Equity $99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within -2% cap. No stop-loss/take-profit checks needed. No exits, no orders, no halt. Updated open_positions.md; no trade_log.md change.
+---
+
+## 2026-09-01 10:26 ET
+Bought 22 shares of NVDA @ $217.99. Score: 82/100. Stop: $207.09. Targets: $235.43/$250.69/$272.49. Thesis: Volume surging (earnings) — well above 30-day avg
+---
+
+## 2026-09-01 10:26 ET
+WARNING: stop-limit order for NVDA failed to place (403 Client Error: Forbidden for url: https://paper-api.alpaca.markets/v2/orders). Position is open on Alpaca WITHOUT a broker-side stop-loss — needs a manual check until this is resolved.
+---

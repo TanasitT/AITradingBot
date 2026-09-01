@@ -1,5 +1,72 @@
 # Portfolio State
-Last updated: 2026-08-15 EOD routine (Saturday-cycle, closing 2026-08-14 Friday session)
+Last updated: 2026-08-26 EOD routine (Thursday-cycle EOD, closing 2026-08-26 session)
+
+- Cash available: $99,096.91
+- Invested: $0.00
+- Total equity: $99,096.91
+- Daily P&L: $0.00 (0.00%)
+- Open positions: 0
+
+NOTE: EOD Thursday-cycle routine. Alpaca GET /v2/positions confirmed empty —
+no SH, no regular stock positions, so no overnight-thesis check or
+force-close was needed for either branch. GET /v2/account: equity
+$99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the -2%
+halt threshold (balance_asof 2026-08-25; market open at check time,
+next_close 16:00 ET). daily_loss_halt confirmed false. No exits needed
+(nothing open). No trades placed this week per trade_log.md/
+weekly_trade_counter.md. No action taken.
+
+NOTE: (prior entry, 2026-08-26 EOD routine (Wednesday-cycle EOD, closing 2026-08-25 session))
+
+- Cash available: $99,096.91
+- Invested: $0.00
+- Total equity: $99,096.91
+- Daily P&L: $0.00 (0.00%)
+- Open positions: 0
+
+NOTE: EOD Wednesday routine. Alpaca GET /v2/positions confirmed empty — no
+SH, no regular stock positions, so no overnight-thesis check or force-close
+was needed for either branch. GET /v2/account: equity $99,096.91 vs
+last_equity $99,096.91 = 0.00% daily, well within the -2% halt threshold
+(balance_asof 2026-08-25). daily_loss_halt confirmed false. No exits needed
+(nothing open). No trades placed this week per trade_log.md/
+weekly_trade_counter.md. No action taken.
+
+NOTE: (prior entry, 2026-08-23 EOD routine (Sunday, EOD Friday cycle — closing 2026-08-21 Friday session))
+
+- Cash available: $99,096.91
+- Invested: $0.00
+- Total equity: $99,096.91
+- Daily P&L: $0.00 (0.00%)
+- Open positions: 0
+
+NOTE: EOD Friday routine (run 2026-08-23, delayed from Friday close). Alpaca
+GET /v2/positions confirmed empty — no SH, no regular stock positions, so no
+overnight-thesis check or force-close was needed for either branch. GET
+/v2/account: equity $99,096.91 vs last_equity $99,096.91 = 0.00% daily, well
+within the -2% halt threshold (balance_asof 2026-08-21, consistent with
+market closed since Friday's session). daily_loss_halt confirmed false. No
+exits needed (nothing open). Market closed at run time (GET /v2/clock:
+is_open=false, next_open 2026-08-24 09:30 ET). No trades placed this week
+per trade_log.md/weekly_trade_counter.md. No action taken.
+
+NOTE: (prior entry, 2026-08-20 EOD routine (Thursday-cycle, closing 2026-08-20 session))
+
+- Cash available: $99,096.91
+- Invested: $0.00
+- Total equity: $99,096.91
+- Daily P&L: -$0.23 (-0.00%)
+- Open positions: 0
+
+NOTE: Alpaca GET /v2/positions confirmed empty — no SH, no regular stock
+positions, so no overnight-thesis check or force-close was needed for either
+branch of the EOD routine. GET /v2/account: equity $99,096.91 vs last_equity
+$99,096.91 = 0.00% daily, well within the -2% halt threshold. daily_loss_halt
+confirmed false. No exits needed (nothing open). No trades placed today
+(market-open routine did not fire a logged entry — see trade_log.md, no new
+rows for 2026-08-20). No action taken.
+
+NOTE: (prior entry, 2026-08-15 EOD routine (Saturday-cycle, closing 2026-08-14 Friday session))
 
 - Cash available: $99,097.14
 - Invested: $0.00

@@ -1,5 +1,75 @@
 # Open Positions
 
+## No open positions (confirmed flat)
+
+Last updated: 2026-08-27 12:33 ET (Intraday monitor check — confirmed flat)
+
+NOTE (2026-08-27 12:33 ET, scheduled 11:30 monitor run): Intraday check. Live
+Alpaca API via utils/alpaca_client.py: GET /v2/clock is_open=true (next_close
+2026-08-27 16:00 ET). GET /v2/positions returned [] (0 open positions). GET
+/v2/account equity $99,096.91 vs last_equity $99,096.91 = 0.00% daily, well
+within the -2% halt threshold. daily_loss_halt confirmed false in
+weekly_trade_counter.md (no change). No SH position held (SPY inverse-ETF check
+not applicable). No stop-loss/take-profit checks needed (nothing open). No
+exits executed. No trade_log.md update needed. No halt triggered.
+
+Last updated: 2026-08-27 12:32 ET (Intraday monitor check — confirmed flat)
+
+NOTE (2026-08-27 12:32 ET, scheduled routine): Intraday check. Live Alpaca API
+confirmed via utils/alpaca_client.py: GET /v2/clock shows market open
+(is_open=true, next_close 2026-08-27 16:00 ET). GET /v2/positions returned []
+(0 open positions). GET /v2/account shows equity $99,096.91 vs last_equity
+$99,096.91 = 0.00% daily, well within the -2% halt threshold. daily_loss_halt
+confirmed false in weekly_trade_counter.md (no change needed). No SH position
+held (SPY inverse-ETF check not applicable — nothing open). No stop-loss/
+take-profit checks needed (no positions to evaluate). No exits executed this
+check. No trade_log.md update needed. No halt triggered.
+
+Last updated: 2026-08-26 12:38 ET (Intraday monitor check — confirmed flat)
+
+NOTE (2026-08-26 12:38 ET, scheduled routine): Intraday check. Live Alpaca API
+confirmed via utils/alpaca_client.py: GET /v2/clock shows market open
+(is_open=true, next_close 16:00 ET). GET /v2/positions returned [] (0 open
+positions). GET /v2/account shows equity $99,096.91 vs last_equity $99,096.91
+= 0.00% daily, well within the -2% halt threshold. daily_loss_halt confirmed
+false in weekly_trade_counter.md (no change needed). No SH position held (SPY
+inverse-ETF check not applicable — nothing open). No stop-loss/take-profit
+checks needed (no positions to evaluate). No exits executed this check. No
+trade_log.md update needed. No halt triggered.
+
+Last updated: 2026-08-26 11:30 ET (Intraday monitor check — confirmed flat)
+
+NOTE (2026-08-26 11:30 ET, scheduled routine): Intraday check. Live Alpaca API
+confirmed via utils/alpaca_client.py: GET /v2/clock shows market open
+(is_open=true, next_close 16:00 ET). GET /v2/positions returned [] (0 open
+positions). GET /v2/account shows equity $99,096.91 vs last_equity $99,096.91
+= 0.00% daily, well within the -2% halt threshold. daily_loss_halt confirmed
+false in weekly_trade_counter.md (no change needed). No SH position held (SPY
+inverse-ETF check not applicable — nothing open). No stop-loss/take-profit
+checks needed (no positions to evaluate). No exits executed this check. No
+trade_log.md update needed. No halt triggered.
+
+Last updated: 2026-08-26 09:30 ET (Intraday monitor check — confirmed flat)
+
+NOTE (2026-08-26 09:30 ET): Intraday check. Live Alpaca API confirmed via
+utils/alpaca_client.py: GET /v2/clock shows market open (next_close 16:00 ET,
+next_open 2026-08-27 09:30 ET). GET /v2/positions returned [] (0 open
+positions). GET /v2/account shows equity $99,096.91 vs last_equity $99,096.91
+= 0.00% daily, well within the -2% halt threshold. daily_loss_halt confirmed
+false in weekly_trade_counter.md (no change needed). No SH position held (SPY
+inverse-ETF check not applicable — nothing open). No stop-loss/take-profit
+checks needed (no positions to evaluate). No exits executed this check. No
+trade_log.md update needed. No halt triggered.
+
+## EOD 2026-08-26 (Wednesday-cycle EOD, closing 2026-08-25 session)
+
+NOTE (2026-08-26 EOD): EOD routine. Alpaca GET /v2/positions confirmed
+empty — no open positions (no SH, no regular stock positions), so no
+overnight-thesis check or force-close was needed for either branch. Account
+equity $99,096.91 vs last_equity $99,096.91 = 0.00% daily, well within the
+-2% halt threshold. daily_loss_halt confirmed false. No exits needed
+(nothing open). No action taken.
+
 ## Intraday check 2026-08-26 11:30 ET
 
 NOTE (2026-08-26 11:30 ET): Intraday check. Live Alpaca API confirmed via
@@ -921,4 +991,16 @@ Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy for
 - High-beta: False
 - STATUS (2026-08-13 11:34 ET): Alpaca GET /v2/positions has no MSFT entry —
   this buy order never filled live. Treating as not open; no exit needed.
+
+
+
+## NVDA — Opened 2026-09-01 10:26 ET
+- Entry: $217.99 | Shares: 22 | Cost: $4795.78
+- Stop-loss: $207.09 (5% below entry)
+- Target 1: $235.43 (+8%) — sell 7 shares
+- Target 2: $250.69 (+15%) — sell 7 shares
+- Target 3: $272.49 (+25%) — sell 8 shares
+- Thesis: Volume surging (earnings) — well above 30-day avg
+- Research score: 82/100
+- High-beta: False
 

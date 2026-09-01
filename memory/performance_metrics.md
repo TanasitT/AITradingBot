@@ -1,6 +1,6 @@
 # Performance Metrics
 
-Last updated: 2026-08-14 (weekly close)
+Last updated: 2026-08-23 (weekly close)
 
 ## All-Time Stats
 - Total trades: 13
@@ -11,6 +11,20 @@ Last updated: 2026-08-14 (weekly close)
 - Profit factor: 0.181 (gross win $199.68 / gross loss $1,104.79)
 - Largest single gain: +$126.44 (NVDA, 2026-08-14)
 - Largest single loss: -$379.26 (AMD, 2026-07-27)
+
+## This Week (2026-08-17 to 2026-08-21) — Final
+- Trades: 0
+- Wins: 0
+- Losses: 0
+- Win rate: N/A
+- Total P&L: $0.00
+- Best trade: — (no trades)
+- Worst trade: — (no trades)
+- No trade_log.md entries for any day 08-17 through 08-21; weekly_trade_counter.md confirms trades_this_week stayed 0/3 all week and daily_loss_halt never triggered
+- Portfolio: $99,097.14 (08-14 close) -> $99,096.91 (08-21 close), -0.0002% (~flat)
+- SPY: $776.30 (08-14) -> $765.64 (08-21), -1.37%
+- Weekly alpha: ~+1.37% (a flat, no-trade week outperformed a declining SPY — same "defensive by inaction" pattern as 06-22 and 07-13, mirror image of 08-03's -3.53% under-trading cost during a rally)
+- All-time stats below are unchanged from the prior week since no new trades were logged
 
 ## This Week (2026-08-10 to 2026-08-14) — Final
 - Trades: 1 (NVDA, opened 2026-08-12 combined 44sh, closed 2026-08-14)
@@ -66,6 +80,7 @@ Last updated: 2026-08-14 (weekly close)
 | 2026-07-27 | 2 | 0 | 0% | -$701.58 | AMD entered and stop-loss-closed twice in one week (07-27, re-entered and closed again 07-29) — first week where losses came from the 7% high-beta stop-loss rather than EOD no-catalyst force-close; portfolio $99,672.34 -> $98,970.71 (-0.70%); SPY $735.98 -> $746.79 (+1.47%); weekly alpha ~-2.17%, worst week since inception; 0 trades placed 07-30/07-31 |
 | 2026-08-03 | 0 | 0 | N/A | $0.00 | No trades all week; market-open routine skipped 08-04 due to stale pre-market research; portfolio flat $98,970.71; SPY $746.79 -> $773.16 (+3.53%); weekly alpha ~-3.53%, worst alpha since inception (rally sat out, no realized losses) |
 | 2026-08-10 | 1 | 1 | 100.0% | +$126.44 | First win-only week since inception; NVDA (44sh, entered 08-12) closed 08-14 for +$126.44 (+1.28%) via an unrule-triggered exit (no stop-loss/TP breach, reason not logged); MSFT 10sh order expired unfilled; portfolio $98,970.71 -> $99,097.14 (+0.13%); SPY $773.16 -> $776.30 (+0.41%); weekly alpha ~-0.28% |
+| 2026-08-17 | 0 | 0 | N/A | $0.00 | No trades all week; 0 open positions throughout; portfolio flat $99,097.14 -> $99,096.91 (-0.0002%); SPY $776.30 -> $765.64 (-1.37%); weekly alpha ~+1.37% (inaction outperformed a declining SPY) |
 
 ## By Signal Type
 | Signal | Trades | Win Rate | Avg P&L |

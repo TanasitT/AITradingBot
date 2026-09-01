@@ -1,61 +1,72 @@
 # Research Cache
-Last Updated: 2026-08-23 (pre-market research run, Sunday automated firing)
-Data sourced via web search; market data reflects last available close (2026-08-21 Friday).
+Last Updated: 2026-08-27 (pre-market research run, Thursday automated firing)
+Data sourced via web search; market data reflects pre-market 2026-08-27 and last close (2026-08-26 Wednesday).
+KEY EVENT RESOLVED: NVDA reported Q2 after the bell 2026-08-26 — BEAT. Revenue $96.2B (+106% YoY),
+EPS $2.22 (+111% YoY), Q3 guide $108B (+~89% YoY), Huang: "supply for 70% growth" into FY28.
+NVDA +5–6% pre-market 08-27. The largest near-term binary event for the AI/chip complex is now
+resolved to the upside — sympathy risk flags from yesterday's cache are lifted for AMD/SMCI/MSFT/QQQ.
+Secondary macro: core PCE (July) +3.3% YoY, in line with expectations but sticky; 10Y yield rose to ~4.66%.
 
 ---
 
-## Scores — 2026-08-23
+## Scores — 2026-08-27
 
 | Ticker | Score | Thesis (one line) | Key Catalyst / Risk | Volume Note |
 |--------|-------|-------------------|---------------------|-------------|
-| AAPL   | 72/100 | Record June-quarter revenue (+16% YoY, EPS +29%); App Store EU reform adds optionality | Risk: forward guidance (9-11%) missed consensus (12%); slight deceleration concern | Volume elevated post-earnings; normalize in days ahead |
-| MSFT   | 74/100 | Strong Buy consensus (56 analysts), avg target $569.56 (+18% upside); post-earnings beat well-received | Risk: Guardian investigation re AI chip capacity caused -3.2% session; cloud story intact | Volume higher post-earnings week |
-| NVDA   | 84/100 | Earnings Aug 26 — analysts expect ~$92-95B Q2 revenue (+massive YoY), near-universal Buy ratings; Blackwell ramp in full swing | Risk: extremely elevated expectations; any guidance miss = sharp sell-off; pre-earnings vol spike expected | Volume surging into earnings; well above 30-day avg |
-| TSLA   | 58/100 | Reported with Mag7 cohort in early August; no standout positive catalyst found; EV market competitive pressure continues | Risk: execution risk on Robotaxi; no clear near-term earnings catalyst | Volume normal; no unusual activity detected |
-| AMZN   | 80/100 | Market cap surpassed $3T; AWS revenue +37% to $42.2B; AI/chip businesses each ~$25B annual run rate | Risk: heavy CapEx investment cycle pressuring FCF; valuation stretched above $3T | Volume elevated on Mag7 earnings rally |
-| META   | 70/100 | Shares recovered the 9% post-Q2 drop; AI hyperscaler spending thesis intact; revenue trajectory strong | Risk: Q2 EPS missed ($6.18 vs $7.22 exp) due to $2.4B legal charges + $1.18B severance; overhang remains | Volume normalizing after earnings volatility |
-| GOOGL  | 72/100 | Alphabet gained 5% in AI-hyperscaler earnings rally; Search + Cloud strong; beneficiary of AI infra spending | Risk: antitrust/regulatory overhangs persist; search disruption thesis remains long-term concern | Volume above average in earnings week |
-| AMD    | 76/100 | Revenue expected +46% YoY (~$11.2B); Data Center segment accelerating; Helios/MI450 chips booking with Meta and OpenAI | Risk: execution vs NVDA dominance; MI450 ramp pace uncertain | Volume above average; AI chip trade active |
-| SMCI   | 73/100 | +6% on liquid-cooled AI rack announcements + AMD partnership (AMD Instinct Coder); up 25% YTD; analyst price target upgrades | Risk: accounting/audit history creates headline risk; concentrated customer exposure | Volume spike on news day; momentum follow-through expected |
-| PLTR   | 81/100 | Q2 revenue $1.94B with 55% net margin; raised 2026 guidance to $8.15-8.16B; US commercial + gov AI platform demand surging | Risk: premium valuation (very high P/E); stock priced for perfection | Volume elevated post-guidance raise |
-| SOFI   | 58/100 | Record Q2 adjusted revenue $1.2B (+40% YoY); Piper Sandler initiated Overweight; recent +18% off Q2 lows | Risk: down 31% YTD; Hold consensus (15 analysts); macro rate sensitivity; fintech competitive pressure | Volume moderate; no exceptional spike |
-| RIVN   | 38/100 | Revenue +27% YoY beat estimates but stock fell ~9% on guidance concerns; R2 SUV launch is medium-term catalyst | Risk: net loss $833M; FCF -$849M; reliance on regulatory credits; back-loaded delivery expectations; legal challenges | Volume elevated (sell-side reaction); negative momentum |
-| COIN   | 77/100 | +8.12% on Aug 21, +11% on Aug 19; tokenization + regulatory tailwinds; Q2 market share all-time high (10.3%); Buy consensus, targets $208-223 | Risk: Bitcoin/crypto volatility; prediction market legal setback in Michigan | Volume surging; one of the strongest recent momentum names |
-| SPY    | 73/100 | Above 5-day MA (~$766.46); closed ~$767 Aug 21; ATH was $779.37 on Aug 13; 50d/200d MA bullish structure; VIX at 2026 low | Risk: marginally above 5-day MA (thin buffer); market digesting post-ATH pullback from $779 | Volume normal for broad ETF |
-| QQQ    | 70/100 | 50d MA ($709.6) above 200d MA ($636.4) — bullish long-term; short-term signals mixed; tech earnings largely in; NVDA earnings Aug 26 is next major catalyst | Risk: 8-day MA (721.83) showing sell signal; near-term consolidation possible ahead of NVDA | Volume moderate |
-| SH     | 22/100 | Inverse SPY ETF — SPY is above 5-day MA and VIX at 2026 lows (~15.13); bullish market regime strongly disfavors SH entry | No bearish catalyst; market trending up; SH entry blocked (score below 60 threshold) | Volume irrelevant; no entry warranted |
+| AAPL   | 66/100 | Record June-quarter (+16% rev YoY) but forward guide light; no fresh catalyst; ~$313 | Risk: no near-term catalyst; sticky PCE + rising yields pressure multiples | Volume near 30-day avg |
+| MSFT   | 74/100 | AI-cloud thesis intact; Strong Buy consensus (~56 analysts, avg PT ~$569); NVDA beat is a positive read-through for Azure AI demand; ~$496 | Risk: below 50d MA earlier in week; GOOGL AI-talent shakeup a sector concern; no MSFT-specific catalyst | Volume normal |
+| NVDA   | 82/100 | Q2 BEAT — rev $96.2B (+106% YoY), EPS $2.22, Q3 guide $108B (+89%), "supply for 70% growth" FY28; 58/61 Buy; +5–6% pre-market | Risk: chasing a post-earnings gap-up; NVDA has faded after 6 of last 8 prints; entry today = gap-fill risk | Volume surging (earnings) — well above 30-day avg |
+| TSLA   | 52/100 | FSD/Robotaxi is a medium-term narrative only; stock down ~18% recent stretch; ~$346 | Risk: no near-term catalyst; EV competition; weak momentum | Volume normal |
+| AMZN   | 80/100 | Only Mag7 name outperforming S&P 500 YTD; AWS +37% (fastest since 2021); JPMorgan PT raised to $365; $3T+ cap; SF robotaxi rollout | Risk: heavy CapEx cycle; valuation stretched; rate-sensitive to yield backup | Volume elevated; strong momentum |
+| META   | 72/100 | Ad revenue +27% YoY; AI hyperscaler spend thesis intact; median 12-mo target ~$750 | Risk: adverse "Meta ruling" digested 08-26 (legal/antitrust overhang); elevated CapEx; limited AI-demand color from mgmt | Volume moderate |
+| GOOGL  | 56/100 | Solid Q2 (Search + Cloud); dividend ex-date Sep 4; AI-infra spend beneficiary; ~$339 | Risk: Jeff Dean departure — AI leadership shakeup weighing on stock; antitrust overhang; -1.2% on 08-26 | Volume elevated on negative news |
+| AMD    | 80/100 | Up ~114% YTD; Raymond James upgrade to Strong Buy; MI450 bookings w/ Meta + OpenAI; NVDA beat now a positive halo; ~$479 | Risk: execution vs NVDA dominance; already extended after +4.9% on 08-25; post-gap chase risk | Volume above average; AI-chip trade very active |
+| SMCI   | 78/100 | +9.35% on 08-25 to $38.46; AI liquid-cooled rack demand; AMD partnership order flow; NVDA beat reinforces buildout thesis | Risk: accounting/audit history is a recurring headline risk; sharp run-up = pullback risk | Volume strongly elevated |
+| PLTR   | 76/100 | Q2 revenue +93% YoY, 55% net margin, raised 2026 guide to $8.15–8.16B; BofA reiterates Buy, PT $255; US commercial + gov AI | Risk: premium valuation, priced for perfection; recent profit-taking on above-avg volume | Volume above average |
+| SOFI   | 54/100 | Record Q2 adjusted revenue $1.2B (+40%); Piper Sandler Overweight; fintech recovering | Risk: Hold consensus majority; rate-sensitive and yields just backed up to 4.66%; no near-term catalyst | Volume moderate |
+| RIVN   | 51/100 | First positive consolidated gross profit Q2; R2 external deliveries started; multiple PT raises (Piper $20 Overweight) | Risk: continued net losses; substantial cash burn; ~$16.72, far below prior highs | Volume elevated on upgrades |
+| COIN   | 72/100 | Goldman PT $196 (08-25); 34-analyst avg Buy, avg PT ~$195; Bernstein $330; crypto regulatory clarity; ~$184 | Risk: BTC/crypto volatility; prediction-market legal setback; below recent $190 high | Volume elevated; crypto rally supportive |
+| SPY    | 65/100 | Above 5-day MA (~$767 vs MA ~mid-$765); NVDA beat supportive for 08-27 open; above 200d MA | Risk: still below 50d MA; sticky core PCE 3.3%; 10Y at 4.66% trims rate-cut odds | Volume normal |
+| QQQ    | 66/100 | NVDA beat lifts entire tech complex; software/cyber (CRM, CRWD, OKTA) also gapping up pre-market | Risk: below 50d MA; rate-sensitive; mixed short-term technicals | Volume moderate |
+| SH     | 22/100 | Inverse SPY — SPY ABOVE 5-day MA, VIX ~15.4, NVDA beat reinforces uptrend; no confirmed 5-day downtrend | SH entry BLOCKED (well below 60 threshold); bullish regime | Volume irrelevant |
 
 ---
 
 ## Tier Summary
 
 ### Tier 1 — Score >= 70 (eligible for regular stock entry if all criteria pass)
-- NVDA: 84/100
-- PLTR: 81/100
+- NVDA: 82/100 (post-earnings gap-up — flag chase/gap-fill risk for market-open routine)
+- AMD: 80/100
 - AMZN: 80/100
-- COIN: 77/100
-- AMD: 76/100
+- SMCI: 78/100
+- PLTR: 76/100
 - MSFT: 74/100
-- SMCI: 73/100
-- SPY: 73/100
-- AAPL: 72/100
-- GOOGL: 72/100
-- QQQ: 70/100
-- META: 70/100
+- META: 72/100
+- COIN: 72/100
 
-### Tier 2 — Score 60-69 (watch; below entry threshold)
-- TSLA: 58/100 (just below; no clear catalyst)
-- SOFI: 58/100 (hold consensus; rate-sensitive)
+### Tier 2 — Score 60–69 (watch; below entry threshold)
+- AAPL: 66/100
+- QQQ: 66/100 (ETF)
+- SPY: 65/100 (ETF)
 
 ### Tier 3 — Score < 60 (avoid)
-- RIVN: 38/100 (negative momentum, cash burn)
-- SH: 22/100 (no bearish regime; blocked)
+- GOOGL: 56/100 (AI leadership shakeup; antitrust overhang)
+- SOFI: 54/100 (Hold consensus; rate-sensitive)
+- TSLA: 52/100 (weak momentum; no catalyst)
+- RIVN: 51/100 (improving but still below threshold)
+- SH: 22/100 (bullish regime; blocked)
 
 ---
 
 ## Top 3 Candidates (for market-open routine reference)
-1. NVDA — 84/100 — EARNINGS AUG 26 (pre-event momentum; extreme risk around report)
-2. PLTR — 81/100 — Strong Q2, raised guidance, high-conviction AI platform
-3. AMZN — 80/100 — $3T milestone, AWS +37%, diversified AI revenue
+1. NVDA — 82/100 — Q2 blowout + strong Q3 guide; momentum confirmed. CAUTION: +5–6% pre-market gap;
+   NVDA has faded after 6 of its last 8 reports — entering at the open risks buying the top tick.
+2. AMD — 80/100 — Raymond James Strong Buy upgrade; MI450 bookings; NVDA beat is now a tailwind, not a risk.
+3. AMZN — 80/100 — cleanest non-chip setup; AWS +37%, JPMorgan PT $365; least dependent on the AI-chip gap trade.
 
-Note: NVDA earnings are Aug 26 (this coming Wednesday). Entry before earnings carries significant binary risk. Market-open routine should weigh that carefully against the 5%-position-size cap.
+**Market-open routine notes**:
+- TRADE_OK = yes. SPY above 5-day MA (regular entries allowed); SH blocked.
+- Verify live volume >= 1.25x 30-day average before any entry — chip names gapped, so opening prints may be spiky.
+- If choosing between the top 3, AMZN offers the least gap-chase risk; NVDA/AMD/SMCI all opened well above
+  Wednesday's close and a stop placed 5% below a gap-up entry sits inside likely intraday noise.
+- Daily trade count 0/3; weekly 0/3; daily_loss_halt = false.

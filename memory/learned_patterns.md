@@ -331,3 +331,43 @@
 4. *(Unresolved, 8 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
 5. *(Unresolved from 07-27)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — still open; this week's NVDA hold-through-to-a-win is a data point against always force-closing on distant earnings dates.
 6. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested this week (no stop-loss triggered).
+
+---
+
+## Weekly Reflection — Week of 2026-08-17 (Final, logged 2026-08-23)
+
+### Week Stats
+- Trades executed: 0 | Wins: 0 | Losses: 0 | Win rate: N/A
+- Net P&L: $0.00 (no trade_log.md entries for any day 08-17 through 08-21)
+- Portfolio: $99,097.14 (08-14 close) -> $99,096.91 (08-21 close), essentially flat (-0.0002%)
+- SPY performance this week: $776.30 (08-14) -> $765.64 (08-21), -1.37%
+- Alpha vs SPY: ~+1.37% — best weekly alpha since 07-23's +1.01%, entirely from sitting out a declining SPY rather than from any realized gain
+- Cumulative alpha since inception: modestly improved after two straight negative-alpha weeks (08-03 at -3.53%, 08-10 at -0.28%); this week's inaction happened to land on the right side of a down market
+
+### Signals That Worked
+- **No hard rules broken**: daily loss cap and 3-trades/day limit never triggered because zero trades were placed; weekly_trade_counter.md confirms trades_this_week stayed 0/3 across every EOD reset this week (08-20, 08-23).
+- **Zero-trade week coincided with a declining SPY (-1.37%)**: this is the mirror image of 08-03 (zero trades during a +3.53% SPY rally, worst alpha to date) — the same "no signal" outcome produced a good result this time purely because the market moved against a hypothetical long position instead of with it. Reinforces that the bot's alpha in no-trade weeks is essentially a coin flip tied to SPY's direction, not a skill signal.
+
+### Signals That Failed
+- **A full second consecutive week with zero trades and no skip-reason logging**: trade_log.md has no entries — active or skipped — for 08-17 through 08-21. This is the same "log skip decisions daily" gap that has been the single most-repeated open action item since Week 2 (2026-06-30), now unresolved for 12+ weeks running. It remains impossible to tell from the trade log alone whether any candidate came close to qualifying this week or whether research/candidates were simply absent.
+- **No new data on the standing open bugs**: the engine/coordinator.py position-logging drift and the 08-14 unrule-triggered-exit mystery were not tested this week (no positions were ever opened), so both remain open with no additional evidence either way.
+- **research_cache.md/daily_context.md staleness risk not explicitly ruled out**: given two prior weeks (07-23, 08-04) were confirmed blocked by stale research, and this week again produced zero trades with no skip log, stale research remains a plausible (unconfirmed) explanation alongside "no qualifying candidates."
+
+### VIX Conditions
+- VIX levels were not explicitly logged this week in any memory file — the VIX-at-decision gap flagged since Week 1 remains unresolved after 10 weeks of tracking.
+- SPY's steady -1.37% decline without a daily_loss_halt or VIX>28 gate ever firing (portfolio never held a position to be affected) suggests a moderate pullback rather than a volatility spike, consistent with prior no-panic pullback weeks (e.g. 07-20).
+
+### Emerging Patterns (10 weeks tracked — moderate-to-high confidence on recurring issues)
+- **No-trade weeks are now a near-coin-flip on alpha, split by SPY's direction that week**: 08-03 (SPY +3.53%, alpha -3.53%) and now 08-17 (SPY -1.37%, alpha +1.37%) are both zero-trade weeks with alpha almost exactly mirroring negative SPY movement. This makes "inaction" a poor strategy to rely on for consistent alpha — it only works when the bot happens to sit out down weeks, which it cannot control or predict without actually evaluating candidates.
+- **Skip-reason logging is now the most overdue open item in the project's history** (raised Weeks 2 through 9, now also Week 10) — 12+ weeks unresolved. This has graduated from an analysis inconvenience to the single clearest, cheapest fix available (a code/prompt change to engine/coordinator.py or the market-open routine) that would meaningfully improve every future reflection's quality.
+- **The bot has now had 4 of the last 5 tracked weeks (08-03, 08-10, 08-17, and effectively 07-31) with 0-1 trades** — trading frequency remains far below the 3/day (15/week) budget, and the cause (candidate scarcity vs. a pipeline/staleness bug vs. an overly strict filter) is still not diagnosable from available logs.
+
+### Open Action Items (carry forward to next week)
+1. **Most overdue, 12+ weeks running**: Log skip decisions in trade_log.md daily, including reason and top candidate scores/volume — this week (08-17 to 08-21) again has zero entries of any kind, active or skipped.
+2. *(Unresolved, 6th week running)* Root-cause and fix the engine/coordinator.py position-logging bug — not observed this week only because no trades occurred, not because it was fixed.
+3. *(Unresolved)* Investigate what closed the NVDA position on 08-14 before the monitor check ran — still no new evidence, no positions opened since.
+4. *(Unresolved, 9 weeks running)* Add VIX at entry/decision time directly to trade_log.md and daily_context.md.
+5. *(Unresolved, 9 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
+6. *(Unresolved from 07-27)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — still open, no new data (zero trades this week).
+7. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested this week.
+8. **New**: Confirm whether pre-market research (research_cache.md/daily_context.md) actually ran and stayed fresh every weekday this week (08-17 to 08-21) — given the confirmed staleness bugs on 07-23 and 08-04, a silent third occurrence during a zero-trade week cannot currently be ruled out from the available logs.

@@ -1,15 +1,16 @@
 # Weekly Trade Counter
 
-Week of: 2026-08-10
-trades_this_week: 0
-last_eod_reset: 2026-08-15
+Week of: 2026-08-24
+trades_this_week: 1
+last_eod_reset: 2026-08-26
 max_trades_per_week: 3
-trades_remaining: 3
+trades_remaining: 2
 
 ## Halt Flags
 daily_loss_halt: false
 halt_reason:
 halt_date:
+
 
 ## EOD Reset — 2026-07-31 (Saturday-cycle EOD, closing 2026-07-31 Friday session)
 daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
@@ -159,3 +160,25 @@ trade counted this week).
 - 2026-08-12: BUY MSFT @ $492.45 (counted)
 
 - 2026-08-12: BUY NVDA @ $224.11 (counted)
+
+## EOD Reset — 2026-08-20 (Thursday-cycle EOD, closing 2026-08-20 session)
+daily_loss_halt set to false (was already false; daily change -0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+today).
+
+## EOD Reset — 2026-08-23 (Sunday run, EOD Friday cycle, closing 2026-08-21 Friday session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+this week).
+
+## EOD Reset — 2026-08-26 (Wednesday-cycle EOD, closing 2026-08-25 session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+this week). "Week of" header advanced to 2026-08-24 (current week).
+
+## EOD Reset — 2026-08-26 (Thursday-cycle EOD, closing 2026-08-26 session)
+daily_loss_halt set to false (was already false; daily change 0.00%, well within -2% cap,
+0 open positions). trades_this_week reset to 0/3 (was already 0/3 — no new entries placed
+today).
+
+- 2026-09-01: BUY NVDA @ $217.99 (counted)
