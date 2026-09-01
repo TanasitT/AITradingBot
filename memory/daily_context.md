@@ -1,92 +1,98 @@
 # Daily Market Context
-Date: 2026-08-27 (Thursday pre-market research run — automated firing)
-Data reflects pre-market conditions 2026-08-27 and last close 2026-08-26 (Wednesday)
+Date: 2026-09-01 (pre-market research run — automated firing)
+Data reflects the 2026-09-01 close and pre-market for the 2026-09-02 session.
 
 ---
 
 ## SPY Trend vs 5-Day Moving Average
 
-**Determination: SPY is ABOVE its 5-day moving average.**
+**Determination: SPY is (marginally) BELOW its 5-day moving average.**
 
-- S&P 500 last close (2026-08-26): ~7,676 (essentially flat, -0.01%); SPY proxy ~$767
-- SPY 5-day moving average: ~$765.5 (estimated) — SPY ~$1.5 (~0.2%) above it
-- SPY 50-day MA: ~$772 — SPY still BELOW its 50-day MA (short-term technical weakness persists)
-- SPY 200-day MA: ~$757 — SPY remains ABOVE its 200-day MA (long-term structure bullish)
-- NVDA reported a Q2 beat after the bell 08-26 and trades +5–6% pre-market 08-27; index futures
-  firmed on the print, so the 08-27 cash open is likely to hold or extend the 5-day MA buffer.
-- Interpretation: regular stock entries are ALLOWED (SPY above 5-day MA). SH entry is BLOCKED.
-  Short-term technicals still mixed (below 50d MA, rising yields) but the biggest overhang (NVDA
-  earnings) resolved to the upside.
+- S&P 500 close 2026-09-01: 7,645.75 (-40.39 pts, -0.53%); SPY -0.57%
+- The index had been trading ~7,676 area late August; the 09-01 risk-off drop pulled it down to
+  roughly its 5-day MA and it closed just below it.
+- S&P 50-day MA: ~7,567 — index still ABOVE (intermediate trend intact)
+- S&P 200-day MA: well below — long-term structure still bullish
+- Breadth deteriorating: <50% of S&P 500 names above their 50-day MA, down from >70% at the August highs.
+- Interpretation: regular stock entries are BLOCKED (SPY below 5-day MA). Evaluate SH — but SH does
+  not qualify either (see below).
 
-**Implication for strategy**: Regular stock entries ALLOWED. SH entry BLOCKED.
+**Implication for strategy**: Regular stock entries BLOCKED. SH entry also BLOCKED (score 52 < 60).
 
 ---
 
 ## VIX Level
 
-**Current VIX: ~15.4 (08-26 close ~15.45, -2.5%) | historically compressed**
+**Current VIX: ~15.88 (2026-09-01 close, +0.96 / +6.4% on the day) | still historically low**
 
-- VIX < 28 threshold: YES — well below, at ~15.4
-- NVDA's beat removed a key event-risk premium; no elevated-fear signal pre-market 08-27.
+- VIX < 28 threshold: YES — comfortably below.
+- VIX rose on the Iran/oil headline but shows no fear spike; options market is not pricing a
+  sustained selloff.
 
 ---
 
 ## TRADE_OK Determination
 
-**TRADE_OK: yes**
+**TRADE_OK: no**
 
 Criteria check:
-- SPY above 5-day MA: YES (~$767 vs ~$765.5)
-- VIX < 28: YES (~15.4)
+- SPY above 5-day MA: NO (closed marginally below) → regular entries blocked
+- VIX < 28: YES (~15.9)
 - daily_loss_halt: false (confirmed in weekly_trade_counter.md)
-- Daily trade count 0/3; weekly 0/3
-- Regular stock entries eligible at market open.
+- Daily/weekly trade count: weekly 3/3 — LIMIT REACHED (NVDA, AMZN, AMD entered 2026-09-01)
+- SH alternative: score 52/100, below the 60 threshold — not a confirmed 5-day downtrend
 
-**Caveat**: The top-scoring names (NVDA, AMD, SMCI) all gapped up pre-market on the NVDA read-through.
-Entering at the open means buying above Wednesday's close with a 5% stop sitting inside likely
-intraday gap-fill range. AMZN is the cleanest entry with the least gap-chase risk. Also watch
-the 8:30 AM ET data / Fed commentary flow — core PCE came in at +3.3% (in line but sticky) and the
-10Y yield rose to ~4.66%, modestly trimming rate-cut expectations.
+Even setting the technical block aside, the weekly trade limit (3/3) independently prevents any
+new entry until the counter resets.
 
 ---
 
 ## Sector Context & Market Regime Notes
 
-**Current regime: Risk-on, AI/chip leadership re-confirmed by NVDA's Q2 beat; rate-cut odds trimmed by sticky PCE.**
+**Current regime: Risk-off headline shock. U.S.-Iran hostilities around the Strait of Hormuz drove
+oil (Brent ~$92+) and Treasury yields to new highs, reviving Fed-tightening concern. Weakest
+seasonal month of the year. Underlying AI/mega-cap earnings remain strong, so this reads as a
+sentiment/geopolitical drawdown rather than a fundamental break — for now.**
 
 ### Sector Rotation
-- **Semiconductors / AI infrastructure**: Leadership re-established. NVDA rev $96.2B (+106% YoY),
-  Q3 guide $108B (+~89%), FY28 "supply for 70% growth." AMD (+ Raymond James Strong Buy upgrade,
-  MI450 bookings with Meta/OpenAI) and SMCI (AI liquid-cooled racks) ride the halo — now a tailwind,
-  not the sympathy risk flagged yesterday.
-- **Software / Cybersecurity**: CRM, CRWD, OKTA gapped up double digits pre-market on their own
-  strong prints — broad enterprise-software strength alongside the AI trade.
-- **Cloud / Mega-cap**: AMZN still the only Mag7 name beating the S&P 500 YTD; AWS +37%; JPMorgan
-  PT $365. MSFT AI-cloud thesis gets a positive NVDA read-through.
-- **AI talent concern**: GOOGL's Jeff Dean departure continues to weigh on GOOGL and raises
-  sector-level AI-talent-competition worries.
-- **Crypto / Fintech**: COIN ~$184; Goldman PT $196, Bernstein $330; regulatory clarity supportive.
-  SOFI rate-sensitive and pressured by the yield backup.
-- **Consumer Discretionary / EV**: TSLA weak (~$346, down ~18% recent), no near-term catalyst.
-  RIVN improving fundamentally but still sub-threshold.
+- **Energy**: outperforming on the crude spike — the day's relative winner.
+- **Semiconductors / AI infrastructure**: retreated. NVDA ~$217 (lowest since May), momentum
+  broken despite the Q2 blowout and the new $3.5B MediaTek NVLink Fusion deal; semiconductor-tariff
+  headlines add overhang. AMD is the standout on fundamentals (Goldman $640, Wells Fargo $615,
+  Raymond James Strong Buy $641; avg PT ~$614; Q3 guide $13.0B/+41%) but is extended near $470 and
+  carries an MI450-schedule rumor.
+- **Cloud / Mega-cap**: AMZN the relative-strength leader (only Mag7 beating S&P YTD; AWS +36.7%;
+  >$3T cap). MSFT strong fundamentally (Azure >$100B ARR, +43%) but flagged as least-upside of the
+  hyperscaler group. META analysts' favored name (median PT ~$750). GOOGL top retail pick but
+  weighed by the Jeff Dean AI-talent departure and antitrust overhang.
+- **AI capex**: the four hyperscalers on track for ~$700B combined 2026 AI infrastructure spend
+  (GOOGL alone guiding ~$195–205B) — a growing investor concern in a risk-off tape.
+- **Crypto / Fintech**: COIN pressured in the risk-off move; SOFI a direct loser from yields at
+  new highs.
+- **Consumer Discretionary / EV**: TSLA ~$363, rangebound, no catalyst. RIVN improving but
+  sub-threshold and speculative.
 
 ### Macro Context — Next 48 Hours
 | Event | Date/Time | Market Impact |
 |-------|-----------|---------------|
-| Core PCE (July) — RELEASED | 08-27 done | +3.3% YoY, in line but sticky; 10Y yield up to ~4.66% |
-| Fed Chair Warsh commentary | this week, time TBD | MEDIUM-HIGH — any hawkish tone compresses growth multiples |
-| Month-end rebalancing flows | 08-28 / 08-31 | LOW-MEDIUM — potential index-level noise |
+| U.S.-Iran / Strait of Hormuz escalation | ongoing | HIGH — drives oil and yields; primary swing factor |
+| Brent crude above ~$92 | ongoing | MEDIUM-HIGH — feeds inflation/Fed-tightening worry |
+| Treasury yields at new highs | ongoing | MEDIUM-HIGH — pressures high-multiple / rate-sensitive names |
+| September seasonality | month | LOW-MEDIUM — historically the weakest month (avg ~-1.2%) |
 
 ### Key Risks to Monitor (Next 48 Hours)
-1. NVDA gap-up fades intraday (has faded after 6 of last 8 prints) — would drag AMD/SMCI/QQQ
-2. Sticky PCE + 10Y at 4.66% — further yield backup pressures rate-sensitive and high-multiple names
-3. Fed Chair Warsh hawkish surprise
-4. GOOGL AI-leadership shakeup spilling into broader AI-sector sentiment
-5. SPY still below its 50-day MA — a failed rally here could retest the 5-day MA
+1. Further Iran/Hormuz escalation → another oil leg up → deeper equity drawdown (chart case: S&P
+   five-wave move toward 7,100–7,200 if this week's low breaks).
+2. Yield backup continues — direct hit to SOFI, COIN, and the high-multiple AI names.
+3. Semiconductor-tariff headlines hitting NVDA/AMD/SMCI.
+4. Breadth keeps narrowing — a small group of mega-caps holding the index up.
+5. SPY fails to reclaim its 5-day MA — confirms short-term downtrend and would put SH back in scope.
 
 ### Inverse ETF (SH) Status
-SH score: 22/100 — well below the 60 threshold. SPY above 5-day MA, VIX ~15.4, NVDA beat
-reinforces the uptrend. No SH entry. Re-evaluate only if SPY closes back below its 5-day MA.
+SH score: 52/100 — below the 60 threshold. SPY closed only marginally below its 5-day MA on a
+single headline-driven down day; VIX (~15.9) shows no fear spike; the move is oil-shock driven,
+not a confirmed 5-day downtrend. No SH entry. Re-evaluate if SPY posts a second consecutive lower
+close below the 5-day MA with VIX pushing toward the low 20s.
 
 ---
 
@@ -94,12 +100,10 @@ reinforces the uptrend. No SH entry. Re-evaluate only if SPY closes back below i
 
 | Parameter | Value | Pass/Fail |
 |-----------|-------|-----------|
-| SPY vs 5-day MA | Above (~$767 vs ~$765.5) | PASS |
-| VIX | ~15.4 | PASS (< 28) |
+| SPY vs 5-day MA | Marginally below | FAIL (regular entries blocked) |
+| VIX | ~15.9 | PASS (< 28) |
 | daily_loss_halt | false | PASS |
-| TRADE_OK | yes | — |
-| Top candidate | NVDA (82/100) — Q2 blowout; FLAG post-earnings gap-up / chase risk | Eligible (with caution) |
-| Second candidate | AMD (80/100) — Strong Buy upgrade; NVDA halo now positive | Eligible |
-| Third candidate | AMZN (80/100) — cleanest setup, least gap-chase risk | Eligible |
-| SH eligible | No (score 22/100) | BLOCKED |
-| Trade counts | 0/3 daily, 0/3 weekly | OK |
+| Weekly trade count | 3/3 | FAIL (limit reached) |
+| TRADE_OK | no | — |
+| Top candidate (if it were allowed) | AMD (80/100) — extended, MI450 rumor risk | Blocked |
+| SH eligible | No (score 52/100) | BLOCKED |
