@@ -1,10 +1,10 @@
 # Weekly Trade Counter
 
 Week of: 2026-08-24
-trades_this_week: 1
+trades_this_week: 2
 last_eod_reset: 2026-08-26
 max_trades_per_week: 3
-trades_remaining: 2
+trades_remaining: 1
 
 ## Halt Flags
 daily_loss_halt: false
@@ -182,3 +182,5 @@ daily_loss_halt set to false (was already false; daily change 0.00%, well within
 today).
 
 - 2026-09-01: BUY NVDA @ $217.99 (counted)
+
+- 2026-09-01: BUY AMZN @ $254.24 (counted)

@@ -1004,3 +1004,15 @@ Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy for
 - Research score: 82/100
 - High-beta: False
 
+
+
+## AMZN — Opened 2026-09-01 10:26 ET
+- Entry: $254.24 | Shares: 19 | Cost: $4830.56
+- Stop-loss: $241.53 (5% below entry)
+- Target 1: $274.58 (+8%) — sell 6 shares
+- Target 2: $292.38 (+15%) — sell 6 shares
+- Target 3: $317.80 (+25%) — sell 7 shares
+- Thesis: Volume elevated; strong momentum
+- Research score: 80/100
+- High-beta: False
+

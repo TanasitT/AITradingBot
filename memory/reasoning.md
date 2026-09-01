@@ -2074,3 +2074,7 @@ Bought 22 shares of NVDA @ $217.99. Score: 82/100. Stop: $207.09. Targets: $235.
 ## 2026-09-01 10:26 ET
 WARNING: stop-limit order for NVDA failed to place (403 Client Error: Forbidden for url: https://paper-api.alpaca.markets/v2/orders). Position is open on Alpaca WITHOUT a broker-side stop-loss — needs a manual check until this is resolved.
 ---
+
+## 2026-09-01 10:26 ET
+Bought 19 shares of AMZN @ $254.24. Score: 80/100. Stop: $241.53. Targets: $274.58/$292.38/$317.8. Thesis: Volume elevated; strong momentum
+---
