@@ -1,72 +1,72 @@
 # Daily Market Context
-Date: 2026-09-01 (pre-market research run — automated firing)
+Date: 2026-09-02 (pre-market research run — automated firing)
 Data reflects the 2026-09-01 close and pre-market for the 2026-09-02 session.
 
 ---
 
 ## SPY Trend vs 5-Day Moving Average
 
-**Determination: SPY is (marginally) BELOW its 5-day moving average.**
+**Determination: SPY is BELOW its 5-day moving average (second consecutive session).**
 
-- S&P 500 close 2026-09-01: 7,645.75 (-40.39 pts, -0.53%); SPY -0.57%
-- The index had been trading ~7,676 area late August; the 09-01 risk-off drop pulled it down to
-  roughly its 5-day MA and it closed just below it.
-- S&P 50-day MA: ~7,567 — index still ABOVE (intermediate trend intact)
-- S&P 200-day MA: well below — long-term structure still bullish
-- Breadth deteriorating: <50% of S&P 500 names above their 50-day MA, down from >70% at the August highs.
-- Interpretation: regular stock entries are BLOCKED (SPY below 5-day MA). Evaluate SH — but SH does
-  not qualify either (see below).
+- S&P 500 close 2026-09-01: ~7,631.47 (-0.71%); a second straight lower close.
+- The index was ~7,676 at the late-August highs; two risk-off sessions (08-31 and 09-01) have
+  pulled it below its rising 5-day MA.
+- S&P 50-day MA: ~7,567 — index still ABOVE (intermediate trend intact).
+- S&P 200-day MA: well below — long-term structure still bullish.
+- Breadth still deteriorating: well under 50% of S&P 500 names above their 50-day MA.
+- Interpretation: regular stock entries are BLOCKED. SH (inverse SPY) is now IN SCOPE and, at a
+  score of 62/100, above the 60 threshold — see below.
 
-**Implication for strategy**: Regular stock entries BLOCKED. SH entry also BLOCKED (score 52 < 60).
+**Implication for strategy**: Regular stock entries BLOCKED. SH entry ELIGIBLE (borderline).
 
 ---
 
 ## VIX Level
 
-**Current VIX: ~15.88 (2026-09-01 close, +0.96 / +6.4% on the day) | still historically low**
+**Current VIX: ~16.34 (2026-09-01 close, +9.5% on the day) | still historically low**
 
 - VIX < 28 threshold: YES — comfortably below.
-- VIX rose on the Iran/oil headline but shows no fear spike; options market is not pricing a
-  sustained selloff.
+- VIX has risen two days running on the Iran/oil headlines but is not yet pricing sustained
+  fear (no move toward the low 20s). This is the main reason the SH call is only borderline.
 
 ---
 
 ## TRADE_OK Determination
 
-**TRADE_OK: no**
+**TRADE_OK (regular stocks): no** — SPY below its 5-day MA.
+**SH (inverse SPY): ELIGIBLE** — score 62 >= 60, VIX < 28, count 0/3, halt false.
 
 Criteria check:
-- SPY above 5-day MA: NO (closed marginally below) → regular entries blocked
-- VIX < 28: YES (~15.9)
+- SPY above 5-day MA: NO (second consecutive close below) → regular entries blocked
+- VIX < 28: YES (~16.3)
 - daily_loss_halt: false (confirmed in weekly_trade_counter.md)
-- Daily/weekly trade count: weekly 3/3 — LIMIT REACHED (NVDA, AMZN, AMD entered 2026-09-01)
-- SH alternative: score 52/100, below the 60 threshold — not a confirmed 5-day downtrend
-
-Even setting the technical block aside, the weekly trade limit (3/3) independently prevents any
-new entry until the counter resets.
+- Weekly trade count: 0/3 — room for entries
+- SH alternative: score 62/100, above the 60 threshold → market-open routine should evaluate
+  an SH entry (3% max position, 5% stop, exit on SPY reclaiming its 5-day MA)
 
 ---
 
 ## Sector Context & Market Regime Notes
 
-**Current regime: Risk-off headline shock. U.S.-Iran hostilities around the Strait of Hormuz drove
-oil (Brent ~$92+) and Treasury yields to new highs, reviving Fed-tightening concern. Weakest
-seasonal month of the year. Underlying AI/mega-cap earnings remain strong, so this reads as a
-sentiment/geopolitical drawdown rather than a fundamental break — for now.**
+**Current regime: Risk-off, day 2 — escalating geopolitical shock. Fresh U.S. strikes on Iran,
+Iranian retaliatory strikes on U.S. bases, and two oil tankers reported hitting naval mines in
+the Strait of Hormuz. Brent ~$95, WTI ~$90; Treasury yields at new highs; Fed-tightening worry
+intensifying. Weakest seasonal month. Mega-cap AI earnings remain fundamentally strong, so this
+still reads as a sentiment/geopolitical drawdown rather than a fundamental break — but it has
+now run two sessions and is escalating rather than fading.**
 
 ### Sector Rotation
-- **Energy**: outperforming on the crude spike — the day's relative winner.
-- **Semiconductors / AI infrastructure**: retreated. NVDA ~$217 (lowest since May), momentum
-  broken despite the Q2 blowout and the new $3.5B MediaTek NVLink Fusion deal; semiconductor-tariff
-  headlines add overhang. AMD is the standout on fundamentals (Goldman $640, Wells Fargo $615,
-  Raymond James Strong Buy $641; avg PT ~$614; Q3 guide $13.0B/+41%) but is extended near $470 and
-  carries an MI450-schedule rumor.
-- **Cloud / Mega-cap**: AMZN the relative-strength leader (only Mag7 beating S&P YTD; AWS +36.7%;
-  >$3T cap). MSFT strong fundamentally (Azure >$100B ARR, +43%) but flagged as least-upside of the
-  hyperscaler group. META analysts' favored name (median PT ~$750). GOOGL top retail pick but
-  weighed by the Jeff Dean AI-talent departure and antitrust overhang.
-- **AI capex**: the four hyperscalers on track for ~$700B combined 2026 AI infrastructure spend
-  (GOOGL alone guiding ~$195–205B) — a growing investor concern in a risk-off tape.
+- **Energy**: outperforming on the crude spike — the clear relative winner.
+- **Semiconductors / AI infrastructure**: under pressure. NVDA ~$217 (weakest since May),
+  momentum broken; AMD's "Helios" AI rack (a direct NVDA competitor) is expected to ship in
+  September, and BMO just initiated AMD at Outperform (avg PT ~$596). Semi-tariff headlines
+  add overhang for the whole group.
+- **Cloud / Mega-cap**: AMZN the relative-strength leader (only Mag7 beating S&P YTD; AWS
+  +36.7%). META analysts' favored name (median PT ~$750–755, Strong Buy). MSFT strong
+  fundamentally (Azure >$100B ARR) but flagged as least hyperscaler upside (median PT ~$555).
+  GOOGL weighed by the Jeff Dean AI-talent departure and antitrust overhang.
+- **AI capex**: AMZN + GOOGL headlined at a combined ~$420B AI-infrastructure spend — a growing
+  investor concern in a risk-off tape.
 - **Crypto / Fintech**: COIN pressured in the risk-off move; SOFI a direct loser from yields at
   new highs.
 - **Consumer Discretionary / EV**: TSLA ~$363, rangebound, no catalyst. RIVN improving but
@@ -75,24 +75,26 @@ sentiment/geopolitical drawdown rather than a fundamental break — for now.**
 ### Macro Context — Next 48 Hours
 | Event | Date/Time | Market Impact |
 |-------|-----------|---------------|
-| U.S.-Iran / Strait of Hormuz escalation | ongoing | HIGH — drives oil and yields; primary swing factor |
-| Brent crude above ~$92 | ongoing | MEDIUM-HIGH — feeds inflation/Fed-tightening worry |
+| U.S.-Iran / Strait of Hormuz escalation | ongoing, worsening | HIGH — primary swing factor; drives oil and yields |
+| Brent crude ~$95 / WTI ~$90 | ongoing | HIGH — feeds inflation / Fed-tightening worry |
 | Treasury yields at new highs | ongoing | MEDIUM-HIGH — pressures high-multiple / rate-sensitive names |
 | September seasonality | month | LOW-MEDIUM — historically the weakest month (avg ~-1.2%) |
 
 ### Key Risks to Monitor (Next 48 Hours)
-1. Further Iran/Hormuz escalation → another oil leg up → deeper equity drawdown (chart case: S&P
-   five-wave move toward 7,100–7,200 if this week's low breaks).
+1. Further Iran/Hormuz escalation → another oil leg up → deeper equity drawdown.
 2. Yield backup continues — direct hit to SOFI, COIN, and the high-multiple AI names.
 3. Semiconductor-tariff headlines hitting NVDA/AMD/SMCI.
-4. Breadth keeps narrowing — a small group of mega-caps holding the index up.
-5. SPY fails to reclaim its 5-day MA — confirms short-term downtrend and would put SH back in scope.
+4. **De-escalation / ceasefire headline → violent SPY snap-back that would stop out an SH
+   position.** This is the specific risk that keeps the SH call borderline.
+5. Breadth keeps narrowing — a small group of mega-caps holding the index up.
 
 ### Inverse ETF (SH) Status
-SH score: 52/100 — below the 60 threshold. SPY closed only marginally below its 5-day MA on a
-single headline-driven down day; VIX (~15.9) shows no fear spike; the move is oil-shock driven,
-not a confirmed 5-day downtrend. No SH entry. Re-evaluate if SPY posts a second consecutive lower
-close below the 5-day MA with VIX pushing toward the low 20s.
+SH score: 62/100 — ABOVE the 60 threshold (up from 52 on 09-01). SPY has now posted two
+consecutive lower closes below its 5-day MA on an escalating U.S.-Iran military conflict with
+oil at ~$95. That is a confirmed short-term downtrend plus a hard catalyst. The one hold-back:
+VIX (~16.3) is not yet showing genuine fear, and any de-escalation headline would snap SPY
+back hard. Market-open routine: evaluate SH entry at 3% max position with a 5% stop; exit
+immediately when SPY reclaims its 5-day MA.
 
 ---
 
@@ -100,10 +102,10 @@ close below the 5-day MA with VIX pushing toward the low 20s.
 
 | Parameter | Value | Pass/Fail |
 |-----------|-------|-----------|
-| SPY vs 5-day MA | Marginally below | FAIL (regular entries blocked) |
-| VIX | ~15.9 | PASS (< 28) |
+| SPY vs 5-day MA | Below (2nd consecutive close) | FAIL (regular entries blocked) |
+| VIX | ~16.3 | PASS (< 28) |
 | daily_loss_halt | false | PASS |
-| Weekly trade count | 3/3 | FAIL (limit reached) |
-| TRADE_OK | no | — |
-| Top candidate (if it were allowed) | AMD (80/100) — extended, MI450 rumor risk | Blocked |
-| SH eligible | No (score 52/100) | BLOCKED |
+| Weekly trade count | 0/3 | PASS |
+| TRADE_OK (regular stocks) | no | — |
+| SH eligible | YES (score 62/100) — borderline | EVALUATE (3% size, 5% stop) |
+| Top regular candidate (if allowed) | AMD (78/100) — extended, but Helios ships Sept | Blocked |

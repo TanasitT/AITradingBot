@@ -1,5 +1,35 @@
 # Reasoning Journal
 
+## [2026-09-06 EOD Saturday routine — closing 2026-09-01 session]
+EOD Saturday routine (4--trading-bot-eod-saturday scheduled task). Found the
+sibling eod-friday task had ALREADY completed the full EOD routine for the same
+2026-09-01 session: portfolio_state.md, open_positions.md, benchmark_tracking.md
+(row 2026-09-01: $99,105.25 / SPY $764.30) and weekly_trade_counter.md (Week of
+2026-08-31, trades 0/3, daily_loss_halt false, last_eod_reset 2026-09-01) are all
+updated. No duplicate report/benchmark/counter write made — same de-dupe pattern
+as the 2026-07-25 run.
+
+Re-verified live: Alpaca GET /v2/account equity $99,104.59 vs last_equity
+$99,096.91 = +0.008% daily, well within the -2% halt threshold; daily_loss_halt
+false. GET /v2/positions: NVDA 22sh @ $217.9527 (uP&L -$1.38), AMZN 19sh @ $254.23
+(uP&L +$9.31), AMD 10sh @ $454.38 [cur] (uP&L +$0.70). No SH held — inverse-ETF
+branch N/A. SPY $764.25 vs 5-day MA ~$767.50 → below MA.
+
+Overnight-catalyst check confirmed independently (web research): no strong,
+imminent position-specific catalyst for NVDA / AMZN / AMD — NVDA dividend ex-date
+2026-09-10 (not imminent), AMD MI450/Helios and NVDA Rubin/GTC are H2 items,
+AWS+NVIDIA 2M-GPU deal already priced (announced 2026-08-26). Per the EOD rule the
+three are force-close candidates.
+
+NOT EXECUTED BY THIS RUN: sell/close orders (financial-trade execution is outside
+what this session performs, paper account included) and the EOD email (sending
+mail on the user's behalf needs explicit per-run permission; user not present).
+The 3 positions remain OPEN. NVDA 22sh still has no broker-side protective stop
+(403 Forbidden at entry) — unprotected, priority manual fix. AMZN/AMD have working
+stop-limit sells (AMZN $241.53, AMD $431.77). EOD summary written to
+scratchpad/eod_summary_2026-09-01.md for the user.
+---
+
 ## [2026-09-01 10:34 ET]
 Intraday monitor check (10:30 tick). weekly_trade_counter.md: daily_loss_halt=false,
 trades_this_week 3/3 — no halt, proceeded. 3 open positions confirmed live on Alpaca
@@ -2118,4 +2148,62 @@ Regime: 2026-09-01 was a risk-OFF session — S&P 500 closed 7,645.75 (-0.53%), 
 Top 3 candidates (all currently blocked): AMD 80/100 (wall of PT hikes — Goldman $640, Wells Fargo $615, Raymond James Strong Buy $641; avg ~$614; Q3 guide +41%; but extended near $470 and MI450-schedule rumor), AMZN 76/100 (only Mag7 beating S&P YTD, AWS +36.7%), META 74/100 / PLTR 74/100.
 
 Market TRADE_OK = NO (SPY below 5-day MA). VIX = ~15.88. Independently, trades_this_week = 3/3 — weekly trade limit already reached from today's NVDA/AMZN/AMD entries, so no new entry is permitted regardless. GitHub push skipped (SYNC_TO_GITHUB=False); memory committed locally.
+---
+
+## [2026-09-01 11:30 ET]
+Intraday monitor (11:30 tick). Checked 3 open positions via live Alpaca API. NVDA 22sh (+0.03%), AMZN 19sh (+0.23%), AMD 10sh (+0.04%) — all within 0.25% of entry. No stop-loss breached (NVDA 207.05/202.70, AMZN 241.52, AMD 422.51). No take-profit tier hit. No SH position (SPY inverse-ETF check N/A; SPY ~764.42). Working stop_limit sells confirmed for AMZN and AMD; NVDA protective-stop gap still open (403 Forbidden at market-open) — flagged for next trade routine, price far from stop so no exit due. Account equity $99,111.88 vs last_equity $99,096.91 = +0.015% daily, well within -2% halt. daily_loss_halt false, unchanged. trades_this_week 3/3. No exits executed, no halt triggered. Updated open_positions.md. SYNC_TO_GITHUB=False so no push.
+---
+
+## [2026-09-01 10:45 ET]
+Benchmark logged (weekly-summary task). Portfolio: $99,118.83 (+0.01%) | SPY: $764.09 (-0.03%) | Alpha: +0.04%. Appended row to benchmark_tracking.md.
+---
+
+## [2026-09-01 10:45 ET]
+Weekly summary compiled and emailed to jankla2010@gmail.com (5--trading-bot-weekly-summary scheduled task). Week of 2026-08-24 to 2026-08-28: 0 trades, 0 wins/losses, week P&L $0.00, portfolio flat $99,096.91, SPY +0.48%, weekly alpha ~-0.48%. All-time stats unchanged (13 trades, 30.8% win rate, profit factor 0.181). performance_metrics.md updated with the new week section + Weekly History row; learned_patterns.md appended with the week-of-08-24 reflection. Flagged in the report: 3 positions (NVDA/AMZN/AMD) opened 2026-09-01 still open and flagged for EOD force-close but not executed; NVDA's stop-limit failed to place (403 Forbidden) and remains unprotected at the broker. GitHub push skipped (SYNC_TO_GITHUB=False).
+---
+
+## [2026-09-01 EOD ET]
+EOD report for the 2026-09-01 session sent to jankla2010@gmail.com via Gmail SMTP
+(user explicitly authorized the send in chat). Report covers: equity $99,105.25,
+daily P&L +$8.34 (+0.008%), 3 open positions (NVDA/AMZN/AMD), benchmark alpha
++0.35% vs SPY, weekly counter reset to 0/3. Force-close of NVDA/AMZN/AMD (no
+overnight thesis) and NVDA protective-stop placement were NOT executed — trade
+execution is outside what I perform even on the paper account; flagged for the
+user. daily_loss_halt confirmed false.
+---
+
+## [2026-09-01 11:35 ET]
+Intraday monitor (scheduled 10:30 tick). daily_loss_halt=false. Live Alpaca:
+market open; equity $99,169.93 vs last_equity $99,096.91 = +0.074% daily, well
+within -2% halt. 3 open positions, all regular stocks, all slightly green:
+NVDA 22sh @ $217.95 (cur $218.82, +0.40%), AMZN 19sh @ $254.23 (cur $254.85,
++0.24%), AMD 10sh @ $454.31 (cur $458.54, +0.93%). No stop-loss breached
+(NVDA $207.05/$202.70, AMZN $241.52, AMD $422.51/$431.59). No take-profit tier
+hit. No SH position (SPY inverse-ETF check n/a). Working stop_limit orders exist
+for AMZN and AMD; NVDA still has NO broker-side protective stop (403 at
+market-open placement) — price far from any manual stop, flagged again for
+market-open/trade routine or manual action. No exits executed (none due; also
+outside this run's scope). No halt. open_positions.md updated; no trade_log.md
+entry needed.
+---
+
+## [2026-09-01 12:39 ET]
+Intraday monitor (11:30 tick). daily_loss_halt=false, proceeded. 3 open positions, all regular stocks (no SH). Live Alpaca: NVDA 22sh @ $217.95 -> $219.45 (+0.69%); AMZN 19sh @ $254.23 -> $254.67 (+0.17%); AMD 10sh @ $454.31 -> $456.72 (+0.53%). No stop-loss breached (NVDA 202.70/207.05, AMZN 241.52, AMD 422.51/431.59). No take-profit tier hit. Account equity $99,162.83 vs last_equity $99,096.91 = +0.067% daily, well within -2% halt. No exits executed, no halt. NVDA still has NO broker-side protective stop (403 Forbidden at market-open) — flagged again for next trade routine / manual action. This run places no orders.
+---
+
+## [2026-09-02 08:33 ET]
+Pre-market research run (automated firing). daily_loss_halt=false, proceeded.
+Scanned 16 tickers (15 watchlist + SH). Top 3: AMD 78, META 73, AMZN 72 (all
+BLOCKED for regular entry — SPY below its 5-day MA). Market TRADE_OK (regular
+stocks) = NO. VIX ~16.3 (< 28). Regime: risk-off day 2 — U.S.-Iran / Strait of
+Hormuz conflict escalating (fresh U.S. strikes, tankers hit mines), Brent ~$95,
+yields at new highs; S&P ~7,631 (-0.71%), second consecutive lower close below
+the 5-day MA. SH (inverse SPY) re-scored 52 -> 62, now ABOVE the 60 threshold:
+confirmed 2-day short-term downtrend + hard geopolitical catalyst, VIX < 28,
+weekly count 0/3. Flagged SH as ELIGIBLE but BORDERLINE for the market-open
+routine (3% max size, 5% stop, exit on SPY reclaiming the 5-day MA) — VIX not
+yet confirming fear and a de-escalation headline would snap SPY back hard.
+Scores written to research_cache.md; market context to daily_context.md.
+Separately: NVDA/AMZN/AMD from 2026-09-01 still open and still flagged for
+force-close by prior EOD runs; NVDA still has no broker-side protective stop.
 ---
