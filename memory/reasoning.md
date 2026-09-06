@@ -2278,3 +2278,72 @@ next real market-open (Mon 2026-09-07 — note: check for the U.S. Labor Day
 holiday, first Monday of September, which would push the next session to
 Tuesday). Git push skipped (SYNC_TO_GITHUB = False).
 ---
+
+## [2026-09-06 08:57 ET]
+Intraday monitor (scheduled 9:30 tick). Market CLOSED — Alpaca /v2/clock is_open=false,
+2026-09-06 is a Saturday. daily_loss_halt=false, proceeded. 3 open positions checked
+against last closes (2026-09-04): NVDA 22sh +5.69% ($230.36), AMZN 19sh +1.68% ($258.51),
+AMD 10sh +5.12% ($477.57). No stop-loss breached, no take-profit tier hit (NVDA closest
+at +5.69% vs +8% TP1). No SH position — inverse-ETF branch N/A. SPY last close $770.18
+now ABOVE 5-day MA $767.39, but no SH held so no action. Account equity $99,683.78,
+daily P&L 0.00%, no halt. No exits executed. Standing flags unchanged: NVDA 22sh still
+has no broker-side protective stop (403 at placement); NVDA/AMZN/AMD still carrying
+overnight past multiple EOD force-close recommendations that automated runs cannot execute.
+Git push skipped (SYNC_TO_GITHUB = False).
+---
+
+## [2026-09-06 09:00 ET]
+Intraday monitor (scheduled 11:30 tick). Market CLOSED (Saturday; Alpaca is_open=false,
+next_open 2026-09-08 09:30 ET). daily_loss_halt=false — proceeded. 3 open positions,
+all regular stocks (no SH): NVDA 22sh +5.69% ($230.36), AMZN 19sh +1.68% ($258.51),
+AMD 10sh +5.12% ($477.57) — last-close prices, unchanged from the 08:57 ET tick. No
+stop-loss breached (NVDA $207.05/$202.70, AMZN $241.52, AMD $431.59/$422.51). No
+take-profit tier hit (nearest NVDA +5.69% vs +8% TP1 $235.39). SPY above its 5-day MA
+but no SH position to act on. Account equity $99,683.78 vs last_equity $99,683.78 =
+0.00% daily, no halt. No exits executed; no trade_log.md exit entry needed. Standing
+flags unchanged: NVDA 22sh still has no broker-side protective stop (403 at placement);
+NVDA/AMZN/AMD still carried past multiple EOD force-close recommendations that automated
+runs cannot execute. Git push skipped (SYNC_TO_GITHUB = False).
+---
+
+## [2026-09-06 08:58 ET]
+Research complete (automated pre-market run, Sunday; next session Tue 2026-09-08, Mon is
+Labor Day). 16 tickers scanned (15 watchlist + SH). Data reflects the 2026-09-04 Friday
+close: S&P 500 7,718.60 (-0.38%), Nasdaq 26,507, VIX 14.53.
+
+REGIME SHIFT logged: the U.S.-Iran / Strait of Hormuz oil-shock risk-off has faded and been
+overtaken by a RATES story — a hot August jobs report (payrolls +162k vs ~53k expected,
+unemployment steady 4.1%) pushed the 10Y to ~4.78% and revived hawkish-Fed / rate-hike fear.
+Oil still elevated (WTI ~$92) but Energy sold off Friday. S&P recovered through the week from
+its 09-01 low of 7,631 and is back ABOVE its 5-day MA (~7,690).
+
+Consequences: regular stock entries UNBLOCKED (SPY reclaimed 5-day MA). SH downgraded 62 -> 40,
+NOT eligible; per strategy any open SH position exits on the reclaim (none is open). TRADE_OK
+= yes on mechanical criteria (SPY > 5d MA, VIX ~14.5 < 28, count 0/3, halt false), with a
+noted macro headwind from the yield backup — favor hard-catalyst names over rate-sensitive /
+premium-multiple ones.
+
+Top 3 candidates: AMD (82) — cascade of analyst PT hikes (BofA $620, Raymond James upgrade to
+Strong Buy $641, UBS $700, KeyBanc $725), Helios rack in full production w/ Q3 deploys,
+Anthropic 2GW MI450 deal; NVDA (76) — momentum recovering to ~$229, Hugging Face + Nscale +
+MediaTek deal flow, Strong Buy PT ~$326; AMZN (73) — relative-strength leader, only Mag7
+beating S&P YTD. All three are ELIGIBLE; NVDA/AMZN/AMD are also the still-open 09-01 positions.
+
+Market TRADE_OK=yes, VIX=14.5. Weekend run — no live volume; market-open routine must verify
+>=1.25x 30-day-average volume on 2026-09-08 before any entry. daily_loss_halt=false.
+Git push skipped (SYNC_TO_GITHUB = False); local commit only.
+---
+
+## [2026-09-06 09:01 ET]
+Intraday monitor (scheduled 10:30 tick). Market CLOSED (Saturday; Alpaca /v2/clock
+is_open=false, next_open 2026-09-08 09:30 ET). daily_loss_halt=false — proceeded.
+3 open positions checked against last regular-session (2026-09-04) closes: NVDA 22sh
++5.69% ($230.36), AMZN 19sh +1.68% ($258.51), AMD 10sh +5.12% ($477.57). No stop-loss
+breached (NVDA $207.05/$202.70, AMZN $241.52, AMD $431.59/$422.51). No take-profit tier
+hit (nearest NVDA +5.69% vs +8% TP1 $235.39). No SH position — inverse-ETF branch not
+applicable. Account equity $99,683.78 = last_equity, 0.00% daily, no halt. No exits
+executed; no trade_log.md exit entry needed. Standing flags unchanged: NVDA 22sh still
+has no broker-side protective stop (403 at placement); NVDA/AMZN/AMD still carried past
+multiple EOD force-close recommendations that automated runs cannot execute. Concurrent
+9:30 and 11:30 tick runs today logged identical data. Git push skipped (SYNC_TO_GITHUB = False).
+---
