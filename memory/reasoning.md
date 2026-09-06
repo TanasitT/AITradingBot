@@ -2207,3 +2207,74 @@ Scores written to research_cache.md; market context to daily_context.md.
 Separately: NVDA/AMZN/AMD from 2026-09-01 still open and still flagged for
 force-close by prior EOD runs; NVDA still has no broker-side protective stop.
 ---
+
+## [2026-09-02 09:40 ET]
+market-open routine (scheduled task). Pre-checks: daily_loss_halt = false,
+trades_this_week = 0/3 — clear to evaluate entries.
+
+/trade result: SPY BELOW its 5-day MA (~$760.9 vs ~$766.8, 2nd consecutive
+close below) → all regular stock entries BLOCKED. Tier-1 names AMD 78, META 73,
+AMZN 72, PLTR 72 all ineligible on the SPY-MA rule. VIX ~16.3 (< 28), so the
+inverse-ETF branch is in scope. SH scored 62/100 in research_cache.md (>= 60
+threshold) → SH included as the sole candidate.
+
+trade_trigger.md written status:pending, action:buy, candidate SH:62, with
+instructions to size at 3% max (Inverse ETF rule, not 5%), set a 5% stop-loss,
+and exit immediately when SPY reclaims its 5-day MA. Borderline conviction
+noted: VIX is not yet confirming genuine fear and a de-escalation headline
+would snap SPY back hard and stop the position out. Awaiting the Python
+executor to verify SH live and place the order.
+
+Per skill rules I did not touch open_positions.md / trade_log.md /
+weekly_trade_counter.md — the executor updates those after confirming a fill.
+
+Still outstanding (not actioned by this run — placing/closing orders is outside
+its scope): NVDA/AMZN/AMD from 2026-09-01 remain open and were flagged for EOD
+force-close by prior runs; NVDA 22sh still has no broker-side protective stop
+(403 Forbidden at prior placement). Flagged again for the executor / user.
+Git push skipped (SYNC_TO_GITHUB = False).
+---
+
+## [2026-09-02 12:04 ET]
+Intraday monitor (10:30 tick). daily_loss_halt=false, proceeded. 3 open positions, all regular stocks, no SH held. Alpaca live: NVDA 22sh +4.38% ($227.51), AMZN 19sh +0.33% ($255.06), AMD 10sh +0.99% ($458.80). No stop-loss breached (NVDA $207.05/$202.70, AMZN $241.52, AMD $431.59/$422.51). No take-profit tier hit (NVDA closest at +4.38% vs +8% TP1 $235.39). SPY $765.68 vs 5d MA $766.93 — still below MA but no SH position to act on. Account equity $99,367.61 vs last_equity $99,151.73 = +0.218% daily, well within -2% halt. No exits executed, no halt. NVDA still has no broker-side protective stop (403 at market-open) — flagged again; this run does not place orders.
+---
+
+## [2026-09-02 12:06 ET]
+Intraday monitor (9:30 tick, ran ~12:06 ET alongside the 10:30-tick run). daily_loss_halt=false. 3 open positions, all regular stocks, no SH. Live Alpaca: NVDA 22sh +4.38% ($227.49), AMZN 19sh +0.33% ($255.06), AMD 10sh +0.99% ($458.80). No stop-loss breached (NVDA $207.05/$202.70, AMZN $241.52, AMD $431.59/$422.51). No take-profit tier hit (nearest NVDA +4.38% vs +8% TP1 $235.39). SPY $765.68 vs 5-day MA ~$766.93 (still below, no SH to act on). Account equity $99,367.72 vs last_equity $99,151.73 = +0.218% daily, well within -2% halt. No exits due, no halt. NVDA still has no broker-side protective stop (403 at market-open) — flagged again for manual/trade-routine action. No orders placed (outside this automated run's scope).
+---
+
+## [2026-09-02 12:39 ET]
+Intraday monitor (11:30 tick). daily_loss_halt=false. 3 open positions, all regular stocks, no SH. Live Alpaca: NVDA 22sh +4.13% ($226.96), AMZN 19sh +0.28% ($254.94), AMD 10sh +0.57% ($456.88). No stop-loss breached (NVDA $207.05/$202.70, AMZN $241.52, AMD $431.59/$422.51). No take-profit tier hit (nearest NVDA +4.13% vs +8% TP1 $235.39). SPY ~$765.09 vs 5-day MA $766.87 (still modestly below, no SH position to act on). Account equity $99,333.16 vs last_equity $99,151.73 = +0.183% daily, well within -2% halt. No exits due, no halt triggered, no trade_log.md entry needed. NVDA still has no broker-side protective stop (403 at market-open) — flagged again for manual/trade-routine action. No orders placed (outside this automated run's scope).
+---
+
+## [2026-09-06 08:57 ET]
+Market-open routine (2--trading-bot-market-open scheduled task), Sunday off-cycle
+run. strategy.md read: live_trading=false (paper). weekly_trade_counter.md:
+daily_loss_halt=false, trades_this_week=0/3 — neither halt condition met, so the
+task proceeded to /trade.
+
+/trade evaluation — NO TRADE PLACED. Reasons:
+1. Market CLOSED — 2026-09-06 is a Sunday; the U.S. equity market is not open and
+   the market-open routine is scheduled Mon–Fri. No entry can fill today.
+2. Research is STALE — research_cache.md / daily_context.md last updated
+   2026-09-02 (2 trading sessions + a weekend old). Per STEP 4/6 the only eligible
+   candidate is SH (62/100, regular stock entries blocked with SPY below its
+   5-day MA). That SH call was explicitly flagged "borderline" and pinned to a
+   fast-moving U.S.-Iran / Strait of Hormuz geopolitical shock — a 4-day-old read
+   on that situation is not a tradable thesis. Tier-1 names (AMD 78, META 73,
+   AMZN 72, PLTR 72) remain blocked by the SPY-below-5-day-MA rule.
+3. Executor pipeline appears inactive — trade_trigger.md still shows status:
+   pending from 2026-09-02 09:38 ET (candidates SH:62) that the local main.py
+   executor never processed. Writing a fresh trigger would only stack another
+   unexecuted file. Left trade_trigger.md untouched.
+4. Placing/closing orders is outside this automated run's permitted scope
+   regardless (consistent with prior EOD/market-open journals).
+
+No files mutated. Still outstanding for the user / executor: NVDA 22sh (open
+since 2026-09-01) has no broker-side protective stop (403 Forbidden at prior
+placement); NVDA/AMZN/AMD were flagged for EOD force-close by prior runs and
+remain open. Fresh pre-market research + a running executor are needed before the
+next real market-open (Mon 2026-09-07 — note: check for the U.S. Labor Day
+holiday, first Monday of September, which would push the next session to
+Tuesday). Git push skipped (SYNC_TO_GITHUB = False).
+---
