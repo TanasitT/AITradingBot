@@ -2463,6 +2463,20 @@ Bookkeeping done: portfolio_state.md updated; benchmark_tracking.md appended (20
 Benchmark logged. Portfolio: $99,811.08 (+0.13%) | SPY: $765.96 (-0.55%) | Alpha: +0.68%
 ---
 
+## [2026-09-19 08:33 ET]
+Pre-market research complete. 16 tickers scanned (15 watchlist + SH). Top candidates:
+NVDA 82/100 (Q2 FY27 blowout, $96B revenue, supply-constrained through FY28, already held),
+AMD 76/100 (Data Center revenue doubled to $6.7B, MI450/Helios demand, already held),
+AMZN 74/100 (AWS strength, Wedbush high-conviction, already held). Market TRADE_OK = NO â€”
+SPY (~762.60) is marginally BELOW its 5-day MA (~763.14), blocking regular stock entries.
+SH scored 42/100, below the 60 threshold, so SH is also NOT eligible. VIX = ~14.53 (well
+below the 28 halt threshold). Context: Fed hiked 25bp on 2026-09-16 (first hike in 3 years);
+market absorbed it bullishly Thursday but SPY slipped under its 5-day MA in Friday pre-market.
+Open positions NVDA/AMZN/AMD all retain scores >= 70 â€” thesis intact for a hold; no new
+entries should be placed at today's market open. research_cache.md and daily_context.md
+overwritten with full 2026-09-19 data. Git push skipped (SYNC_TO_GITHUB=False per CLAUDE.md).
+---
+
 ## [2026-09-09 EOD ET]
 EOD report compiled for the 2026-09-08 session and delivered to the user as a file (memory/eod_report_2026-09-08.md). Email to jankla2010@gmail.com NOT sent â€” sending mail on the user's behalf requires explicit per-run permission and the user was not present for this automated run.
 ---
@@ -2479,4 +2493,19 @@ Intraday monitor (9:30 tick). weekly_trade_counter.md: daily_loss_halt=false â€”
 
 ## [2026-09-19 11:30 ET-equivalent]
 Intraday monitor (11:30 tick). Market closed (Saturday, next open Mon 2026-09-21 09:30 ET). daily_loss_halt=false, proceeded. Checked open positions via live Alpaca API: NVDA 22sh +1.98% (no stop/TP hit), AMZN 19sh -0.21% (no stop hit, well within 5% cap), AMD 10sh +23.22% -- now past both TP1 (+8%) and TP2 (+15%), below TP3 (+25%). Per strategy.md tiers, 6 of the original 10 AMD shares (TP1 3sh + TP2 3sh) remain unsold, pending since 2026-09-08 -- not executed this run (market closed; also, placing/cancelling live orders is outside what this automated monitor performs). No stop-loss breached on any position, so no forced exit either. New observation: AMD's working sell stop_limit order is now status "pending_cancel" (cancel request in flight) -- once it clears, AMD will have no broker-side protective stop, same gap NVDA has had since 2026-09-01. Portfolio daily P&L +0.26% ($100,237.10 vs $99,977.46 last_equity) -- no halt. No trades placed, no halt triggered. open_positions.md and trade_log.md updated.
+---
+## [2026-09-19 00:33 ET]
+Intraday monitor (10:30 tick): market closed (Saturday, next_open 2026-09-21
+09:30 ET). Daily P&L +0.26% (equity $100,237.10 vs last_equity $99,977.46) —
+no halt. NVDA +1.98%, AMZN -0.21%, AMD +23.22% — no stop-losses breached. AMD
+is past TP1 (+8%) and TP2 (+15%), not yet at TP3 (+25%): a 6-share catch-up
+sell (3sh TP1 + 3sh TP2) is owed, leaving 4sh to run. Submitted a cancel on
+the stale 10sh AMD protective stop_limit order to free shares for that sell,
+but the market is closed so the cancel is stuck pending_cancel — did not
+place the partial sell or a new stop on top of an unresolved cancel to avoid
+an inconsistent order state. Flagged for the Monday pre-market/market-open
+routine to confirm the cancel finalized, execute the 6sh AMD sell, and
+re-place a 4sh protective stop (stop $431.77/limit $429.61). NVDA 22sh still
+has no broker-side protective stop (long-standing gap). No trades filled, no
+halt triggered.
 ---
