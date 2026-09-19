@@ -371,3 +371,96 @@
 6. *(Unresolved from 07-27)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — still open, no new data (zero trades this week).
 7. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested this week.
 8. **New**: Confirm whether pre-market research (research_cache.md/daily_context.md) actually ran and stayed fresh every weekday this week (08-17 to 08-21) — given the confirmed staleness bugs on 07-23 and 08-04, a silent third occurrence during a zero-trade week cannot currently be ruled out from the available logs.
+
+---
+
+## Weekly Reflection — Week of 2026-08-24 (Final, logged 2026-09-01)
+
+### Week Stats
+- Trades executed: 0 | Wins: 0 | Losses: 0 | Win rate: N/A
+- Net P&L: $0.00 (no trade_log.md entries for any day 08-24 through 08-28)
+- Portfolio: $99,096.91 (08-21 close) -> $99,096.91 (08-28 close), 0.00% (flat, 0 positions held all week)
+- SPY performance this week: $765.64 (08-21) -> $769.28 (08-28), +0.48%
+- Alpha vs SPY: ~-0.48% — a flat, no-trade week that landed on the wrong side of a mildly rising market
+- Cumulative alpha since inception: gave back most of last week's +1.37% inaction gain; the no-trade alpha coin-flip landed tails this time
+
+### Signals That Worked
+- **No hard rules broken**: daily loss cap and 3-trades/day limit never triggered (zero trades); weekly_trade_counter.md confirms trades_this_week stayed 0/3 across the 08-26 EOD resets.
+- **Zero realized losses**: no stop-loss or EOD force-close losses, because no position was ever opened.
+- **VIX was a non-factor** (~14-16 all week) — consistent with every prior reflection: risk-off caution is not what is keeping the bot out of the market.
+
+### Signals That Failed
+- **Fifth zero-or-one-trade week out of the last six** (08-03: 0, 08-10: 1, 08-17: 0, 08-24: 0). The bot used 0 of its 15-trade weekly budget again during a calm, slightly-up tape — the same structural under-trading flagged since the 06-30 reflection, now with a -0.48% alpha cost this week.
+- **Skip-reason logging still absent** — trade_log.md has no entries, active or skipped, for 08-24 to 08-28. This is the single most-repeated open action item in the project (raised every week since 2026-06-30, now ~14 weeks) and again made it impossible to tell whether any candidate came close to the volume/score gate this week or whether research was simply thin.
+- **Then the opposite failure the following Monday+1**: after weeks of nothing, the 2026-09-01 market-open routine fired 3 entries in one morning — NVDA 22sh @ $217.99 (score 82), AMZN 19sh @ $254.24 (score 80), AMD 10sh @ $454.50 (score 80) — exhausting the 3/3 weekly limit before noon, directly into a risk-off session (S&P -0.53%, Iran/Hormuz headline shock, Brent ~$92, yields at highs). Feast-or-famine cadence: the bot goes from zero conviction for a month to three simultaneous high-beta AI/semi entries on a single down day.
+- **NVDA protective stop-limit failed to place (403 Forbidden)** on 2026-09-01 — a new failure mode. NVDA 22sh has sat unprotected at the broker across every intraday monitor since (AMZN and AMD both got working stop_limits; only NVDA's failed). No routine has retried the placement.
+- **Position-logging drift recurred** — open_positions.md still read "confirmed flat" at the first 2026-09-01 intraday check while 3 positions were live on Alpaca; same chronic engine/coordinator.py write-path gap flagged since 07-13, still unresolved, engine/*.py still show uncommitted edits in git status.
+- **EOD 2026-09-01 force-close not executed**: all 3 positions were flagged for force-close (no strong overnight catalyst found, risk-off tape) but the automated EOD run is not permitted to place orders — the closes and /journal entries are pending manual action, and the EOD email was not sent.
+
+### VIX Conditions
+- VIX ranged ~14-16 through 08-24/08-28, then ~15.88 on 2026-09-01 (+6.4% on the Iran headline) — still comfortably under the 28 gate. VIX has not been the binding constraint on a single decision in 11 weeks of tracking.
+- The 2026-09-01 entries were placed with SPY sitting right at / marginally below its 5-day MA and VIX ticking up — a weaker technical backdrop than the strategy's "SPY above 5-day MA" entry rule nominally wants; worth checking whether the market-open routine evaluated the MA on an intraday quote rather than the prior close.
+
+### Emerging Patterns (11 weeks tracked — moderate-to-high confidence on recurring issues)
+- **The bot's trading cadence is bimodal, not steady**: long stretches of zero trades punctuated by same-day bursts that hit the weekly cap at once (07-16: 3, 07-20: 3, now 09-01: 3). This concentrates entry timing risk — every burst so far has gone in near a local high or into a down day, and three of them exhausted the weekly budget in one session, leaving no capacity to act on a better setup later that week.
+- **Skip-reason logging (14 weeks unresolved) is now the clearest blocker to improving this reflection** — without it, "under-trading" cannot be attributed to candidate scarcity vs. an over-strict volume gate vs. a research-freshness bug. This should be the next fix.
+- **Broker-order placement is now a two-instance problem**: EOD force-close orders can't be placed by the automated run (permission), and now protective stop-limits are failing at entry (403). The bot is increasingly opening positions it cannot protect or close on schedule — a correctness risk that compounds with the position-logging drift.
+- **No-trade weeks remain an alpha coin-flip**: 08-17 (+1.37%, SPY down) and 08-24 (-0.48%, SPY up) bracket the pattern — inaction is not a strategy, it only looks like alpha when SPY happens to fall.
+
+### Open Action Items (carry forward to next week)
+1. **Immediate**: Place a protective stop for NVDA 22sh (retry the stop-limit that 403'd on 2026-09-01) and decide on the 3 open positions (NVDA/AMZN/AMD) flagged for force-close at EOD 09-01 but not executed — all three are unprotected/overdue per the EOD overnight-thesis rule.
+2. **Most overdue, ~14 weeks running**: Log skip decisions in trade_log.md daily, including reason and top candidate scores/volume — 08-24 to 08-28 again has zero entries of any kind.
+3. *(Unresolved, 7th week running)* Root-cause and fix the engine/coordinator.py position-logging bug — recurred again 2026-09-01 (open_positions.md read "flat" with 3 live positions).
+4. **New**: Investigate why the NVDA stop-limit hit 403 Forbidden at market-open on 2026-09-01 while AMZN/AMD stop-limits placed fine — same account, same routine, same order type.
+5. **New**: Review why 3 entries fired simultaneously on 2026-09-01 into a risk-off session with SPY at/below its 5-day MA — check the MA evaluation source (intraday quote vs prior close) and whether staggering entries would reduce burst-timing risk.
+6. *(Unresolved, 10 weeks running)* Add VIX at entry/decision time directly to trade_log.md rows.
+7. *(Unresolved, 9 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points.
+8. *(Unresolved from 07-27)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — about to get fresh data from the 3 open 09-01 positions once they are closed.
+9. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested.
+
+---
+
+## Weekly Reflection — Week of 2026-08-31 (Final, logged 2026-09-06)
+
+### Week Stats
+- Trades executed: 3 (all entries, all 2026-09-01) | Closed: 0 | Wins: 0 | Losses: 0 | Win rate: N/A
+- Net realized P&L: $0.00 — nothing was closed; all 3 positions (NVDA 22sh @ $217.99, AMZN 19sh @ $254.24, AMD 10sh @ $454.50) remain open
+- Unrealized P&L at 2026-09-04 close: NVDA +$272.96 (+5.69%), AMZN +$81.32 (+1.68%), AMD +$232.60 (+5.12%) = +$586.88 combined, all three green
+- Portfolio: $99,096.91 (08-28 close) -> $99,683.78 (09-04 close), +0.59% (100% mark-to-market, 0% realized)
+- SPY this week: $769.28 (08-28) -> $770.18 (09-04), +0.12%
+- Alpha vs SPY: ~+0.47% — earned entirely by holding three rising positions the rules said to close
+- Cumulative alpha since inception: nudged positive this week, but on unrealized marks that reverse instantly if the positions gap down before they are closed
+
+### Signals That Worked
+- **The 2026-09-01 entry scores held up over 3 sessions**: NVDA (82), AMZN (80), AMD (80) all moved higher into the 09-04 close. Unlike the 07-16/07-20 bursts that were force-closed same-day at small losses, these were never closed — and the AI/semi thesis (NVDA data-center demand, AMD MI450/Helios H2 ramp, AMZN AI-capex) firmed up rather than breaking. First time a same-day multi-entry burst is sitting on a material gain.
+- **No hard rules broken on the entry side**: all 3 positions sized within the 5% cap (NVDA ~$4.8k, AMZN ~$4.8k, AMD ~$4.5k on a ~$99k book), 3/3 weekly limit respected, daily loss cap never neared -2% on any day (worst daily print was +0.008%).
+- **VIX was a non-factor again** (~15-16 all week, briefly ~15.9 on the 09-01 Iran/Hormuz headline) — 12 weeks running, VIX < 28 has never been the binding constraint on a single decision.
+- **AMZN and AMD protective stop-limits placed and held all week** (AMZN stop $241.53/limit $240.32; AMD stop $431.77/limit $429.61) — the stop mechanism works when the order is accepted.
+
+### Signals That Failed
+- **The EOD no-overnight-catalyst force-close rule was flagged three times (09-01, 09-02, 09-04) and executed zero times**: every EOD run correctly researched the overnight thesis, correctly concluded all 3 should be closed, and then could not act because the automated run is not permitted to place orders. The positions rode through the entire week unmanaged by rule. This week that *helped* (+$586.88 unrealized), but the bot got the good outcome by failing to follow its own process, not by design — the same gap would have locked in a loss just as easily if the week had gone the other way.
+- **NVDA 22sh had no broker-side protective stop for the entire week**: the stop-limit 403'd at placement on 09-01 and no routine ever retried it. NVDA is the largest and highest-beta of the three positions and ran from $217.99 to $230.36 completely unprotected. AMZN and AMD (same account, same routine, same order type, same session) placed fine — so this is an order-specific or symbol-specific rejection, not an account-wide permissions problem.
+- **Position-logging drift recurred**: open_positions.md still read "confirmed flat" at the first 09-01 intraday check while 3 positions were live on Alpaca; the file was only reconciled to live state at the 10:32 ET monitor run. Same chronic engine/coordinator.py write-path gap flagged in nearly every reflection since 07-13; engine/*.py still show uncommitted edits in git status.
+- **Feast-or-famine cadence, third instance**: after 4 consecutive near-zero-trade weeks (08-03: 0, 08-10: 1, 08-17: 0, 08-24: 0), the bot fired all 3 allowed trades in a single morning (09-01) directly into a risk-off session (SPY -0.34% that day, Iran/Hormuz headline, Brent ~$92). Same pattern as 07-16 (3 in a day) and 07-20 (3 in a day). Every burst so far has exhausted the weekly budget at once and gone in near a local low or into a down day — this time the down-day entry timing actually worked in the bot's favor as the market recovered 09-02 to 09-04.
+- **Skip-reason logging still absent** for 09-03/09-04 (no entries evaluated those days because the 3/3 cap was already hit) — ~15 weeks unresolved, though less impactful this week since the cap, not candidate scarcity, was the blocker.
+
+### VIX Conditions
+- VIX ~15-16 through the week, one ~15.9 tick on the 09-01 geopolitical headline, back to ~15 by 09-04. Never near the 28 gate.
+- The 09-01 entries were placed with SPY sitting right at / marginally below its 5-day MA (09-01 close $760.86 vs 5-day MA $766.83 — SPY *below* MA, which nominally blocks regular-stock entries). SPY did not reclaim its 5-day MA until the 09-03 close ($773.12). Worth re-checking whether the 09-01 market-open routine evaluated the MA on an intraday quote rather than the prior close — if SPY was below its 5-day MA at the open, all 3 regular-stock entries were placed against the strategy's own SPY-health gate.
+
+### Emerging Patterns (12 weeks tracked)
+- **The bot is now structurally unable to close positions on schedule**: EOD force-closes have been flagged-but-not-executed on 09-01, 09-02, 09-04 (and were also the pending item from the 08-31 reflection). Combined with the NVDA stop-limit 403, the bot spent the whole week holding three positions it could neither protect nor exit by rule. This is the single most important finding this week — it is a correctness failure that happened to pay off, which is the most dangerous kind because it discourages fixing it.
+- **First "rule said sell, holding won" data point for the no-overnight-catalyst debate**: 8 of the bot's first 10 lifetime trades lost to same-day/next-day force-closes for a combined -$372.75. This week, three positions the rule wanted closed on 09-01 are +$586.88 three sessions later. One week is not an expectancy study, but it is the first concrete case *against* mechanical same-day exits on distant-earnings names — consistent with the 08-14 NVDA hold-to-a-win. The pattern forming: force-closing intraday momentum names the same day compresses winners to zero while leaving the small losers; letting a few ride has now helped twice (08-14, this week).
+- **Entry timing on bursts is not as bad as first feared**: the 06-22 through 07-20 read was "every burst goes in near a local high." The 09-01 burst went in near a *local low* (SPY had just dropped on the Iran headline) and all 3 positions are up 1.7-5.7%. Small sample, but the "bursts always mistime the top" hypothesis is weaker now.
+- **VIX gate remains dead weight** — 12 weeks, zero binding decisions. Not a criticism (it's cheap insurance), just a confirmed non-factor in the current low-vol regime.
+
+### Open Action Items (carry forward to next week)
+1. **Immediate / carried from 08-31**: The 3 open positions (NVDA/AMZN/AMD) are still open, still flagged for force-close every EOD since 09-01, and NVDA is still unprotected. A permitted process (user or authorized routine) needs to either (a) place the NVDA stop and formally decide to hold all 3 with a documented thesis, or (b) execute the three force-closes. They cannot keep riding in limbo.
+2. **New, high priority**: Fix the automated-run gap where EOD/monitor routines can research and decide an exit but cannot execute it. Either grant the EOD routine scoped sell-to-close permission on the paper account, or route flagged closes to a process that can act, or explicitly change the strategy to "flag only, human executes" and stop calling them force-*closes*.
+3. **New**: Root-cause the NVDA stop-limit 403 Forbidden (09-01) — it is order/symbol-specific, not account-wide (AMZN/AMD placed same session). Add an automatic retry on stop-order placement failure so a position is never left unprotected silently.
+4. *(Unresolved, 8th week running)* Root-cause and fix the engine/coordinator.py position-logging bug — recurred again 09-01 (open_positions.md read "flat" with 3 live positions).
+5. **New**: Verify the 09-01 market-open routine's SPY 5-day MA check — SPY closed *below* its 5-day MA on 09-01, which should have blocked all 3 regular-stock entries. Determine whether it evaluated an intraday quote vs the prior close.
+6. *(Unresolved from 07-27, now with supporting data)* Formally evaluate the "no overnight catalyst = force-close" rule's expectancy — this week and 08-14 both favor holding; the 07-16/07-20 weeks favor closing. Needs a real backtest, not another week of anecdote.
+7. *(Unresolved, 11 weeks)* Add VIX at entry/decision time directly to trade_log.md rows.
+8. *(Unresolved, 10 weeks)* Add valuation risk modifier: flag reduces research score by 7 points — especially relevant with AMD +142% YTD and NVDA/AMZN both extended at entry.
+9. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested.

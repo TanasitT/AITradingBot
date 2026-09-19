@@ -1,15 +1,60 @@
 # Weekly Trade Counter
 
-Week of: 2026-08-24
-trades_this_week: 3
-last_eod_reset: 2026-08-26
+Week of: 2026-09-07
+trades_this_week: 0
+last_eod_reset: 2026-09-09
 max_trades_per_week: 3
-trades_remaining: 0
+trades_remaining: 3
 
 ## Halt Flags
 daily_loss_halt: false
 halt_reason:
 halt_date:
+
+## EOD Reset — 2026-09-09 (eod-wednesday task, closing the 2026-09-08 session)
+daily_loss_halt set to false (was already false; equity $99,811.08 vs last_equity
+$99,683.78 = +0.128% daily, well within the -2% cap). trades_this_week reset to
+0/3 (was already 0/3 — no entries since 2026-09-01). CAVEAT: NVDA/AMZN/AMD remain
+OPEN. Mechanical EOD rule points to force-closing all three (no hard overnight
+catalyst per 2026-09-09 web research); all three still score >= 70 (AMD 80, NVDA
+78, AMZN 73) so thesis borderline-intact — closes NOT executed (placing trades is
+outside this automated run's scope), flagged in portfolio_state.md /
+open_positions.md. AMD TP1 (+8%) partial sell (3sh) still pending user action.
+NVDA still has no broker-side protective stop. trade_trigger.md still pending
+(executor not running). EOD email NOT sent (needs per-run permission; user
+absent) — /report delivered as a file.
+
+## EOD Reset — 2026-09-08 (eod-tuesday task)
+daily_loss_halt set to false (was already false; equity $99,683.78 = last_equity,
+0.00% daily, well within the -2% cap). trades_this_week reset to 0/3 (was already
+0/3 — no entries since 2026-09-01; Mon 2026-09-07 was Labor Day). "Week of" header
+advanced to 2026-09-07. CAVEAT: NVDA/AMZN/AMD remain OPEN. Mechanical EOD rule
+points to force-closing all three (no hard overnight catalyst per 2026-09-08 web
+research); scores still >= 70 so thesis borderline-intact (diverges from the
+2026-09-06 HOLD call). Closes NOT executed — placing trades is outside this
+automated run's permitted scope; flagged in portfolio_state.md / open_positions.md.
+NVDA still has no broker-side protective stop. EOD email NOT sent (needs per-run
+permission; user absent) — /report delivered as a file.
+
+## EOD Reset — 2026-09-06 (eod-saturday task, closing 2026-09-04 Friday session)
+daily_loss_halt confirmed false; trades_this_week confirmed 0/3 (both already set by
+the parallel eod-friday run below). Ran after that run. Overnight/weekend thesis review
+= HOLD NVDA/AMZN/AMD — the 2026-09-06 research refresh shows a regime shift (SPY reclaimed
+5-day MA, VIX ~14.5) and all three still score >= 70 (AMD 82, NVDA 76, AMZN 73), so the
+thesis is intact (diverges from the eod-friday force-close call; neither run placed
+orders). EOD email report SENT to jankla2010@gmail.com this run. NVDA still has no
+broker-side protective stop — flagged for Tue 2026-09-08.
+
+## EOD Reset — 2026-09-06 (eod-friday task, closing 2026-09-04 Friday session)
+daily_loss_halt set to false (was already false; daily change 0.00%, equity
+$99,683.78 vs last_equity $99,683.78, well within -2% cap). trades_this_week
+reset to 0/3 (was already 0/3 — no new entries since 2026-09-01).
+CAVEAT: NVDA, AMZN and AMD remain OPEN. Per the EOD overnight-thesis rule all
+three should have been force-closed this run (web research 2026-09-06 found no
+strong overnight catalyst; NVDA div ex-date 2026-09-10 is not a hold thesis).
+Closes NOT executed — placing trades is outside this automated run's permitted
+scope; flagged in portfolio_state.md and open_positions.md. EOD email NOT sent
+(needs per-run permission; user absent) — report delivered as a file.
 
 
 ## EOD Reset — 2026-07-31 (Saturday-cycle EOD, closing 2026-07-31 Friday session)
@@ -186,3 +231,24 @@ today).
 - 2026-09-01: BUY AMZN @ $254.24 (counted)
 
 - 2026-09-01: BUY AMD @ $454.50 (counted)
+
+## EOD Reset — 2026-09-01 (eod-friday task)
+daily_loss_halt set to false (was already false; daily change +0.008%, well within
+-2% cap; equity $99,105.25 vs last_equity $99,096.91). trades_this_week reset to
+0/3 (was 3/3 — NVDA/AMZN/AMD entered 2026-09-01). "Week of" header advanced to
+2026-08-31. CAVEAT: NVDA, AMZN and AMD are still OPEN and, per the EOD
+overnight-thesis rule, should have been force-closed this run (no strong
+overnight catalyst found). Those closes were NOT executed — placing trades is
+outside what this automated run is permitted to do; flagged for the user in
+portfolio_state.md and open_positions.md. The EOD email report was also not sent.
+
+## EOD Reset — 2026-09-02 (eod-wednesday task, closing 2026-09-01 session)
+daily_loss_halt set to false (was already false; daily change +0.033%, well within
+-2% cap; equity $99,129.17 vs last_equity $99,096.91). trades_this_week reset to
+0/3 (was already 0/3 — reset by the eod-friday run 2026-09-01; no new entries since).
+CAVEAT: NVDA, AMZN and AMD remain OPEN. Per the EOD overnight-thesis rule all three
+should have been force-closed this run (web research 2026-09-02 found no strong
+overnight catalyst). Closes NOT executed — placing trades is outside this automated
+run's permitted scope; flagged for the user in portfolio_state.md and
+open_positions.md. EOD email NOT sent (needs per-run permission; user absent) —
+report delivered to the user as a file.
