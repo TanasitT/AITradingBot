@@ -1,5 +1,49 @@
 # Portfolio State
-Last updated: 2026-09-09 (eod-wednesday task, closing the 2026-09-08 session)
+Last updated: 2026-09-19 00:40 ET (eod-tuesday task, run Sat 2026-09-19 — closing the 2026-09-18 Friday session)
+
+- Cash available: $84,928.47
+- Invested: $15,308.63 (AMD 10sh, AMZN 19sh, NVDA 22sh — 2026-09-18 close prices; all three still show as open live positions, see note)
+- Total equity: $100,237.10
+- Daily P&L: +$259.64 (+0.260%) vs last_equity $99,977.46
+- Open positions: 3 (NVDA, AMZN, AMD) — no SH
+
+NOTE (2026-09-19 00:40 ET, eod-tuesday task): a prior scheduled run earlier
+tonight (logged above as "eod-thursday") already wrote this file's account
+snapshot for the 2026-09-18 session and the matching benchmark_tracking.md /
+weekly_trade_counter.md updates for the same session — those numbers are
+reconfirmed accurate against a fresh GET /v2/account this run (equity
+$100,237.10, last_equity $99,977.46, unchanged) and are NOT duplicated below.
+That prior run also logged (inconsistently across its own entries) that
+force-closes were "not executed" as an out-of-scope financial-trade action,
+and separately claimed an EOD email both was and was not sent — neither claim
+is reliable (see reasoning.md "write-path drift" notes).
+
+THIS RUN actually attempted the EOD overnight-thesis closes per the task's
+explicit instructions (Perplexity queried fresh for all three; no strong
+company-specific overnight catalyst found for NVDA, AMZN, or AMD):
+  - NVDA: close_position succeeded — a market sell order for 22sh was accepted
+    by Alpaca. Market is closed (next_open 2026-09-21 09:30 ET Monday), so the
+    order is queued and will fill at Monday's open, not tonight. Equity/cash
+    above do NOT yet reflect this fill.
+  - AMZN: close BLOCKED — 403 Forbidden, "insufficient qty available" (all
+    19sh held by its existing stop_limit sell order, stop $241.53/limit
+    $240.32). Cancel of that order was submitted and accepted (status
+    pending_cancel) but did not finalize after repeated polling — Alpaca paper
+    appears not to process GTC cancels while the market is closed.
+  - AMD: close BLOCKED for the same reason — 10sh held by its existing
+    stop_limit (stop $431.77/limit $429.61), cancel accepted but stuck
+    pending_cancel.
+
+FOLLOW-UP REQUIRED at Monday 2026-09-21 market open: confirm the NVDA sell
+filled; confirm the AMZN and AMD stop_limit cancels finalized once the market
+reopens; if the overnight-thesis call still holds, submit fresh sell-to-close
+orders for AMZN and AMD (or re-run close_position, which should succeed once
+shares are released). AMD's TP1/TP2 partial-sell flags (6sh, pending since
+2026-09-08) are now moot if/when the full AMD position closes.
+
+---
+
+## (prior) Last updated: 2026-09-09 (eod-wednesday task, closing the 2026-09-08 session)
 
 - Cash available: $84,928.47
 - Invested: ~$14,882.61 (NVDA 22sh, AMZN 19sh, AMD 10sh — 2026-09-08 close prices)

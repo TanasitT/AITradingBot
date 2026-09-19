@@ -56,3 +56,4 @@ Alpha = portfolio % change minus SPY % change.
 | 2026-09-04 | $99,683.78 | +0.56% | $770.18 | +1.23% | -0.67% | (eod task, run Sat 2026-09-06; last session close 2026-09-04; row deduped — eod-thursday, eod-friday and eod-saturday all fired)
 | 2026-09-08 | $99,683.78 | 0.00% | $770.18 | 0.00% | 0.00% | (eod-tuesday, run 2026-09-08; Mon 09-07 Labor Day, no new session since 09-04; Alpaca clock still lagged — values carried from the 09-04 close)
 | 2026-09-08 | $99,811.08 | +0.13% | $765.96 | -0.55% | +0.68% | (eod-wednesday, run 2026-09-09; actual 2026-09-08 session close — supersedes the Labor Day carry-forward row above; portfolio vs last_equity $99,683.78; SPY vs 09-04 close $770.18)
+| 2026-09-18 | $100,237.10 | +0.43% | $761.62 | -0.57% | +0.99% | (eod-thursday, run Sat 2026-09-19; actual 2026-09-18 Friday session close; portfolio vs prior logged row 2026-09-08 $99,811.08; SPY vs prior logged $765.96)

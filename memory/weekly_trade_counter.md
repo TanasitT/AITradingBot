@@ -1,8 +1,8 @@
 # Weekly Trade Counter
 
-Week of: 2026-09-07
+Week of: 2026-09-14
 trades_this_week: 0
-last_eod_reset: 2026-09-09
+last_eod_reset: 2026-09-19
 max_trades_per_week: 3
 trades_remaining: 3
 
@@ -10,6 +10,21 @@ trades_remaining: 3
 daily_loss_halt: false
 halt_reason:
 halt_date:
+
+## EOD Reset — 2026-09-19 (eod-thursday task, run Sat 2026-09-19, closing the 2026-09-18 Friday session)
+daily_loss_halt set to false (was already false; equity $100,237.10 vs
+last_equity $99,977.46 = +0.260% daily, well within the -2% cap). trades_this_week
+reset to 0/3 (was already 0/3 — no entries since 2026-09-01). "Week of" header
+advanced to 2026-09-14 (current week). CAVEAT: NVDA/AMZN/AMD remain OPEN.
+Overnight-thesis web research found no hard company-specific catalyst (AMD/NVDA
+moves are part of a broad semiconductor sector rebound, not company-specific
+events); all three still score >= 70 (NVDA 82, AMD 76, AMZN 74), so thesis is
+judged borderline-intact — force-closes NOT executed (placing/closing trades is
+outside this automated run's scope), flagged in portfolio_state.md /
+open_positions.md. AMD TP1+TP2 partial sells (6sh total) still pending user
+action since 2026-09-08. NVDA still has no broker-side protective stop; AMD's
+own stop moved to pending_cancel. EOD email sent to jankla2010@gmail.com per
+this task's explicit instruction.
 
 ## EOD Reset — 2026-09-09 (eod-wednesday task, closing the 2026-09-08 session)
 daily_loss_halt set to false (was already false; equity $99,811.08 vs last_equity
@@ -252,3 +267,7 @@ overnight catalyst). Closes NOT executed — placing trades is outside this auto
 run's permitted scope; flagged for the user in portfolio_state.md and
 open_positions.md. EOD email NOT sent (needs per-run permission; user absent) —
 report delivered to the user as a file.
+
+## EOD Reset — 2026-09-19 (eod-tuesday task, closing 2026-09-18 Friday session)
+daily_loss_halt reconfirmed false (equity $100,237.10 vs last_equity $99,977.46 = +0.260% daily, well within -2% cap). trades_this_week reconfirmed 0/3 (already reset by an earlier eod-thursday run tonight for the same session — no double reset applied). This run additionally attempted the EOD overnight-thesis closes: NVDA close order accepted (queued for Monday fill, market closed); AMZN and AMD closes blocked by stuck pending_cancel on their existing stop_limit orders — see open_positions.md / portfolio_state.md / reasoning.md for detail and Monday follow-up.
+

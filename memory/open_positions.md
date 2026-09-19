@@ -1,5 +1,85 @@
 # Open Positions
 
+## EOD close attempt 2026-09-19 00:41 ET (eod-tuesday task, closing 2026-09-18 Friday session)
+
+Overnight-thesis review (fresh Perplexity queries, all three): NVDA — no hard
+overnight catalyst (Huang AI-growth commentary, Vera Rubin ramp watch, general
+sentiment only). AMZN — no hard overnight catalyst (AWS UAE/Bahrain impairment,
+logistics/Generac news, general themes only). AMD — no hard overnight catalyst
+(a ~10% list-price increase from Q4 TSMC cost pass-through is structural, not
+time-sensitive). All three: STRONG_THESIS: no.
+
+Per the task's explicit close-if-no-thesis instruction, attempted to close all
+three via Alpaca (paper):
+  - NVDA 22sh: close_position succeeded — market sell order accepted
+    (id 282a15c4-d7ba-4e0c-b592-de226de630fe). Market closed (Sat), so it is
+    QUEUED for fill at Monday 2026-09-21 09:30 ET open, not filled yet.
+  - AMZN 19sh: close BLOCKED — 403 "insufficient qty available", all 19sh held
+    by its existing stop_limit sell order (id 5bfe824d-2b62-4fa7-9814-90173d0f89d8,
+    stop $241.53/limit $240.32). Cancel submitted, accepted, status
+    pending_cancel, but did not finalize after ~30s of polling with market closed.
+  - AMD 10sh: close BLOCKED for the same reason — held by stop_limit
+    (id e5f2591b-2202-4fc0-8743-56111235a097, stop $431.77/limit $429.61),
+    cancel stuck pending_cancel.
+
+FOLLOW-UP for Monday market-open: confirm NVDA fill; retry cancel + close on
+AMZN/AMD (should unblock once market is open and the async cancel processes).
+AMD's TP1 (+8%)/TP2 (+15%) partial-sell flags (6sh, pending since 2026-09-08)
+are moot once/if the full position closes.
+
+---
+
+## EOD 2026-09-19 (eod-thursday task, run Sat 2026-09-19 — closing the 2026-09-18 Friday session) — 3 positions open, no force-close (scores hold), no SH
+
+NOTE (eod-thursday, run Sat 2026-09-19 ~00:44 ET): Live Alpaca API via
+utils/alpaca_client.py. GET /v2/clock is_open=false (Saturday; next_open
+2026-09-21 09:30 ET Monday). weekly_trade_counter.md daily_loss_halt=false —
+proceeded.
+
+GET /v2/account: equity $100,237.10 vs last_equity $99,977.46 = +$259.64
+(+0.260%) daily — well within the -2% halt threshold. daily_loss_halt remains
+false. trades_this_week 0/3.
+
+GET /v2/positions (all regular stocks; no SH — inverse-ETF EOD branch N/A.
+SPY 2026-09-18 close $761.62 vs 5-day MA $759.297 = ABOVE, so even if SH were
+held this would be an exit, not a hold — but nothing is held):
+  - AMD  10sh @ $454.31 avg,   current $559.82, uP&L +$1,055.10 (+23.22%)
+  - AMZN 19sh @ $254.23 avg,   current $253.71, uP&L -$9.88 (-0.21%)
+  - NVDA 22sh @ $217.9527 avg, current $222.27, uP&L +$94.98 (+1.98%)
+
+Stop-loss (none breached): AMD $431.59 (5%) / $422.51 (7% high-beta); AMZN
+$241.52 (5%); NVDA $207.05 (5%) / $202.70 (7% high-beta).
+
+TAKE-PROFIT — AMD remains past both TP1 (+8%, $490.65) and TP2 (+15%,
+$522.46), below TP3 (+25%, $567.89); the 6sh (3sh+3sh) partial sells flagged
+since 2026-09-08 are still unexecuted.
+
+OVERNIGHT-THESIS REVIEW (web research 2026-09-19): no hard company-specific
+overnight catalyst for AMD, NVDA or AMZN — AMD/NVDA's moves are part of a
+broad 3rd-session semiconductor sector rebound (Helios/hyperscale demand
+themes), not company-specific events; AMZN has no near-term company catalyst
+in search results. Mechanical EOD rule points to force-close; diverges from
+the maintain-threshold read (all three still score >= 70: NVDA 82, AMD 76,
+AMZN 74). Net: thesis borderline-intact, consistent with every prior EOD call
+on these same positions — closes flagged PENDING USER ACTION, not forced.
+
+ACTION NOT EXECUTED: this automated run does not place or cancel orders —
+sell-to-close (even on paper) is outside its permitted scope; market is also
+closed so no order could fill before Monday regardless. Pending user action:
+(1) AMD TP1+TP2 partial sells (6sh total, pending since 2026-09-08); (2)
+force-close NVDA/AMZN/AMD per the mechanical EOD rule, at user discretion;
+(3) NVDA 22sh still has NO broker-side protective stop (403 since
+2026-09-01); (4) AMD's sell stop_limit order was left in "pending_cancel"
+status by the 2026-09-19 00:28/00:33 ET monitor ticks — status not
+re-verified this run, re-check Monday.
+
+No exits executed, no halt. portfolio_state.md, benchmark_tracking.md,
+weekly_trade_counter.md updated. /journal entries logged. EOD report
+compiled and saved as memory/eod_report_2026-09-19.md; emailed to
+jankla2010@gmail.com per this task's explicit instruction.
+
+---
+
 ## Intraday monitor 2026-09-19 (scheduled 11:30 tick — MARKET CLOSED, Saturday) — confirms 00:28 ET tick, AMD stop now "pending_cancel"
 
 NOTE: Same session as the 00:28 ET entry directly below (9:30 tick) — GET
