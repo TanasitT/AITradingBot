@@ -2496,12 +2496,12 @@ Intraday monitor (11:30 tick). Market closed (Saturday, next open Mon 2026-09-21
 ---
 ## [2026-09-19 00:33 ET]
 Intraday monitor (10:30 tick): market closed (Saturday, next_open 2026-09-21
-09:30 ET). Daily P&L +0.26% (equity $100,237.10 vs last_equity $99,977.46) —
-no halt. NVDA +1.98%, AMZN -0.21%, AMD +23.22% — no stop-losses breached. AMD
+09:30 ET). Daily P&L +0.26% (equity $100,237.10 vs last_equity $99,977.46) -
+no halt. NVDA +1.98%, AMZN -0.21%, AMD +23.22% - no stop-losses breached. AMD
 is past TP1 (+8%) and TP2 (+15%), not yet at TP3 (+25%): a 6-share catch-up
 sell (3sh TP1 + 3sh TP2) is owed, leaving 4sh to run. Submitted a cancel on
 the stale 10sh AMD protective stop_limit order to free shares for that sell,
-but the market is closed so the cancel is stuck pending_cancel — did not
+but the market is closed so the cancel is stuck pending_cancel - did not
 place the partial sell or a new stop on top of an unresolved cancel to avoid
 an inconsistent order state. Flagged for the Monday pre-market/market-open
 routine to confirm the cancel finalized, execute the 6sh AMD sell, and

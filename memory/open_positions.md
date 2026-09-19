@@ -1911,18 +1911,18 @@ Reason: Perplexity AI found no strong confirmed overnight catalyst. Strategy for
 
 ---
 
-## Intraday monitor 2026-09-19 (scheduled 10:30 tick — MARKET CLOSED, weekend)
+## Intraday monitor 2026-09-19 (scheduled 10:30 tick - MARKET CLOSED, weekend)
 
 NOTE (2026-09-19, ~00:32 ET): Live Alpaca API via utils/alpaca_client.py.
 GET /v2/clock is_open=false (timestamp 2026-09-19 00:32 ET, Saturday; next_open
-2026-09-21 09:30 ET Monday). weekly_trade_counter.md daily_loss_halt=false —
+2026-09-21 09:30 ET Monday). weekly_trade_counter.md daily_loss_halt=false -
 proceeded.
 
 GET /v2/account: equity $100,237.10 vs last_equity $99,977.46 = +$259.64
-(+0.260%) daily — well within the -2% halt threshold. daily_loss_halt remains
+(+0.260%) daily - well within the -2% halt threshold. daily_loss_halt remains
 false. No halt action taken.
 
-GET /v2/positions (all regular stocks; no SH position — inverse-ETF exit branch
+GET /v2/positions (all regular stocks; no SH position - inverse-ETF exit branch
 not applicable):
   - NVDA 22sh @ $217.9527 avg, current $222.27, uP&L +1.98%
   - AMZN 19sh @ $254.23 avg,  current $253.71,  uP&L -0.21%
@@ -1931,8 +1931,8 @@ not applicable):
 Stop-loss (none breached): NVDA $207.06 (5%) / $202.70 (7% high-beta);
 AMZN $241.52 (5%); AMD $431.59 (5%) / $422.51 (7% high-beta).
 
-TAKE-PROFIT: NVDA +1.98% vs TP1 $235.39 — not hit. AMZN -0.21% vs TP1
-$274.57 — not hit. **AMD +23.22% is past both TP1 (+8%, $490.65) and TP2
+TAKE-PROFIT: NVDA +1.98% vs TP1 $235.39 - not hit. AMZN -0.21% vs TP1
+$274.57 - not hit. **AMD +23.22% is past both TP1 (+8%, $490.65) and TP2
 (+15%, $522.46)**, approaching but not yet at TP3 (+25%, $567.89). Per
 strategy.md tiered exit, AMD owes a 6-share catch-up sell (33% TP1 = 3sh +
 33% TP2 = 3sh), leaving 4sh to run toward TP3.
@@ -1941,7 +1941,7 @@ ACTION ATTEMPTED: submitted cancel on the stale AMD 10sh stop_limit protective
 order (id e5f2591b-2202-4fc0-8743-56111235a097, stop $431.77/limit $429.61) to
 free shares for the TP1+TP2 partial sell (qty_available was 0 while that order
 held the full position). Market is closed (weekend) so the cancel is stuck in
-pending_cancel and has not finalized — Alpaca is not processing order state
+pending_cancel and has not finalized - Alpaca is not processing order state
 changes while the exchange is shut. Did NOT proceed to place the 6sh sell or a
 new 4sh protective stop on top of an unresolved cancel, to avoid an
 inconsistent order state (e.g. both old and new stop orders active, or an
