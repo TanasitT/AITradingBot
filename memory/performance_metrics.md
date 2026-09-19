@@ -1,6 +1,6 @@
 # Performance Metrics
 
-Last updated: 2026-09-06 (weekly close for week of 2026-08-31)
+Last updated: 2026-09-19 (weekly close for week of 2026-09-14, weekly-summary task)
 
 ## All-Time Stats
 - Total trades: 13
@@ -11,6 +11,38 @@ Last updated: 2026-09-06 (weekly close for week of 2026-08-31)
 - Profit factor: 0.181 (gross win $199.68 / gross loss $1,104.79)
 - Largest single gain: +$126.44 (NVDA, 2026-08-14)
 - Largest single loss: -$379.26 (AMD, 2026-07-27)
+
+## This Week (2026-09-14 to 2026-09-18) — Final
+- Trades: 0 (no new entries or exits filled 09-14 through 09-18; trades_this_week stayed 0/3 all week per weekly_trade_counter.md)
+- Closed trades: 0 — NVDA/AMZN/AMD (all opened 2026-09-01) remain the same 3 OPEN positions, now held 3 full weeks
+- Wins: 0 | Losses: 0 | Win rate: N/A (no realized round-trips)
+- Total realized P&L: $0.00
+- Best trade: — (none closed) | Worst trade: — (none closed)
+- Unrealized P&L at 2026-09-18 close: NVDA +$94.98 (+1.98%), AMZN -$9.88 (-0.21%), AMD +$1,055.10 (+23.22%) = +$1,140.20 combined
+- Portfolio: $99,811.08 (09-08 close) -> $100,237.10 (09-18 close), +0.43% (entirely unrealized mark-to-market)
+- SPY: $765.96 (09-08) -> $761.62 (09-18), -0.57%
+- Weekly alpha: +0.99% (AMD's continued run to +23.22% outran a mildly declining SPY)
+- All-time stats below UNCHANGED — no positions were closed this week
+- AMD crossed BOTH take-profit tiers this week (TP1 +8% $490.65, TP2 +15% $522.46) with the 6sh partial-sell flagged since 2026-09-08 still unexecuted (automated runs cannot place orders) — now sitting on +23.22% unrealized on the full 10sh instead of a partially-locked-in gain
+- EOD-thursday task (run Sat 2026-09-19, closing 09-18) flagged all 3 for force-close (no hard company-specific overnight catalyst — AMD/NVDA move judged a sector-wide semiconductor rebound) but scores still >=70 (NVDA 82, AMD 76, AMZN 74) so treated as borderline-intact, not forced
+- A second, later run the same night (eod-tuesday task) went further and actually attempted the closes per its own explicit instruction: NVDA market-sell accepted (queued, unfilled — market closed, fills Monday 09-21 open); AMZN and AMD both BLOCKED (403 insufficient qty — shares held by their existing stop_limit orders, whose cancel requests got stuck in "pending_cancel" with the market closed). This is a new failure mode: even when a run IS permitted/instructed to close, the stop_limit-vs-cancel race can block it.
+- RISK GAP: NVDA 22sh has now carried NO broker-side protective stop for 18 consecutive days (403 at placement 09-01, never successfully retried). AMD's own protective stop_limit is now itself stuck in "pending_cancel" limbo, leaving AMD momentarily without a working stop either.
+- Weekly trade budget: 0/3 used, 3rd straight week of zero new entries (weeks of 09-07 and 09-14 both 0 trades) — the 09-01 burst remains the only trading activity in 18 days
+
+## This Week (2026-09-07 to 2026-09-08) — Final
+- Trades: 0 (Mon 2026-09-07 was Labor Day; only 09-08 was a trading session)
+- Closed trades: 0 — NVDA/AMZN/AMD (all opened 2026-09-01) remained open all week
+- Wins: 0 | Losses: 0 | Win rate: N/A
+- Total realized P&L: $0.00
+- Best trade: — (none closed) | Worst trade: — (none closed)
+- Unrealized P&L at 2026-09-08 close: NVDA +$164.06 (+3.42%), AMZN +$44.84 (+0.93%), AMD +$504.90 (+11.11%) = +$713.80 combined
+- Portfolio: $99,683.78 (08-31 week's 09-04 close) -> $99,811.08 (09-08 close), +0.13%
+- SPY: $770.18 (09-04) -> $765.96 (09-08), -0.55%
+- Weekly alpha: ~+0.68% (holding through a single trading day outran a dipping SPY)
+- All-time stats below UNCHANGED — no positions were closed this week
+- AMD crossed TP1 (+8%, $490.65) intraday on 09-08 (peaked +12.00% before settling +11.11% at close); the 3sh partial sell was flagged repeatedly through the day and never executed (automated runs cannot place orders) — first instance of a take-profit tier being hit and missed entirely, not just an EOD force-close being skipped
+- This week's reflection was not logged at the time (gap in the weekly cadence); captured retroactively here as part of the 2026-09-19 weekly-summary run
+- Weekly trade budget: 0/3 used, 2nd straight week of zero new entries after the 09-01 burst
 
 ## This Week (2026-08-31 to 2026-09-04) — Final
 - Trades: 3 (all entries, all 2026-09-01: BUY NVDA 22sh @ $217.99 score 82, BUY AMZN 19sh @ $254.24 score 80, BUY AMD 10sh @ $454.50 score 80)
@@ -113,6 +145,8 @@ Last updated: 2026-09-06 (weekly close for week of 2026-08-31)
 | 2026-08-17 | 0 | 0 | N/A | $0.00 | No trades all week; 0 open positions throughout; portfolio flat $99,097.14 -> $99,096.91 (-0.0002%); SPY $776.30 -> $765.64 (-1.37%); weekly alpha ~+1.37% (inaction outperformed a declining SPY) |
 | 2026-08-24 | 0 | 0 | N/A | $0.00 | No trades all week; 0 open positions throughout; portfolio flat $99,096.91; SPY $765.64 -> $769.28 (+0.48%); weekly alpha ~-0.48% (inaction underperformed a mildly rising SPY). Streak broken the next Monday+1: 3 positions opened 2026-09-01 (NVDA/AMZN/AMD), all still open, counted in the 2026-08-31 week |
 | 2026-08-31 | 3 | 0 | N/A | $0.00 realized | 3 entries fired one morning (09-01: NVDA 22sh $217.99, AMZN 19sh $254.24, AMD 10sh $454.50), hit 3/3 weekly cap by noon; 0 closed — all 3 still open at week close, +$586.88 unrealized at 09-04 ($99,096.91 -> $99,683.78, +0.59%); SPY $769.28 -> $770.18 (+0.12%); weekly alpha ~+0.47%. EOD force-close rule flagged all 3 for exit on 09-01/09-02/09-04 (no overnight catalyst) but automated runs can't place orders — positions rode through and the unrealized gain accrued. NVDA had no broker-side stop all week (403 at placement). All-time stats unchanged (nothing realized) |
+| 2026-09-07 | 0 | 0 | N/A | $0.00 | Labor Day-shortened week (only 09-08 traded); same 3 positions (NVDA/AMZN/AMD) held, still 0 closed; AMD crossed TP1 (+8%) intraday 09-08, peaking +12.00%, 3sh partial sell flagged and never executed; portfolio $99,683.78 -> $99,811.08 (+0.13%); SPY $770.18 -> $765.96 (-0.55%); weekly alpha ~+0.68%; NVDA still unprotected. Reflection logged retroactively 2026-09-19 |
+| 2026-09-14 | 0 | 0 | N/A | $0.00 | 3rd straight week of zero new entries; same 3 positions (NVDA/AMZN/AMD, now 18 days old) still 0 closed; AMD crossed BOTH TP1 and TP2 this week (+23.22% by 09-18 close), 6sh of partial-sell flags unexecuted; portfolio $99,811.08 -> $100,237.10 (+0.43%); SPY $765.96 -> $761.62 (-0.57%); weekly alpha ~+0.99%. EOD 09-19 runs diverged: one flagged force-close (borderline scores, not forced), a second attempted it — NVDA sell queued unfilled, AMZN/AMD blocked by stop_limit cancels stuck pending_cancel. NVDA now unprotected 18 consecutive days; AMD's own stop also now stuck in limbo |
 
 ## By Signal Type
 | Signal | Trades | Win Rate | Avg P&L |

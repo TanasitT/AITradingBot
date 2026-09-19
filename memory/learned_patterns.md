@@ -464,3 +464,49 @@
 7. *(Unresolved, 11 weeks)* Add VIX at entry/decision time directly to trade_log.md rows.
 8. *(Unresolved, 10 weeks)* Add valuation risk modifier: flag reduces research score by 7 points — especially relevant with AMD +142% YTD and NVDA/AMZN both extended at entry.
 9. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested.
+
+---
+
+## Weekly Reflection — Week of 2026-09-14 (Final, logged 2026-09-19; also backfills the skipped Week of 2026-09-07)
+
+### Week Stats (2026-09-14 to 2026-09-18)
+- Trades executed: 0 | Closed: 0 | Wins: 0 | Losses: 0 | Win rate: N/A — 3rd straight week of zero new entries
+- Net realized P&L: $0.00 — NVDA/AMZN/AMD (all opened 2026-09-01) are now 18 days old, still all open
+- Unrealized P&L at 2026-09-18 close: NVDA +$94.98 (+1.98%), AMZN -$9.88 (-0.21%), AMD +$1,055.10 (+23.22%) = +$1,140.20 combined
+- Portfolio: $99,811.08 (09-08 close) -> $100,237.10 (09-18 close), +0.43% — first week-ending close above the original $100,000 baseline (2026-06-15) since tracking began
+- SPY this week: $765.96 (09-08) -> $761.62 (09-18), -0.57%
+- Alpha vs SPY: +0.99%
+- Backfilled Week of 2026-09-07 (Labor Day-shortened, only 09-08 traded — this reflection was skipped in real time): 0 trades, $99,683.78 -> $99,811.08 (+0.13%), SPY $770.18 -> $765.96 (-0.55%), alpha ~+0.68%; AMD hit TP1 (+8%) intraday 09-08, peaking +12.00%
+
+### Signals That Worked
+- **Holding through, again**: for the 4th consecutive multi-week stretch (08-14 single-day, then 08-31, 09-07, 09-14), not force-closing on the mechanical "no overnight catalyst" rule has outperformed what a same-day close would have done. AMD alone is now +23.22% unrealized (+$1,055.10) on a position the EOD rule has wanted closed since 2026-09-01 — 18 days and counting.
+- **No hard rules broken**: daily loss cap and 3-trades/day limit never triggered (0 trades placed); daily equity swings stayed well inside the -2% halt band all two weeks (worst single-day move was a fraction of a percent).
+- **VIX remained a non-factor** — consistent with 13+ weeks of tracking, though exact VIX prints for 09-14 to 09-18 were not captured in any memory file this week (see Signals That Failed).
+
+### Signals That Failed
+- **AMD crossed BOTH take-profit tiers with zero partial sells executed**: TP1 (+8%, $490.65) was hit 09-08, TP2 (+15%, $522.46) by mid-September — per strategy.md's own tiered exit rule, 3sh should have sold at each tier (6sh total, 60% of the position). None of it happened, because automated runs are not permitted to place orders. The position is now riding on the full original 10sh instead of a partially de-risked one. This is the third distinct exit rule (after stop-loss and EOD-force-close) shown to be structurally unenforceable by the current automation.
+- **New failure mode: even a run explicitly instructed to execute closes couldn't fully do it.** The 2026-09-19 eod-tuesday task was given explicit permission to close all three positions. NVDA's market-sell was accepted but is queued unfilled until Monday (market was closed). AMZN and AMD were both BLOCKED outright — 403 "insufficient qty," because their shares were held by their own protective stop_limit orders; the cancel requests Alpaca accepted got stuck in "pending_cancel" for 30+ seconds and never finalized while the market was closed. Protective stops and close orders are now shown to actively conflict with each other under this broker's paper-account behavior — not just a permissions gap, but a sequencing bug.
+- **AMD's own working stop_limit is now itself in "pending_cancel" limbo** as a side effect of the blocked close attempt — the one position that has reliably carried a protective stop since 09-01 is, for the first time, also exposed, at the exact moment it holds the week's largest unrealized gain (+23.22%) and would have the most to lose from a Monday-morning reversal.
+- **NVDA's protective-stop gap reached 18 consecutive days** (403 Forbidden at placement 2026-09-01, never successfully retried by any routine) — the longest unresolved instance of this bug yet.
+- **VIX-at-decision logging remains absent** for both backfilled weeks — now unresolved for 13+ weeks running, and this week it also blocked confirming whether VIX played any role in the weekend order-processing issues.
+- **The Week of 09-07 reflection was skipped entirely in real time** — a new instance of the "weekly reflection cadence" itself lapsing, separate from the long-standing "daily skip-reason logging" gap.
+
+### VIX Conditions
+- No VIX levels were captured in trade_log.md, open_positions.md, or portfolio_state.md for either 09-07 or 09-14 through 09-18 — the VIX-at-decision gap flagged since Week 1 is now unresolved for 13+ weeks and, for the first time, is also relevant to a non-strategy question (whether elevated weekend volatility expectations contributed to Alpaca's paper-account order-processing delays) that current logging cannot answer.
+- No VIX>28 halt or SPY-below-5-day-MA regular-entry block appears to have fired in either week (SPY stayed within a $761–$770 band); consistent with the standing low-vol-regime read from adjacent weeks.
+
+### Emerging Patterns (14 weeks tracked)
+- **The "hold, don't force-close" evidence is now 4-for-4 across the last 5 active-position weeks** (08-14 single trade, 08-31, 09-07, 09-14) — every week since the 09-01 burst has rewarded not force-closing on distant-earnings/no-catalyst grounds. This is the strongest evidence yet for formally loosening or removing the same-day-earnings-distance EOD rule (open action item since 07-13, now 9+ weeks running) — but see the next point before treating this as pure upside.
+- **The automation's exit mechanism is now failing in three distinct, compounding ways simultaneously**: (1) permitted-but-never-executed EOD force-closes (the original gap), (2) take-profit partial-sell tiers hit and never executed (TP1+TP2 on AMD), and (3) as of this week, even an explicitly-permitted close attempt getting blocked by a stop_limit-cancel race condition. The bot cannot currently guarantee it can exit a position on schedule under any of its three exit rules. Unrealized gains have masked this every week since 09-01, but the risk is symmetric — the same gaps would lock in and compound a loss just as easily, and now do so with less warning (AMD's stop is currently down, not just NVDA's).
+- **Crossing the $100,000 original baseline this week** is a milestone worth noting for the user, but it is a fragile one: it rests entirely on one unrealized, unprotected, un-take-profited position (AMD +$1,055.10) that the bot's own rules have wanted to at least partially exit twice over (TP1, TP2) and fully exit repeatedly (EOD rule) since 09-01.
+
+### Open Action Items (carry forward to next week)
+1. **Immediate, escalated**: Monday 2026-09-21 market open — confirm the queued NVDA market-sell fills; retry AMZN/AMD cancel+close now that the market is open (should unblock once the async cancel finally processes); re-place a working stop_limit for AMD once its position size is settled; if positions are kept open, finally place a working NVDA stop (unprotected 18 days) and execute the still-pending AMD TP1+TP2 partial sells (6sh) if the full close doesn't happen.
+2. **New, high priority**: Investigate the stop_limit-cancel-then-close race exposed this week — a "pending_cancel" order that doesn't finalize while the market is closed left AMZN and AMD both unclosable despite explicit permission and a submitted order. Determine whether this is an Alpaca paper-account quirk (cancels only process when the market is open) and whether the close routine should wait/retry instead of giving up after ~30s.
+3. *(Unresolved, 9+ weeks running, now with a 4th consecutive supporting week)* Formally evaluate whether the "no overnight catalyst = force-close" rule is net-negative in expectancy — 08-14, 08-31, 09-07, and 09-14 all favor holding; needs a real backtest, not another week of anecdote, especially now that the take-profit-tier failures show the bot can't cleanly test "force-close" against "take partial profits" as separate strategies while neither executes reliably.
+4. *(Unresolved, 9th week running)* Root-cause and fix the engine/coordinator.py position-logging bug — not tested this week (no new trades), still open.
+5. *(Unresolved, 14 weeks running, most overdue item in the project)* Log skip decisions in trade_log.md daily.
+6. *(Unresolved, 13 weeks running)* Add VIX at entry/decision time directly to trade_log.md rows.
+7. *(Unresolved, 12 weeks running)* Add valuation risk modifier: flag reduces research score by 7 points — especially relevant with AMD now +23% since entry.
+8. *(Unresolved from 07-27)* Add a same-ticker cooldown after a stop-loss exit — still open, not tested.
+9. **New**: Set a reminder/checklist step for the weekly-summary task itself to run every week without gaps — the Week of 09-07 reflection was missed entirely and had to be backfilled retroactively this run.
