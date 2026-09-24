@@ -11,6 +11,19 @@ daily_loss_halt: false
 halt_reason:
 halt_date:
 
+## EOD Reset — 2026-09-19 (eod-friday task, run Sat 2026-09-19 — duplicate firing for the same 2026-09-18 Friday session already reset below)
+Re-verified via live Alpaca GET /v2/account: daily_loss_halt confirmed false
+(equity $100,237.10 vs last_equity $99,977.46 = +0.260%, well within -2% cap).
+trades_this_week confirmed 0/3. No change made — daily_loss_halt and
+trades_this_week were already reset for this session by the eod-thursday task
+below; this run found itself firing for the same Friday-session close within
+the same hour. Also retried closing AMD/AMZN (still blocked, 403 insufficient
+qty — shares held by stop orders stuck pending_cancel) and confirmed no SH
+position. Did not resend the EOD email or duplicate the benchmark row — see
+reasoning.md for the full reconciliation entry. Flagging: multiple
+differently-named scheduled EOD tasks appear to be firing for the same
+session tonight — worth reviewing the schedule config.
+
 ## EOD Reset — 2026-09-19 (eod-thursday task, run Sat 2026-09-19, closing the 2026-09-18 Friday session)
 daily_loss_halt set to false (was already false; equity $100,237.10 vs
 last_equity $99,977.46 = +0.260% daily, well within the -2% cap). trades_this_week

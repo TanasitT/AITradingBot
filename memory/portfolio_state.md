@@ -1,4 +1,22 @@
 # Portfolio State
+Last updated: 2026-09-19 (eod-friday task) — reconfirmed, no change
+
+- Cash available: $84,928.47
+- Invested: $15,308.63 (AMD 10sh, AMZN 19sh, NVDA 22sh)
+- Total equity: $100,237.10
+- Daily P&L: +$259.64 (+0.260%) vs last_equity $99,977.46
+- Open positions: 3 (NVDA, AMZN, AMD) — no SH
+
+NOTE (eod-friday task, run Sat 2026-09-19): this is a duplicate firing for the
+same 2026-09-18 Friday-session EOD close already written below by the
+eod-tuesday/eod-thursday runs tonight. Fresh GET /v2/account this run confirms
+these figures are unchanged (no fills since the last write — NVDA sell order
+still queued for Monday, AMD/AMZN still blocked). Not rewriting the full
+snapshot again; see reasoning.md for the full reconciliation entry.
+
+---
+
+# Portfolio State
 Last updated: 2026-09-19 00:40 ET (eod-tuesday task, run Sat 2026-09-19 — closing the 2026-09-18 Friday session)
 
 - Cash available: $84,928.47

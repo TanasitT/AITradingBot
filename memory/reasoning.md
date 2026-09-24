@@ -2595,3 +2595,13 @@ FLAGGED, not acted on (out of scope for this task): the uncommitted working-tree
 
 memory/open_positions.md and memory/trade_log.md updated with the AMD exit. No halt, no new entries.
 ---
+
+## [2026-09-24 11:44 ET] -- intraday-monitor-1030 task
+Duplicate/near-simultaneous firing with the intraday-monitor-1130 task logged directly above -- both landed around 11:40-11:44 ET server time, consistent with the recurring multi-task overlap flagged repeatedly in this file. Read weekly_trade_counter.md first: daily_loss_halt=false -- proceeded, then re-verified live Alpaca as ground truth rather than re-running checks blind.
+
+GET /v2/positions: only AMZN remains open (19sh @ $254.23 avg, current $246.28, -3.13%). AMD is confirmed closed -- the 1130-tick run's take-profit exit (order a651c614-debb-4c9f-97fe-81ce4f832fbe) filled 10sh @ $612.02, matching this file's entry above. No SH position. GET /v2/orders?status=open: empty -- AMZN still has no broker-side protective stop (unresolved, carried over; -3.13% has not breached its 5%/7% stop levels of $241.52/$236.43).
+
+GET /v2/account: equity $100,609.95 vs last_equity $100,692.72 = -0.0822% daily -- well within the -2% halt threshold. daily_loss_halt remains false, no change to weekly_trade_counter.md.
+
+No action taken this run: AMD's take-profit exit was already executed by the concurrent 1130-tick run moments earlier -- nothing left to act on, and re-submitting a close against an already-flat position would be a duplicate/erroneous order. AMZN has no stop-loss or take-profit condition due and no order to place or cancel. memory/open_positions.md updated with a short reconciliation entry; no new trade_log.md row needed (nothing new to log). No halt.
+---

@@ -1,5 +1,35 @@
 # Open Positions
 
+## Intraday monitor 2026-09-24 (scheduled 10:30 tick) — duplicate/near-simultaneous firing with the 11:30 tick below; no change, AMD already closed by that run
+
+NOTE: this scheduled task (intraday-monitor-1030) fired within the same
+window as the sibling 11:30-tick run logged directly below, both landing
+around 11:40 ET server time — the recurring multi-task overlap flagged in
+prior journal entries. Re-verified live Alpaca as ground truth rather than
+re-running the same checks blind:
+
+GET /v2/positions: only AMZN remains open (19sh @ $254.23 avg, current
+$246.28, uP&L -$151.4 / -3.13%) — AMD is confirmed closed (the 11:30 run's
+market-sell close, order a651c614-debb-4c9f-97fe-81ce4f832fbe, filled 10sh
+@ $612.02). No SH position. GET /v2/orders?status=open: empty — AMZN still
+has no broker-side protective stop (5% stop level $241.52 / 7% high-beta
+$236.43 — current -3.13% has not breached either).
+
+GET /v2/account: equity $100,609.95 vs last_equity $100,692.72 = -0.0822%
+daily — well within the -2% halt threshold. daily_loss_halt remains false,
+no change to weekly_trade_counter.md.
+
+No action taken this run: AMD's take-profit exit was already executed by
+the concurrent 11:30-tick run moments earlier (see entry below) — nothing
+left to act on for AMD, and re-submitting would double-sell a position
+that's already flat. AMZN has no stop-loss or take-profit condition due and
+no order to place/cancel. Flagged (unresolved, carried over): AMZN still
+lacks a broker-side protective stop — worth restoring next time an order
+can be placed. No exits executed by this run, no trade_log.md row added
+(nothing new to log), /journal entry logged.
+
+---
+
 ## Intraday monitor 2026-09-24 11:40 ET (scheduled 11:30 tick) — AMD take-profit exit (TP1+TP2+TP3 all triggered), AMZN held, no halt
 
 NOTE (2026-09-24 11:40 ET): Live Alpaca API via utils/alpaca_client.py. GET
