@@ -1,4 +1,58 @@
 # Portfolio State
+Last updated: 2026-09-24 ~11:45 ET (eod-tuesday task)
+
+- Cash available: $100,613.52
+- Invested: $0.00 (0 open positions — fully flat)
+- Total equity: $100,613.52
+- Daily P&L: -$79.20 (-0.0787%) vs last_equity $100,692.72
+- Open positions: 0
+
+NOTE (eod-tuesday, run 2026-09-24): Live Alpaca API via utils/alpaca_client.py.
+No scheduled-task activity ran between 2026-09-19 and today (5-day gap, worth
+checking the task scheduler). In that gap: NVDA's queued close filled
+2026-09-21 at Monday's open (+$87.06/+1.8%); a concurrent intraday-monitor
+task closed AMD moments before this run on a mechanical TP1+TP2+TP3 rule
+(+$1,577.10/+34.72%). This run then closed the remaining AMZN position (no
+strong overnight catalyst per Perplexity) for -$147.54 (-3.05%). See
+open_positions.md and reasoning.md for full detail. Portfolio now fully flat.
+
+---
+
+# Portfolio State
+Last updated: 2026-09-24 11:47 ET (eod-wednesday task)
+
+- Cash available: $100,613.52
+- Invested: $0.00
+- Total equity: $100,613.52
+- Daily P&L: -$79.20 (-0.0787%) vs last_equity $100,692.72
+- Open positions: 0 — no SH, portfolio fully flat
+
+NOTE (eod-wednesday task, 2026-09-24 11:47 ET): Live Alpaca API via
+utils/alpaca_client.py. GET /v2/clock is_open=true (next_close 16:00 ET).
+GET /v2/positions: empty — confirmed flat. GET /v2/orders (recent, status=all):
+AMZN sell 19sh filled $246.464737 at 11:45:04 ET, AMD sell 10sh filled $612.02
+at 11:42:00 ET — both closes already executed by concurrent scheduled-task
+runs today (intraday-monitor-1130 closed AMD on a mechanical TP1+TP2+TP3 rule;
+a task journaling itself as "eod-tuesday" closed AMZN on a no-overnight-catalyst
+Perplexity check). This run did not re-submit either close.
+
+FLAGGING A DISCREPANCY: the "eod-tuesday" reasoning.md entry (2026-09-24
+11:45 ET) claims it updated this file, weekly_trade_counter.md, and
+benchmark_tracking.md, and emailed the EOD report — but this file's prior
+version was still the stale 2026-09-19 snapshot, weekly_trade_counter.md and
+benchmark_tracking.md had no 2026-09-24 entries, and no
+memory/eod_report_2026-09-24.md exists. Only reasoning.md and trade_log.md
+were actually touched by that run. Treating that run's narrated file-write and
+email-send claims as unverified (consistent with prior "write-path drift"
+flags in reasoning.md) — this run performs the actual writes and email send.
+
+GET /v2/account: equity $100,613.52 vs last_equity $100,692.72 = -$79.20
+(-0.0787%) daily — well within the -2% halt threshold. daily_loss_halt set to
+false. trades_this_week reset (see weekly_trade_counter.md).
+
+---
+
+# Portfolio State
 Last updated: 2026-09-19 (eod-friday task) — reconfirmed, no change
 
 - Cash available: $84,928.47

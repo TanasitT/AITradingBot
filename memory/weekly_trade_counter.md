@@ -1,8 +1,8 @@
 # Weekly Trade Counter
 
-Week of: 2026-09-14
+Week of: 2026-09-21
 trades_this_week: 0
-last_eod_reset: 2026-09-19
+last_eod_reset: 2026-09-24
 max_trades_per_week: 3
 trades_remaining: 3
 
@@ -283,4 +283,7 @@ report delivered to the user as a file.
 
 ## EOD Reset — 2026-09-19 (eod-tuesday task, closing 2026-09-18 Friday session)
 daily_loss_halt reconfirmed false (equity $100,237.10 vs last_equity $99,977.46 = +0.260% daily, well within -2% cap). trades_this_week reconfirmed 0/3 (already reset by an earlier eod-thursday run tonight for the same session — no double reset applied). This run additionally attempted the EOD overnight-thesis closes: NVDA close order accepted (queued for Monday fill, market closed); AMZN and AMD closes blocked by stuck pending_cancel on their existing stop_limit orders — see open_positions.md / portfolio_state.md / reasoning.md for detail and Monday follow-up.
+
+## EOD Reset — 2026-09-24 (eod-tuesday task)
+daily_loss_halt confirmed false (equity $100,613.52 vs last_equity $100,692.72 = -0.0787% daily, well within -2% cap). trades_this_week reset to 0/3 (was already 0/3 — no new entries since 2026-09-01; today's AMZN close and the concurrent AMD close are exits, not counted as new entries). "Week of" header advanced to 2026-09-21 (current week). No scheduled-task activity for 5 days prior (2026-09-19 to 2026-09-24) — flagged for the user. NVDA closed 2026-09-21 at Monday's open (+1.8%); AMD closed today by a concurrent intraday-monitor task on a mechanical TP1+TP2+TP3 rule (+34.72%); AMZN closed by this run — no strong overnight catalyst per Perplexity (-3.05%). Portfolio now fully flat (0 open positions). EOD email sent to jankla2010@gmail.com per this task's explicit instruction.
 

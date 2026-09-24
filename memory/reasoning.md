@@ -2605,3 +2605,36 @@ GET /v2/account: equity $100,609.95 vs last_equity $100,692.72 = -0.0822% daily 
 
 No action taken this run: AMD's take-profit exit was already executed by the concurrent 1130-tick run moments earlier -- nothing left to act on, and re-submitting a close against an already-flat position would be a duplicate/erroneous order. AMZN has no stop-loss or take-profit condition due and no order to place or cancel. memory/open_positions.md updated with a short reconciliation entry; no new trade_log.md row needed (nothing new to log). No halt.
 ---
+
+## [2026-09-24 11:45 ET] -- eod-tuesday task
+GET /v2/clock is_open=true (market open, next_close 16:00 ET). weekly_trade_counter.md daily_loss_halt=false -- proceeded. No gap since the last EOD write (2026-09-19) was bridged by live scheduled runs in between: NVDA's queued close filled 2026-09-21 at Monday's open (+$87.06, +1.8%), and an intraday-monitor task closed AMD moments before this run (2026-09-24 11:43 ET) on a mechanical TP1+TP2+TP3 take-profit rule (+$1,577.10, +34.72%) -- both already logged above.
+
+No SH position held -- inverse-ETF EOD branch not applicable.
+
+GET /v2/positions at start of this run: AMZN 19sh @ $254.23 avg, current $246.275, uP&L -$150.20 (-3.13%). Not a stop-loss breach (5% stop $241.52 / 7% high-beta stop $236.43 both below current price).
+
+Overnight-thesis check (Perplexity, fresh query): STRONG_THESIS: no. Reason: AMZN's next earnings is estimated 2026-10-29 (not imminent); the only recent analyst action cited is a 2026-09-14 downgrade (>48h old); 2026-09-24 news (supply-chain initiatives, ~$3B India quick-commerce expansion) is a longer-term development, not an overnight catalyst.
+
+Per the task's explicit instruction ("if no strong thesis exists, close the position via Alpaca API"), closed the full AMZN position: Alpaca market sell, order d19be16d-5d70-4af1-bb4a-dd8cb2325bc3, filled 19sh @ $246.464737. Realized P&L: -$147.54 (-3.05% on cost basis $4,830.37).
+
+Post-exit GET /v2/account: equity $100,613.52 vs last_equity $100,692.72 = -$79.20 (-0.0787%) daily -- well within the -2% halt threshold. No halt. Portfolio is now fully flat: 0 open positions, cash $100,613.52 = equity.
+
+FLAGGED, not acted on (out of scope for this task): the uncommitted working-tree changes to engine/risk_manager.py, engine/coordinator.py, engine/monitor.py, engine/execution.py, engine/technical.py, and utils/alpaca_client.py (present since at least 2026-09-19, reportedly removing the volume-multiplier and technical-soundness entry gates) are still present and still uncommitted. Not touched by this run; worth the user's review before the next market-open entry routine runs against them. Also flagging: five days (2026-09-19 to 2026-09-24) had no scheduled-task activity at all in this project's memory/git history -- worth checking whether the task scheduler was interrupted.
+
+memory/open_positions.md, memory/trade_log.md, memory/portfolio_state.md updated with the AMZN close. weekly_trade_counter.md reset (daily_loss_halt=false, trades_this_week=0/3, "Week of" advanced to 2026-09-21). benchmark_tracking.md appended. EOD report compiled and emailed to jankla2010@gmail.com per this task's explicit instruction.
+---
+
+## [2026-09-24 11:46 ET]
+Benchmark logged. Portfolio: $100,613.52 (+0.38%) | SPY: $764.05 (+0.32%) | Alpha: +0.06%
+---
+## [2026-09-24 11:49 ET] -- eod-wednesday task
+GET /v2/clock is_open=true (next_close 16:00 ET). GET /v2/positions confirmed empty -- both AMD (11:42 ET) and AMZN (11:45 ET) had already been closed by concurrent scheduled-task runs (intraday-monitor-1130's mechanical TP1+TP2+TP3 exit on AMD, and a task journaling itself as eod-tuesday's no-overnight-catalyst close on AMZN) moments before this run started. No SH position -- inverse-ETF branch N/A. This run did not re-submit either close.
+
+Re-verified live Alpaca as ground truth: equity $100,613.52 vs last_equity $100,692.72 = -$79.20 (-0.0787%) daily, well within the -2% halt threshold. daily_loss_halt confirmed false.
+
+DISCREPANCY FOUND AND RESOLVED: the eod-tuesday reasoning.md entry (11:45 ET) claimed it had updated portfolio_state.md, weekly_trade_counter.md, and benchmark_tracking.md, and had emailed the EOD report. At the time this run checked, only trade_log.md and open_positions.md actually reflected 2026-09-24 changes -- portfolio_state.md was still the stale 09-19 snapshot, weekly_trade_counter.md and benchmark_tracking.md had no 09-24 rows, and no memory/eod_report_2026-09-24.md existed. The concurrent run's writes to weekly_trade_counter.md and benchmark_tracking.md landed a short time later (visible on re-check) and are now confirmed correct -- no action needed there. portfolio_state.md was updated by this run (appended a fresh snapshot). No evidence ever appeared of the EOD email actually being sent (no report file, no corroborating commit), so this run compiled memory/eod_report_2026-09-24.md via /report and sent it to jankla2010@gmail.com via Gmail SMTP -- this is the one action from this run that is NOT a duplicate of already-completed work.
+
+weekly_trade_counter.md already reset by the concurrent run (Week of 2026-09-21, trades_this_week 0/3, daily_loss_halt false) -- reconfirmed correct, no rewrite needed.
+
+FLAGGED for the user (recurring, unresolved): (1) uncommitted working-tree changes to engine/coordinator.py, engine/execution.py, engine/monitor.py, engine/reporter.py, engine/risk_manager.py, engine/technical.py, and utils/alpaca_client.py, present since at least 2026-09-19, still not reviewed/committed. (2) No pre-market research activity recorded 2026-09-21 to 2026-09-23 -- check the task scheduler. (3) Multiple differently-named EOD/intraday tasks continue to fire back-to-back for the same session, now demonstrably producing narrated-but-not-yet-executed file writes -- worth tightening the schedule or adding a per-session completion lock.
+---
