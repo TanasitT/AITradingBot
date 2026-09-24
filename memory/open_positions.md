@@ -1,5 +1,64 @@
 # Open Positions
 
+## Intraday monitor 2026-09-24 11:40 ET (scheduled 11:30 tick) — AMD take-profit exit (TP1+TP2+TP3 all triggered), AMZN held, no halt
+
+NOTE (2026-09-24 11:40 ET): Live Alpaca API via utils/alpaca_client.py. GET
+/v2/clock is_open=true (server ts 11:40 ET; next_close 16:00 ET).
+weekly_trade_counter.md daily_loss_halt=false — proceeded.
+
+GET /v2/positions at start of check (2 positions; NVDA no longer held — its
+2026-09-19 queued close order evidently filled at the 2026-09-21 Monday open;
+no SH position, inverse-ETF branch N/A):
+  - AMD  10sh @ $454.31 avg, current $611.885, uP&L +$1,575.75 (+34.68%)
+  - AMZN 19sh @ $254.23 avg, current $246.275, uP&L -$151.15 (-3.13%)
+
+GET /v2/orders?status=open: 0 open orders (the AMD/AMZN stop_limit orders
+that were stuck "pending_cancel" as of 2026-09-19 are gone — both positions
+showed qty_available == qty, confirming no shares were held by working
+orders).
+
+Stop-loss check: AMZN -3.13% vs -5% stop ($241.52) / -7% high-beta stop
+($236.43) — NOT breached, no action. AMD far in profit, stop-loss N/A.
+
+Take-profit check: AMD +34.68% is past TP1 (+8%, $490.65), TP2 (+15%,
+$522.46), AND TP3 (+25%, $567.89) simultaneously. None of these tiers had
+ever been executed despite being flagged repeatedly since 2026-09-08 (prior
+automated runs treated order placement as out of scope). This task's
+instructions explicitly direct executing required stop-loss/take-profit
+exits, so ACTION EXECUTED: closed the full AMD position via Alpaca
+close_position (market sell, order a651c614-debb-4c9f-97fe-81ce4f832fbe) —
+filled 10sh @ $612.02. This is the mechanical equivalent of the summed
+TP1(33%)+TP2(33%)+TP3(34%) tranches since all three were simultaneously
+past-due and unexecuted. Realized P&L: +$1,577.10 (+34.72% on cost basis
+$4,543.10). AMZN: no stop-loss or take-profit tier hit — HELD, no action.
+
+Post-exit GET /v2/account: equity $100,608.40 vs last_equity $100,692.72 =
+-0.0837% daily — well within the -2% halt threshold. daily_loss_halt remains
+false, no halt triggered. trades_this_week unchanged (this file's exit is not
+counted as a new entry trade). Remaining open positions: AMZN 19sh only.
+
+memory/trade_log.md appended (AMD exit row). /journal entry logged.
+
+---
+
+## EOD 2026-09-19 (eod-friday task, run Sat 2026-09-19) — duplicate firing, no change; AMD/AMZN close still blocked
+
+NOTE: this scheduled task fired for the same 2026-09-18 Friday-session EOD
+close that the eod-tuesday/eod-thursday runs below already handled within the
+same hour. Reconciled against live Alpaca (GET /v2/account, /v2/positions,
+/v2/orders) as ground truth — see reasoning.md for the full write-up. No SH
+held. NVDA sell (22sh, market) still status=accepted, queued for Monday
+2026-09-21 09:30 ET open. Retried close_position on AMD and AMZN: both still
+403 "insufficient qty available" — their stop_limit sell orders remain
+status=pending_cancel (Alpaca paper not finalizing GTC cancels while market
+closed). No new fills, no change to equity/positions. Did not duplicate the
+EOD email, benchmark row, or portfolio_state.md rewrite (already done by the
+runs below for this session). Follow-up at Monday market open unchanged:
+confirm NVDA fill, confirm AMD/AMZN cancels finalized, re-attempt AMD/AMZN
+close if the no-catalyst thesis still holds.
+
+---
+
 ## EOD close attempt 2026-09-19 00:41 ET (eod-tuesday task, closing 2026-09-18 Friday session)
 
 Overnight-thesis review (fresh Perplexity queries, all three): NVDA — no hard

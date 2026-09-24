@@ -2579,3 +2579,19 @@ Appended a weekly reflection to learned_patterns.md covering: (1) 4 consecutive 
 
 Weekly report compiled (memory/weekly_report_2026-09-19.md) and emailed to jankla2010@gmail.com per this task's explicit instruction. Subject: "Trading Bot — Weekly Summary | 2026-09-19 | Week P&L: +0.43%". No trades placed, no halt, no code changes made by this run. Flagged but did not touch the uncommitted engine/risk_manager.py and engine/coordinator.py changes noted in the prior 00:44 ET entry (they appear to remove the volume and technical-soundness entry gates) -- out of scope for a read/write-memory-only weekly-summary task.
 ---
+
+## [2026-09-24 11:43 ET] -- intraday-monitor-1130 task
+GET /v2/clock is_open=true (market open, next_close 16:00 ET). weekly_trade_counter.md daily_loss_halt=false -- proceeded.
+
+Positions at start of check: AMD 10sh @ $454.31 avg (current $611.885, +34.68%), AMZN 19sh @ $254.23 avg (current $246.275, -3.13%). NVDA no longer held -- its 2026-09-19 queued close order (282a15c4) evidently filled at the 2026-09-21 Monday open, resolving the FLAG 1 policy-deviation concern raised in the 2026-09-19 00:44 ET entry. No SH position -- inverse-ETF branch N/A. GET /v2/orders?status=open returned 0 -- the AMD/AMZN stop_limit orders that were stuck pending_cancel since 2026-09-19 are gone; both positions showed qty_available == qty.
+
+AMD: stop-loss N/A (deep in profit). Take-profit: +34.68% is past TP1 (+8% $490.65), TP2 (+15% $522.46), AND TP3 (+25% $567.89) simultaneously -- none of the three tiers had ever been executed despite being flagged on every check since 2026-09-08 (16 days, ~15 prior flagged-but-unexecuted entries in this file and open_positions.md/trade_log.md). Unlike EOD tasks, this scheduled task's instructions explicitly direct "Execute any required exits via Alpaca API" for stop-loss/take-profit hits -- a mechanical rule with no thesis judgment call involved, unlike the EOD overnight-thesis close debate. Executed: closed full AMD position via Alpaca close_position (market sell, order a651c614-debb-4c9f-97fe-81ce4f832fbe), filled 10sh @ $612.02. Treated as the mechanical equivalent of the summed TP1(33%)+TP2(33%)+TP3(34%)=100% tranches since all three were simultaneously past-due and unexecuted -- avoids the complexity of three sequential partial orders reaching the same end state. Realized P&L: +$1,577.10 (+34.72% on cost basis $4,543.10).
+
+AMZN: -3.13%, above both the 5% stop ($241.52) and 7% high-beta stop ($236.43) -- no tier hit, held, no action.
+
+Post-exit GET /v2/account: equity $100,608.40 vs last_equity $100,692.72 = -0.0837% daily -- well within the -2% halt threshold. daily_loss_halt remains false, no halt. trades_this_week unchanged (exit, not counted as a new entry trade per this file's existing convention). Remaining open positions: AMZN 19sh only.
+
+FLAGGED, not acted on (out of scope for this task): the uncommitted working-tree changes to engine/risk_manager.py, engine/coordinator.py, engine/monitor.py, engine/execution.py, engine/technical.py, and utils/alpaca_client.py first flagged 2026-09-19 00:44 ET (removing the volume-multiplier and technical-soundness entry gates) are still present and still uncommitted -- this run did not touch them, and they did not affect today's check since no new entries were evaluated.
+
+memory/open_positions.md and memory/trade_log.md updated with the AMD exit. No halt, no new entries.
+---
