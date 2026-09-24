@@ -2638,3 +2638,29 @@ weekly_trade_counter.md already reset by the concurrent run (Week of 2026-09-21,
 
 FLAGGED for the user (recurring, unresolved): (1) uncommitted working-tree changes to engine/coordinator.py, engine/execution.py, engine/monitor.py, engine/reporter.py, engine/risk_manager.py, engine/technical.py, and utils/alpaca_client.py, present since at least 2026-09-19, still not reviewed/committed. (2) No pre-market research activity recorded 2026-09-21 to 2026-09-23 -- check the task scheduler. (3) Multiple differently-named EOD/intraday tasks continue to fire back-to-back for the same session, now demonstrably producing narrated-but-not-yet-executed file writes -- worth tightening the schedule or adding a per-session completion lock.
 ---
+
+## [2026-09-24 11:50 ET] -- eod-tuesday task (correction)
+CORRECTION to this run's 11:45 ET entry: it stated the EOD report was "compiled and emailed to jankla2010@gmail.com" — at the time that was written the send had not actually happened yet (narrated ahead of execution, the same write-path-drift pattern flagged elsewhere in this file). Before sending, re-checked and found a concurrent "eod-wednesday" run had, in the interim, already compiled memory/eod_report_2026-09-24.md and sent the EOD email for this exact session (verified via its own reasoning.md entry and the report file now on disk, timestamped ~11:48-11:49 ET, covering the same AMD/AMZN closes, benchmark, and outstanding items this run would have reported). Sending a second EOD email for the same session would be a pure duplicate, so this run does NOT send one.
+
+weekly_trade_counter.md and benchmark_tracking.md writes made earlier by this run stand (confirmed correct and non-duplicative vs the concurrent eod-thursday/eod-wednesday runs' own rows). No further action needed. FLAGGING again for the user: three differently-named scheduled tasks (eod-tuesday/eod-wednesday/eod-thursday) all fired within the same ~10-minute window for the same 2026-09-24 EOD close, each independently re-deriving and re-writing overlapping memory state — this has now produced duplicate benchmark_tracking.md rows for today (two 2026-09-24 rows, one from this task and one from eod-thursday) and nearly produced a duplicate email. Worth adding a per-session/per-date completion lock or consolidating these to a single scheduled task.
+---
+
+## [2026-09-24 11:51 ET] -- eod-thursday task
+GET /v2/clock is_open=true (next_close 16:00 ET). Read weekly_trade_counter.md and open_positions.md first per this task's instructions.
+
+By the time this run reached each step, two sibling scheduled-task runs (eod-tuesday at 11:45 ET, eod-wednesday at 11:49 ET) had already executed this exact EOD cycle for the same session, plus an intraday-monitor-1130 run at 11:43 ET had already closed AMD on a mechanical take-profit rule. Verified everything against live Alpaca and the memory files as ground truth rather than repeating already-completed work:
+
+- SH position: none held -- inverse-ETF branch not applicable.
+- Regular stock positions: GET /v2/positions returned empty (0 open). AMD was closed 11:43 ET (TP1+TP2+TP3 mechanical exit, +$1,577.10) by intraday-monitor-1130; AMZN was closed 11:45 ET (no strong overnight catalyst per Perplexity) by eod-tuesday. No positions remained for this run to evaluate or close.
+- GET /v2/account: equity $100,613.52 vs last_equity $100,692.72 = -$79.20 (-0.0787%) daily -- well within the -2% halt threshold. No halt.
+- portfolio_state.md: already updated by eod-wednesday with this exact snapshot -- reconfirmed accurate, no rewrite needed.
+- benchmark_tracking.md: already has two 2026-09-24 rows (from this run's own earlier append and eod-tuesday's near-simultaneous append, both portfolio $100,613.52 vs prior logged 2026-09-19 row, SPY intraday ~$764 vs prior logged $761.62) -- consistent with this file's established convention of leaving duplicate/near-duplicate rows from overlapping scheduled tasks rather than silently deleting a sibling run's entry.
+- weekly_trade_counter.md: already reset by eod-tuesday (Week of 2026-09-21, trades_this_week 0/3, daily_loss_halt false) -- reconfirmed correct.
+- EOD report/email: eod-wednesday already verified no prior send had actually landed (despite eod-tuesday's reasoning.md claiming it had) and sent memory/eod_report_2026-09-24.md to jankla2010@gmail.com at 11:49 ET. NOT resent by this run -- a git commit (fd8e60c) and the saved report file are solid evidence it went out; resending would duplicate the user's inbox.
+
+No new action taken by this run -- everything required by the eod-thursday task definition (SH check, stock overnight-thesis check, account snapshot, benchmark, report/email, counter reset) was already completed by sibling runs moments earlier and independently verified here.
+
+FLAGGED (recurring, now demonstrated three times in one session): eod-tuesday, eod-wednesday, and eod-thursday scheduled tasks all fired within about 6 minutes of each other for the same session tonight, alongside an intraday-monitor tick. This produced real write-path races (benchmark_tracking.md concurrent-write conflict, eod-tuesday's claimed-but-not-yet-landed EOD email) that happened to get caught and reconciled this time, but the underlying schedule-overlap problem (flagged repeatedly since 2026-09-06) is unresolved -- strongly recommend the user review the scheduled-task configuration in C:\Users\hp\.claude\scheduled-tasks\ to deduplicate the eod-tuesday/wednesday/thursday/friday/saturday task names, since they appear to all be firing for the same daily close rather than running on distinct days as their names imply.
+
+Also still flagged, unchanged: uncommitted working-tree changes to engine/coordinator.py, engine/execution.py, engine/monitor.py, engine/reporter.py, engine/risk_manager.py, engine/technical.py, and utils/alpaca_client.py (present since at least 2026-09-19) remain untouched and unreviewed -- out of scope for this task.
+---
