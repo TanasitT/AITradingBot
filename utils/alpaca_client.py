@@ -50,6 +50,13 @@ def get_clock():
     return _get("/v2/clock")
 
 
+def get_orders(status="all", limit=100, symbols=None):
+    path = f"/v2/orders?status={status}&limit={limit}&direction=desc"
+    if symbols:
+        path += f"&symbols={','.join(symbols)}"
+    return _get(path)
+
+
 def is_market_open():
     return get_clock().get("is_open", False)
 
@@ -89,9 +96,28 @@ def get_latest_bar(symbol):
 
 
 def get_bars(symbol, timeframe="1Day", limit=30):
-    path = f"/v2/stocks/{symbol}/bars?timeframe={timeframe}&limit={limit}&adjustment=raw"
+    path = f"/v2/stocks/{symbol}/bars?timeframe={timeframe}&limit={limit}&adjustment=raw&feed=iex"
     data = _get(path, base=DATA_URL)
     return data.get("bars", [])
+
+
+def get_bars_range(symbol, start, end, timeframe="1Day"):
+    """Fetch all bars for symbol between start/end (YYYY-MM-DD), paginating as needed."""
+    bars = []
+    page_token = None
+    while True:
+        path = (
+            f"/v2/stocks/{symbol}/bars?timeframe={timeframe}&start={start}&end={end}"
+            f"&adjustment=raw&feed=iex&limit=10000"
+        )
+        if page_token:
+            path += f"&page_token={page_token}"
+        data = _get(path, base=DATA_URL)
+        bars.extend(data.get("bars", []))
+        page_token = data.get("next_page_token")
+        if not page_token:
+            break
+    return bars
 
 
 def get_snapshot(symbol):
