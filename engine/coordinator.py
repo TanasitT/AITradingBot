@@ -143,6 +143,8 @@ def run_eod():
     log.info("[Coordinator] EOD run")
     github_sync.pull()
 
+    monitor_agent.reconcile_positions()
+
     account = get_account()
     equity = float(account["equity"])
     last_equity = float(account["last_equity"])
