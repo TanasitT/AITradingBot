@@ -27,9 +27,10 @@ def open_trade(symbol, score, thesis, technical, shares):
     order = place_limit_order(symbol, shares, "buy", price)
     log.info(f"[Execution] BUY order placed: {symbol} {shares}sh @ ${price:.2f} | order_id={order.get('id')}")
 
-    place_stop_limit_order(symbol, shares, "sell", stop_price, stop_limit)
-    log.info(f"[Execution] Stop-limit placed for {symbol} @ ${stop_price:.2f}")
-
+    # Everything below is written to memory immediately after the fill-triggering
+    # call succeeds, and before any step that could still fail (stop-limit order,
+    # email, git push) — so a failure downstream can never strand a live Alpaca
+    # position without a matching memory record.
     position_entry = (
         f"\n## {symbol} — Opened {memory.now_et()}\n"
         f"- Entry: ${price:.2f} | Shares: {shares} | Cost: ${price * shares:.2f}\n"
@@ -63,8 +64,29 @@ def open_trade(symbol, score, thesis, technical, shares):
     )
     memory.append("reasoning.md", journal)
 
-    send_trade_alert("BUY", symbol, shares, price, stop_price, thesis, score)
-    github_sync.push(f"auto: BUY {symbol} {shares}sh @ ${price:.2f} | score:{score}")
+    try:
+        place_stop_limit_order(symbol, shares, "sell", stop_price, stop_limit)
+        log.info(f"[Execution] Stop-limit placed for {symbol} @ ${stop_price:.2f}")
+    except Exception as e:
+        log.error(f"[Execution] Stop-limit order failed for {symbol}: {e}")
+        memory.append(
+            "reasoning.md",
+            f"## {memory.now_et()}\n"
+            f"WARNING: stop-limit order for {symbol} failed to place ({e}). Position "
+            f"is open on Alpaca WITHOUT a broker-side stop-loss — needs a manual check "
+            f"until this is resolved.\n---",
+        )
+
+    try:
+        send_trade_alert("BUY", symbol, shares, price, stop_price, thesis, score)
+    except Exception as e:
+        log.error(f"[Execution] Trade alert email failed for {symbol}: {e}")
+
+    try:
+        github_sync.push(f"auto: BUY {symbol} {shares}sh @ ${price:.2f} | score:{score}")
+    except Exception as e:
+        log.error(f"[Execution] github push failed for {symbol}: {e}")
+
     return order
 
 

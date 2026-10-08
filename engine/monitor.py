@@ -3,7 +3,10 @@ import logging
 from utils import memory, github_sync
 from utils.alpaca_client import get_positions, get_account, close_position, get_latest_bar
 from utils.email_client import send_stop_loss_alert, send_halt_alert
-from config import DAILY_LOSS_CAP_PCT, TRAILING_STOP_PCT, MAX_TRADES_PER_DAY
+from config import (
+    DAILY_LOSS_CAP_PCT, TRAILING_STOP_PCT, MAX_TRADES_PER_DAY,
+    STOP_LOSS_DEFAULT_PCT,
+)
 
 log = logging.getLogger(__name__)
 
@@ -59,8 +62,62 @@ def _parse_open_positions():
     return positions
 
 
+def reconcile_positions():
+    """Backfill any live Alpaca position missing from open_positions.md.
+
+    Guards against the write-path drift where a buy order fills on Alpaca but
+    the matching memory record never gets written (e.g. a downstream step in
+    open_trade() failed, or the position was opened outside the normal path).
+    Without this, the gap is only ever found manually days later.
+    """
+    open_mem = _parse_open_positions()
+    live_positions = get_positions()
+    missing = [p for p in live_positions if p["symbol"] not in open_mem]
+
+    for p in missing:
+        symbol = p["symbol"]
+        qty = p["qty"]
+        avg_entry = float(p["avg_entry_price"])
+        stop_price = round(avg_entry * (1 - STOP_LOSS_DEFAULT_PCT), 2)
+
+        log.warning(f"[Monitor] RECONCILE: {symbol} open on Alpaca with no open_positions.md record — backfilling")
+
+        position_entry = (
+            f"\n## {symbol} — Opened unknown (auto-reconciled {memory.now_et()})\n"
+            f"- Entry: ${avg_entry:.2f} (Alpaca avg) | Shares: {qty} | Cost: ${avg_entry * float(qty):.2f}\n"
+            f"- Stop-loss: ${stop_price:.2f} ({STOP_LOSS_DEFAULT_PCT:.0%} below entry, default — "
+            f"high-beta status unknown, review manually)\n"
+            f"- Thesis: unknown — found live on Alpaca with no matching memory record\n"
+            f"- Research score: unknown\n"
+            f"- High-beta: unknown\n"
+        )
+        memory.append("open_positions.md", position_entry)
+
+        trade_row = (
+            f"| {memory.today_et()} | {symbol} | ${avg_entry:.2f} | open | {qty} | — | — | "
+            f"auto-reconciled: found live on Alpaca, no prior memory record |"
+        )
+        memory.append("trade_log.md", trade_row)
+
+        journal = (
+            f"## {memory.now_et()}\n"
+            f"RECONCILE: {symbol} ({qty}sh @ ${avg_entry:.2f} avg) found live on Alpaca with no "
+            f"matching open_positions.md entry — write-path drift detected and auto-backfilled. "
+            f"Stop-loss defaulted to {STOP_LOSS_DEFAULT_PCT:.0%} (high-beta unknown); verify manually "
+            f"and confirm a broker-side stop-limit order actually exists for this position.\n---"
+        )
+        memory.append("reasoning.md", journal)
+
+    if missing:
+        github_sync.push(f"auto: reconciled {len(missing)} untracked position(s)")
+
+    return missing
+
+
 def run():
     log.info("[Monitor] Intraday check running")
+
+    reconcile_positions()
 
     halted, pnl_pct = check_daily_halt()
     if halted:
