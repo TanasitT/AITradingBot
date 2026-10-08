@@ -2,6 +2,36 @@
 
 A plain-English guide to how the bot works, what it does, and all the rules it follows.
 
+> **What this is:** a personal engineering experiment in building an AI-assisted trading workflow with hard, code-enforced risk limits. It trades **paper money only** (Alpaca paper account) and is **not financial advice** and not a profitable strategy. The interesting part is the engineering: deterministic risk rules around an LLM research step, and a written decision trail for every action.
+
+## Results so far (paper trading)
+
+Snapshot from `memory/performance_metrics.md`, last updated at the 2026-09-06 weekly close. It will drift; the memory files are the source of truth.
+
+| Metric | Value |
+|---|---|
+| Closed trades | 13 (4 winners) |
+| Win rate | 30.8% |
+| Profit factor | 0.18 (gross wins $199.68 vs gross losses $1,104.79) |
+| Best / worst trade | +$126.44 (NVDA) / -$379.26 (AMD) |
+| Account equity | Within about 1% of the $100,000 starting balance: low of $98,970.71 (2026-08-07, benchmark table), most recent figure in the journal $100,237.10 (2026-09-19 monitor check) |
+
+Thirteen trades is far too few to say anything about the strategy, and the realised numbers are poor. They are published as they are on purpose.
+
+## What went wrong, and what it taught
+
+These come from `CHANGELOG.md` and the bot's own journal in `memory/`:
+
+- **A rule that blocked every trade.** The original "volume at least 2x average" entry rule never passed, because Alpaca's free IEX feed sees only about 7-15% of total market volume. The threshold was lowered to 1.25x (changelog 0.4.0). Lesson: validate thresholds against the data feed you actually have.
+- **Cloud routines could not reach GitHub.** The design relied on GitHub as the memory store, but cloud-hosted routines had no `github.com` egress, so the project moved to local desktop routines (changelog 0.1.1).
+- **Rules the automation was not allowed to carry out.** In September the scheduled monitor and end-of-day runs were limited to analysis, so signals such as "sell a third at +8%" and the end-of-day force-close rule were flagged repeatedly and never executed. An AMD position was flagged past its first profit target on 2026-09-08 and was still unsold on 2026-09-19, by then past the second target as well. Lesson: a rule that no component is permitted to act on is documentation, not a control.
+- **A gap in protection that nothing could fix.** The broker-side stop-limit for NVDA failed with a 403 on 2026-09-01 and was never retried. The journal flags the missing stop in every report through 2026-09-19, but no component was permitted to place the replacement. Lesson: verify that safety orders actually exist at the broker, and give some component the authority to repair them.
+- **State drift.** The markdown memory files and the live broker account disagreed more than once, and one position was closed on 2026-08-14 by a process that did not log why. Lesson: reconcile against the broker as the source of truth.
+
+## Two ways the routines run
+
+`main.py` runs the daily routines with a local Python scheduler. The Claude Code skills and sub-agents in `.claude/` describe the same routines, and the author's own deployment used Claude desktop local routines calling those skills. See `CHANGELOG.md` for why.
+
 ---
 
 ## What This Bot Does
@@ -38,7 +68,7 @@ Copy `.env.example` to `.env` and fill in your real values — **never commit `.
 | `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` | Alpaca dashboard → Paper Trading → API Keys. Leave `ALPACA_BASE_URL` pointed at `paper-api.alpaca.markets` until you're ready to go live |
 | `PERPLEXITY_API_KEY` | Perplexity AI account → API settings |
 | `EMAIL_SENDER` / `EMAIL_PASSWORD` | A Gmail address + an [App Password](https://support.google.com/accounts/answer/185833) (not your real Gmail password) |
-| `EMAIL_RECIPIENT` | Where reports get sent (defaults to `jankla2010@gmail.com` if unset) |
+| `EMAIL_RECIPIENT` | Where reports get sent (defaults to `EMAIL_SENDER` if unset) |
 | `GITHUB_TOKEN` / `GITHUB_REPO` / `GITHUB_BRANCH` | A GitHub personal access token with repo write access, and the `owner/repo` this bot's `memory/` files sync to |
 
 ### 4. Start the bot
@@ -257,7 +287,7 @@ When you are ready to trade real money:
 
 ## Email Reports
 
-The bot sends emails to `jankla2010@gmail.com` for:
+The bot sends emails to the address in `EMAIL_RECIPIENT` for:
 - End-of-day summary (daily P&L, trades, open positions, vs SPY)
 - Trade alerts (when a buy or sell is executed)
 - Halt alerts (when the -2% daily loss cap is triggered)
@@ -267,11 +297,6 @@ The bot sends emails to `jankla2010@gmail.com` for:
 
 ## Current Status
 
-- **Mode:** Paper trading (fake money)
+- **Mode:** Paper trading only (`live_trading: false` in `memory/strategy.md`; the default broker URL is Alpaca's paper endpoint)
 - **Starting balance:** $100,000
-- **Trades made:** 6 (NVDA, AMZN, META, NVDA, AAPL, META — all closed same-day, no overnight holds yet)
-- **Current equity:** ~$99,648 (as of 2026-07-17 EOD)
-- **Open positions:** 0
-- **Inverse ETF:** SH added to watchlist — will activate when SPY is below 5-day MA
-
-This section reflects a point-in-time snapshot and will drift out of date — check `memory/portfolio_state.md` and `memory/trade_log.md` for the current numbers.
+- **Numbers:** see [Results so far](#results-so-far-paper-trading) and `memory/performance_metrics.md`, `memory/portfolio_state.md`, `memory/trade_log.md` for the live figures. This README no longer hard-codes a trade count or equity because they go stale within days.

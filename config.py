@@ -12,7 +12,8 @@ PERPLEXITY_API_KEY = os.getenv("PERPLEXITY_API_KEY")
 
 EMAIL_SENDER = os.getenv("EMAIL_SENDER")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
-EMAIL_RECIPIENT = os.getenv("EMAIL_RECIPIENT", "jankla2010@gmail.com")
+# Reports go to EMAIL_RECIPIENT; if it is not set they are sent to the sender's own address.
+EMAIL_RECIPIENT = os.getenv("EMAIL_RECIPIENT") or EMAIL_SENDER
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 GITHUB_REPO = os.getenv("GITHUB_REPO")

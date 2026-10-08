@@ -111,7 +111,7 @@ All notable changes to AITradingBot are documented here.
   - `/trade` — Alpaca order placement with full rule enforcement (12 steps)
   - `/journal` — append timestamped reasoning entry to `memory/reasoning.md`
   - `/benchmark` — append daily portfolio vs SPY snapshot to benchmark tracking
-  - `/report` — compile EOD summary and email to jankla2010@gmail.com
+  - `/report` — compile EOD summary and email it to the configured recipient
 - **8 Python agents**: coordinator, research, technical, risk_manager, execution,
   monitor, reporter, benchmark
 - **Utility modules**: alpaca_client, perplexity_client, email_client, github_sync, memory

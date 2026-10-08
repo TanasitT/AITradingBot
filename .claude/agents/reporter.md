@@ -1,6 +1,6 @@
 ---
 name: reporter
-description: Compiles the EOD or weekly summary and emails it to jankla2010@gmail.com via Gmail SMTP. Use at end of trading day or end of week.
+description: Compiles the EOD or weekly summary and emails it to the configured recipient (EMAIL_RECIPIENT in .env) via Gmail SMTP. Use at end of trading day or end of week.
 tools:
   - Read
   - Write
@@ -14,7 +14,7 @@ Reads: memory/trade_log.md, memory/portfolio_state.md, memory/open_positions.md,
        memory/benchmark_tracking.md, memory/weekly_trade_counter.md, memory/reasoning.md
 
 Email subject: `Trading Bot — EOD Summary [DATE] | P&L: [daily_pnl]`
-Email recipient: jankla2010@gmail.com (from EMAIL_RECIPIENT in .env)
+Email recipient: the address in EMAIL_RECIPIENT (.env; falls back to EMAIL_SENDER)
 
 Include: portfolio equity + daily P&L, benchmark vs SPY alpha, trades used this week (N/3),
 today's trades, open positions with unrealized P&L, bot reasoning entries from today,
@@ -26,5 +26,5 @@ for the full week, learned_patterns.md.
 Email subject: `Trading Bot — Weekly Summary | [DATE] | Week P&L: [pct]%`
 
 ## After Sending
-- Call /journal: "EOD report sent to jankla2010@gmail.com."
+- Call /journal: "EOD report sent to <EMAIL_RECIPIENT>."
 - Reset daily_loss_halt: false in memory/weekly_trade_counter.md (EOD only)

@@ -1,4 +1,4 @@
-Compile the end-of-day summary and send it to jankla2010@gmail.com via Gmail SMTP.
+Compile the end-of-day summary and send it to the address in EMAIL_RECIPIENT (.env) via Gmail SMTP.
 
 Steps:
 1. Read memory/trade_log.md — extract rows where date = today
@@ -43,7 +43,7 @@ MARKET CONTEXT (from daily_context.md)
 ```
 
 8. Send the email using Gmail SMTP (EMAIL_SENDER, EMAIL_PASSWORD from .env)
-9. Call /journal with: "EOD report sent to jankla2010@gmail.com."
+9. Call /journal with: "EOD report sent to <EMAIL_RECIPIENT>."
 10. Commit and push memory/ to GitHub with message: `auto: EOD report sent | [date]`
 
 For the weekly version (called on Fridays): include the full trade_log.md, performance_metrics.md,

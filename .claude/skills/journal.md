@@ -20,7 +20,7 @@ Examples of entries the bot writes automatically:
 - "Bought 3 shares of NVDA @ $142.50. Score: 84/100. Stop: $135.38. Thesis: Earnings beat 12%, data center guidance raised."
 - "Skipped TSLA. Score 52 (below 70 threshold). Volume only 1.3x avg."
 - "HALT triggered. Portfolio down -2.1% by 11:30 AM. Daily loss cap hit. All routines suspended."
-- "EOD report sent to jankla2010@gmail.com."
+- "EOD report sent to <EMAIL_RECIPIENT>."
 
 Examples of entries you can write manually:
 - `/journal I want to pause trading this week — markets feel uncertain`
