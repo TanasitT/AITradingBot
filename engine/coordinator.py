@@ -103,8 +103,8 @@ def run_market_open(tickers=None):
             continue
 
         tech = technical_agent.analyze(symbol)
-        if not tech or not tech["technically_sound"]:
-            log.info(f"[Coordinator] {symbol} failed technical check")
+        if not tech:
+            log.info(f"[Coordinator] {symbol} — no price data, skipping")
             continue
 
         context = memory.read("daily_context.md")
@@ -137,6 +137,7 @@ def run_intraday():
         return
 
     monitor_agent.run()
+    run_market_open()
 
 
 def run_eod():

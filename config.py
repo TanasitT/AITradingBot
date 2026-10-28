@@ -30,6 +30,11 @@ DAILY_LOSS_CAP_PCT = 0.02      # -2% daily loss halts all routines
 MAX_TRADES_PER_DAY = 3
 ALLOW_OPTIONS = False          # stocks only
 
+# --- US momentum executor (engine/momentum.py) ---
+MOMENTUM_DIR = os.path.join(ROOT_DIR, "us-momentum-routines")
+MOMENTUM_RISK_PCT = 0.005      # lose at most 0.5% of equity if a stop is hit
+MOMENTUM_TRAIL_SESSIONS = 10   # stop trails just under the lowest low of this many sessions
+
 # --- Soft thresholds (also in risk_rules.md — editable) ---
 MIN_RESEARCH_SCORE = 70
 MIN_VOLUME_MULTIPLIER = 1.25

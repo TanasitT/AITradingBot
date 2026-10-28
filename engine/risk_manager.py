@@ -3,7 +3,7 @@ from utils.memory import read, get_flag
 from utils.alpaca_client import get_account
 from config import (
     MAX_POSITION_PCT, DAILY_LOSS_CAP_PCT, MAX_TRADES_PER_DAY,
-    MIN_RESEARCH_SCORE, MIN_VOLUME_MULTIPLIER, MAX_VIX, ALLOW_OPTIONS,
+    MIN_RESEARCH_SCORE, MAX_VIX, ALLOW_OPTIONS,
 )
 
 log = logging.getLogger(__name__)
@@ -65,9 +65,6 @@ class RiskManager:
 
         if score < MIN_RESEARCH_SCORE:
             reasons.append(f"research score {score} < minimum {MIN_RESEARCH_SCORE}")
-
-        if volume_ratio < MIN_VOLUME_MULTIPLIER:
-            reasons.append(f"volume ratio {volume_ratio:.1f}x < minimum {MIN_VOLUME_MULTIPLIER}x")
 
         if vix >= MAX_VIX:
             reasons.append(f"VIX {vix:.1f} >= max allowed {MAX_VIX}")

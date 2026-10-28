@@ -1,302 +1,181 @@
-# AITradingBot — User Manual
+# AITradingBot
 
-A plain-English guide to how the bot works, what it does, and all the rules it follows.
+An automated US stock momentum trading system running on an Alpaca **paper** account. A rules-based
+screen and a daily pre-open order plan run on a schedule, an AI routine checks recent news on each
+candidate, and a deterministic Python executor places the orders and manages every stop.
 
-> **What this is:** a personal engineering experiment in building an AI-assisted trading workflow with hard, code-enforced risk limits. It trades **paper money only** (Alpaca paper account) and is **not financial advice** and not a profitable strategy. The interesting part is the engineering: deterministic risk rules around an LLM research step, and a written decision trail for every action.
+> **Disclaimer:** this is a personal engineering project. It trades simulated money only, has no
+> proven edge, and nothing here is investment advice.
 
-## Results so far (paper trading)
+The engineering focus is on keeping an AI agent useful while making sure it cannot take risk: the AI
+reads the news and can veto a trade, but position sizing, order limits and stop management are all
+enforced in plain Python, and every order goes through one guarded code path.
 
-Snapshot from `memory/performance_metrics.md`, last updated at the 2026-09-06 weekly close. It will drift; the memory files are the source of truth.
+---
 
-| Metric | Value |
+## How it works
+
+```mermaid
+flowchart LR
+    S["Weekend screen<br/>us_momentum_screen.py"] -->|five-tier watchlist| P["Pre-open plan<br/>preopen_plan.py"]
+    P -->|order tickets| N["News check<br/>(AI routine)"]
+    N -->|tickets that pass| E["Entries<br/>engine/momentum.py"]
+    E -->|breakout orders| A[("Alpaca<br/>paper account")]
+    X["Executor loop<br/>main.py"] -->|"stops: place, check, trail"| A
+```
+
+| Stage | When (US Eastern) | Component | What it does |
+|---|---|---|---|
+| Screen | Saturday, after Friday's close | `us-momentum-routines/scripts/us_momentum_screen.py` | Scores about 580 stocks and sorts them into five tiers |
+| Plan | Weekdays, about 08:00 | `us-momentum-routines/scripts/preopen_plan.py` | Refreshes prices, sets the market regime, turns top-tier stocks into order tickets |
+| News check | Right after the plan | Scheduled Claude routine | Removes any ticket with negative news from the last 3 days; it can never add a ticket or change a price |
+| Entries | Before 09:10 (routine) or 09:15–09:30 (executor) | `engine/momentum.py` `enter()` | Places each ticket as a buy stop-limit day order, so it fills only on a breakout |
+| Protection | Every 5 minutes, 09:25–16:05, and at startup | `engine/momentum.py` `protect()` | Makes sure every position has a sell stop at the broker; enforces the daily loss halt |
+| Trailing | 16:20 | `engine/momentum.py` `end_of_day()` | Raises each stop to just under the 10-session low and logs the day's fills |
+
+The screen and plan are run by two scheduled Claude Code routines, which also write a decision
+journal. The routine can place orders only by running `scripts/routine_entries.py`, which calls the
+executor's own entry code and refuses to run against a non-paper account or after 09:10 ET. If the
+routine does not run, the executor builds the day's plan itself (without the news check).
+
+---
+
+## Strategy
+
+Based on Mark Minervini's Trend Template and volatility contraction pattern (VCP), following
+[Clement Ang's watchlist method](https://tradingresourcehub.substack.com/p/how-to-build-and-maintain-watchlists-clement-ang).
+The full rules are in [`us-momentum-routines/docs/SPEC.md`](us-momentum-routines/docs/SPEC.md).
+
+- **Universe:** S&P 500 plus a short extra list, using 14 months of daily bars from Yahoo Finance.
+- **Trend Template:** seven checks, including price above the 50, 150 and 200-day averages, a rising
+  200-day average, at least 30% above the 52-week low and within 25% of the 52-week high.
+- **Relative strength:** a weighted 3, 6, 9 and 12-month return, ranked 1–99 within the universe;
+  70 or more passes. This approximates, but is not, the IBD rating.
+- **Tiers:** *Execution* (up to 5 stocks within 3% of a 20-day high, with a tight 10-day range and
+  contracting price swings or drying-up volume),
+  *Almost Ready*, *Secondary*, and long and short *Wide Lists* for monitoring.
+- **Market regime:** *Defense* when SPY is below its 50-day average (no new orders), *Selective*
+  when fewer than half the universe is above its own 50-day average (1 order a day), *Offense*
+  otherwise (up to 3).
+- **Order ticket:** trigger 0.1% above the 10-session high, limit 0.3% above the trigger, stop at the
+  higher of the 10-session low and 8% below the trigger. Tickets with earnings within 3 days are
+  skipped.
+
+---
+
+## Risk controls
+
+All of these are enforced in code, not in prompts.
+
+| Control | Rule |
 |---|---|
-| Closed trades | 13 (4 winners) |
-| Win rate | 30.8% |
-| Profit factor | 0.18 (gross wins $199.68 vs gross losses $1,104.79) |
-| Best / worst trade | +$126.44 (NVDA) / -$379.26 (AMD) |
-| Account equity | Within about 1% of the $100,000 starting balance: low of $98,970.71 (2026-08-07, benchmark table), most recent figure in the journal $100,237.10 (2026-09-19 monitor check) |
+| Risk per trade | 0.5% of equity between the trigger and the stop |
+| Position size cap | 5% of equity |
+| Order caps | The regime cap, and never more than 3 new orders a day |
+| Daily loss halt | At -2% on the day: no new entries and unfilled entries are cancelled; stops stay in place |
+| A stop on every position | A good-until-cancelled sell stop is held at the broker. A position found without one gets it within 5 minutes, or is closed if already below its stop |
+| Stops only move up | Raised after each close to just under the 10-session low, never lowered |
+| No duplicate orders | Each entry has a per-day, per-ticker `client_order_id`, so a retry or second run is rejected by the broker |
+| Fresh data only | No entries from a screen older than 9 days, and entries only before the open |
+| Paper trading | The executor trades a live account only when explicitly enabled; the AI routine's entry script refuses any non-paper account regardless |
 
-Thirteen trades is far too few to say anything about the strategy, and the realised numbers are poor. They are published as they are on purpose.
-
-## What went wrong, and what it taught
-
-These come from `CHANGELOG.md` and the bot's own journal in `memory/`:
-
-- **A rule that blocked every trade.** The original "volume at least 2x average" entry rule never passed, because Alpaca's free IEX feed sees only about 7-15% of total market volume. The threshold was lowered to 1.25x (changelog 0.4.0). Lesson: validate thresholds against the data feed you actually have.
-- **Cloud routines could not reach GitHub.** The design relied on GitHub as the memory store, but cloud-hosted routines had no `github.com` egress, so the project moved to local desktop routines (changelog 0.1.1).
-- **Rules the automation was not allowed to carry out.** In September the scheduled monitor and end-of-day runs were limited to analysis, so signals such as "sell a third at +8%" and the end-of-day force-close rule were flagged repeatedly and never executed. An AMD position was flagged past its first profit target on 2026-09-08 and was still unsold on 2026-09-19, by then past the second target as well. Lesson: a rule that no component is permitted to act on is documentation, not a control.
-- **A gap in protection that nothing could fix.** The broker-side stop-limit for NVDA failed with a 403 on 2026-09-01 and was never retried. The journal flags the missing stop in every report through 2026-09-19, but no component was permitted to place the replacement. Lesson: verify that safety orders actually exist at the broker, and give some component the authority to repair them.
-- **State drift.** The markdown memory files and the live broker account disagreed more than once, and one position was closed on 2026-08-14 by a process that did not log why. Lesson: reconcile against the broker as the source of truth.
-
-## Two ways the routines run
-
-`main.py` runs the daily routines with a local Python scheduler. The Claude Code skills and sub-agents in `.claude/` describe the same routines, and the author's own deployment used Claude desktop local routines calling those skills. See `CHANGELOG.md` for why.
+Example: with $100,000 equity, a $100 trigger and a $94 stop, 0.5% risk allows 83 shares, but the
+5% cap limits the position to 50 shares ($5,000).
 
 ---
 
-## What This Bot Does
+## Lessons from the first version
 
-The bot monitors the US stock market every day and automatically:
-1. Researches stocks using AI (Perplexity)
-2. Decides whether to buy based on a strict set of rules
-3. Monitors open positions every hour and exits when targets are hit
-4. Sends you an end-of-day email report
-5. Keeps a journal of every decision it makes
+The project started in June 2026 as a different design: an AI research bot that scored a fixed
+watchlist each morning with Perplexity and traded intraday on those scores. It was retired in
+October 2026. Its failures shaped the current design:
 
-All trading happens on **Alpaca** (currently paper trading — fake money, no real risk).
+- **Test thresholds against the data you actually have.** A "volume at least 2x average" entry rule
+  never passed, because the free IEX data feed sees only a small share of total market volume.
+- **A rule that nothing is allowed to act on is not a control.** Scheduled checks flagged profit
+  targets and exit signals that no component was permitted to execute.
+- **Confirm that protective orders exist at the broker.** A stop order failed with an API error and
+  was never retried; later, a position filled with no stop and stayed unprotected for a week. The
+  executor now checks for a stop on every position every 5 minutes.
+- **Treat the broker as the source of truth.** Local state files drifted from the real account, so
+  the executor now reads positions and orders from Alpaca on every run.
+- **Keep order placement deterministic.** A scheduled AI run that started after the open built its
+  plan from partial-day prices, and the routines once stopped for several days without any alert.
+  Entries are now allowed only before the open, and the executor builds the plan itself if the
+  routine has not.
+- **Backtest before trusting a strategy.** A two-year mechanical backtest of the first version's
+  rules (August 2024 to August 2026, without the AI research step) ended 0.9% down over 169 trades.
+  See `scripts/backtest.py`.
 
 ---
 
-## Getting Started (New User Setup)
+## Results
 
-### 1. Prerequisites
-- Python 3.10+
-- A GitHub repo for this project (used to back up `memory/` state — see [Backup & Syncing](#backup--syncing))
-- Accounts on: [Alpaca](https://alpaca.markets) (paper trading), [Perplexity AI](https://www.perplexity.ai) (research), Gmail (reports)
+Paper account, started with $100,000 in June 2026. Status as of 2026-10-28:
 
-### 2. Install dependencies
+- **Account equity:** $100,502 (+0.5% since inception, across both versions).
+- **Momentum system:** one open position. No new entries have been placed since the executor went
+  live on 2026-10-20; the latest screen (2026-10-23) put the market in Defense, which allows none.
+- **First version:** 13 closed trades by 2026-09-06, with a 30.8% win rate and a profit factor of 0.18.
+
+These are far too few trades to judge either strategy, and they are reported as they are.
+
+---
+
+## Running it
+
+Requirements: Python 3.10+ and an [Alpaca](https://alpaca.markets) paper trading account. The
+author's deployment runs on Windows (`run_bot.bat` is a launcher for Windows Task Scheduler), but
+the Python code is cross-platform.
+
 ```
 pip install -r requirements.txt
+cp .env.example .env                  # add your Alpaca paper API keys
+
+cd us-momentum-routines
+python scripts/us_momentum_screen.py  # weekly: writes results/latest/
+python scripts/preopen_plan.py        # optional: the executor builds the plan itself if missing
+cd ..
+
+python main.py                        # the executor; keep it running during US market hours
 ```
-This installs `alpaca-py`, `anthropic`, `gitpython`, `python-dotenv`, `requests`, `pytz`, and `schedule`.
 
-### 3. Configure credentials
-Copy `.env.example` to `.env` and fill in your real values — **never commit `.env`**:
+- **Settings:** order and sizing rules in `us-momentum-routines/config/risk.json`; risk percentages
+  and caps in `config.py`.
+- **Local state:** the executor writes its journal (`reasoning.md`) and trade log (`trade_log.md`)
+  to `memory/`, which is created on first run and is not part of the repository.
+- **Live trading:** off by default. It requires a `memory/strategy.md` containing
+  `live_trading: true` and live Alpaca keys. It is not recommended.
 
-| Variable | Where to get it |
-|---|---|
-| `ALPACA_API_KEY` / `ALPACA_SECRET_KEY` | Alpaca dashboard → Paper Trading → API Keys. Leave `ALPACA_BASE_URL` pointed at `paper-api.alpaca.markets` until you're ready to go live |
-| `PERPLEXITY_API_KEY` | Perplexity AI account → API settings |
-| `EMAIL_SENDER` / `EMAIL_PASSWORD` | A Gmail address + an [App Password](https://support.google.com/accounts/answer/185833) (not your real Gmail password) |
-| `EMAIL_RECIPIENT` | Where reports get sent (defaults to `EMAIL_SENDER` if unset) |
-| `GITHUB_TOKEN` / `GITHUB_REPO` / `GITHUB_BRANCH` | A GitHub personal access token with repo write access, and the `owner/repo` this bot's `memory/` files sync to |
+---
 
-### 4. Start the bot
+## Project layout
+
 ```
-python main.py
+main.py                         Executor scheduler (US Eastern time)
+engine/momentum.py              Entries, stop protection, trailing stops, fill log
+scripts/routine_entries.py      The only order path for the AI routine (paper only, before 09:10 ET)
+scripts/backtest.py             Backtest of the first version's strategy
+utils/alpaca_client.py          Alpaca REST API wrapper
+config.py                       Risk constants
+us-momentum-routines/
+  scripts/                      Weekend screen and pre-open plan
+  docs/SPEC.md                  Screening, regime and ticket rules
+  config/                       risk.json, extra_tickers.txt
+
+Retired first version, kept for reference:
+engine/ (other modules), utils/perplexity_client.py, utils/email_client.py,
+utils/github_sync.py, .claude/agents/, .claude/skills/
 ```
-This starts a long-running scheduler loop (see `main.py`) — it does **not** trade immediately. It registers the routines below and checks every 30 seconds whether one is due, plus polls `memory/trade_trigger.md` every 30 seconds for manual trade requests. Leave it running (e.g. in a background terminal, `screen`/`tmux` session, or as a service) for it to operate on schedule. Logs go to `logs/bot.log` and stdout.
-
-### 5. Verify it's working
-- Check `logs/bot.log` for `"AI Trading Bot starting up"` and routine log lines
-- After the next scheduled pre-market research run, check `memory/research_cache.md` for scored tickers
-- You should receive an EOD email report the same day trading starts
-
-### 6. What to expect on day one
-- The bot starts in **paper trading mode** (`live_trading: false` in `memory/strategy.md`) — no real money is at risk
-- It won't necessarily place a trade on the first run — entries only happen when [all 5 entry rules](#the-5-rules-before-any-trade) pass
-- Read the rest of this manual (below) to understand what it's doing and why before you consider flipping it to live trading
-
-> **Note on times:** `main.py`'s schedule is written in US Eastern Time (ET) — e.g. `08:33`, `09:37`, `15:47`. The [Daily Schedule](#daily-schedule-bangkok-time--ict) section below describes the same routines converted to Bangkok time (ICT) for reference.
 
 ---
 
-## Key Terms Explained
+## Limitations
 
-| Term | What It Means |
-|---|---|
-| **SPY** | An ETF that tracks the 500 biggest US companies. It goes up when the overall market goes up. Used as the market's health indicator. |
-| **VIX** | The "Fear Gauge." Measures how nervous investors are. Low VIX (< 20) = calm market. High VIX (> 28) = fearful, choppy market — bot avoids trading. |
-| **5-day MA** | Moving Average — the average price of SPY over the last 5 trading days. If today's SPY price is above this average, the market is in an uptrend. |
-| **Volume** | How many shares of a stock are traded today vs the normal daily amount. High volume = big investors are active in that stock. |
-| **Stop-loss** | A safety net price. If the stock falls this far below your buy price, the bot sells automatically to cut the loss. |
-| **Take-profit** | A target price. When the stock rises this much, the bot sells a portion to lock in gains. |
-| **Paper trading** | Trading with fake money to test the strategy. Works exactly like real trading but no real money at risk. |
-| **ETF** | Exchange Traded Fund — a basket of stocks you can buy as a single share. SPY holds all 500 S&P 500 stocks. |
-| **Inverse ETF** | An ETF that moves opposite to the market. When SPY goes down 1%, SH goes up 1%. Used to profit during market downturns. |
-| **Research score** | A score from 0–100 the bot assigns each stock after analyzing news, analyst opinions, volume, and technical charts. |
-| **Portfolio** | Your total account value — cash + value of stocks currently held. |
-| **Equity** | Another word for your total portfolio value (cash + investments). |
-| **Alpha** | How much better (or worse) you did vs SPY. +1% alpha means you beat the market by 1% that day. |
-
----
-
-## Daily Schedule (Bangkok Time / ICT)
-
-| Time | What Happens |
-|---|---|
-| **7:33 PM** (Mon–Fri) | Pre-market research — bot scans all watchlist stocks, scores them 0–100 |
-| **8:37 PM** (Mon–Fri) | Market open — bot reviews scores and places trades if conditions are met |
-| **8:30 PM, 9:30 PM, 10:30 PM, 11:30 PM** (Mon–Fri) | Intraday monitor — checks if stop-loss or take-profit targets are hit |
-| **2:47 AM** (Tue–Sat) | End of day — reviews overnight thesis, closes weak positions, sends email report |
-| **4:23 AM** (Saturdays) | Weekly summary — full week performance review, email sent |
-
----
-
-## The 5 Rules Before Any Trade
-
-All 5 must be true at the same time. If any one fails, no trade is placed.
-
-### Rule 1 — Research Score ≥ 70/100
-The bot asks Perplexity AI to analyze each stock across 6 dimensions:
-- Recent news and catalysts (last 48 hours)
-- Analyst upgrades/downgrades and price targets
-- Volume vs 30-day average
-- Price vs 50-day and 200-day moving averages
-- RSI (momentum indicator)
-- Sector momentum
-
-A score below 70 means the signal is too weak to risk money.
-
-### Rule 2 — Volume ≥ 1.25x Normal
-The stock must be trading at least 25% above its normal daily volume. This confirms that above-average institutional interest is present. The threshold was lowered from 2x to 1.25x because the bot's data source (Alpaca IEX feed) captures only a fraction of total market volume, making 2x too strict in practice.
-
-### Rule 3 — SPY Above Its 5-Day Average
-The overall market must be in an uptrend. If the whole market is falling, even good stocks tend to fall with it. The bot waits for market health before entering.
-
-**Exception:** When SPY is BELOW the 5-day average, the bot switches to evaluating SH (inverse ETF) instead of regular stocks.
-
-### Rule 4 — VIX Below 28
-Fear must be low enough to trade. When VIX is above 28, markets are volatile and unpredictable — stops get hit randomly, even correct trades lose money. The bot sits in cash.
-
-### Rule 5 — No Existing Halt
-- Daily portfolio loss must be below 2%
-- Daily trade count must be below 3
-
----
-
-## Position Sizing
-
-The bot never risks more than **5% of total portfolio per trade**.
-
-| Portfolio Value | Max Per Trade |
-|---|---|
-| $100,000 | $5,000 |
-| $50,000 | $2,500 |
-| $10,000 | $500 |
-
-For SH (inverse ETF): max is **3% of portfolio** — smaller because inverse ETFs can reverse quickly.
-
----
-
-## Exit Rules
-
-### Stop-Loss (cut losses)
-| Stock Type | Stop-Loss Level |
-|---|---|
-| Regular stocks | 5% below entry price |
-| High-beta stocks (volatile, beta > 1.5) | 7% below entry price |
-| SH (inverse ETF) | 5% below entry price |
-
-### Take-Profit (lock in gains)
-| Level | Gain | Action |
-|---|---|---|
-| Tier 1 | +8% | Sell 33% of position |
-| Tier 2 | +15% | Sell another 33% |
-| Tier 3 | +25% | Sell final 34% |
-
-These three tiers are recorded as the plan at entry time, but the intraday monitor currently enforces exits through two mechanisms instead of firing three separate partial sells:
-
-1. **Broker-side stop-limit order** — placed automatically the moment a trade opens, at the stop-loss price. This protects the position even if the bot is offline, since Alpaca holds the order, not the bot.
-2. **Trailing stop after Target 1** — once the price reaches +8% (Target 1), the bot starts tracking the intraday high. If price then pulls back 3% from that high, the *entire remaining position* is closed (not just a partial sell). This is the trailing-stop mechanism, separate from the fixed 5%/7% stop-loss above.
-
-In practice this means a winning trade is far more likely to exit in one shot via the trailing stop than to be sold off in three discrete 33% chunks at each tier.
-
-### Force-Close Triggers (sell immediately regardless of P&L)
-- Perplexity AI detects a major negative news reversal for the stock
-- VIX spikes above 30 during the day
-- End of day and no strong reason to hold overnight (confirmed by Perplexity)
-- SPY reclaims its 5-day MA while holding SH (inverse ETF thesis is resolved)
-
----
-
-## Inverse ETF Mode (SH)
-
-When the market is in a short-term pullback (SPY below 5-day MA), the bot switches into inverse ETF mode:
-
-- **What it buys:** SH — a fund that goes up when SPY goes down
-- **Entry threshold:** Score ≥ 60 (lower than the 70 required for stocks)
-- **Position size:** 3% of portfolio max (vs 5% for stocks)
-- **Exit trigger:** As soon as SPY recovers above its 5-day MA, SH is sold — the thesis is gone
-- **Why only SH:** SH is 1x (not leveraged). Leveraged inverse ETFs (SQQQ, SPXS) are too risky
-
----
-
-## Hard Rules (Cannot Be Changed Without Code)
-
-These are enforced in the code — they cannot be overridden by editing memory files:
-
-| Rule | Value |
-|---|---|
-| Max position size | 5% of portfolio (3% for SH) |
-| Daily loss halt | -2% triggers full stop for the day |
-| Max trades per day | 3 |
-| No options | Only stocks and approved ETFs |
-| Paper trading | Until `live_trading: true` is set in strategy.md |
-
----
-
-## Memory Files (The Bot's Brain)
-
-All state is stored as text files in the `memory/` folder. You can read and edit these directly.
-
-| File | What It Contains |
-|---|---|
-| `strategy.md` | Master rules — the bot reads this first every single run |
-| `watchlist.md` | Stocks the bot monitors + inverse ETFs |
-| `research_cache.md` | Latest scores for each stock (refreshed daily) |
-| `daily_context.md` | Today's SPY trend, VIX level, sector leaders |
-| `open_positions.md` | All currently held positions with entry, stop, and targets |
-| `trade_log.md` | Complete history of every trade ever made |
-| `portfolio_state.md` | Current cash, equity, and daily P&L |
-| `weekly_trade_counter.md` | Despite the name, this tracks *today's* trade count and the daily loss halt flag — it's reset to 0 every day at EOD, not weekly |
-| `trade_trigger.md` | Manual/on-demand trade request. Set `status: pending` and the bot picks it up and runs a market-open evaluation immediately, then updates status to `executing` → `done` (or `error` with details) |
-| `benchmark_tracking.md` | Daily portfolio vs SPY performance comparison |
-| `performance_metrics.md` | Overall win rate, profit factor, all-time stats |
-| `learned_patterns.md` | Weekly reflections on what worked and what didn't |
-| `reasoning.md` | Append-only journal of every bot decision |
-| `risk_rules.md` | Numerical thresholds (editable to tune the bot) |
-| `news_events.md` | Upcoming earnings, Fed meetings, economic calendar |
-| `pending_orders.md` | Orders placed but awaiting fill |
-
----
-
-## Backup & Syncing
-
-Before each routine runs, the bot pulls the latest `memory/` files from GitHub. After any action that changes state (trade opened/closed, halt triggered, counters reset, report sent), it commits and pushes the `memory/` folder back to GitHub automatically. This means:
-- Every decision is versioned — you can see the full history in the GitHub commit log
-- If you edit a memory file by hand and the bot is about to run, make sure your edit is saved before the scheduled time, or it may be overwritten by the next pull
-
----
-
-## Tuning the Bot (Without Code)
-
-Edit `memory/risk_rules.md` to adjust thresholds. Changes take effect on the next routine run.
-
-Common adjustments:
-- Raise `Min research score` from 70 to 80 → fewer but higher-conviction trades
-- Lower `Max VIX` from 28 to 22 → only trade in very calm markets
-- Change `SPY must be above N-day MA` from 5 to 10 → require a longer confirmed uptrend
-
-Do NOT edit `memory/strategy.md` hard rules unless you fully understand the consequences.
-
----
-
-## How to Switch to Live Trading
-
-When you are ready to trade real money:
-
-1. Open `memory/strategy.md`
-2. Change `live_trading: false` to `live_trading: true`
-3. Make sure your `.env` file has your **live** Alpaca API keys (not paper keys)
-4. The bot will automatically use the live account on the next run
-
-**Recommended:** Only do this after at least 4 weeks of paper trading with consistent positive results.
-
----
-
-## Email Reports
-
-The bot sends emails to the address in `EMAIL_RECIPIENT` for:
-- End-of-day summary (daily P&L, trades, open positions, vs SPY)
-- Trade alerts (when a buy or sell is executed)
-- Halt alerts (when the -2% daily loss cap is triggered)
-- Weekly summary (every Saturday — full week performance)
-
----
-
-## Current Status
-
-- **Mode:** Paper trading only (`live_trading: false` in `memory/strategy.md`; the default broker URL is Alpaca's paper endpoint)
-- **Starting balance:** $100,000
-- **Numbers:** see [Results so far](#results-so-far-paper-trading) and `memory/performance_metrics.md`, `memory/portfolio_state.md`, `memory/trade_log.md` for the live figures. This README no longer hard-codes a trade count or equity because they go stale within days.
+- Yahoo Finance data is unofficial and can change or rate-limit. The universe is mostly large caps.
+- The relative strength rating is ranked only within the screened universe.
+- Plans use the previous close, not pre-market prices.
+- The executor must be running during market hours for entries and stop trailing. Stops already
+  placed are held by the broker and work without it.
+- Paper fills are simulated and can be more favourable than real fills.
+- The NYSE holiday list in `preopen_plan.py` covers 2026 only.

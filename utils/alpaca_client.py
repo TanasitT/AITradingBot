@@ -29,6 +29,13 @@ def _delete(path):
     return r.json()
 
 
+def _patch(path, body):
+    url = f"{ALPACA_BASE_URL}{path}"
+    r = requests.patch(url, json=body, headers=HEADERS, timeout=10)
+    r.raise_for_status()
+    return r.json()
+
+
 def get_account():
     return _get("/v2/account")
 
@@ -84,6 +91,48 @@ def place_stop_limit_order(symbol, qty, side, stop_price, limit_price):
         "limit_price": str(round(limit_price, 2)),
     }
     return _post("/v2/orders", body)
+
+
+def place_entry_stop_limit(symbol, qty, stop_price, limit_price, client_order_id):
+    """Buy that only triggers on a breakout through stop_price; expires at the close."""
+    body = {
+        "symbol": symbol,
+        "qty": str(qty),
+        "side": "buy",
+        "type": "stop_limit",
+        "time_in_force": "day",
+        "stop_price": str(round(stop_price, 2)),
+        "limit_price": str(round(limit_price, 2)),
+        "client_order_id": client_order_id,
+    }
+    return _post("/v2/orders", body)
+
+
+def place_stop_order(symbol, qty, stop_price):
+    """Protective sell stop (market once triggered, so a gap cannot skip it); good until cancelled."""
+    body = {
+        "symbol": symbol,
+        "qty": str(qty),
+        "side": "sell",
+        "type": "stop",
+        "time_in_force": "gtc",
+        "stop_price": str(round(stop_price, 2)),
+    }
+    return _post("/v2/orders", body)
+
+
+def replace_order(order_id, qty=None, stop_price=None):
+    body = {}
+    if qty is not None:
+        body["qty"] = str(qty)
+    if stop_price is not None:
+        body["stop_price"] = str(round(stop_price, 2))
+    return _patch(f"/v2/orders/{order_id}", body)
+
+
+def cancel_order(order_id):
+    r = requests.delete(f"{ALPACA_BASE_URL}/v2/orders/{order_id}", headers=HEADERS, timeout=10)
+    r.raise_for_status()  # 204 No Content on success, so there is no body to return
 
 
 def close_position(symbol):

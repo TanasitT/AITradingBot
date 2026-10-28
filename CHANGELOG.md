@@ -4,6 +4,29 @@ All notable changes to AITradingBot are documented here.
 
 ---
 
+## [0.6.0] — 2026-10-28 — US momentum system
+
+### Added
+- **US momentum screen and pre-open plan** (`us-momentum-routines/`) — Minervini Trend Template,
+  relative strength and a VCP contraction check over the S&P 500, a SPY-based market regime, and
+  daily order tickets (trigger, limit, stop). Run by two scheduled Claude routines; the pre-open
+  routine adds a news check that can remove tickets but never add or change one
+- **Executor** (`engine/momentum.py`, scheduled by `main.py` in US Eastern time) — places plan tickets
+  as buy stop-limit day orders, keeps a good-until-cancelled sell stop on every position, raises
+  stops after each close to just under the 10-session low (never lowers them), and logs fills
+- **`scripts/routine_entries.py`** — the only way the AI routine can place orders: it calls the
+  executor's own entry code, and refuses a non-paper account or any time from 09:10 ET
+- **Risk controls in code** — 0.5% of equity at risk per trade, 5% position cap, regime and daily
+  order caps, -2% daily halt, duplicate-order guard (`client_order_id`), stale-screen guard
+- **`scripts/backtest.py`** — two-year mechanical backtest of the 0.1–0.5 strategy
+
+### Changed
+- The Perplexity research bot (0.1–0.5) is retired: no longer scheduled, code kept for reference
+- `memory/` (journal and state) is no longer published; it stays on the machine running the bot
+- `requirements.txt` lists only what the code imports
+
+---
+
 ## [0.5.0] — 2026-07-05
 
 ### Changed
@@ -133,7 +156,9 @@ All notable changes to AITradingBot are documented here.
 
 ---
 
-## Hard Rules Reference (never change without understanding consequences)
+## Hard Rules Reference — retired research bot (0.1–0.5)
+
+For the current rules see the README.
 
 | Rule | Value |
 |---|---|

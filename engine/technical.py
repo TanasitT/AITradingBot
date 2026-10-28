@@ -34,10 +34,16 @@ def analyze(symbol):
         gains = [max(closes[i] - closes[i - 1], 0) for i in range(1, len(closes))]
         losses = [max(closes[i - 1] - closes[i], 0) for i in range(1, len(closes))]
         period = 14
-        avg_gain = statistics.mean(gains[-period:]) if len(gains) >= period else 0
-        avg_loss = statistics.mean(losses[-period:]) if len(losses) >= period else 1
-        rs = avg_gain / avg_loss if avg_loss else 100
-        rsi = 100 - (100 / (1 + rs))
+        if len(gains) >= period:
+            avg_gain = statistics.mean(gains[-period:])
+            avg_loss = statistics.mean(losses[-period:])
+            rs = avg_gain / avg_loss if avg_loss else 100
+            rsi = 100 - (100 / (1 + rs))
+            rsi_sufficient = True
+        else:
+            log.warning(f"[Technical] {symbol}: only {len(gains)+1} bars — RSI skipped")
+            rsi = None
+            rsi_sufficient = False
 
         daily_returns = [
             (closes[i] - closes[i - 1]) / closes[i - 1]
@@ -52,7 +58,7 @@ def analyze(symbol):
 
         high_beta = beta > HIGH_BETA_THRESHOLD
         volume_ok = volume_ratio >= MIN_VOLUME_MULTIPLIER
-        rsi_ok = 40 <= rsi <= 70
+        rsi_ok = (not rsi_sufficient) or (40 <= rsi <= 70)
 
         result = {
             "symbol": symbol,
@@ -67,9 +73,10 @@ def analyze(symbol):
             "rsi_ok": rsi_ok,
             "technically_sound": volume_ok and rsi_ok and (above_ma50 is not False),
         }
+        rsi_str = f"{rsi:.0f}" if rsi is not None else "n/a"
         log.info(
             f"[Technical] {symbol}: price={current_price:.2f} vol_ratio={volume_ratio:.1f}x "
-            f"RSI={rsi:.0f} beta={beta:.1f} sound={result['technically_sound']}"
+            f"RSI={rsi_str} beta={beta:.1f} sound={result['technically_sound']}"
         )
         return result
 

@@ -5,3 +5,18 @@ __pycache__/
 *.pyo
 .DS_Store
 *.pdf
+
+# Local editor/tool config
+.mcp.json
+
+# Bot journal and state: kept on the machine running the bot, never published
+memory/
+
+# Screen and plan outputs (generated from market data on each run)
+us-momentum-routines/results/*
+!us-momentum-routines/results/.gitkeep
+us-momentum-routines/plans/*
+!us-momentum-routines/plans/.gitkeep
+
+# Third-party setup guide the routines were built from (not ours to republish)
+us-momentum-routines/*Setup Guide*.md

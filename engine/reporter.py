@@ -26,6 +26,30 @@ def _latest_benchmark_row():
     return rows[-1] if rows else "No benchmark data yet"
 
 
+def _this_week_table_rows(content):
+    """Return table header lines + only rows whose date column falls within Mon–Sun of this week."""
+    from datetime import timedelta
+    now_et = datetime.now(ET)
+    monday = now_et - timedelta(days=now_et.weekday())
+    week_dates = {(monday + timedelta(days=i)).strftime("%Y-%m-%d") for i in range(7)}
+
+    header, data = [], []
+    for line in content.splitlines():
+        if not line.startswith("|"):
+            continue
+        if "Date" in line or line.startswith("|---") or line.startswith("|---|"):
+            header.append(line)
+        elif any(d in line for d in week_dates):
+            data.append(line)
+    return "\n".join(header + data) if data else None
+
+
+def _latest_patterns_section(content):
+    """Return only the most recent ## Week of section."""
+    sections = re.split(r"\n(?=## Week of )", content)
+    return sections[-1].strip() if sections else content.strip()
+
+
 def run_eod():
     log.info("[Reporter] Compiling EOD report")
 
@@ -88,9 +112,10 @@ def run_weekly():
     log.info("[Reporter] Compiling weekly report")
 
     metrics = memory.read("performance_metrics.md")
-    benchmark = memory.read("benchmark_tracking.md")
     patterns = memory.read("learned_patterns.md")
-    trade_log = memory.read("trade_log.md")
+
+    benchmark_this_week = _this_week_table_rows(memory.read("benchmark_tracking.md"))
+    trades_this_week = _this_week_table_rows(memory.read("trade_log.md"))
 
     subject = f"Trading Bot — Weekly Summary | {memory.today_et()}"
     text_body = f"""WEEKLY SUMMARY
@@ -99,14 +124,14 @@ def run_weekly():
 PERFORMANCE METRICS
 {metrics}
 
-BENCHMARK (portfolio vs SPY)
-{benchmark}
+BENCHMARK THIS WEEK (portfolio vs SPY)
+{benchmark_this_week or 'No benchmark data this week'}
 
-LEARNED PATTERNS
-{patterns}
+TRADES THIS WEEK
+{trades_this_week or 'No trades this week'}
 
-FULL TRADE LOG
-{trade_log}
+LEARNED PATTERNS THIS WEEK
+{_latest_patterns_section(patterns)}
 """
     send_email(subject, text_body)
 

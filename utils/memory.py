@@ -5,6 +5,7 @@ import pytz
 from config import MEMORY_DIR
 
 ET = pytz.timezone("America/New_York")
+os.makedirs(MEMORY_DIR, exist_ok=True)  # memory/ is gitignored, so it will not exist on a fresh clone
 
 
 def read(filename):

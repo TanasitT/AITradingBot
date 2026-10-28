@@ -1,0 +1,11 @@
+{
+  "_note": "Dollar figures approximate 0.5% risk / 5% max position on the ~$100k Alpaca paper account. The executor (engine/momentum.py) re-sizes every order from live equity, so these only shape the plan's display and its under-1-share skips.",
+  "risk_per_trade_usd": 500,
+  "max_position_usd": 5000,
+  "max_stop_pct": 0.08,
+  "max_new_orders": 3,
+  "trigger_buffer_pct": 0.001,
+  "limit_buffer_pct": 0.003,
+  "earnings_blackout_days": 3,
+  "skip_if_open_above_trigger_pct": 0.03
+}
