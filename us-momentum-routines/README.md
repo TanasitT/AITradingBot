@@ -10,7 +10,7 @@ These scripts analyse data and write files only. The executor in the parent proj
 | `scripts/preopen_plan.py [--date YYYY-MM-DD]` | `plans/<date>.json` and `.md`: market regime and order tickets for the day |
 
 Rules: [docs/SPEC.md](docs/SPEC.md). Sizing inputs: `config/risk.json`. Extra tickers outside the
-S&P 500: `config/extra_tickers.txt`. Results and plans are generated locally and not committed.
+S&P 500: `config/extra_tickers.txt`. Results and plans are generated at run time and not committed.
 
 Run from this folder:
 

@@ -1,0 +1,57 @@
+# The US momentum executor's stop jobs (python main.py protect / eod), on GitHub's servers.
+# Entries are placed by the pre-open Claude routine (scripts/routine_entries.py), not here.
+# This repository is public, so these logs are public: main.py prints only done / skipped /
+# failed, never symbols, sizes or prices. A failed run emails the repository owner.
+# Secrets: ALPACA_API_KEY and ALPACA_SECRET_KEY (paper account). Times below are UTC; main.py
+# checks US/Eastern time and the market clock, so daylight saving needs no edits.
+
+name: executor
+
+on:
+  schedule:
+    - cron: "*/10 13-20 * * 1-5"   # stop check every 10 minutes; skipped while the market is closed
+    - cron: "23 20,21 * * 1-5"     # trail the stops at 16:23 ET (the run that falls before the close is skipped)
+  workflow_dispatch:
+    inputs:
+      job:
+        description: "protect or eod"
+        required: true
+        default: protect
+
+permissions:
+  contents: read
+  actions: write   # only for the keepalive step below
+
+concurrency:
+  group: executor
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -q -r requirements.txt
+      - name: Run the executor job
+        env:
+          ALPACA_API_KEY: ${{ secrets.ALPACA_API_KEY }}
+          ALPACA_SECRET_KEY: ${{ secrets.ALPACA_SECRET_KEY }}
+          ALPACA_BASE_URL: ${{ secrets.ALPACA_BASE_URL }}   # optional; unset means the paper account
+          JOB: ${{ github.event.schedule == '23 20,21 * * 1-5' && 'eod' || inputs.job || 'protect' }}
+        run: python main.py "$JOB"
+      # GitHub turns off scheduled workflows in a public repository after 60 days without
+      # activity. Re-enabling the workflow through the API resets that clock without a commit.
+      - name: Keep the schedule alive
+        if: github.event.schedule == '23 20,21 * * 1-5'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          curl -fsS -o /dev/null -X PUT
+          -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json"
+          "https://api.github.com/repos/${{ github.repository }}/actions/workflows/executor.yml/enable"

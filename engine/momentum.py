@@ -1,7 +1,8 @@
 """US momentum executor: places the pre-open plan's orders and manages their stops.
 
-Runs from main.py; enter() also runs from scripts/routine_entries.py for the pre-open
-routine, so every entry goes through this code. The CLAUDE.md hard rules apply:
+enter() runs only from scripts/routine_entries.py, which the pre-open routine runs after its
+news check, so every entry goes through this code. protect() and end_of_day() run from
+main.py (on GitHub Actions, or in a loop on your own machine). The CLAUDE.md hard rules apply:
 - Entries: buy stop-limit day orders at the plan's trigger and limit, at most
   min(regime cap, MAX_TRADES_PER_DAY) a day, and none once the day is down 2%.
 - Size: 0.5% of equity at risk down to the plan's stop, capped at 5% of equity.
@@ -14,8 +15,6 @@ import json
 import logging
 import math
 import os
-import subprocess
-import sys
 from datetime import date
 
 import requests
@@ -62,16 +61,9 @@ def _max_stop_pct():
 
 
 def _load_plan(today):
+    # Only the news-checked plan the pre-open routine wrote. Building one here would skip the
+    # news check and could enter a ticket the routine removed.
     path = os.path.join(PLANS_DIR, f"{today}.json")
-    if not os.path.exists(path):
-        # The pre-open plan routine did not run in time, so build the plan here (without its news check).
-        log.warning(f"[Momentum] No plan for {today} — running preopen_plan.py")
-        result = subprocess.run(
-            [sys.executable, os.path.join("scripts", "preopen_plan.py"), "--date", today],
-            cwd=MOMENTUM_DIR, capture_output=True, text=True, timeout=900,
-        )
-        if result.returncode != 0:
-            log.error(f"[Momentum] preopen_plan.py failed: {result.stderr[-500:]}")
     if not os.path.exists(path):
         return None
     with open(path, encoding="utf-8") as f:
@@ -86,8 +78,38 @@ def _shares(equity, trigger, stop):
                           equity * MAX_POSITION_PCT / trigger))
 
 
+def _entry_order(symbol):
+    """The newest filled US momentum entry order for symbol, or None."""
+    for o in get_orders(status="closed", limit=200, symbols=[symbol]):
+        if (o["side"] == "buy" and o.get("filled_at") and o.get("stop_price")
+                and (o.get("client_order_id") or "").startswith(ORDER_PREFIX)):
+            return o
+    return None
+
+
+def _plan_stop(order):
+    """Rebuild the plan's stop for a filled entry, as preopen_plan.py computes it:
+    max(lowest low of the 10 sessions before the entry day x 0.999, trigger x (1 - max_stop_pct)).
+    The trigger is the entry order's stop price, and its client_order_id carries the entry day."""
+    trigger = float(order["stop_price"])
+    entry_day = order["client_order_id"][len(ORDER_PREFIX):len(ORDER_PREFIX) + 10]
+    floor = trigger * (1 - _max_stop_pct())
+    try:
+        import yfinance as yf
+        lows = yf.Ticker(order["symbol"]).history(period="3mo", interval="1d", auto_adjust=True)["Low"].dropna()
+        lows = lows[lows.index.strftime("%Y-%m-%d") < entry_day]
+    except Exception as e:
+        log.warning(f"[Momentum] No price history for {order['symbol']}, using the {_max_stop_pct():.0%} stop: {e}")
+        return round(floor, 2)
+    if len(lows) < 10:
+        return round(floor, 2)
+    return round(max(float(lows.tail(10).min()) * 0.999, floor), 2)
+
+
 def _initial_stop(symbol, avg_entry):
-    """The stop from the newest plan that listed this ticker, else max_stop_pct below the entry."""
+    """The stop from the newest local plan that listed this ticker; else the plan's stop rebuilt
+    from the entry order (no plan files are kept when the routines run in the cloud);
+    else max_stop_pct below the entry."""
     today = memory.today_et()
     for path in sorted(glob.glob(os.path.join(PLANS_DIR, "*.json")), reverse=True):
         if os.path.basename(path)[:10] > today:
@@ -100,6 +122,9 @@ def _initial_stop(symbol, avg_entry):
         for t in tickets:
             if t.get("ticker") == symbol:
                 return float(t["stop"])
+    order = _entry_order(symbol)
+    if order:
+        return _plan_stop(order)
     return round(avg_entry * (1 - _max_stop_pct()), 2)
 
 
@@ -126,17 +151,21 @@ def enter():
         log.info(f"[Momentum] {today} is not a trading day — no entries")
         return
 
+    if not os.path.exists(SCREEN_SUMMARY):
+        _journal("No entries: no screen results. Run us_momentum_screen.py before the plan.")
+        return
     with open(SCREEN_SUMMARY, encoding="utf-8") as f:
         data_date = json.load(f)["data_date"]
     age = (date.fromisoformat(today) - date.fromisoformat(data_date)).days
     if age > MAX_SCREEN_AGE_DAYS:
-        _journal(f"No entries: the weekend screen is {age} days old (data {data_date}). "
-                 f"Run the us-momentum-weekend-research routine.")
+        _journal(f"No entries: the screen is {age} days old (data {data_date}). "
+                 f"Run us_momentum_screen.py before the plan.")
         return
 
     plan = _load_plan(today)
     if not plan or plan.get("status") != "ok" or plan.get("date") != today:
-        _journal(f"No entries: no usable plan for {today} (status: {plan.get('status') if plan else 'missing'}).")
+        _journal(f"No entries: no usable plan for {today} (status: {plan.get('status') if plan else 'missing'}). "
+                 f"Run preopen_plan.py and the news check first.")
         return
 
     account = get_account()

@@ -4,6 +4,26 @@ All notable changes to AITradingBot are documented here.
 
 ---
 
+## [0.7.0] — 2026-11-17 — Runs without the local machine
+
+### Changed
+- **Routines run in the cloud** — the two Claude routines are Claude Code cloud routines instead of
+  desktop-app routines. Nothing is kept between runs, so the weekday pre-open routine runs the screen
+  itself from the previous close, then the plan, the news check and the entries. The Saturday
+  routine is a weekly screen report and places nothing
+- **Executor on GitHub Actions** (`.github/workflows/executor.yml`) — `main.py protect` every 10
+  minutes in market hours and `main.py eod` after the close. One-shot jobs print only done / skipped /
+  failed, because the repository's Actions logs are public, and fail the run on any error
+- **Entries come only from the news-checked plan** — the executor no longer builds a plan or places
+  entries when the routine has not; if the routine fails, no entries are placed that day
+- **A new position's stop is rebuilt from its entry order** (trigger and entry date) when no plan
+  file exists, giving the same stop as the plan
+- `scripts/routine_entries.py --check` — a read-only test of the keys, the paper account and the
+  trading day; the Windows task check is gone
+- `ALPACA_BASE_URL` left unset or empty means the paper account
+
+---
+
 ## [0.6.0] — 2026-10-28 — US momentum system
 
 ### Added
